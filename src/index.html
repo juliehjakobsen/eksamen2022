@@ -12,6 +12,748 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .baggrundsbillede {
+        background-image: url(img/hero_billede.webp);
+      }
+
+      button {
+        background-color: var(--background-color);
+        border: none;
+      }
+
+      /* farveskift mobil */
+      #sort {
+        width: 75px;
+        height: 40px;
+        top: 27px;
+        left: 31px;
+        animation-name: blink;
+        animation: blink 5s infinite;
+        animation-delay: 0s;
+        animation-direction: alternate;
+        position: absolute;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        1% {
+          opacity: 1;
+        }
+        24% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        49% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        74% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #sol {
+        width: 75px;
+        height: 40px;
+        position: absolute;
+        top: 27px;
+        left: 31px;
+        animation-name: blink1;
+        animation: blink1 5s infinite;
+        animation-delay: 0s;
+        animation-direction: alternate;
+        position: absolute;
+      }
+      @keyframes blink1 {
+        0% {
+          opacity: 0;
+        }
+        1% {
+          opacity: 0;
+        }
+        24% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        49% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        74% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #graes {
+        width: 75px;
+        height: 40px;
+        position: absolute;
+        top: 27px;
+        left: 31px;
+        animation-name: blink2;
+        animation: blink2 5s infinite;
+        animation-delay: 0s;
+        animation-direction: alternate;
+        position: absolute;
+      }
+      @keyframes blink2 {
+        0% {
+          opacity: 0;
+        }
+        1% {
+          opacity: 0;
+        }
+        24% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        49% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        74% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #himmel {
+        width: 75px;
+        height: 40px;
+        position: absolute;
+        top: 27px;
+        left: 31px;
+        animation-name: blink3;
+        animation: blink3 5s infinite;
+        animation-delay: 0s;
+        animation-direction: alternate;
+        position: absolute;
+      }
+      @keyframes blink3 {
+        0% {
+          opacity: 0;
+        }
+        1% {
+          opacity: 0;
+        }
+        24% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        49% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        74% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      #rust {
+        width: 75px;
+        height: 40px;
+        position: absolute;
+        top: 27px;
+        left: 31px;
+        animation-name: blink4;
+        animation: blink4 5s infinite;
+        animation-delay: 0s;
+        animation-direction: alternate;
+        position: absolute;
+      }
+      @keyframes blink4 {
+        0% {
+          opacity: 0;
+        }
+        1% {
+          opacity: 0;
+        }
+        24% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        49% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        74% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .burger_ikon {
+        width: 40px;
+        height: 40px;
+      }
+      .navigation_mobil {
+        background-color: var(--background-color);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid black;
+        height: 96px;
+        align-items: center;
+        padding-left: 27px;
+        padding-right: 27px;
+      }
+
+      .navigation_desktop {
+        display: none;
+      }
+
+      @media (min-width: 900px) {
+        .navigation_mobil {
+          display: none;
+        }
+        .navigation_desktop {
+          display: block;
+          background-color: var(--background-color);
+          border-bottom: 2px solid black;
+          /* rigtig afstand fra figma 
+      height: 286px;*/
+        }
+        .navigation_under_logo {
+          display: flex;
+          justify-content: space-between;
+          font-family: "Roboto", sans-serif;
+          padding-top: var(--l-spacing-desktop);
+          padding-bottom: var(--s-spacing-desktop);
+          list-style: none;
+          font-size: var(--header_text_desktop);
+        }
+        .main_nav {
+          display: flex;
+          list-style: none;
+          gap: var(--xxl-spacing-desktop);
+          padding-left: var(--xxl-spacing-desktop);
+        }
+        .sortiment_pil {
+          display: flex;
+        }
+
+        .secondary_nav {
+          list-style: none;
+          display: flex;
+          gap: var(--s-spacing-desktop);
+          padding-right: var(--xxl-spacing-desktop);
+        }
+        .person {
+          width: 40px;
+          height: 40px;
+        }
+        .shopping {
+          width: 40px;
+          height: 40px;
+        }
+        .search {
+          width: 40px;
+          height: 40px;
+        }
+
+        .logo_center {
+          display: flex;
+          justify-content: center;
+          /* rigtige afstand fra figma
+      padding-top: var(--xl-spacing-desktop); */
+          padding-top: var(--l-spacing-desktop);
+        }
+
+        /* farveskift desktop  */
+        #sort {
+          width: 446px;
+          height: 33px;
+          animation-name: blink;
+          animation: blink 5s infinite;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          position: absolute;
+        }
+        @keyframes blink {
+          0% {
+            opacity: 1;
+          }
+          1% {
+            opacity: 1;
+          }
+          24% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 0;
+          }
+          74% {
+            opacity: 0;
+          }
+          75% {
+            opacity: 0;
+          }
+          95% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+
+        #sol {
+          width: 446px;
+          height: 33px;
+          animation-name: blink1;
+          animation: blink1 5s infinite;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          position: absolute;
+        }
+        @keyframes blink1 {
+          0% {
+            opacity: 0;
+          }
+          1% {
+            opacity: 0;
+          }
+          24% {
+            opacity: 1;
+          }
+          25% {
+            opacity: 1;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 0;
+          }
+          74% {
+            opacity: 0;
+          }
+          75% {
+            opacity: 0;
+          }
+          95% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+
+        #graes {
+          width: 446px;
+          height: 33px;
+          animation-name: blink2;
+          animation: blink2 5s infinite;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          position: absolute;
+        }
+        @keyframes blink2 {
+          0% {
+            opacity: 0;
+          }
+          1% {
+            opacity: 0;
+          }
+          24% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+          }
+          74% {
+            opacity: 0;
+          }
+          75% {
+            opacity: 0;
+          }
+          95% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+
+        #himmel {
+          width: 446px;
+          height: 33px;
+          animation-name: blink3;
+          animation: blink3 5s infinite;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          position: absolute;
+        }
+        @keyframes blink3 {
+          0% {
+            opacity: 0;
+          }
+          1% {
+            opacity: 0;
+          }
+          24% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 0;
+          }
+          74% {
+            opacity: 1;
+          }
+          75% {
+            opacity: 1;
+          }
+          95% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+        #rust {
+          width: 446px;
+          height: 33px;
+          animation-name: blink4;
+          animation: blink4 5s infinite;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          position: absolute;
+        }
+        @keyframes blink4 {
+          0% {
+            opacity: 0;
+          }
+          1% {
+            opacity: 0;
+          }
+          24% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0;
+          }
+          49% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 0;
+          }
+          74% {
+            opacity: 0;
+          }
+          75% {
+            opacity: 0;
+          }
+          95% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+
+      .article_wrapper {
+        border: solid 2px black;
+        border-radius: var(--xs-radius);
+        width: 155px;
+      }
+      /* img {
+        width: 155px;
+      } */
+      .overskrift {
+        background-color: #ffffff;
+        color: black;
+        border-top: 2px solid black;
+        text-align: center;
+        font-size: var(--h5-mobile);
+        font-family: var(--other-headings);
+      }
+      .card_info img {
+        display: none;
+      }
+
+      .arrow img {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+      }
+      .arrow {
+        display: grid;
+        justify-content: end;
+      }
+      h5 {
+        display: none;
+        text-align: center;
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        .article_wrapper,
+        img {
+          width: 452px;
+        }
+        .overskrift {
+          font-size: var(--h5-desktop);
+        }
+      }
+      /* flipped card blomster */
+      [data-variant="card_sortiment_flipped"] .article_wrapper {
+        width: 280px;
+      }
+      [data-variant="card_sortiment_flipped"] .billede {
+        display: none;
+      }
+      [data-variant="card_sortiment_flipped"] .card_info {
+        display: block;
+        text-align: start;
+      }
+
+      [data-variant="card_sortiment_flipped"] .card_info img {
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      [data-variant="card_sortiment_flipped"] .overskrift {
+        border: none;
+        padding-top: var(--m-spacing-mobile);
+        padding-bottom: var(--l-spacing-mobile);
+      }
+      [data-variant="card_sortiment_flipped"] .maal {
+        display: none;
+      }
+      [data-variant="card_sortiment_flipped"] .maal,
+      [data-variant="card_sortiment_flipped"] .oprindelse,
+      [data-variant="card_sortiment_flipped"] .sollys,
+      [data-variant="card_sortiment_flipped"] .holdbarhed,
+      [data-variant="card_sortiment_flipped"] .pris {
+        padding-right: var(--xs-spacing-mobile);
+        padding-bottom: var(--xs-spacing-mobile);
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        [data-variant="card_sortiment_flipped"] .article_wrapper {
+          width: 452px;
+        }
+        [data-variant="card_sortiment_flipped"] .overskrift {
+          padding-top: var(--l-spacing-desktop);
+          padding-bottom: var(--xl-spacing-desktop);
+        }
+        [data-variant="card_sortiment_flipped"] .maal,
+        [data-variant="card_sortiment_flipped"] .oprindelse,
+        [data-variant="card_sortiment_flipped"] .sollys,
+        [data-variant="card_sortiment_flipped"] .holdbarhed,
+        [data-variant="card_sortiment_flipped"] .pris {
+          padding-right: var(--m-spacing-desktop);
+          padding-bottom: var(--m-spacing-desktop);
+        }
+      }
+      /* flipped card vaser */
+      [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
+        width: 280px;
+      }
+      [data-variant="card_sortiment_flipped_vaser"] .billede {
+        display: none;
+      }
+      [data-variant="card_sortiment_flipped_vaser"] .card_info {
+        display: block;
+        text-align: start;
+      }
+
+      [data-variant="card_sortiment_flipped_vaser"] .card_info img {
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      [data-variant="card_sortiment_flipped_vaser"] .overskrift {
+        border: none;
+        padding-top: var(--m-spacing-mobile);
+        padding-bottom: var(--l-spacing-mobile);
+      }
+      h5 {
+        display: block;
+        padding-top: var(--l-spacing-mobile);
+        padding-bottom: var(--l-spacing-mobile);
+      }
+      [data-variant="card_sortiment_flipped_vaser"] .maal {
+        display: block;
+        padding-right: var(--xs-spacing-mobile);
+        padding-bottom: var(--xs-spacing-mobile);
+      }
+      [data-variant="card_sortiment_flipped_vaser"] .oprindelse,
+      [data-variant="card_sortiment_flipped_vaser"] .sollys,
+      [data-variant="card_sortiment_flipped_vaser"] .holdbarhed {
+        display: none;
+        padding-right: var(--xs-spacing-mobile);
+        padding-bottom: var(--xs-spacing-mobile);
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
+          width: 452px;
+        }
+        [data-variant="card_sortiment_flipped_vaser"] .oprindelse,
+        [data-variant="card_sortiment_flipped_vaser"] .sollys,
+        [data-variant="card_sortiment_flipped_vaser"] .holdbarhed,
+        [data-variant="card_sortiment_flipped_vaser"] .maal {
+          padding-right: var(--m-spacing-desktop);
+          padding-bottom: var(--m-spacing-desktop);
+        }
+        [data-variant="card_sortiment_flipped_vaser"] .overskrift {
+          padding-top: var(--l-spacing-desktop);
+          padding-bottom: var(--xl-spacing-desktop);
+        }
+        [data-variant="card_sortiment_flipped_vaser"] .underoverskrift {
+          padding-bottom: var(--xl-spacing-desktop);
+        }
+      }
+
+      /* Card forside */
+      [data-variant="card_forside"] .article_wrapper {
+        width: 280px;
+      }
+      [data-variant="card_forside"] img {
+        width: 280px;
+      }
+      [data-variant="card_forside"] .arrow img {
+        width: 25px;
+        height: 25px;
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        [data-variant="card_forside"] .article_wrapper,
+        [data-variant="card_forside"] img {
+          width: 452px;
+        }
+      }
+      /* Card forside flipped */
+      [data-variant="card_forside_flipped"] .article_wrapper {
+        width: 330px;
+      }
+      [data-variant="card_forside_flipped"] .billede {
+        display: none;
+      }
+      [data-variant="card_forside_flipped"] .card_info {
+        display: block;
+        text-align: start;
+      }
+
+      [data-variant="card_forside_flipped"] .card_info img {
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      [data-variant="card_forside_flipped"] .overskrift {
+        border: none;
+        padding-top: var(--xl-spacing-mobile);
+        padding-bottom: var(--xxl-spacing-mobile);
+      }
+      [data-variant="card_forside_flipped"] .maal {
+        display: none;
+      }
+      [data-variant="card_forside_flipped"] .maal,
+      [data-variant="card_forside_flipped"] .oprindelse,
+      [data-variant="card_forside_flipped"] .sollys,
+      [data-variant="card_forside_flipped"] .holdbarhed,
+      [data-variant="card_forside_flipped"] .pris {
+        padding-right: var(--xs-spacing-mobile);
+        padding-bottom: var(--xs-spacing-mobile);
+      }
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        [data-variant="card_forside_flipped"] .article_wrapper {
+          width: 452px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -121,7 +863,94 @@
         </section>
       </article>
     </header>
-    <main></main>
+    <main>
+      <section class="baggrundsbillede">
+        <div class="farve bg-color-headings">
+          <img src="img/logo/bb_ill_sol.png" alt="" />
+          <h1 class="text-h1-mobile text-sol-300">
+            Bring sæsonnen hjem til dig
+          </h1>
+          <p>
+            Med et abonnement hos Blomster Bjarne får du leveret unikke buketter
+            fra hver sæson.
+          </p>
+          <button>Tegn mit abonnement</button>
+        </div>
+      </section>
+      <section>
+        <h2>Hvem er vi?</h2>
+        <h5>Hos Blomster Bjarne fejrer vi alt, hvad der er smukt!</h5>
+        <p>
+          Blomster Bjarne udspringer ud fra et kærligt minde om vores
+          grundlægger – at sælge blomster er en del af vores DNA. Vores ønske at
+          forkæle og lade dig vare en del at dette univers. Kald det et slags
+          ‘menageri’, hvor du kommer ind i vores florale univers – gennem et
+          væld af blomster i alverdens flimrende farver, alle unikke i deres
+          enkelte karakter. Tag forbi en af vores butikker eller se dig om på
+          hjemmesiden efter netop den vase eller den blomst, der skal være en
+          del af dit enestående hjem.
+        </p>
+        <button>Se vores udvalg af blomster</button>
+      </section>
+      <section>
+        <!-- banner -->
+        <img src="" alt="" />
+      </section>
+      <section>
+        <img src="img/sollys_ikon.svg" alt="" />
+        <img src="img/sollys_ikon.svg" alt="" />
+        <img src="img/sollys_ikon.svg" alt="" />
+        <img src="img/sollys_ikon.svg" alt="" />
+        <h2>Sæsonens blomster</h2>
+
+        <!-- Card forside -->
+        <article>
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/blomster/solsikke.webp" alt="" />
+            </div>
+            <div class="overskrift">
+              <h4>Solsikke</h4>
+              <!-- <div class="card_info">
+                <h5>{underoverskrift}</h5> 
+              <div class="oprindelse">
+                <img src=/img/${oprindelseikon}_ikon.svg alt="" />
+                <p>{oprindelse}</p>
+              </div>
+              <div class="sollys">
+                  <img src={`/img/${sollysikon}_ikon.svg`} alt="" />
+                  <p>{sollys}</p>
+                </div>
+                <div class="holdbarhed">
+                  <img src={`/img/${holdbarhedikon}_ikon.svg`} alt="" />
+                  <p>{holdbarhed}</p>
+                </div>
+                <div class="maal">
+                  <img src={`/img/${maalikon}_ikon.svg`} alt="" />
+                  <p>{maal}</p>
+                </div>
+                <div class="pris">
+                  <img src={`/img/${prisikon}_ikon.svg`} alt="" />
+                  <p>{pris}</p>
+                </div> -->
+            </div>
+          </div>
+        </article>
+        <button>Udforsk sortimentet</button>
+        <h2>Testimonials</h2>
+        <!-- stjerner -->
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <p>
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor ”
+        </p>
+      </section>
+    </main>
     <footer></footer>
     <script></script>
   </body>
