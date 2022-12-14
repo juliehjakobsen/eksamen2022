@@ -104,10 +104,10 @@ module.exports = {
 
     },
     fontFamily: {
-      "font-body": ["Orienta", sans-serif],
-    "main-heading": ["Sansita", sans-serif],
-      "other-headings": ["Roboto", sans-serif],
-      "button-text": ["Roboto", sans-serif],
+      "font-body": ["Orienta", "sans-serif"],
+    "main-heading": ["Sansita", "sans-serif"],
+      "other-headings": ["Roboto", "sans-serif"],
+      "button-text": ["Roboto", "sans-serif"],
     },
     fontSize: {
       /* mobile */
