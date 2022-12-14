@@ -13,3 +13,251 @@ main {
     margin-right: 80px;
   }
 }
+
+:root {
+  /* MEDIA QUERY */
+  --media-desktop: 900px;
+  --media-tablet: 600px;
+
+  /* COLORS */
+
+  /* PRIMÆRE */
+  --sol: #f5c330;
+  --rust: #d2682c;
+  --himmel: #cdeff6;
+  --regnorm: #d5bba4;
+  --graes: #656a41;
+
+  /* rust */
+  --rust-100: #f9eed7;
+  --rust-200: #f4d7b0;
+  --rust-300: #e8b886;
+  --rust-400: #d89966;
+  --rust-500: #c36e3b;
+  --rust-600: #a7522d;
+  --rust-700: #8c3b21;
+  --rust-800: #6f2717;
+  --rust-900: #5c1a0f;
+
+  /* himmel */
+
+  --himmel-100: #f7fefd;
+  --himmel-200: #f0fefd;
+  --himmel-300: #e7fafc;
+  --himmel-400: #dff5f8;
+  --himmel-500: #d4eef5;
+  --himmel-600: #9fc3d1;
+  --himmel-700: #7298ae;
+  --himmel-800: #4c6e8b;
+  --himmel-900: #314f73;
+
+  /* graes */
+
+  --graes-100: #f6f7e6;
+  --graes-200: #edf0ce;
+  --graes-300: #ced2a6;
+  --graes-400: #a0a57a;
+  --graes-500: #666a46;
+  --graes-600: #565b35;
+  --graes-700: #464c26;
+  --graes-800: #373d1a;
+  --graes-900: #2d3212;
+
+  /* sol */
+
+  --sol-100: #fdf8d9;
+  --sol-200: #fbf0b4;
+  --sol-300: #f8e48f;
+  --sol-400: #f3d774;
+  --sol-500: #edc551;
+  --sol-600: #caa340;
+  --sol-700: #a98332;
+  --sol-800: #886524;
+  --sol-900: #6f501b;
+
+  /* regnorm */
+
+  --regnorm-100: #fcf9f2;
+  --regnorm-200: #f9f2e5;
+  --regnorm-300: #f0e4d2;
+  --regnorm-400: #e2d3c0;
+  --regnorm-500: #d1bca7;
+  --regnorm-600: #b2937b;
+  --regnorm-700: #926e56;
+  --regnorm-800: #744c38;
+  --regnorm-900: #5f3423;
+
+  /* COLOR | ALIAS */
+
+  /* BACKGROUNDS */
+
+  --background-color: #fffdf9;
+  --banner-background: #282828;
+  --footer-background1: #484848;
+  --footer-background2: #323232;
+
+  /* HEADINGS */
+
+  --color-headings: #000000;
+  --color-landingpage-headings: var(--sol-300);
+  --color-abonnement-headings: var(--sol-500);
+  --color-blomster-headings: var(--himmel-500);
+  --color-banner-heading: var(--sol-300);
+
+  /* TYPOGRAFI */
+  --color-white: #ffffff;
+
+  /* PROGRESSBARS */
+
+  /* PADDING */
+  --padding-mobile: 30px;
+  --padding-desktop: 80px;
+
+  /* ICON SIZES */
+  --icon-mobile-height: 40px;
+  --icon-mobile-width: 40px;
+
+  /* abonnement */
+  --color-abonnement-bar-disabled: var(--rust-200);
+  --color-abonnement-bar-active: var(--rust-500);
+  --color-abonnement-bar-text: #ffffff;
+
+  /* kurv */
+
+  --color-kurv-bar-disabled: var(--himmel-700);
+  --color-kurv-bar-active: var(--himmel-900);
+  --color-kurv-bar-text: var(--himmel-100);
+
+  /* BUTTONS */
+
+  /* primary */
+  --color-primary-button-background: var(--graes-500);
+  --color-primary-button-text: #ffffff;
+  --color-primary-button-hover-background: var(--graes-400);
+
+  /* secondary */
+  --color-secondary-button-background: #ffffff00;
+  --color-secondary-button-text: var(--rust-800);
+  --color-secondary-button-border: var(--rust-500);
+  --color-secondary-button-hover-background: var(--rust-200);
+
+  /* FONT */
+  /* font family */
+  font-family: "Orienta", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Sansita", sans-serif;
+
+  --font-body: "Orienta", sans-serif;
+  --main-heading: "Sansita", sans-serif;
+  --other-headings: "Roboto", sans-serif;
+  --button-text: "Roboto", sans-serif;
+
+  /* font sizes */
+
+  /* sizes */
+
+  /* mobile */
+  --h1-mobile: 2.488rem;
+  --h2-mobile: 2.074rem;
+  --h3-mobile: 1.728rem;
+  --h4-mobile: 1.44rem;
+  --h5-mobile: 1.2rem;
+  --body-mobile: 1rem;
+  --button-mobile: 0.938rem;
+  --footer-mobile: 0.938rem;
+  --banner-mobile: 6.875rem;
+  --abonnement-text-spand: 0.563rem;
+  --abonnement-text-info: 0.813rem;
+  --progressbar-number: 0.625rem;
+
+  /* desktop */
+
+  --h1-desktop: 5.653rem;
+  --h2-desktop: 3.998rem;
+  --h3-desktop: 2.827rem;
+  --h4-desktop: 1.999rem;
+  --h5-desktop: 1.414rem;
+  --body-desktop: 1.125rem;
+  --banner-desktop: 15.625rem;
+  --button-desktop: 1.375rem;
+  --progress-heading: 2rem;
+  --header_text_desktop: 1.2rem;
+
+  /* Global font size
+
+ --step--2: clamp(0.39rem, calc(-1.77rem + 8.88vw), 7.82rem);
+ --step--1: clamp(0.47rem, calc(-2.62rem + 12.65vw), 11.05rem);
+ --step-0: clamp(0.56rem, calc(-3.83rem + 18.01vw), 15.63rem);
+ --step-1: clamp(0.68rem, calc(-5.57rem + 25.61vw), 22.09rem);
+ --step-2: clamp(0.81rem, calc(-8.06rem + 36.39vw), 31.24rem);
+ --step-3: clamp(0.97rem, calc(-11.62rem + 51.66vw), 44.17rem);
+ --step-4: clamp(1.17rem, calc(-16.70rem + 73.30vw), 62.46rem);
+ --step-5: clamp(1.40rem, calc(-23.94rem + 103.94vw), 88.32rem);
+
+  /* font size   */
+
+  /* --font-size-3xl: var(--step-5);
+  --font-size-2xl: var(--step-4);
+  --font-size-xl: var(--step-3);
+  --font-size-lg: var(--step-2);
+  --font-size-md: var(--step-1);
+  --font-size-sm: var(--step-0);
+  --font-size-xs: var(--step--1);
+  --font-size-2xs: var(--step--2); */
+
+  /* font-weight | gobal */
+  --font-weight-thin: 100;
+  --font-weight-exlight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-exbold: 800;
+  --font-weight-black: 900;
+
+  /* SPACING */
+
+  /* mobile */
+  --xxxs-spacing-mobile: 5px;
+  --xxs-spacing-mobile: 9px;
+  --xs-spacing-mobile: 14px;
+  --s-spacing-mobile: 18px;
+  --m-spacing-mobile: 27px;
+  --l-spacing-mobile: 36px;
+  --xl-spacing-mobile: 54px;
+  --xxl-spacing-mobile: 72px;
+  --xxxl-spacing-mobile: 108px;
+
+  /* desktop */
+
+  --xxxs-spacing-desktop: 6px;
+  --xxs-spacing-desktop: 11px;
+  --xs-spacing-desktop: 17px;
+  --s-spacing-desktop: 22px;
+  --m-spacing-desktop: 33px;
+  --l-spacing-desktop: 44px;
+  --xl-spacing-desktop: 66px;
+  --xxl-spacing-desktop: 88px;
+  --xxxl-spacing-desktop: 132px;
+
+  /* spacing grid */
+
+  /* letter spacing */
+  --letter-spacing-dense: -1px;
+  --letter-spacing-double: 2px;
+
+  /* line height */
+  --line-height-heading: 1.25;
+  --line-height-reset: 1;
+  --line-height-text: 1.5;
+
+  /* shadows */
+  --shadow: rgba(70, 70, 70, 0.25);
+
+  /* border & border radius */
+
+  --radius-mobile: 3px;
+  --radius-desktop: 5px;
+  --border: 2px;
+}

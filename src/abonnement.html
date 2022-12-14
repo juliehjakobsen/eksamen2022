@@ -12,6 +12,133 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* MOBILE */
+      article {
+        background-color: var(--footer-background1);
+        padding-top: var(--xl-spacing-mobile);
+        text-align: center;
+      }
+
+      .adresser {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        gap: var(--l-spacing-mobile);
+      }
+
+      article p,
+      article a {
+        color: var(--background-color);
+        font-family: var(--font-body);
+        font-size: var(--body-mobile);
+      }
+
+      .ikoner {
+        display: flex;
+        gap: var(--m-spacing-mobile);
+        place-content: center;
+      }
+
+      .folgosher h4 {
+        padding-bottom: var(--l-spacing-mobile);
+      }
+
+      h4 {
+        font-size: var(--h4-mobile);
+        color: var(--background-color);
+        font-family: var(--font-body);
+      }
+
+      .butikker,
+      .informationer,
+      .abningstider {
+        display: grid;
+        gap: var(--l-spacing-mobile);
+      }
+
+      .dage,
+      .tidspunkter {
+        display: grid;
+        gap: var(--l-spacing-mobile);
+      }
+
+      .tider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .butikker,
+      .informationer,
+      .abningstider,
+      .folgosher {
+        padding-bottom: var(--xxl-spacing-mobile);
+      }
+
+      .nederst {
+        background-color: var(--footer-background2);
+        display: grid;
+        gap: var(--l-spacing-mobile);
+        padding-bottom: var(--xl-spacing-mobile);
+        padding-top: var(--l-spacing-mobile);
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        .desktop {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding-bottom: var(--xxl-spacing-desktop);
+        }
+
+        article {
+          padding-top: var(--xl-spacing-desktop);
+        }
+
+        .butikker,
+        .informationer,
+        .abningstider {
+          display: grid;
+          gap: var(--l-spacing-desktop);
+        }
+
+        .dage,
+        .tidspunker {
+          display: grid;
+          gap: var(--m-spacing-desktop);
+        }
+
+        .folgosher {
+          grid-column: 2;
+          padding-top: var(--xxl-spacing-desktop);
+        }
+
+        .butikker,
+        .informationer,
+        .abningstider,
+        .folgosher {
+          padding-bottom: 0;
+        }
+
+        article p,
+        article a {
+          font-family: var(--font-body);
+          font-size: var(--body-desktop);
+        }
+
+        h4 {
+          font-size: var(--h5-desktop);
+        }
+
+        .nederst {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
