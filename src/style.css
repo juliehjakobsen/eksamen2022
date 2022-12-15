@@ -2,9 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+}
+
 main {
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.burger {
+  display: flex;
+  justify-content: end;
+  /* border-bottom: 2px solid black; */
+}
+
+.burger button {
+  margin-right: var(--m-spacing-mobile);
+  margin-top: var(--s-spacing-mobile);
+  margin-bottom: var(--s-spacing-mobile);
+  font-size: var(--h2-mobile);
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  border-bottom: 2px solid black;
+}
+
+nav.shown {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column;
+}
+nav ul {
+  display: flex;
+  flex-flow: column;
+  margin-top: var(--xxl-spacing-mobile);
+  margin-left: var(--xxl-spacing-mobile);
+  height: 23rem;
+}
+
+.secondary_nav {
+  display: flex;
+  margin-top: var(--xxl-spacing-mobile);
+  gap: var(--xl-spacing-mobile);
+  margin-left: var(--xxl-spacing-mobile);
+  margin-bottom: var(--l-spacing-mobile);
+}
+
+header nav ul {
+  gap: 60px;
+}
+
+/* sortiment dropdown */
+
+.sortiment {
+  display: flex;
 }
 
 @media (min-width: 900px) {
