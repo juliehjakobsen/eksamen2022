@@ -54,6 +54,10 @@
         /* padding: var(--l-spacing-mobile); */
       }
 
+      .banner {
+        margin: none;
+      }
+
       /* farveskift mobil */
       #sort {
         width: 75px;
@@ -310,7 +314,7 @@
           display: block;
           background-color: var(--background-color);
           border-bottom: 2px solid black;
-          /* rigtig afstand fra figma 
+          /* rigtig afstand fra figma
       height: 286px;*/
         }
         .navigation_under_logo {
@@ -900,24 +904,25 @@
         </section>
       </article>
     </header>
-    <main>
-      <section class="baggrundsbillede">
-        <img class="pt-s-spacing-mobile" src="img/logo/bb_ill_sol.png" alt="" />
-        <div class="px-16 text-center">
-          <h1 class="pt-s-spacing-mobile text-h1-mobile text-sol-300">
-            Bring sæsonnen hjem til dig
-          </h1>
-          <p
-            class="pt-l-spacing-mobile font-font-body text-body-mobile text-sol-300"
-          >
-            Med et abonnement hos Blomster Bjarne får du leveret unikke buketter
-            fra hver sæson.
-          </p>
-          <div class="primary py-xl-spacing-mobile">
-            <button class="mx-auto">Tegn mit abonnement</button>
-          </div>
+
+    <section class="baggrundsbillede">
+      <img class="pt-s-spacing-mobile" src="img/logo/bb_ill_sol.png" alt="" />
+      <div class="px-16 text-center">
+        <h1 class="pt-s-spacing-mobile text-h1-mobile text-sol-300">
+          Bring sæsonnen hjem til dig
+        </h1>
+        <p
+          class="pt-l-spacing-mobile font-font-body text-body-mobile text-sol-300"
+        >
+          Med et abonnement hos Blomster Bjarne får du leveret unikke buketter
+          fra hver sæson.
+        </p>
+        <div class="primary py-xl-spacing-mobile">
+          <button class="mx-auto">Tegn mit abonnement</button>
         </div>
-      </section>
+      </div>
+    </section>
+    <main>
       <section>
         <h2
           class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile"
@@ -945,12 +950,13 @@
       </section>
       <section>
         <!-- banner -->
-        <div class="bg-color-headings">
-          <p
+        <div class="banner h-60 bg-color-headings">
+          <img class="max-w-7xl m-0" src="img/banner.svg" alt="" />
+          <!-- <p
             class="overflow-hidden font-other-headings text-banner-mobile font-bold italic text-sol-300"
           >
             BLOMSTER BJARNE
-          </p>
+          </p> -->
         </div>
       </section>
       <section>
@@ -981,7 +987,7 @@
           Sæsonens blomster
         </h2>
 
-        <!-- Card forside -->
+        <!-- Card til forsiden -->
         <article>
           <div class="article_wrapper">
             <div class="billede">
@@ -1021,6 +1027,7 @@
           <button class="mx-auto">Udforsk sortimentet</button>
         </div>
 
+        <!-- testimonials section X -->
         <h2
           class="pt-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
         >
@@ -1100,11 +1107,28 @@
                 />
               </svg>
             </div>
-            <div>
+            <div class="flex gap-[36px] px-l-spacing-mobile">
+              <svg width="30" height="30" viewBox="0 0 24 24">
+                <path
+                  fill="#888888"
+                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+                />
+              </svg>
               <p class="text-center font-font-body text-body-mobile">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ”
               </p>
+              <svg
+                class="rotate-180"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#888888"
+                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+                />
+              </svg>
             </div>
             <div>
               <p
@@ -1135,11 +1159,28 @@
                 />
               </svg>
             </div>
-            <div>
+            <div class="flex gap-[36px] px-l-spacing-mobile">
+              <svg width="30" height="30" viewBox="0 0 24 24">
+                <path
+                  fill="#888888"
+                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+                />
+              </svg>
               <p class="text-center font-font-body text-body-mobile">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ”
               </p>
+              <svg
+                class="rotate-180"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#888888"
+                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+                />
+              </svg>
             </div>
             <div>
               <p
