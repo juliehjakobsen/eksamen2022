@@ -1,5 +1,7 @@
 // ** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
+
   content: ["./src/**/*.{html,vue,js,ts,jsx,tsx}"],
   theme: {
     colors: {
@@ -86,11 +88,16 @@ module.exports = {
 
       /* TYPOGRAFI */
       "color-white": "#ffffff",
+      "color-black": "#000000",
 
       /* BUTTONS */
 
       /* secondary */
       "color-secondary-button-background": "#ffffff00",
+    },
+    maxWidth: {
+      "abb-card-mobile": "175px",
+      "abb-card-desktop": "375.39px",
     },
     fontFamily: {
       "font-body": ["Orienta", "sans-serif"],
