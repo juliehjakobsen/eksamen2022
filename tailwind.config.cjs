@@ -178,6 +178,9 @@ module.exports = {
         help: "20px",
 
         "max-width": "100%",
+
+        "hero-height": "700px",
+        "hero-border-height": "600px",
       },
     },
     borderRadius: {

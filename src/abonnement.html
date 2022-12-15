@@ -13,6 +13,16 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      label {
+        display: block;
+        background: lightgrey;
+      }
+
+      #demo:checked + label {
+        background: blue;
+        color: rgb(255, 0, 0);
+      }
+
       .baggrundsbillede {
         background-image: url(img/tekstur_baggrund.jpg);
         background-repeat: no-repeat;
@@ -61,10 +71,10 @@
         justify-content: center;
         padding-top: var(--l-spacing-mobile);
       }
-      .img {
+      /* .img {
         width: 80px;
         min-height: 80px;
-      }
+      } */
 
       .h4 {
         font-family: var(--other-headings);
@@ -115,10 +125,10 @@
     </style>
   </head>
   <body class="baggrundsbillede">
-    <a href="index.html">tilbage</a>
+    <a href="kurv.html">kurv</a>
     <header class="bg-rust-400 font-medium text-color-black">
       <div
-        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info"
+        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info lg:flex lg:justify-around lg:text-body-mobile"
       >
         <p>Køb dine blomster i vores butikker</p>
         <p>Bestil dit abonnement på vores webshop</p>
@@ -126,16 +136,24 @@
     </header>
 
     <!---------------------------------------------- HERO -->
-    <section class="bg-hero_image bg-cover pt-l-spacing-mobile text-center">
+    <section
+      class="bg-hero_image bg-cover pt-l-spacing-mobile text-center lg:h-hero-height"
+    >
       <div
-        class="mx-10 border-2 border-sol pt-m-spacing-mobile pl-10 pr-10 text-sol"
+        class="mx-10 border-2 border-sol pt-m-spacing-mobile pl-10 pr-10 text-sol lg:h-hero-border-height"
       >
-        <h1 class="font-main-heading text-h1-mobile">Abonnement</h1>
-        <p class="pt-s-spacing-mobile font-font-body text-h5-mobile">
+        <h1
+          class="font-main-heading text-h1-mobile lg:pt-xxxl-spacing-desktop lg:text-h1-desktop"
+        >
+          Abonnement
+        </h1>
+        <p
+          class="pt-s-spacing-mobile font-font-body text-h5-mobile lg:pt-s-spacing-desktop lg:text-h5-desktop"
+        >
           Et udvalg af blomster leveret til din dør
         </p>
         <p
-          class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile"
+          class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
         >
           Med et blomsterabonnement fra Blomster Bjarne kan du nyde et udvalg af
           årstidens blomster leveret direkte til din hoveddør *
@@ -155,39 +173,42 @@
         </svg>
       </div>
     </section>
+
     <main class="">
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section>
         <h2
-          class="pt-xxl-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
+          class="saadan pt-xxl-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
         >
           Sådan fungerer det
         </h2>
 
         <!------------------------------- SÅDAN GØR DU -->
         <article
-          class="scroll- flex gap-xxxl-spacing-mobile overflow-x-scroll lg:grid lg:overflow-x-auto"
+          class="flex gap-xxxl-spacing-mobile overflow-x-scroll lg:grid lg:overflow-hidden lg:overflow-x-auto"
         >
-          <div class="article">
-            <div class="ikon">
-              <img class="img" src="img/ikoner/blomst_ikon.svg" alt="" />
-            </div>
-            <div class="info">
-              <div><h3 class="h4">1. Vælg din buket</h3></div>
-              <div>
-                <p class="tekst">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
+          <input type="checkbox" id="demo" />
+          <label for="demo">
+            <div class="article">
+              <div class="ikon">
+                <img class="img" src="img/ikoner/blomst_ikon.svg" alt="" />
               </div>
-            </div>
-            <div class="progress">
-              <div>
-                <ProgressBarCard />
+              <div class="info">
+                <div><h3 class="h4">1. Vælg din buket</h3></div>
+                <div>
+                  <p class="tekst">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
+              <div class="progress">
+                <div>
+                  <ProgressBarCard />
+                </div>
+              </div></div
+          ></label>
 
           <div class="article">
             <div class="ikon">
