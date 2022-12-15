@@ -13,6 +13,12 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      .baggrundsbillede {
+        background-image: url(img/tekstur_baggrund.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
       button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
@@ -108,16 +114,16 @@
       }
     </style>
   </head>
-  <body>
-    <header>
-      <a href="kurv.html">KURV</a>
+  <body class="baggrundsbillede">
+    <a href="index.html">tilbage</a>
+    <header class="bg-rust-400 font-medium text-color-black">
+      <div
+        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info"
+      >
+        <p>Køb dine blomster i vores butikker</p>
+        <p>Bestil dit abonnement på vores webshop</p>
+      </div>
     </header>
-    <div
-      class="grid pb-10 text-center font-font-body text-abonnement-text-info"
-    >
-      <p>Køb dine blomster i vores butikker</p>
-      <p>Bestil dit abonnement på vores webshop</p>
-    </div>
 
     <!---------------------------------------------- HERO -->
     <section class="bg-hero_image bg-cover pt-l-spacing-mobile text-center">
@@ -131,8 +137,8 @@
         <p
           class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile"
         >
-          Med et blomsterabonnement kan du nyde et udvalg af årstidens blomster
-          leveret direkte til din hoveddør*
+          Med et blomsterabonnement fra Blomster Bjarne kan du nyde et udvalg af
+          årstidens blomster leveret direkte til din hoveddør *
         </p>
       </div>
       <div class="py-s-spacing-mobile">
@@ -149,7 +155,7 @@
         </svg>
       </div>
     </section>
-    <main>
+    <main class="">
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section>
         <h2
@@ -255,10 +261,10 @@
           </button></a
         >
 
-        <!------------------------------- KNAP -->
-        <article class="mt-xl-spacing-mobile">
+        <!------------------------------- INFO -->
+        <article class="my-xl-spacing-mobile grid gap-s-spacing-mobile">
           <p class="mx-auto font-font-body text-abonnement-text-info">
-            *Udlevering vil finde sted om torsdagen inden for arbejdstiden. Du
+            * Udlevering vil finde sted om torsdagen inden for arbejdstiden. Du
             vil blive opkrævet en engangsbetaling på 20 DKK. depositum for
             leveringsspanden.
           </p>
