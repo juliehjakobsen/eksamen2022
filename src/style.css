@@ -10,7 +10,9 @@ main {
   margin-left: 30px;
   margin-right: 30px;
 }
-
+body {
+  background-color: var(--background-color);
+}
 .burger {
   display: flex;
   justify-content: end;
@@ -63,8 +65,8 @@ header nav ul {
 
 /* sortiment dropdown */
 
-.sortiment {
-  display: flex;
+.dropdown {
+  height: 40px;
 }
 
 @media (min-width: 900px) {
