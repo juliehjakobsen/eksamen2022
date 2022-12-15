@@ -13,16 +13,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      label {
-        display: block;
-        background: lightgrey;
-      }
-
-      #demo:checked + label {
-        background: blue;
-        color: rgb(255, 0, 0);
-      }
-
       .baggrundsbillede {
         background-image: url(img/tekstur_baggrund.jpg);
         background-repeat: no-repeat;
@@ -71,10 +61,10 @@
         justify-content: center;
         padding-top: var(--l-spacing-mobile);
       }
-      /* .img {
+      .img {
         width: 80px;
         min-height: 80px;
-      } */
+      }
 
       .h4 {
         font-family: var(--other-headings);
@@ -82,11 +72,17 @@
         padding-top: var(--l-spacing-mobile);
         padding-bottom: var(--l-spacing-mobile);
       }
+
+      .info {
+        padding-left: var(--l-spacing-mobile);
+      }
+
       .tekst {
         font-family: var(--font-body);
         font-size: var(--body-mobile);
         padding-bottom: var(--l-spacing-mobile);
       }
+
       .progress {
         display: grid;
         place-content: center;
@@ -97,25 +93,26 @@
       @media (min-width: 900px) {
         .article {
           display: flex;
-          max-width: 550px;
-          height: 300px;
-          padding: var(--l-spacing-desktop);
+          padding: var(--m-spacing-desktop);
         }
+
         .ikon {
           display: flex;
           place-items: center;
         }
         .img {
-          max-width: 100px;
-          height: 100px;
+          max-width: 120px;
         }
         .h4 {
           font-size: var(--h4-desktop);
-          padding-top: var(--xl-spacing-desktop);
-          padding-bottom: var(--l-spacing-desktop);
+          padding-top: var(--xs-spacing-desktop);
+          padding-bottom: var(--m-spacing-desktop);
         }
         .tekst {
           font-size: var(--body-desktop);
+        }
+
+        .info {
           padding-left: var(--l-spacing-desktop);
         }
         .progress {
@@ -176,39 +173,61 @@
 
     <main class="">
       <!---------------------------------------------- FØRSTE SEKTION -->
-      <section>
+      <section class="pb-xxl-spacing-mobile lg:pb-xxl-spacing-desktop">
+        <!------------------------------- KNAP -->
+
+        <a href="abonnement1.html"
+          ><button class="mx-auto mt-xl-spacing-mobile">
+            Tegn mit abonnement
+          </button></a
+        >
+
+        <!------------------------------- INFO -->
+        <article class="my-xl-spacing-mobile grid gap-s-spacing-mobile">
+          <p
+            class="mx-auto w-1/2 font-font-body text-abonnement-text-info lg:text-body-desktop"
+          >
+            * Udlevering vil finde sted om torsdagen inden for arbejdstiden. Du
+            vil blive opkrævet en engangsbetaling på 20 DKK. depositum for
+            leveringsspanden.
+          </p>
+          <p
+            class="mx-auto w-1/2 font-font-body text-abonnement-text-info lg:text-body-desktop"
+          >
+            * Billederne er blot en repræsentation af, hvad spanden kunne
+            indeholde til prisen. Typerne af blomster kan variere afhængigt af
+            sæsonen.
+          </p>
+        </article>
+
         <h2
-          class="saadan pt-xxl-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
+          class="pt-s-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
         >
           Sådan fungerer det
         </h2>
 
         <!------------------------------- SÅDAN GØR DU -->
         <article
-          class="flex gap-xxxl-spacing-mobile overflow-x-scroll lg:grid lg:overflow-hidden lg:overflow-x-auto"
+          class="flex gap-xl-spacing-mobile overflow-x-scroll lg:grid lg:grid-cols-2 lg:overflow-hidden lg:overflow-x-auto"
         >
-          <input type="checkbox" id="demo" />
-          <label for="demo">
-            <div class="article">
-              <div class="ikon">
-                <img class="img" src="img/ikoner/blomst_ikon.svg" alt="" />
+          <div class="article">
+            <div class="ikon">
+              <img class="img" src="img/ikoner/blomst_ikon.svg" alt="" />
+            </div>
+            <div class="info">
+              <h3 class="h4">1. Vælg din buket</h3>
+              <p class="tekst">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation
+              </p>
+            </div>
+            <!-- <div class="progress">
+              <div>
+                <ProgressBarCard />
               </div>
-              <div class="info">
-                <div><h3 class="h4">1. Vælg din buket</h3></div>
-                <div>
-                  <p class="tekst">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  </p>
-                </div>
-              </div>
-              <div class="progress">
-                <div>
-                  <ProgressBarCard />
-                </div>
-              </div></div
-          ></label>
+            </div> -->
+          </div>
 
           <div class="article">
             <div class="ikon">
@@ -272,28 +291,6 @@
               </div>
             </div>
           </div>
-        </article>
-
-        <!------------------------------- KNAP -->
-
-        <a href="abonnement1.html"
-          ><button class="mx-auto mt-xl-spacing-mobile">
-            Tegn mit abonnement
-          </button></a
-        >
-
-        <!------------------------------- INFO -->
-        <article class="my-xl-spacing-mobile grid gap-s-spacing-mobile">
-          <p class="mx-auto font-font-body text-abonnement-text-info">
-            * Udlevering vil finde sted om torsdagen inden for arbejdstiden. Du
-            vil blive opkrævet en engangsbetaling på 20 DKK. depositum for
-            leveringsspanden.
-          </p>
-          <p class="mx-auto font-font-body text-abonnement-text-info">
-            * Billederne er blot en repræsentation af, hvad spanden kunne
-            indeholde til prisen. Typerne af blomster kan variere afhængigt af
-            sæsonen.
-          </p>
         </article>
       </section>
     </main>
