@@ -12,6 +12,54 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .banner {
+        animation-name: banner_animate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes banner_animate {
+        0% {
+          transform: translateX(-400px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      .banner_delay {
+        animation-name: banner_animate_delay;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes banner_animate_delay {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(400px);
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="overflow-x-hidden">
+        <!-- banner -->
+        <div class="bg-color-headings">
+          <img
+            class="banner absolute top-0 left-0"
+            src="img/banner.svg"
+            alt=""
+          />
+          <img
+            class="banner_delay absolute top-0 left-0"
+            src="img/banner.svg"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
