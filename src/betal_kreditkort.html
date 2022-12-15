@@ -170,7 +170,7 @@
             <h1
               class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h2-desktop"
             >
-              Betaling
+              Kreditkort
             </h1>
           </div>
         </article>
@@ -217,124 +217,85 @@
           </div>
         </article>
       </section>
-      <div class="lg:flex lg:gap-10">
+      <div class="">
         <section>
           <article>
-            <div>
-              <h2
-                class="pb-xs-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
-              >
-                Ordreoversigt
-              </h2>
-            </div>
-            <div class="rounded-radius-mobile border-2 border-color-headings">
-              <div class="flex lg:gap-8">
-                <div class="my-auto w-1/2 pt-xs-spacing-mobile lg:w-full">
-                  <img src="img/abonnement_filler.webp" alt="" />
+            <form
+              class="lg:flex lg:justify-around lg:pb-xl-spacing-desktop"
+              action="udfyld"
+            >
+              <div class="">
+                <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                  <h4
+                    class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                  >
+                    Fulde navn kortholder <span class="text-rust-500">*</span>
+                  </h4>
+                  <label for="betaling">
+                    <input
+                      class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                      type="text"
+                      value=""
+                      placeholder="Fx. Sofie Larsen"
+                    />
+                  </label>
                 </div>
-                <div class="lg:w-[600px]">
-                  <div class="pt-l-spacing-mobile lg:pt-l-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                  <h4
+                    class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                  >
+                    Kortnummer <span class="text-rust-500">*</span>
+                  </h4>
+                  <label for="betaling">
+                    <input
+                      class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                      type="text"
+                      value=""
+                      placeholder="Fx. 1234 1234 1234 1234"
+                    />
+                  </label>
+                </div>
+                <div class="flex gap-10">
+                  <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                    <h4
+                      class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                     >
-                      Lille
-                    </p>
+                      Udløbsdato <span class="text-rust-500">*</span>
+                    </h4>
+                    <label for="betaling">
+                      <input
+                        class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                        type="text"
+                        value=""
+                        placeholder="MM / ÅÅ"
+                      />
+                    </label>
                   </div>
-                  <div class="pt-m-spacing-mobile lg:pt-xl-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                  <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                    <h4
+                      class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                     >
-                      Neutral og tæt
-                    </p>
-                  </div>
-                  <div class="pt-m-spacing-mobile lg:pt-xl-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Sensitiv (nej)
-                    </p>
-                  </div>
-                  <div class="pt-m-spacing-mobile lg:pt-xl-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Levering hver anden uge
-                    </p>
+                      Kontrolcifre <span class="text-rust-500">*</span>
+                    </h4>
+                    <label for="betaling">
+                      <input
+                        class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                        type="tel"
+                        value=""
+                        placeholder="CVC"
+                      />
+                    </label>
                   </div>
                 </div>
               </div>
-              <div
-                class="flex place-content-center py-l-spacing-mobile font-medium lg:py-m-spacing-desktop"
-              >
-                <h4
-                  class="font-other-headings text-h4-mobile lg:text-h4-desktop"
-                >
-                  Subtotal 620 kr
-                </h4>
-              </div>
-            </div>
-            <div class="primary py-xl-spacing-mobile lg:py-xl-spacing-desktop">
-              <button class="mx-auto">
-                <a href="abonnement.html">Rediger Ordre</a>
-              </button>
-            </div>
-          </article>
-        </section>
-        <section>
-          <article class="pb-xxl-spacing-mobile">
-            <div>
-              <h2
-                class="pb-l-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
-              >
-                Betalingsmetode
-              </h2>
-            </div>
-            <div class="flex flex-col gap-[27px] lg:gap-[44px]">
-              <a href="betal_kreditkort.html">
-                <div
-                  class="grid h-[70px] w-[330px] border-2 border-color-black lg:h-[100px] lg:w-[490px]"
-                >
-                  <h3
-                    class="m-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Mobile Pay
-                  </h3>
-                </div></a
-              >
-              <a class="" href="betal_kreditkort.html">
-                <div
-                  class="flex h-[70px] w-[330px] place-content-center gap-10 border-2 border-color-black lg:h-[100px] lg:w-[490px]"
-                >
-                  <img
-                    class="my-auto h-10 w-10"
-                    src="img/ikoner/kreditkort_ikon.svg"
-                    alt=""
-                  />
-                  <h3
-                    class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Kreditkort
-                  </h3>
-                </div></a
-              >
 
-              <a href="betal_kreditkort.html">
-                <div
-                  class="flex h-[70px] w-[330px] place-content-center gap-10 border-2 border-color-black lg:h-[100px] lg:w-[490px]"
-                >
-                  <img
-                    class="my-auto h-10 w-10"
-                    src="img/ikoner/gavekort_ikon.svg"
-                    alt=""
-                  />
-                  <h3
-                    class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Gavekort
-                  </h3>
-                </div></a
-              >
-            </div>
+              <div class="flex gap-5">
+                <input class="h-8 w-8" type="checkbox" />
+                <p class="font-font-body text-body-mobile lg:text-body-desktop">
+                  Jeg har læst og accepterer vilkår og betingelser
+                </p>
+              </div>
+            </form>
           </article>
         </section>
       </div>
