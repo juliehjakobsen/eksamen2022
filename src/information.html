@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blomster Bjarne - Kurv (betaling)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orienta&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      p {
+        margin-block: 0;
+      }
+      [class^="ball"] {
+        display: grid;
+        place-content: center;
+      }
+      .overskrift {
+        font-size: var(--abonnement-text-info);
+        font-family: var(--font-body);
+        font-weight: var(--font-weight-bold);
+      }
+      .full_bar {
+        display: flex;
+
+        place-items: center;
+      }
+      .bar1,
+      .bar2,
+      .bar3,
+      .bar4 {
+        display: flex;
+
+        place-items: center;
+      }
+
+      .ball1,
+      .ball2,
+      .ball3,
+      .ball4 {
+        margin-left: -3px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-kurv-bar-disabled);
+        border-radius: 100%;
+        font-family: var(--font-body);
+        font-size: var(--progressbar-number);
+
+        color: var(--color-kurv-bar-text);
+      }
+      .ball1,
+      .ball2 {
+        background-color: var(--color-kurv-bar-active);
+        z-index: 1;
+      }
+
+      .line1,
+      .line2,
+      .line3 {
+        width: 60px;
+        height: 0px;
+        border: solid 2px var(--color-kurv-bar-disabled);
+        margin-left: -3px;
+      }
+      .line1 {
+        border: solid 2px var(--color-kurv-bar-active);
+      }
+      @media (min-width: 900px) {
+        .overskrift {
+          font-size: var(--h4-desktop);
+        }
+        .ball1,
+        .ball2,
+        .ball3,
+        .ball4 {
+          width: 50px;
+          height: 50px;
+          background-color: var(--color-kurv-bar-disabled);
+          border-radius: 100%;
+          font-family: var(--font-body);
+          font-size: var(--h4-desktop);
+
+          color: var(--color-kurv-bar-text);
+        }
+        .ball1 {
+          background-color: var(--color-kurv-bar-active);
+          z-index: 1;
+        }
+
+        .line1,
+        .line2,
+        .line3 {
+          width: 180px;
+          height: 0px;
+          border: 5px solid var(--color-kurv-bar-disabled);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <div>
+            <h1
+              class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop"
+            >
+              Information
+            </h1>
+          </div>
+        </article>
+        <article
+          class="grid place-content-center pb-m-spacing-mobile lg:pb-m-spacing-desktop"
+        >
+          <div class="full_bar">
+            <div>
+              <p class="overskrift -ml-2 lg:-ml-3">Kurv</p>
+              <div class="bar1">
+                <div class="ball1">
+                  <p>1</p>
+                </div>
+                <div class="line1"></div>
+              </div>
+            </div>
+
+            <div>
+              <p class="overskrift -ml-1.5 lg:-ml-2">Info</p>
+              <div class="bar2">
+                <div class="ball2">
+                  <p>2</p>
+                </div>
+                <div class="line2"></div>
+              </div>
+            </div>
+            <div>
+              <p class="overskrift -ml-2 lg:-ml-5">Betal</p>
+              <div class="bar3">
+                <div class="ball3">
+                  <p>3</p>
+                </div>
+                <div class="line3"></div>
+              </div>
+            </div>
+            <div>
+              <p class="overskrift -ml-4 lg:-ml-9">Bekræft</p>
+              <div class="bar4">
+                <div class="ball4">
+                  <p>4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section>
+        <article>
+          <form action="udfyld">
+            <div>
+              <h4 class="font-other-headings text-h4-mobile font-medium">
+                Fornavn og efternavn
+              </h4>
+              <label for="betaling">
+                <input
+                  class="w-full font-font-body text-body-mobile"
+                  type="text"
+                  value=""
+                  placeholder="Fx. Sofie Larsen"
+                />
+              </label>
+            </div>
+            <div>
+              <h4 class="font-other-headings text-h4-mobile font-medium">
+                Leveringsadresse
+              </h4>
+              <label for="betaling">
+                <input
+                  class="w-full font-font-body text-body-mobile"
+                  type="text"
+                  value=""
+                  placeholder="Fx. Strandvejen 167, 2900 Hellerup"
+                />
+              </label>
+            </div>
+            <div>
+              <h4 class="font-other-headings text-h4-mobile font-medium">
+                Email
+              </h4>
+              <label for="betaling">
+                <input
+                  class="w-full font-font-body text-body-mobile"
+                  type="email"
+                  value=""
+                  placeholder="Fx. sofie@gmail.com"
+                />
+              </label>
+            </div>
+            <div>
+              <h4 class="font-other-headings text-h4-mobile font-medium">
+                Telefonnummer
+              </h4>
+              <label for="betaling">
+                <input
+                  class="w-full font-font-body text-body-mobile"
+                  type="tel"
+                  value=""
+                  placeholder="Fx. +45 12345678"
+                />
+              </label>
+            </div>
+            <div>
+              <h4 class="font-other-headings text-h4-mobile font-medium">
+                Bemærkning til bestilling
+              </h4>
+              <label for="betaling">
+                <input
+                  class="w-full font-font-body text-body-mobile"
+                  type="text"
+                  value=""
+                  placeholder="Fx. særlig bemærkninger for levering"
+                />
+              </label>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
