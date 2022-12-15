@@ -139,22 +139,17 @@
 
           color: var(--color-kurv-bar-text);
         }
+        .ball1 {
+          background-color: var(--color-kurv-bar-active);
+          z-index: 1;
+        }
 
+        .line1,
         .line2,
         .line3 {
           width: 180px;
           height: 0px;
           border: 5px solid var(--color-kurv-bar-disabled);
-        }
-        .ball1,
-        .ball2 {
-          background-color: var(--color-kurv-bar-active);
-          z-index: 1;
-        }
-        .line1 {
-          width: 180px;
-          height: 0px;
-          border: 5px solid var(--color-kurv-bar-active);
         }
       }
     </style>
@@ -210,137 +205,6 @@
                   <p>4</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section class="pt-xxl-spacing-mobile lg:pt-l-spacing-desktop">
-        <article class="">
-          <form
-            class="lg:flex lg:justify-around lg:pb-xl-spacing-desktop"
-            action="udfyld"
-          >
-            <div class="">
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Fornavn og efternavn
-                </h4>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="text"
-                    value=""
-                    placeholder="Fx. Sofie Larsen"
-                  />
-                </label>
-              </div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Leveringsadresse
-                </h4>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="text"
-                    value=""
-                    placeholder="Fx. Strandvejen 167, 2900 Hellerup"
-                  />
-                </label>
-              </div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Email
-                </h4>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="email"
-                    value=""
-                    placeholder="Fx. sofie@gmail.com"
-                  />
-                </label>
-              </div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Telefonnummer
-                </h4>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="tel"
-                    value=""
-                    placeholder="Fx. +45 12345678"
-                  />
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Bemærkning til bestilling
-                </h4>
-                <label for="betaling">
-                  <textarea
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    name=""
-                    id=""
-                    cols="39"
-                    rows="10"
-                    placeholder="Fx. særlig bemærkninger for levering"
-                  ></textarea>
-                </label>
-              </div>
-              <div>
-                <h5
-                  class="pb-xs-spacing-mobile font-font-body text-h5-mobile lg:pb-s-spacing-desktop lg:text-h5-desktop"
-                >
-                  Vil du have besked, når der er leveret?
-                </h5>
-                <div class="grid gap-5">
-                  <div class="flex gap-5">
-                    <input class="h-8 w-8" type="checkbox" />
-                    <p
-                      class="font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Jeg ønsker en SMS, pr levering
-                    </p>
-                  </div>
-                  <div class="flex gap-5">
-                    <input class="h-8 w-8" type="checkbox" />
-
-                    <p
-                      class="font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Jeg ønsker en E-mail, pr levering
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
-          <div
-            class="flex justify-between pt-xl-spacing-mobile lg:justify-evenly lg:pt-xl-spacing-desktop"
-          >
-            <div class="secondary">
-              <button class="mx-auto">
-                <a href="kurv.html">Tilbage</a>
-              </button>
-            </div>
-            <div class="primary">
-              <button class="mx-auto">
-                <a href="betal.html">Videre</a>
-              </button>
             </div>
           </div>
         </article>
