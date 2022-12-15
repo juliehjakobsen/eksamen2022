@@ -72,30 +72,7 @@
       .line2 {
         border: solid 2px var(--color-kurv-bar-active);
       }
-      .secondary button {
-        background-color: var(--color-secondary-button-background);
-        color: var(--color-secondary-button-text);
-        border: var(--color-secondary-button-border) 2px solid;
 
-        font-family: var(--button-text);
-        font-weight: var(--font-weight-semibold);
-        font-size: var(--button-mobile);
-        padding: 15px 40px;
-        max-width: 50%;
-        height: 50px;
-
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--radius-mobile);
-
-        gap: 10px;
-      }
-      .secondary button:hover {
-        background-color: var(--color-secondary-button-hover-background);
-      }
       .primary button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
@@ -119,7 +96,6 @@
       }
 
       @media (min-width: 900px) {
-        .secondary button,
         .primary button {
           font-size: var(--button-desktop);
           padding: 15px 60px;
@@ -222,7 +198,7 @@
         <article>
           <div class="py-s-spacing-mobile lg:flex">
             <a
-              class="font-font-body text-abonnement-text-spand underline opacity-50 hover:opacity-100"
+              class="font-font-body text-abonnement-text-spand underline opacity-50 hover:opacity-100 lg:text-body-mobile"
               href="betal.html"
               >Tilbage</a
             >
@@ -306,7 +282,7 @@
           </div>
           <div class="primary py-xl-spacing-mobile lg:py-xl-spacing-desktop">
             <button class="mx-auto">
-              <a href="bekraeft.html">Betal</a>
+              <a href="betal_bekraeft.html">Betal</a>
             </button>
           </div>
         </article>

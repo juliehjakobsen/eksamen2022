@@ -46,18 +46,12 @@
         margin-left: -3px;
         width: 20px;
         height: 20px;
-        background-color: var(--color-kurv-bar-disabled);
+        background-color: var(--color-kurv-bar-active);
         border-radius: 100%;
         font-family: var(--font-body);
         font-size: var(--progressbar-number);
 
         color: var(--color-kurv-bar-text);
-      }
-      .ball1,
-      .ball2,
-      .ball3 {
-        background-color: var(--color-kurv-bar-active);
-        z-index: 1;
       }
 
       .line1,
@@ -65,12 +59,8 @@
       .line3 {
         width: 60px;
         height: 0px;
-        border: solid 2px var(--color-kurv-bar-disabled);
-        margin-left: -3px;
-      }
-      .line1,
-      .line2 {
         border: solid 2px var(--color-kurv-bar-active);
+        margin-left: -3px;
       }
 
       .primary button {
@@ -110,7 +100,7 @@
         .ball4 {
           width: 50px;
           height: 50px;
-          background-color: var(--color-kurv-bar-disabled);
+          background-color: var(--color-kurv-bar-active);
           border-radius: 100%;
           font-family: var(--font-body);
           font-size: var(--h4-desktop);
@@ -118,19 +108,9 @@
           color: var(--color-kurv-bar-text);
         }
 
-        .line3 {
-          width: 180px;
-          height: 0px;
-          border: 5px solid var(--color-kurv-bar-disabled);
-        }
-        .ball1,
-        .ball2,
-        .ball3 {
-          background-color: var(--color-kurv-bar-active);
-          z-index: 1;
-        }
         .line1,
-        .line2 {
+        .line2,
+        .line3 {
           width: 180px;
           height: 0px;
           border: 5px solid var(--color-kurv-bar-active);
@@ -146,7 +126,7 @@
             <h1
               class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h2-desktop"
             >
-              Betaling
+              Bekræftelse
             </h1>
           </div>
         </article>
@@ -186,25 +166,33 @@
               <p class="overskrift -ml-4 lg:-ml-9">Bekræft</p>
               <div class="bar4">
                 <div class="ball4">
-                  <p>4</p>
+                  <a href="betal_bekraeft.html"><p>4</p></a>
                 </div>
               </div>
             </div>
           </div>
         </article>
       </section>
-      <div class="lg:flex lg:gap-10">
-        <section>
+      <div class="py-s-spacing-mobile lg:flex">
+        <a
+          class="font-font-body text-abonnement-text-spand underline opacity-50 hover:opacity-100 lg:text-body-mobile"
+          href="betal_kreditkort.html"
+          >Tilbage</a
+        >
+      </div>
+
+      <div class="lg:grid lg:grid-cols-2 lg:gap-10">
+        <section class="pb-xl-spacing-mobile">
           <article>
             <div>
               <h2
-                class="pb-xs-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
+                class="pb-m-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
               >
                 Ordreoversigt
               </h2>
             </div>
             <div class="rounded-radius-mobile border-2 border-color-headings">
-              <div class="flex lg:gap-8">
+              <div class="flex lg:gap-10">
                 <div class="my-auto w-1/2 pt-xs-spacing-mobile lg:w-full">
                   <img src="img/abonnement_filler.webp" alt="" />
                 </div>
@@ -249,72 +237,127 @@
                 </h4>
               </div>
             </div>
-            <div class="primary py-xl-spacing-mobile lg:py-xl-spacing-desktop">
-              <button class="mx-auto">
-                <a href="abonnement.html">Rediger Ordre</a>
-              </button>
-            </div>
           </article>
         </section>
         <section>
-          <article class="pb-xxl-spacing-mobile">
+          <article class="pb-xl-spacing-mobile">
+            <div>
+              <h2
+                class="pb-m-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
+              >
+                Information
+              </h2>
+            </div>
+            <div class="border-color-heading rounded-radius-mobile border-2">
+              <div
+                class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:pt-l-spacing-desktop"
+              >
+                <h4
+                  class="font-other-headings text-h4-mobile lg:text-h4-desktop"
+                >
+                  Navn
+                </h4>
+                <p
+                  class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  Sofie Larsen
+                </p>
+              </div>
+              <div
+                class="flex justify-between px-s-spacing-mobile pb-m-spacing-mobile lg:px-s-spacing-desktop lg:py-xl-spacing-desktop"
+              >
+                <h4
+                  class="font-other-headings text-h4-mobile lg:text-h4-desktop"
+                >
+                  Levering
+                </h4>
+                <p
+                  class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  Strandvejen 167
+                  <br />
+                  2900 Hellerup
+                </p>
+              </div>
+              <div
+                class="flex justify-between px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
+              >
+                <h4
+                  class="font-other-headings text-h4-mobile lg:text-h4-desktop"
+                >
+                  E-mail
+                </h4>
+                <p
+                  class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sofie@gmail.com
+                </p>
+              </div>
+              <div
+                class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
+              >
+                <h4
+                  class="font-other-headings text-h4-mobile lg:text-h4-desktop"
+                >
+                  Telefonnummer
+                </h4>
+                <p
+                  class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  +45 12345678
+                </p>
+              </div>
+
+              <div
+                class="flex place-content-center pb-l-spacing-mobile font-medium lg:py-m-spacing-desktop"
+              >
+                <p class="font-font-body text-body-mobile lg:text-body-desktop">
+                  Jeg ønsker en SMS, pr levering
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+      <div class="lg:grid lg:grid-cols-2">
+        <section>
+          <article class="pb-xl-spacing-mobile">
             <div>
               <h2
                 class="pb-l-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
               >
                 Betalingsmetode
               </h2>
+            </div>
+            <div
+              class="flex h-[70px] w-full place-content-center gap-10 border-2 border-color-black lg:h-[100px] lg:w-[490px]"
+            >
+              <img
+                class="my-auto h-10 w-10"
+                src="img/ikoner/kreditkort_ikon.svg"
+                alt=""
+              />
               <h3
-                class="pb-xs-spacing-mobile text-center font-other-headings text-h3-mobile"
+                class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
               >
-                - Vælg betalingsmetode -
+                Kreditkort
               </h3>
             </div>
-            <div class="flex flex-col gap-[27px] lg:gap-[44px]">
-              <a href="betal_kreditkort.html">
-                <div
-                  class="grid h-[70px] w-[330px] border-2 border-color-black lg:h-[100px] lg:w-[490px]"
-                >
-                  <h3
-                    class="m-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Mobile Pay
-                  </h3>
-                </div></a
+          </article>
+        </section>
+        <section>
+          <article class="">
+            <div class="primary py-xl-spacing-mobile lg:py-xl-spacing-desktop">
+              <p
+                class="text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
-              <a class="" href="betal_kreditkort.html">
-                <div
-                  class="flex h-[70px] w-[330px] place-content-center gap-10 border-2 border-color-black lg:h-[100px] lg:w-[490px]"
-                >
-                  <img
-                    class="my-auto h-10 w-10"
-                    src="img/ikoner/kreditkort_ikon.svg"
-                    alt=""
-                  />
-                  <h3
-                    class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Kreditkort
-                  </h3>
-                </div></a
-              >
-
-              <a href="betal_kreditkort.html">
-                <div
-                  class="flex h-[70px] w-[330px] place-content-center gap-10 border-2 border-color-black lg:h-[100px] lg:w-[490px]"
-                >
-                  <img
-                    class="my-auto h-10 w-10"
-                    src="img/ikoner/gavekort_ikon.svg"
-                    alt=""
-                  />
-                  <h3
-                    class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Gavekort
-                  </h3>
-                </div></a
-              >
+                En bekræftelse vil blive sendt til dig på din mail
+              </p>
+              <div class="pt-xl-spacing-mobile">
+                <button class="mx-auto">
+                  <a href="tak.html">Bekræft</a>
+                </button>
+              </div>
             </div>
           </article>
         </section>
