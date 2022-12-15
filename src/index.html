@@ -22,34 +22,43 @@
       .scene {
         width: 200px;
         height: 260px;
+        border: 1px solid #ccc;
+        margin: 40px 0;
         perspective: 600px;
       }
 
-      .kort {
+      .card {
         width: 100%;
         height: 100%;
-        position: relative;
         transition: transform 1s;
         transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
       }
 
-      .kort__face {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        backface-visibility: hidden;
-      }
-
-      .kort__face--front {
-        background: red;
-      }
-
-      .kort__face--back {
-        background: blue;
+      .card.is-flipped {
         transform: rotateY(180deg);
       }
 
-      .kort.is-flipped {
+      .card__face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 260px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .card__face--front {
+        background: red;
+      }
+
+      .card__face--back {
+        background: blue;
         transform: rotateY(180deg);
       }
 
@@ -1102,14 +1111,13 @@
         </h2>
 
         <!-- tre cards til forside -->
-        <div class="scene">
-          <div id="container" class="kort">
-            <div id="front_card" class="kort__face kort__face--front">
-              front
-            </div>
-            <div class="kort__face kort__face--back">back</div>
+        <div class="scene scene--card">
+          <div class="card">
+            <div class="card__face card__face--front">front</div>
+            <div class="card__face card__face--back">back</div>
           </div>
         </div>
+        <p>Click card to flip.</p>
         <!-- Card til forsiden solsikke -->
         <article>
           <div class="article_wrapper">
@@ -1441,19 +1449,10 @@
     </main>
     <footer></footer>
     <script>
-      const card = document.querySelector("#container");
-
-      window.addEventListener("load", sidenVises);
-
-      function sidenVises() {
-        console.log("halllllo");
-        document.querySelector("#front_card").addEventListener("click", Flip);
-      }
-
-      function Flip() {
-        card.classList.add("kort.is-flipped");
-        console.log("hej");
-      }
+      var card = document.querySelector(".card");
+      card.addEventListener("click", function () {
+        card.classList.toggle("is-flipped");
+      });
     </script>
     <script type="module" src="main.js"></script>
   </body>
