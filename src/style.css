@@ -63,6 +63,16 @@ header nav ul {
   gap: 60px;
 }
 
+.navigation_desktop {
+  display: none;
+}
+
+@media (min-width: 900) {
+  header nav ul {
+    display: flex;
+  }
+}
+
 /* sortiment dropdown */
 
 .dropdown {

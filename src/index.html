@@ -19,49 +19,6 @@
         background-size: cover;
       }
 
-      .scene {
-        width: 200px;
-        height: 260px;
-        border: 1px solid #ccc;
-        margin: 40px 0;
-        perspective: 600px;
-      }
-
-      .card {
-        width: 100%;
-        height: 100%;
-        transition: transform 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
-      }
-
-      .card.is-flipped {
-        transform: rotateY(180deg);
-      }
-
-      .card__face {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        line-height: 260px;
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        font-size: 40px;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-      }
-
-      .card__face--front {
-        background: red;
-      }
-
-      .card__face--back {
-        background: blue;
-        transform: rotateY(180deg);
-      }
-
       .primary button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
@@ -401,12 +358,13 @@
           height: 40px;
         }
 
-        .logo_center {
+        .navigation_desktop {
           display: flex;
           justify-content: center;
           /* rigtige afstand fra figma
-      padding-top: var(--xl-spacing-desktop); */
-          padding-top: var(--l-spacing-desktop);
+          padding-top: var(--xl-spacing-desktop); */
+          /* padding-top: var(--l-spacing-desktop); */
+          border-bottom: 2px solid black;
         }
 
         /* farveskift desktop  */
@@ -871,6 +829,39 @@
   <body>
     <!-- header -->
     <header>
+      <div class="lg:none navigation_desktop lg:block">
+        <a class="hej" href=""></a>
+        <img
+          class="logo_lang"
+          id="sort"
+          src="img/logo/bb_logo_lang.png"
+          alt=""
+        />
+        <img
+          class="logo_lang_sol"
+          id="sol"
+          src="img/logo/bb_logo_lang_sol.png"
+          alt=""
+        />
+        <img
+          class="logo_lang_graes"
+          id="graes"
+          src="img/logo/bb_logo_lang.png"
+          alt=""
+        />
+        <img
+          class="logo_lang_himmel"
+          id="himmel"
+          src="img/logo/bb_logo_lang_himmel.png"
+          alt=""
+        />
+        <img
+          class="logo_lang_rust"
+          id="rust"
+          src="img/logo/bb_logo_lang_rust.png"
+          alt=""
+        />
+      </div>
       <section class="navigation_mobil">
         <button>
           <a href="">
@@ -911,7 +902,7 @@
         </div>
       </section>
 
-      <nav class="lg:block">
+      <nav class="lg:flex">
         <ul>
           <li>
             <a
@@ -920,7 +911,6 @@
               >Abonnement</a
             >
           </li>
-
           <div class="dropdown">
             <label tabindex="0">
               <button class="flex gap-s-spacing-mobile">
@@ -1113,13 +1103,7 @@
         </h2>
 
         <!-- tre cards til forside -->
-        <div class="scene scene--card">
-          <div class="card">
-            <div class="card__face card__face--front">front</div>
-            <div class="card__face card__face--back">back</div>
-          </div>
-        </div>
-        <p>Click card to flip.</p>
+
         <!-- Card til forsiden solsikke -->
         <article>
           <div class="article_wrapper">
@@ -1450,12 +1434,7 @@
       </section>
     </main>
     <footer></footer>
-    <script>
-      var card = document.querySelector(".card");
-      card.addEventListener("click", function () {
-        card.classList.toggle("is-flipped");
-      });
-    </script>
+    <script></script>
     <script type="module" src="main.js"></script>
   </body>
 </html>
