@@ -19,6 +19,40 @@
         background-size: cover;
       }
 
+      .scene {
+        width: 200px;
+        height: 260px;
+        perspective: 600px;
+      }
+
+      .kort {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+      }
+
+      .kort__face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+      }
+
+      .kort__face--front {
+        background: red;
+      }
+
+      .kort__face--back {
+        background: blue;
+        transform: rotateY(180deg);
+      }
+
+      .kort.is-flipped {
+        transform: rotateY(180deg);
+      }
+
       .primary button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
@@ -871,23 +905,44 @@
       <nav class="lg:block">
         <ul>
           <li>
-            <a href="" class="mt-8 font-other-headings text-h3-mobile"
+            <a
+              href="abonnement.html"
+              class="mt-8 font-other-headings text-h3-mobile"
               >Abonnement</a
             >
           </li>
 
-          <li>
-            <button class="sortiment">
-              <div class="flex">
+          <div class="dropdown">
+            <label tabindex="0">
+              <button class="flex gap-s-spacing-mobile">
                 <p class="font-other-headings text-h3-mobile">Sortiment</p>
-                <p class="rotate-90">❯</p>
-              </div>
-            </button>
-            <div>
-              <li>Vaser</li>
-              <li>Blomster</li>
-            </div>
-          </li>
+                <svg width="40" height="40" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                  />
+                </svg>
+              </button>
+            </label>
+            <ul class="m-0">
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow"
+                  href="abonnement.html"
+                  >Blomster</a
+                >
+              </li>
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow"
+                  href="abonnement.html"
+                  >Vaser</a
+                >
+              </li>
+            </ul>
+          </div>
           <li>
             <a href="" class="font-other-headings text-h3-mobile"
               >Begivenheder</a
@@ -980,26 +1035,6 @@
       </div>
     </section>
     <main>
-      <div class="dropdown">
-        <label tabindex="0">
-          <svg
-            class="h-help w-help hover:scale-125 hover:fill-sol-700"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11.95 18q.525 0 .888-.363q.362-.362.362-.887t-.362-.887q-.363-.363-.888-.363t-.888.363q-.362.362-.362.887t.362.887q.363.363.888.363Zm-.9-3.85h1.85q0-.825.188-1.3q.187-.475 1.062-1.3q.65-.65 1.025-1.238q.375-.587.375-1.412q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75q-.888.75-1.238 1.8l1.65.65q.125-.45.563-.975Q11.2 7.7 12.1 7.7q.8 0 1.2.437q.4.438.4.963q0 .5-.3.937q-.3.438-.75.813q-1.1.975-1.35 1.475q-.25.5-.25 1.825ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"
-            />
-          </svg>
-        </label>
-
-        <a
-          tabindex="0"
-          class="dropdown-content rounded-box w-52 bg-sol-100 p-4 font-font-body text-abonnement-text-info shadow"
-          href="abonnement.html"
-          >hej</a
-        >
-      </div>
-
       <section>
         <h2
           class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile"
@@ -1067,6 +1102,14 @@
         </h2>
 
         <!-- tre cards til forside -->
+        <div class="scene">
+          <div id="container" class="kort">
+            <div id="front_card" class="kort__face kort__face--front">
+              front
+            </div>
+            <div class="kort__face kort__face--back">back</div>
+          </div>
+        </div>
         <!-- Card til forsiden solsikke -->
         <article>
           <div class="article_wrapper">
@@ -1397,7 +1440,21 @@
       </section>
     </main>
     <footer></footer>
-    <script></script>
+    <script>
+      const card = document.querySelector("#container");
+
+      window.addEventListener("load", sidenVises);
+
+      function sidenVises() {
+        console.log("halllllo");
+        document.querySelector("#front_card").addEventListener("click", Flip);
+      }
+
+      function Flip() {
+        card.classList.add("kort.is-flipped");
+        console.log("hej");
+      }
+    </script>
     <script type="module" src="main.js"></script>
   </body>
 </html>
