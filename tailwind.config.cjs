@@ -91,11 +91,11 @@ module.exports = {
       /* BUTTONS */
 
       /* secondary */
-      "color-secondary-button-background": "#ffffff00",
+      "color-secondary-button-background": "#ffffff",
     },
     maxWidth: {
       "abb-card-mobile": "175px",
-      "abb-card-desktop": "375.39px",
+      "abb-card-desktop": "280px",
     },
     fontFamily: {
       "font-body": ["Orienta", "sans-serif"],
@@ -131,11 +131,11 @@ module.exports = {
       "progress-heading": "2rem",
       header_text_desktop: "1.2rem",
     },
-    dropShadow: {
-      shadow: "rgba(70, 70, 70, 0.25)",
-    },
 
     extend: {
+      dropShadow: {
+        buttonshadow: "rgba(70, 70, 70, 0.25)",
+      },
       backgroundImage: {
         hero_image: "url('img/hero_billede.webp')",
       },
@@ -162,12 +162,33 @@ module.exports = {
         "xl-spacing-desktop": "66px",
         "xxl-spacing-desktop": "88px",
         "xxxl-spacing-desktop": "132px",
+
+        /* secondary button mobile spacing */
+        "sbutton-padding-x-mobile": "40px",
+        "sbutton-padding-y-mobile": "15px",
+
+        /* secondary button desktop spacing */
+        "sbutton-padding-x-desktop": "60px",
+        "sbutton-padding-y-desktop": "15px",
+
+        /* progress bar abonnement */
+        "progress-ab-size-mobile": "20px",
+        "line-width": "100px",
+
+        help: "20px",
+
+        "max-width": "100%",
       },
     },
     borderRadius: {
       "radius-mobile": "3px",
       "radius-desktop": "5px",
+      full: "100%",
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("daisyui"),
+  ],
 };

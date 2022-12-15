@@ -20,14 +20,9 @@
         display: grid;
         place-content: center;
       }
-
       .overskrift {
         font-size: var(--abonnement-text-info);
         font-family: var(--font-body);
-        font-weight: var(--font-weight-normal);
-      }
-
-      .overskrift1 {
         font-weight: var(--font-weight-bold);
       }
 
@@ -64,6 +59,11 @@
         z-index: 1;
       }
 
+      .ball2 {
+        background-color: var(--color-abonnement-bar-active);
+        z-index: 1;
+      }
+
       .line1,
       .line2,
       .line3 {
@@ -71,6 +71,10 @@
         height: 0px;
         border: solid 2px var(--color-abonnement-bar-disabled);
         margin-left: -3px;
+      }
+
+      .line1 {
+        border: solid 2px var(--color-abonnement-bar-active);
       }
 
       @media (min-width: 900px) {
@@ -108,7 +112,7 @@
   </head>
   <body class="bg-background-color">
     <!--------------------------------------------------------------------- HEADER -->
-    <a href="abonnement.html">tilbage</a>
+    <a href="abonnement1.html">tilbage</a>
     <header class="mb-10 bg-rust-400 font-medium text-color-black">
       <div
         class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info"
@@ -138,7 +142,7 @@
             </div>
 
             <div>
-              <p class="overskrift -ml-1.5 text-rust-200 lg:-ml-2">Stil</p>
+              <p class="overskrift -ml-1.5 text-rust-500 lg:-ml-2">Stil</p>
               <div class="bar2">
                 <a href="abonnement2.html"
                   ><div class="ball2">
@@ -176,18 +180,26 @@
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section class="text-center">
         <h1 class="font-main-heading text-h1-mobile">
-          Hvilken størrelse buket ønsker du?
+          Hvilken stil skal din buket have?
         </h1>
-        <p
+        <article
           class="mx-auto py-l-spacing-mobile text-left font-font-body text-body-mobile"
         >
-          Du kan vælge mellem 4 forskellige størrelser af buket; mini, lille,
-          mellem og stor. Størrelsen har ingen påvirkning på designet af
-          buketten, kun størrelsen!
-        </p>
+          <h2 class="">
+            Vælg mellem 2 forskellige farvesammensætninger af din buket, så du
+            kan få det tilpasset det til din stil!
+          </h2>
+          <h2 class="">
+            Du kan desuden også vælge om din buket skal være tæt eller luftig,
+            og derved gøre den endnu mere personlig.
+          </h2>
+        </article>
       </section>
 
       <!---------------------------------------------- ANDEN SEKTION -->
+      <h3 class="pb-s-spacing-mobile font-other-headings text-h5-mobile">
+        Vælg farvesammensætning
+      </h3>
       <section class="flex flex-wrap gap-l-spacing-mobile pb-l-spacing-mobile">
         <!-- CARD 1 -->
         <article
@@ -201,16 +213,10 @@
             />
           </div>
           <div
-            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-3 font-font-body text-abonnement-text-info lg:text-h4-desktop"
+            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-6 font-font-body text-abonnement-text-info lg:text-h4-desktop"
           >
-            <p
-              class="spand color-black pb-2 text-abonnement-text-spand lg:text-body-desktop"
-            >
-              Spandens mål: 60x50x40 cm
-            </p>
-            <div class="info flex justify-between">
-              <p>Mini</p>
-              <p>400,- DKK</p>
+            <div class="info justify-between text-center">
+              <p class="">Farverig</p>
             </div>
           </div>
         </article>
@@ -227,20 +233,41 @@
             />
           </div>
           <div
-            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-3 font-font-body text-abonnement-text-info lg:text-h4-desktop"
+            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-6 font-font-body text-abonnement-text-info lg:text-h4-desktop"
           >
-            <p
-              class="spand color-black pb-2 text-abonnement-text-spand lg:text-body-desktop"
-            >
-              Spandens mål: 60x50x40 cm
-            </p>
-            <div class="info flex justify-between">
-              <p>Lille</p>
-              <p>600,- DKK</p>
+            <div class="info justify-between text-center">
+              <p>Neutral</p>
             </div>
           </div>
         </article>
+      </section>
 
+      <div class="flex gap-xxxs-spacing-mobile">
+        <h3 class="pb-s-spacing-mobile font-other-headings text-h5-mobile">
+          Vælg tæthed
+        </h3>
+
+        <div class="dropdown">
+          <label tabindex="0">
+            <svg
+              class="h-help w-help hover:scale-125 hover:fill-sol-700"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.95 18q.525 0 .888-.363q.362-.362.362-.887t-.362-.887q-.363-.363-.888-.363t-.888.363q-.362.362-.362.887t.362.887q.363.363.888.363Zm-.9-3.85h1.85q0-.825.188-1.3q.187-.475 1.062-1.3q.65-.65 1.025-1.238q.375-.587.375-1.412q0-1.4-1.025-2.15T12.1 6q-1.425 0-2.312.75q-.888.75-1.238 1.8l1.65.65q.125-.45.563-.975Q11.2 7.7 12.1 7.7q.8 0 1.2.437q.4.438.4.963q0 .5-.3.937q-.3.438-.75.813q-1.1.975-1.35 1.475q-.25.5-.25 1.825ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"
+              />
+            </svg>
+          </label>
+          <p
+            tabindex="0"
+            class="dropdown-content rounded-box w-52 bg-sol-100 p-4 font-font-body text-abonnement-text-info shadow"
+          >
+            Dette indikerer hvor meget afstand der skal være mellem blomsterne.
+          </p>
+        </div>
+      </div>
+
+      <section class="flex flex-wrap gap-l-spacing-mobile pb-l-spacing-mobile">
         <!-- CARD 3 -->
         <article
           class="max-w-abb-card-mobile rounded-radius-mobile border-2 border-color-black hover:scale-105 lg:max-w-abb-card-desktop"
@@ -253,16 +280,10 @@
             />
           </div>
           <div
-            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-3 font-font-body text-abonnement-text-info lg:text-h4-desktop"
+            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-6 font-font-body text-abonnement-text-info lg:text-h4-desktop"
           >
-            <p
-              class="spand color-black pb-2 text-abonnement-text-spand lg:text-body-desktop"
-            >
-              Spandens mål: 80x60x50 cm
-            </p>
-            <div class="info flex justify-between">
-              <p>Mellem</p>
-              <p>800,- DKK</p>
+            <div class="info justify-between text-center">
+              <p>Tæt</p>
             </div>
           </div>
         </article>
@@ -279,24 +300,17 @@
             />
           </div>
           <div
-            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-3 font-font-body text-abonnement-text-info lg:text-h4-desktop"
+            class="info_wrapper border-t-2 border-color-black bg-rust-100 p-6 font-font-body text-abonnement-text-info lg:text-h4-desktop"
           >
-            <p
-              class="spand color-black pb-2 text-abonnement-text-spand lg:text-body-desktop"
-            >
-              Spandens mål: 80x60x50 cm
-            </p>
-            <div class="info flex justify-between">
-              <p>Stor</p>
-              <p>1000,- DKK</p>
+            <div class="info justify-between text-center">
+              <p class="">Luftig</p>
             </div>
           </div>
         </article>
       </section>
-
       <!---------------------------------------------- TREDJE SEKTION -->
       <section class="flex place-content-center pb-xxl-spacing-mobile">
-        <a href="abonnement2.html"
+        <a href="abonnement3.html"
           ><button
             class="flex flex-row-reverse rounded-radius-mobile border-2 border-rust-500 bg-color-secondary-button-background px-sbutton-padding-x-mobile py-sbutton-padding-y-mobile font-button-text text-button-mobile font-semibold text-rust-800 hover:bg-rust-200 lg:px-sbutton-padding-x-desktop lg:py-sbutton-padding-y-desktop lg:text-button-desktop"
           >
