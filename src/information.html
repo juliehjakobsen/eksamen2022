@@ -70,7 +70,59 @@
       .line1 {
         border: solid 2px var(--color-kurv-bar-active);
       }
+      .secondary button {
+        background-color: var(--color-secondary-button-background);
+        color: var(--color-secondary-button-text);
+        border: var(--color-secondary-button-border) 2px solid;
+
+        font-family: var(--button-text);
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--button-mobile);
+        padding: 15px 40px;
+        max-width: 50%;
+        height: 50px;
+
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--radius-mobile);
+
+        gap: 10px;
+      }
+      .secondary button:hover {
+        background-color: var(--color-secondary-button-hover-background);
+      }
+      .primary button {
+        background-color: var(--color-primary-button-background);
+        color: var(--color-primary-button-text);
+        font-family: var(--button-text);
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--button-mobile);
+        padding: 15px 40px;
+        border: none;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--radius-mobile);
+        max-width: 50%;
+        height: 50px;
+        gap: 10px;
+      }
+      .primary button:hover {
+        background-color: var(--color-primary-button-hover-background);
+      }
+
       @media (min-width: 900px) {
+        .secondary button,
+        .primary button {
+          font-size: var(--button-desktop);
+          padding: 15px 60px;
+          border-radius: var(--radius-desktop);
+        }
         .overskrift {
           font-size: var(--h4-desktop);
         }
@@ -108,21 +160,21 @@
         <article>
           <div>
             <h1
-              class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop"
+              class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h2-desktop"
             >
               Information
             </h1>
           </div>
         </article>
         <article
-          class="grid place-content-center pb-m-spacing-mobile lg:pb-m-spacing-desktop"
+          class="grid place-content-center pb-m-spacing-mobile lg:pb-xl-spacing-desktop"
         >
           <div class="full_bar">
             <div>
               <p class="overskrift -ml-2 lg:-ml-3">Kurv</p>
               <div class="bar1">
                 <div class="ball1">
-                  <p>1</p>
+                  <a href="kurv.html"><p>1</p></a>
                 </div>
                 <div class="line1"></div>
               </div>
@@ -132,7 +184,7 @@
               <p class="overskrift -ml-1.5 lg:-ml-2">Info</p>
               <div class="bar2">
                 <div class="ball2">
-                  <p>2</p>
+                  <a href="information.html"><p>2</p></a>
                 </div>
                 <div class="line2"></div>
               </div>
@@ -157,75 +209,132 @@
           </div>
         </article>
       </section>
-      <section>
-        <article>
-          <form action="udfyld">
-            <div>
-              <h4 class="font-other-headings text-h4-mobile font-medium">
-                Fornavn og efternavn
-              </h4>
-              <label for="betaling">
-                <input
-                  class="w-full font-font-body text-body-mobile"
-                  type="text"
-                  value=""
-                  placeholder="Fx. Sofie Larsen"
-                />
-              </label>
+      <section class="pt-xxl-spacing-mobile lg:pt-l-spacing-desktop">
+        <article class="">
+          <form class="lg:flex lg:justify-around" action="udfyld">
+            <div class="">
+              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                <h4
+                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                >
+                  Fornavn og efternavn
+                </h4>
+                <label for="betaling">
+                  <input
+                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                    type="text"
+                    value=""
+                    placeholder="Fx. Sofie Larsen"
+                  />
+                </label>
+              </div>
+              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                <h4
+                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                >
+                  Leveringsadresse
+                </h4>
+                <label for="betaling">
+                  <input
+                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                    type="text"
+                    value=""
+                    placeholder="Fx. Strandvejen 167, 2900 Hellerup"
+                  />
+                </label>
+              </div>
+              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                <h4
+                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                >
+                  Email
+                </h4>
+                <label for="betaling">
+                  <input
+                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                    type="email"
+                    value=""
+                    placeholder="Fx. sofie@gmail.com"
+                  />
+                </label>
+              </div>
+              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                <h4
+                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                >
+                  Telefonnummer
+                </h4>
+                <label for="betaling">
+                  <input
+                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                    type="tel"
+                    value=""
+                    placeholder="Fx. +45 12345678"
+                  />
+                </label>
+              </div>
             </div>
             <div>
-              <h4 class="font-other-headings text-h4-mobile font-medium">
-                Leveringsadresse
-              </h4>
-              <label for="betaling">
-                <input
-                  class="w-full font-font-body text-body-mobile"
-                  type="text"
-                  value=""
-                  placeholder="Fx. Strandvejen 167, 2900 Hellerup"
-                />
-              </label>
-            </div>
-            <div>
-              <h4 class="font-other-headings text-h4-mobile font-medium">
-                Email
-              </h4>
-              <label for="betaling">
-                <input
-                  class="w-full font-font-body text-body-mobile"
-                  type="email"
-                  value=""
-                  placeholder="Fx. sofie@gmail.com"
-                />
-              </label>
-            </div>
-            <div>
-              <h4 class="font-other-headings text-h4-mobile font-medium">
-                Telefonnummer
-              </h4>
-              <label for="betaling">
-                <input
-                  class="w-full font-font-body text-body-mobile"
-                  type="tel"
-                  value=""
-                  placeholder="Fx. +45 12345678"
-                />
-              </label>
-            </div>
-            <div>
-              <h4 class="font-other-headings text-h4-mobile font-medium">
-                Bemærkning til bestilling
-              </h4>
-              <label for="betaling">
-                <input
-                  class="w-full font-font-body text-body-mobile"
-                  type="text"
-                  value=""
-                  placeholder="Fx. særlig bemærkninger for levering"
-                />
-              </label>
+              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
+                <h4
+                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
+                >
+                  Bemærkning til bestilling
+                </h4>
+                <label for="betaling">
+                  <textarea
+                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
+                    name=""
+                    id=""
+                    cols="39"
+                    rows="10"
+                    placeholder="Fx. særlig bemærkninger for levering"
+                  ></textarea>
+                </label>
+              </div>
+              <div>
+                <h5
+                  class="pb-xs-spacing-mobile font-font-body text-h5-mobile lg:text-h5-desktop"
+                >
+                  Vil du have besked, når der er leveret?
+                </h5>
+                <div class="grid gap-5">
+                  <div class="flex gap-5">
+                    <input class="h-8 w-8" type="checkbox" />
+                    <p
+                      class="font-font-body text-body-mobile lg:text-body-desktop"
+                    >
+                      Jeg ønsker en SMS, pr levering
+                    </p>
+                  </div>
+                  <div class="flex gap-5">
+                    <input class="h-8 w-8" type="checkbox" />
+
+                    <p
+                      class="font-font-body text-body-mobile lg:text-body-desktop"
+                    >
+                      Jeg ønsker en E-mail, pr levering
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
+
+          <div
+            class="flex justify-between pt-xl-spacing-mobile lg:justify-evenly lg:pt-xl-spacing-desktop"
+          >
+            <div class="secondary">
+              <button class="mx-auto">
+                <a href="kurv.html">Tilbage</a>
+              </button>
+            </div>
+            <div class="primary">
+              <button class="mx-auto">
+                <a href="betal.html">Videre</a>
+              </button>
+            </div>
+          </div>
         </article>
       </section>
     </main>
