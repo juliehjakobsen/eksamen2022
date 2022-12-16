@@ -766,6 +766,68 @@
         padding-right: var(--xs-spacing-mobile);
         padding-bottom: var(--xs-spacing-mobile);
       }
+
+      /* Banner */
+
+      .banner {
+        animation-name: banner_animate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes banner_animate {
+        0% {
+          transform: translateX(-820px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      .banner_delay {
+        animation-name: banner_animate_delay;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes banner_animate_delay {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(820px);
+        }
+      }
+      #banner_section img {
+        max-width: 200%;
+      }
+      main {
+        margin: 0;
+      }
+      @media (min-width: 900px) {
+        #banner_section img {
+          min-width: 120%;
+        }
+        #banner_section div {
+          height: 180px;
+        }
+        @keyframes banner_animate_delay {
+          0% {
+            transform: translateX(0px);
+          }
+          100% {
+            transform: translateX(1600px);
+          }
+        }
+        @keyframes banner_animate {
+          0% {
+            transform: translateX(-1600px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        }
+      }
+
       /* DESKTOP */
 
       @media (min-width: 900px) {
@@ -1007,15 +1069,19 @@
           <button class="mx-auto">Se vores udvalg af blomster</button>
         </div>
       </section>
-      <section>
+      <section id="banner_section" class="overflow-x-hidden">
         <!-- banner -->
-        <div class="bg-color-headings">
-          <img class="" src="img/banner.svg" alt="" />
-          <!-- <p
-            class="overflow-hidden font-other-headings text-banner-mobile font-bold italic text-sol-300"
-          >
-            BLOMSTER BJARNE
-          </p> -->
+        <div class="h-[90px] bg-color-headings">
+          <img
+            class="banner top-50 absolute left-0"
+            src="img/banner_text_mobil.svg"
+            alt=""
+          />
+          <img
+            class="banner_delay top-50 absolute left-0"
+            src="img/banner_text_mobil.svg"
+            alt=""
+          />
         </div>
       </section>
 
