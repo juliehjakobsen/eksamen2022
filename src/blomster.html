@@ -40,6 +40,7 @@
       button:hover {
         background-color: var(--color-primary-button-hover-background);
       }
+
       @media (min-width: 900px) {
         button {
           font-size: var(--button-desktop);
@@ -80,9 +81,6 @@
         text-align: center;
         font-size: var(--h5-mobile);
         font-family: var(--other-headings);
-      }
-      .card_info img {
-        display: none;
       }
 
       .arrow img {
@@ -189,8 +187,9 @@
         class="flex flex-wrap justify-center gap-m-spacing-mobile lg:gap-l-spacing-desktop"
       >
         <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
+        <label class="swap swap-flip hover:scale-105">
+          <input class="hidden" type="checkbox" />
+          <div class="article_wrapper swap-off">
             <div class="billede">
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
@@ -207,7 +206,40 @@
               <h4>Anthurium</h4>
             </div>
           </div>
-        </article>
+          <div class="article_wrapper overskrift swap-on p-s-spacing-mobile">
+            <h4>Anthurium</h4>
+            <div class="mx-auto grid">
+              <div class="flex">
+                <img
+                  class="h-5 w-5"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt=""
+                />
+                <p>hej</p>
+              </div>
+              <div class="flex">
+                <img class="h-5 w-5" src="img/ikoner/sollys_ikon.svg" alt="" />
+                <p>hej</p>
+              </div>
+              <div class="flex">
+                <img
+                  class="h-5 w-5"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt=""
+                />
+                <p>hej</p>
+              </div>
+              <div class="flex">
+                <img class="h-5 w-5" src="img/ikoner/maal_ikon.svg" alt="" />
+                <p>hej</p>
+              </div>
+              <div class="flex">
+                <img class="h-5 w-5" src="img/ikoner/pris_ikon.svg" alt="" />
+                <p>hej</p>
+              </div>
+            </div>
+          </div>
+        </label>
 
         <!-- card -->
         <article class="hover:scale-105">
@@ -575,6 +607,6 @@
         </section>
       </article>
     </footer>
-    <script></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
