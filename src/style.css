@@ -16,7 +16,7 @@ body {
 
 .burger button {
   margin-right: var(--m-spacing-mobile);
-  margin-top: var(--s-spacing-mobile);
+  margin-top: var(--xxs-spacing-mobile);
   margin-bottom: var(--s-spacing-mobile);
   font-size: var(--h2-mobile);
 }
@@ -43,7 +43,7 @@ nav ul {
   flex-flow: column;
   margin-top: var(--xxl-spacing-mobile);
   margin-left: var(--xxl-spacing-mobile);
-  height: 23rem;
+  /* height: 23rem; */
 }
 
 .secondary_nav {
@@ -52,6 +52,12 @@ nav ul {
   gap: var(--xl-spacing-mobile);
   margin-left: var(--xxl-spacing-mobile);
   margin-bottom: var(--l-spacing-mobile);
+}
+
+.logo_mobil {
+  display: grid;
+  padding-top: var(--xs-spacing-mobile);
+  padding-left: var(--xs-spacing-mobile);
 }
 
 header nav ul {
@@ -63,18 +69,249 @@ header nav ul {
   justify-content: space-between;
 }
 
+/* farveskift mobil */
+#sort {
+  width: 85px;
+  height: 50px;
+  animation-name: blink;
+  animation: blink 5s infinite;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#sol {
+  width: 85px;
+  height: 50px;
+  animation-name: blink1;
+  animation: blink1 5s infinite;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+@keyframes blink1 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#graes {
+  width: 85px;
+  height: 50px;
+  animation-name: blink2;
+  animation: blink2 5s infinite;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+@keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#himmel {
+  width: 85px;
+  height: 50px;
+  animation-name: blink3;
+  animation: blink3 5s infinite;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+@keyframes blink3 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#rust {
+  width: 85px;
+  height: 50px;
+  animation-name: blink4;
+  animation: blink4 5s infinite;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+@keyframes blink4 {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo_lang {
+  display: none;
+}
+
+.navigation_desktop {
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
 /* navigation desktop */
 @media (min-width: 900px) {
   nav ul {
     display: flex;
     flex-flow: row;
-    margin-top: 90px;
+    margin-top: var(--l-spacing-desktop);
   }
 
   .navigation_desktop {
-    display: block;
     margin: auto;
+    margin-top: var(--s-spacing-desktop);
   }
+
+  .logo_lang {
+    display: block;
+  }
+
   .navigation_mobil {
     display: none;
   }
@@ -82,14 +319,216 @@ header nav ul {
   nav {
     display: flex;
     justify-content: space-between;
-    height: 150px;
-    margin-top: var(--l-spacing-desktop);
-    margin-top: 0;
   }
 
   .secondary_nav {
     margin-right: var(--xxl-spacing-desktop);
-    margin-top: 90px;
+    margin-top: var(--l-spacing-desktop);
+  }
+
+  /* farveskift desktop  */
+  #sort {
+    width: 450px;
+    height: 37px;
+    animation-name: blink;
+    animation: blink 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    1% {
+      opacity: 1;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #sol {
+    width: 450px;
+    height: 37px;
+    animation-name: blink1;
+    animation: blink1 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+  @keyframes blink1 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #graes {
+    width: 450px;
+    height: 37px;
+    animation-name: blink2;
+    animation: blink2 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+  @keyframes blink2 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #himmel {
+    width: 450px;
+    height: 37px;
+    animation-name: blink3;
+    animation: blink3 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+  @keyframes blink3 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  #rust {
+    width: 450px;
+    height: 37px;
+    animation-name: blink4;
+    animation: blink4 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+  @keyframes blink4 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
