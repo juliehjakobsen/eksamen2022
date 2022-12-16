@@ -328,8 +328,8 @@ header nav ul {
 
   /* farveskift desktop  */
   #sort {
-    width: 446px;
-    height: 33px;
+    width: 450px;
+    height: 37px;
     animation-name: blink;
     animation: blink 5s infinite;
     animation-delay: 0s;
@@ -369,8 +369,8 @@ header nav ul {
   }
 
   #sol {
-    width: 446px;
-    height: 33px;
+    width: 450px;
+    height: 37px;
     animation-name: blink1;
     animation: blink1 5s infinite;
     animation-delay: 0s;
@@ -410,8 +410,8 @@ header nav ul {
   }
 
   #graes {
-    width: 446px;
-    height: 33px;
+    width: 450px;
+    height: 37px;
     animation-name: blink2;
     animation: blink2 5s infinite;
     animation-delay: 0s;
@@ -451,8 +451,8 @@ header nav ul {
   }
 
   #himmel {
-    width: 446px;
-    height: 33px;
+    width: 450px;
+    height: 37px;
     animation-name: blink3;
     animation: blink3 5s infinite;
     animation-delay: 0s;
@@ -491,8 +491,8 @@ header nav ul {
     }
   }
   #rust {
-    width: 446px;
-    height: 33px;
+    width: 450px;
+    height: 37px;
     animation-name: blink4;
     animation: blink4 5s infinite;
     animation-delay: 0s;
