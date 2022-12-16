@@ -49,21 +49,30 @@
       }
 
       /* card */
+      article {
+        width: 155px;
+        height: 100%;
+      }
 
       .article_wrapper {
         border: solid 2px black;
         border-radius: var(--xs-radius);
-        max-width: 155px;
-        max-height: 200px;
       }
 
       .article_wrapper:hover {
         cursor: pointer;
       }
 
-      img {
-        width: 155px;
+      .billede_wrapper {
+        max-width: 100%;
+        max-height: 100%;
+        height: 150px;
       }
+      img {
+        max-height: 100%;
+        margin: auto;
+      }
+
       .overskrift {
         background-color: #ffffff;
         color: black;
@@ -92,17 +101,15 @@
       /* DESKTOP */
 
       @media (min-width: 900px) {
-        .article_wrapper,
-        img {
-          width: 350px;
-        }
-        .overskrift {
-          font-size: var(--h5-desktop);
+        /* card */
+        article {
+          width: 250px;
+          height: 100%;
         }
 
-        .arrow img {
-          width: 40px;
-          height: 40px;
+        .billede_wrapper {
+          width: 100%;
+          height: 300px;
         }
       }
     </style>
@@ -188,7 +195,93 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/blomster/prover.png" alt="Alstromeria blomst" />
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/anthurium.webp"
+                  alt="Anthurium blomst"
+                />
+              </div>
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Anthurium</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img src="/img/blomster/astromea.webp" alt="Astromea blomst" />
+              </div>
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Astromea</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/carnations.webp"
+                  alt="Carnations blomst"
+                />
+              </div>
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Carnations</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/dry-flower.webp"
+                  alt="Dry flower blomst"
+                />
+              </div>
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Dry flower</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/eucalyptus.webp"
+                  alt="Alstromeria blomst"
+                />
+              </div>
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -202,9 +295,31 @@
           <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/gron_blomst.webp"
+                  alt="Alstromeria blomst"
+                />
+              </div>
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img src="/img/blomster/iris.webp" alt="Alstromeria blomst" />
+              </div>
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -218,9 +333,11 @@
           <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
+              <div class="billede_wrapper">
+                <img src="/img/blomster/okkide.webp" alt="Alstromeria blomst" />
+              </div>
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -234,9 +351,14 @@
           <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/orchid-cymbidium.webp"
+                  alt="Alstromeria blomst"
+                />
+              </div>
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -250,9 +372,14 @@
           <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/pink-lilies.webp"
+                  alt="Alstromeria blomst"
+                />
+              </div>
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -266,9 +393,14 @@
           <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/queen-protea.webp"
+                  alt="Alstromeria blomst"
+                />
+              </div>
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -276,95 +408,16 @@
             </div>
           </div>
         </article>
-
         <!-- card -->
         <article class="hover:scale-105">
           <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              <div class="billede_wrapper">
+                <img src="/img/blomster/roses.webp" alt="Alstromeria blomst" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
-              </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
-              </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
-              </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
-              </div>
-              <img src="/img/abonnement_filler.webp" alt="" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
