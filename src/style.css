@@ -94,13 +94,6 @@ header nav ul {
   height: 40px;
 }
 
-@media (min-width: 900px) {
-  main {
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-}
-
 :root {
   /* MEDIA QUERY */
   --media-desktop: 900px;
