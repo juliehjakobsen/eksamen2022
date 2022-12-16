@@ -21,7 +21,7 @@
       }
       @keyframes banner_animate {
         0% {
-          transform: translateX(-400px);
+          transform: translateX(-820px);
         }
         100% {
           transform: translateX(0px);
@@ -38,24 +38,54 @@
           transform: translateX(0px);
         }
         100% {
-          transform: translateX(400px);
+          transform: translateX(820px);
+        }
+      }
+      img {
+        max-width: 200%;
+      }
+      main {
+        margin: 0;
+      }
+      @media (min-width: 900px) {
+        img {
+          max-width: 300%;
+        }
+        #banner_section div {
+          height: 200px;
+        }
+        @keyframes banner_animate_delay {
+          0% {
+            transform: translateX(0px);
+          }
+          100% {
+            transform: translateX(1850px);
+          }
+        }
+        @keyframes banner_animate {
+          0% {
+            transform: translateX(-1850px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
         }
       }
     </style>
   </head>
   <body>
     <main>
-      <section class="overflow-x-hidden">
+      <section id="banner_section" class="overflow-x-hidden">
         <!-- banner -->
-        <div class="bg-color-headings">
+        <div class="h-[90px] bg-color-headings">
           <img
             class="banner absolute top-0 left-0"
-            src="img/banner.svg"
+            src="img/banner_text_mobil.svg"
             alt=""
           />
           <img
             class="banner_delay absolute top-0 left-0"
-            src="img/banner.svg"
+            src="img/banner_text_mobil.svg"
             alt=""
           />
         </div>
