@@ -73,7 +73,7 @@
         width: 60px;
         height: 0px;
         border: solid 2px var(--color-abonnement-bar-disabled);
-        margin-left: -3px;
+        margin-left: -0.5px;
       }
 
       .line1,
@@ -99,7 +99,9 @@
 
           color: var(--color-abonnement-bar-text);
         }
-        .ball1 {
+        .ball1,
+        .ball2,
+        .ball3 {
           background-color: var(--color-abonnement-bar-active);
           z-index: 1;
         }
@@ -110,6 +112,11 @@
           width: 180px;
           height: 0px;
           border: 5px solid var(--color-abonnement-bar-disabled);
+        }
+
+        .line1,
+        .line2 {
+          border: solid 5px var(--color-abonnement-bar-active);
         }
 
         /* ---------------------------------RADIO BUTTONS */
@@ -127,6 +134,10 @@
           input {
             font-size: var(--body-desktop);
           }
+
+          input[type="radio"] {
+            transform: scale(2);
+          }
         }
       }
     </style>
@@ -136,7 +147,7 @@
     <a href="abonnement2.html">tilbage</a>
     <header class="mb-10 bg-rust-400 font-medium text-color-black">
       <div
-        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info"
+        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info lg:flex lg:place-content-evenly lg:text-body-mobile"
       >
         <p>Køb dine blomster i vores butikker</p>
         <p>Bestil dit abonnement på vores webshop</p>
@@ -204,7 +215,7 @@
           Er du sensitiv over for stærk blomsterduft?
         </h1>
         <article
-          class="mx-auto py-l-spacing-mobile text-left font-font-body text-body-mobile"
+          class="mx-auto w-11/12 py-l-spacing-mobile text-left font-font-body text-body-mobile lg:w-2/3 lg:py-xl-spacing-desktop lg:text-body-desktop"
         >
           <h2 class="pb-xxs-spacing-mobile">
             Vi spørger fordi nogle kan være ekstra sensitive over for stærke
@@ -219,8 +230,12 @@
       </section>
 
       <!---------------------------------------------- ANDEN SEKTION -->
-      <section class="flex justify-around">
-        <article class="flex items-baseline gap-xs-spacing-mobile">
+      <section
+        class="flex place-content-center gap-xl-spacing-mobile lg:gap-xxxl-spacing-desktop"
+      >
+        <article
+          class="flex items-baseline gap-xs-spacing-mobile lg:gap-s-spacing-desktop"
+        >
           <div>
             <label class="form-control">
               <input
@@ -230,10 +245,14 @@
               />
             </label>
           </div>
-          <h3 class="font-font-body text-body-mobile">Ja</h3>
+          <h3 class="font-font-body text-body-mobile lg:text-body-desktop">
+            Ja
+          </h3>
         </article>
 
-        <article class="flex items-baseline gap-xs-spacing-mobile">
+        <article
+          class="flex items-baseline gap-xs-spacing-mobile lg:gap-s-spacing-desktop"
+        >
           <div>
             <label class="form-control">
               <input
@@ -243,13 +262,15 @@
               />
             </label>
           </div>
-          <h3 class="font-font-body text-body-mobile">Nej</h3>
+          <h3 class="font-font-body text-body-mobile lg:text-body-desktop">
+            Nej
+          </h3>
         </article>
       </section>
 
       <!---------------------------------------------- TREDJE SEKTION -->
       <section
-        class="flex place-content-center pt-l-spacing-mobile pb-xxl-spacing-mobile"
+        class="flex place-content-center pt-l-spacing-mobile pb-xxl-spacing-mobile lg:pt-xl-spacing-desktop lg:pb-xxl-spacing-desktop"
       >
         <a href="abonnement4.html"
           ><button

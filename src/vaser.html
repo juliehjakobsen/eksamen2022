@@ -19,8 +19,6 @@
         background-size: cover;
       }
 
-      /* knap */
-
       button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
@@ -52,75 +50,58 @@
 
       /* card */
 
-      .article {
-        background-color: var(--regnorm-100);
-        border: 2px solid black;
-        min-width: 380px;
-
+      .article_wrapper {
+        border: solid 2px black;
         border-radius: var(--xs-radius);
-        padding: var(--l-spacing-mobile);
-      }
-      .ikon {
-        display: grid;
-        justify-content: center;
-        padding-top: var(--l-spacing-mobile);
-      }
-      .img {
-        width: 80px;
-        min-height: 80px;
+        width: 155px;
       }
 
-      .h4 {
+      .article_wrapper:hover {
+        cursor: pointer;
+      }
+
+      img {
+        width: 155px;
+      }
+      .overskrift {
+        background-color: #ffffff;
+        color: black;
+        border-top: 2px solid black;
+        text-align: center;
+        font-size: var(--h5-mobile);
         font-family: var(--other-headings);
-        font-size: var(--h4-mobile);
-        padding-top: var(--l-spacing-mobile);
-        padding-bottom: var(--l-spacing-mobile);
+      }
+      .card_info img {
+        display: none;
       }
 
-      .info {
-        padding-left: var(--l-spacing-mobile);
+      .arrow img {
+        width: 20px;
+        height: 20px;
       }
-
-      .tekst {
-        font-family: var(--font-body);
-        font-size: var(--body-mobile);
-        padding-bottom: var(--l-spacing-mobile);
-      }
-
-      .progress {
+      .arrow {
         display: grid;
-        place-content: center;
+        justify-content: end;
+      }
+
+      .billede {
+        background-color: var(--himmel-100);
       }
 
       /* DESKTOP */
 
       @media (min-width: 900px) {
-        .article {
-          display: flex;
-          padding: var(--m-spacing-desktop);
+        .article_wrapper,
+        img {
+          width: 350px;
+        }
+        .overskrift {
+          font-size: var(--h5-desktop);
         }
 
-        .ikon {
-          display: flex;
-          place-items: center;
-        }
-        .img {
-          max-width: 120px;
-        }
-        .h4 {
-          font-size: var(--h4-desktop);
-          padding-top: var(--xs-spacing-desktop);
-          padding-bottom: var(--m-spacing-desktop);
-        }
-        .tekst {
-          font-size: var(--body-desktop);
-        }
-
-        .info {
-          padding-left: var(--l-spacing-desktop);
-        }
-        .progress {
-          display: none;
+        .arrow img {
+          width: 40px;
+          height: 40px;
         }
       }
     </style>
@@ -143,28 +124,30 @@
       class="bg-hero_image bg-cover pt-l-spacing-mobile text-center lg:h-hero-height"
     >
       <div
-        class="mx-10 border-2 border-sol pt-m-spacing-mobile pl-10 pr-10 text-sol lg:h-hero-border-height"
+        class="mx-10 border-2 border-graes-300 pt-m-spacing-mobile pl-10 pr-10 text-graes-300 lg:h-hero-border-height"
       >
         <h1
           class="font-main-heading text-h1-mobile lg:pt-xxxl-spacing-desktop lg:text-h1-desktop"
         >
-          Abonnement
+          Vaser
         </h1>
         <p
-          class="pt-s-spacing-mobile font-font-body text-h5-mobile lg:pt-s-spacing-desktop lg:text-h5-desktop"
+          class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
         >
-          Et udvalg af blomster leveret til din dør
+          Enhver blomst har brug for sin perfekte vase, og her hos Blomster
+          Bjarne her vi noget til enhver smag. Dyk ned gennem vores udvalg af
+          håndlavede vaser, og find det perfekte match til dine blomster. Kig
+          forbi butikken for at købe dem!
         </p>
         <p
           class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
         >
-          Med et blomsterabonnement fra Blomster Bjarne kan du nyde et udvalg af
-          årstidens blomster leveret direkte til din hoveddør *
+          Vi glæder os til at se dig!
         </p>
       </div>
       <div class="py-s-spacing-mobile">
         <svg
-          class="mx-auto grid text-sol"
+          class="mx-auto grid text-graes-300"
           width="32"
           height="32"
           viewBox="0 0 24 24"
@@ -179,125 +162,232 @@
 
     <main class="">
       <!---------------------------------------------- FØRSTE SEKTION -->
-      <section class="pb-xxl-spacing-mobile lg:pb-xxl-spacing-desktop">
+      <section
+        class="pt-xxl-spacing-mobile text-center lg:pt-xxl-spacing-desktop"
+      >
         <!------------------------------- KNAP -->
 
-        <a href="abonnement1.html"
-          ><button class="mx-auto mt-xl-spacing-mobile">
-            Tegn mit abonnement
-          </button></a
-        >
-
-        <!------------------------------- INFO -->
-        <article class="my-xl-spacing-mobile grid gap-s-spacing-mobile">
-          <p
-            class="mx-auto w-1/2 font-font-body text-abonnement-text-info lg:text-body-desktop"
-          >
-            * Udlevering vil finde sted om torsdagen inden for arbejdstiden. Du
-            vil blive opkrævet en engangsbetaling på 20 DKK. depositum for
-            leveringsspanden.
-          </p>
-          <p
-            class="mx-auto w-1/2 font-font-body text-abonnement-text-info lg:text-body-desktop"
-          >
-            * Billederne er blot en repræsentation af, hvad spanden kunne
-            indeholde til prisen. Typerne af blomster kan variere afhængigt af
-            sæsonen.
-          </p>
-        </article>
-
-        <h2
-          class="pt-s-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
-        >
-          Sådan fungerer det
+        <h2 class="font-other-headings text-h2-mobile lg:text-h2-desktop">
+          Blomster
         </h2>
-
-        <!------------------------------- SÅDAN GØR DU -->
-        <article
-          class="flex justify-center gap-xl-spacing-mobile overflow-x-scroll lg:grid lg:grid-cols-2 lg:overflow-hidden lg:overflow-x-auto"
+        <p
+          class="py-l-spacing-mobile font-font-body text-body-mobile lg:pt-l-spacing-desktop lg:pb-xxl-spacing-desktop lg:text-body-desktop"
         >
-          <div class="article">
-            <div class="ikon">
-              <img class="img" src="img/ikoner/blomst_ikon.svg" alt="" />
-            </div>
-            <div class="info">
-              <h3 class="h4">1. Vælg din buket</h3>
-              <p class="tekst">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation
-              </p>
-            </div>
-            <!-- <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
-            </div> -->
-          </div>
+          12 resultater
+        </p>
+      </section>
 
-          <div class="article">
-            <div class="ikon">
-              <img class="img" src="img/ikoner/shoppingcart_ikon.svg" alt="" />
-            </div>
-            <div class="info">
-              <div><h3 class="h4">2. Tilføj til kurv</h3></div>
-              <div>
-                <p class="tekst">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
+      <!---------------------------------------------- ANDEN SEKTION CARDS -->
+      <section
+        class="flex flex-wrap justify-center gap-m-spacing-mobile lg:gap-l-spacing-desktop"
+      >
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
               </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
             </div>
-            <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
-            </div>
-          </div>
 
-          <div class="article">
-            <div class="ikon">
-              <img class="img" src="img/ikoner/levering_ikon.svg" alt="" />
-            </div>
-            <div class="info">
-              <div><h3 class="h4">3. Din buket bliver sendt</h3></div>
-              <div>
-                <p class="tekst">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-            <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
-            </div>
-          </div>
-
-          <div class="article">
-            <div class="ikon">
-              <img class="img" src="img/ikoner/lokation_ikon.svg" alt="" />
-            </div>
-            <div class="info">
-              <div><h3 class="h4">4. Buketten bliver leveret</h3></div>
-              <div>
-                <p class="tekst">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation
-                </p>
-              </div>
-            </div>
-            <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
             </div>
           </div>
         </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="" />
+              </div>
+              <img src="/img/abonnement_filler.webp" alt="" />
+            </div>
+
+            <div class="overskrift p-s-spacing-mobile">
+              <h4>Alstromeria</h4>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!---------------------------------------------- TREDJE SEKTION -->
+      <section
+        class="mx-auto w-10/12 pt-l-spacing-mobile pb-xl-spacing-mobile text-center font-font-body text-body-mobile lg:py-xxl-spacing-desktop"
+      >
+        <p>Øv, du er nået til enden.</p>
+        <p class="pb-xl-spacing-mobile lg:pb-xl-spacing-desktop">
+          Kan du ikke bestemme dig for én enkelt? Fri dig selv for besværet og
+          bestil et abonnement i dag!
+        </p>
+        <div>
+          <a class="" href="abonnement1.html"
+            ><button class="mx-auto">Tegn mit abonnement</button></a
+          >
+        </div>
       </section>
     </main>
 

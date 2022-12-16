@@ -73,7 +73,7 @@
         width: 60px;
         height: 0px;
         border: solid 2px var(--color-abonnement-bar-disabled);
-        margin-left: -3px;
+        margin-left: -0.5px;
       }
 
       .line1,
@@ -100,7 +100,10 @@
 
           color: var(--color-abonnement-bar-text);
         }
-        .ball1 {
+        .ball1,
+        .ball2,
+        .ball3,
+        .ball4 {
           background-color: var(--color-abonnement-bar-active);
           z-index: 1;
         }
@@ -112,6 +115,12 @@
           height: 0px;
           border: 5px solid var(--color-abonnement-bar-disabled);
         }
+
+        .line1,
+        .line2,
+        .line3 {
+          border: solid 4px var(--color-abonnement-bar-active);
+        }
       }
     </style>
   </head>
@@ -120,7 +129,7 @@
     <a href="abonnement3.html">tilbage</a>
     <header class="mb-10 bg-rust-400 font-medium text-color-black">
       <div
-        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info"
+        class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info lg:flex lg:place-content-evenly lg:text-body-mobile"
       >
         <p>Køb dine blomster i vores butikker</p>
         <p>Bestil dit abonnement på vores webshop</p>
@@ -184,11 +193,11 @@
       </section>
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section class="text-center">
-        <h1 class="font-main-heading text-h1-mobile">
+        <h1 class="font-main-heading text-h1-mobile lg:text-h1-desktop">
           Hvor ofte vil du have din buket leveret?
         </h1>
         <article
-          class="mx-auto py-l-spacing-mobile text-left font-font-body text-body-mobile"
+          class="mx-auto w-11/12 py-l-spacing-mobile text-left font-font-body text-body-mobile lg:w-2/3 lg:py-xl-spacing-desktop lg:text-body-desktop"
         >
           <h2 class="">
             Hvor tit skal vi komme med dine nye, personlige buketter? Vi glæder
@@ -199,7 +208,7 @@
 
       <!---------------------------------------------- ANDEN SEKTION -->
       <select
-        class="max-w-xs mx-auto flex w-64 rounded-radius-mobile border-2 border-color-black font-font-body"
+        class="max-w-xs mx-auto flex w-64 rounded-radius-mobile border-2 border-color-black font-font-body text-body-mobile lg:text-body-desktop"
       >
         <option disabled selected>-- Vælg hyppighed --</option>
         <option class="active:bg-sol">Hver uge</option>
@@ -209,7 +218,7 @@
 
       <!---------------------------------------------- TREDJE SEKTION -->
       <section
-        class="flex place-content-center pt-l-spacing-mobile pb-xxl-spacing-mobile"
+        class="flex place-content-center pt-l-spacing-mobile pb-xxl-spacing-mobile lg:pt-l-spacing-desktop lg:pb-xxl-spacing-desktop"
       >
         <a href="index.html"
           ><button

@@ -181,6 +181,9 @@ module.exports = {
 
         "hero-height": "700px",
         "hero-border-height": "600px",
+
+        // cards
+        "card-mobile-width": "155px",
       },
     },
     borderRadius: {
