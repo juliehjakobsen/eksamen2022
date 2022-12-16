@@ -21,7 +21,6 @@ body {
   font-size: var(--h2-mobile);
 }
 
-
 .toggle-btn {
   background-color: transparent;
   border: none;
@@ -302,7 +301,7 @@ header nav ul {
   nav ul {
     display: flex;
     flex-flow: row;
-    margin-top: var(--xs-spacing-desktop);
+    margin-top: var(--m-spacing-desktop);
   }
 
   .navigation_desktop {
@@ -315,20 +314,18 @@ header nav ul {
   }
 
   .navigation_mobil {
-    
     display: none;
   }
 
   nav {
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: 82px;
   }
 
   .secondary_nav {
     margin-right: var(--xxl-spacing-desktop);
-    margin-top: var(--xxxs-spacing-desktop);
-    
+    margin-top: var(--m-spacing-desktop);
   }
 
   /* farveskift desktop  */
