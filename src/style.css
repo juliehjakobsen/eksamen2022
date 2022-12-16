@@ -68,6 +68,7 @@ header nav ul {
   nav ul {
     display: flex;
     flex-flow: row;
+    margin-top: 90px;
   }
 
   .navigation_desktop {
@@ -83,15 +84,22 @@ header nav ul {
     justify-content: space-between;
     height: 150px;
     margin-top: var(--l-spacing-desktop);
+    margin-top: 0;
   }
 
   .secondary_nav {
     margin-right: var(--xxl-spacing-desktop);
+    margin-top: 90px;
   }
 }
 
 .dropdown {
   height: 40px;
+}
+
+.underkat {
+  display: flex;
+  flex-flow: column;
 }
 
 :root {
