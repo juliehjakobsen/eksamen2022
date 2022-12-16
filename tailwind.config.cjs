@@ -130,6 +130,7 @@ module.exports = {
       "button-desktop": "1.375rem",
       "progress-heading": "2rem",
       "header_text_desktop": "1.2rem",
+      "h1-hero": "3.5rem",
     },
 
     extend: {

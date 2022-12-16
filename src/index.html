@@ -22,12 +22,17 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      .bg_tekstur {
+        background-image: url(img/tekstur_baggrund.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
       .primary button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
         font-family: var(--button-text);
-        font-weight: var(--font-weight-semibold);
+
         font-size: var(--button-mobile);
         padding: 15px 40px;
         border: none;
@@ -446,7 +451,9 @@
 
     <!-- hero section -->
     <section class="baggrundsbillede">
-      <div class="lg:p-l-spacing-mobile lg:pb-m-spacing-desktop">
+      <div
+        class="lg:py-l-spacing-mobile lg:px-xxl-spacing-desktop lg:pb-m-spacing-desktop"
+      >
         <div class="lg:grid lg:grid-cols-2 lg:border-2 lg:border-sol-300">
           <div class="lg:border-r-2 lg:border-sol-300 lg:px-s-spacing-mobile">
             <img
@@ -455,12 +462,16 @@
               alt=""
             />
           </div>
-          <div class="text-center">
-            <h1 class="text-h1-mobile text-sol-300 lg:text-h1-desktop">
+          <div
+            class="my-auto text-center lg:px-xl-spacing-desktop lg:pt-l-spacing-desktop"
+          >
+            <h1
+              class="text-h1-mobile text-sol-300 lg:pb-s-spacing-desktop lg:text-h1-hero"
+            >
               Bring sæsonen hjem til dig
             </h1>
             <p
-              class="pt-xxxs-spacing-mobile font-font-body text-body-mobile text-sol-300 lg:text-body-desktop"
+              class="font-font-body text-body-mobile text-sol-300 lg:px-s-spacing-desktop lg:text-body-desktop"
             >
               Med et abonnement hos Blomster Bjarne får du leveret unikke
               buketter fra hver sæson.
@@ -496,14 +507,14 @@
     </section>
     <main class="overflow-x-clip">
       <!-- section_1 -->
-      <section class="mx-[30px] lg:mx-[80px]">
+      <section class="bg_tekstur px-[30px] lg:px-[80px]">
         <h2
           class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-xxl-spacing-desktop lg:text-h2-desktop"
         >
           Hvem er vi?
         </h2>
         <h3
-          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-xl-spacing-desktop lg:text-h3-desktop"
+          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-xl-spacing-desktop lg:text-h5-desktop"
         >
           Hos Blomster Bjarne fejrer vi alt, hvad der er smukt!
         </h3>
@@ -753,7 +764,7 @@
       </section>
 
       <!-- testimonials section_4 -->
-      <section class="mx-[30px] lg:mx-[80px]">
+      <section class="bg_tekstur px-[30px] lg:px-[80px]">
         <h2
           class="mt-xxl-spacing-desktop text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
         >
