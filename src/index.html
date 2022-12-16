@@ -13,6 +13,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      body {
+        overflow-x: hidden;
+      }
+
       .baggrundsbillede {
         background-image: url(img/hero_billede.webp);
         background-repeat: no-repeat;
@@ -296,6 +300,11 @@
 
       .navigation_desktop {
         display: none;
+        background-color: var(--background-color);
+      }
+
+      .stor_snefnug {
+        display: none;
       }
 
       @media (min-width: 900px) {
@@ -318,6 +327,25 @@
           height: 40px;
         }
 
+        .lille_snefnug {
+          display: none;
+        }
+
+        .stor_snefnug {
+          display: block;
+        }
+
+        .secondary button,
+        .primary button {
+          font-size: var(--button-desktop);
+          padding: 15px 60px;
+          border-radius: var(--radius-desktop);
+        }
+
+        .pile {
+          display: none;
+        }
+
         /* farveskift desktop  */
         #sort {
           width: 446px;
@@ -326,7 +354,6 @@
           animation: blink 5s infinite;
           animation-delay: 0s;
           animation-direction: alternate;
-          position: absolute;
         }
         @keyframes blink {
           0% {
@@ -368,7 +395,6 @@
           animation: blink1 5s infinite;
           animation-delay: 0s;
           animation-direction: alternate;
-          position: absolute;
         }
         @keyframes blink1 {
           0% {
@@ -410,7 +436,6 @@
           animation: blink2 5s infinite;
           animation-delay: 0s;
           animation-direction: alternate;
-          position: absolute;
         }
         @keyframes blink2 {
           0% {
@@ -452,7 +477,6 @@
           animation: blink3 5s infinite;
           animation-delay: 0s;
           animation-direction: alternate;
-          position: absolute;
         }
         @keyframes blink3 {
           0% {
@@ -493,7 +517,6 @@
           animation: blink4 5s infinite;
           animation-delay: 0s;
           animation-direction: alternate;
-          position: absolute;
         }
         @keyframes blink4 {
           0% {
@@ -545,6 +568,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
       }
+
       /* når carded er flipped */
       .card_info {
         border: solid 2px black;
@@ -562,7 +586,6 @@
       .arrow {
         display: grid;
         justify-content: end;
-        /* place-items: end; */
       }
       .billede_1 {
         background-image: url(/img/blomster/solsikke.webp);
@@ -590,16 +613,57 @@
       /* DESKTOP */
 
       @media (min-width: 900px) {
-        .article_wrapper,
-        img {
-          width: 452px;
-        }
         .overskrift {
           font-size: var(--h5-desktop);
         }
+
+        .felxi {
+          display: flex;
+          place-content: center;
+          justify-content: space-between;
+        }
+
+        .article_wrapper {
+          border: solid 2px black;
+          border-radius: var(--xs-radius);
+          width: 400px;
+          height: 600px;
+          margin: auto;
+          margin-top: 36px;
+          display: block;
+        }
+
+        .billede_1 {
+          background-image: url(/img/blomster/solsikke.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 458px;
+        }
+        .billede_2 {
+          background-image: url(/img/blomster/gron_blomst.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 458px;
+        }
+        .billede_3 {
+          background-image: url(/img/blomster/okkide.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 458px;
+        }
+
+        /* når carded er flipped */
+        .card_info {
+          border: solid 2px black;
+          border-radius: var(--xs-radius);
+          width: 380px;
+          height: 600px;
+          margin-top: 36px;
+          display: none;
+        }
       }
       /* flipped card blomster */
-      [data-variant="card_sortiment_flipped"] .article_wrapper {
+      /* [data-variant="card_sortiment_flipped"] .article_wrapper {
         width: 280px;
       }
       [data-variant="card_sortiment_flipped"] .billede {
@@ -630,11 +694,11 @@
       [data-variant="card_sortiment_flipped"] .pris {
         padding-right: var(--xs-spacing-mobile);
         padding-bottom: var(--xs-spacing-mobile);
-      }
+      } */
 
       /* DESKTOP */
 
-      @media (min-width: 900px) {
+      /* @media (min-width: 900px) {
         [data-variant="card_sortiment_flipped"] .article_wrapper {
           width: 452px;
         }
@@ -650,9 +714,9 @@
           padding-right: var(--m-spacing-desktop);
           padding-bottom: var(--m-spacing-desktop);
         }
-      }
+      } */
       /* flipped card vaser */
-      [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
+      /* [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
         width: 280px;
       }
       [data-variant="card_sortiment_flipped_vaser"] .billede {
@@ -689,11 +753,11 @@
         display: none;
         padding-right: var(--xs-spacing-mobile);
         padding-bottom: var(--xs-spacing-mobile);
-      }
+      } */
 
       /* DESKTOP */
 
-      @media (min-width: 900px) {
+      /* @media (min-width: 900px) {
         [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
           width: 452px;
         }
@@ -711,10 +775,10 @@
         [data-variant="card_sortiment_flipped_vaser"] .underoverskrift {
           padding-bottom: var(--xl-spacing-desktop);
         }
-      }
+      } */
 
       /* Card forside */
-      [data-variant="card_forside"] .article_wrapper {
+      /* [data-variant="card_forside"] .article_wrapper {
         width: 280px;
       }
       [data-variant="card_forside"] img {
@@ -723,18 +787,18 @@
       [data-variant="card_forside"] .arrow img {
         width: 25px;
         height: 25px;
-      }
+      } */
 
       /* DESKTOP */
 
-      @media (min-width: 900px) {
+      /* @media (min-width: 900px) {
         [data-variant="card_forside"] .article_wrapper,
         [data-variant="card_forside"] img {
           width: 452px;
         }
-      }
+      } */
       /* Card forside flipped */
-      [data-variant="card_forside_flipped"] .article_wrapper {
+      /* [data-variant="card_forside_flipped"] .article_wrapper {
         width: 330px;
       }
       [data-variant="card_forside_flipped"] .billede {
@@ -765,7 +829,7 @@
       [data-variant="card_forside_flipped"] .pris {
         padding-right: var(--xs-spacing-mobile);
         padding-bottom: var(--xs-spacing-mobile);
-      }
+      } */
 
       /* Banner */
 
@@ -933,7 +997,7 @@
                 </svg>
               </button>
             </label>
-            <ul class="m-0">
+            <ul class="underkat m-0">
               <li>
                 <a
                   tabindex="0"
@@ -969,107 +1033,81 @@
           <li><img class="search" src="img/ikoner/search.svg" alt="" /></li>
         </ol>
       </nav>
-
-      <!-- <section class="navigation_desktop">
-          <div class="logo_center">
-            <a class="hej" href=""></a>
-            <img
-              class="logo_lang"
-              id="sort"
-              src="img/logo/bb_logo_lang.png"
-              alt=""
-            />
-            <img
-              class="logo_lang_sol"
-              id="sol"
-              src="img/logo/bb_logo_lang_sol.png"
-              alt=""
-            />
-            <img
-              class="logo_lang_graes"
-              id="graes"
-              src="img/logo/bb_logo_lang.png"
-              alt=""
-            />
-            <img
-              class="logo_lang_himmel"
-              id="himmel"
-              src="img/logo/bb_logo_lang_himmel.png"
-              alt=""
-            />
-            <img
-              class="logo_lang_rust"
-              id="rust"
-              src="img/logo/bb_logo_lang_rust.png"
-              alt=""
-            />
-          </div>
-          <div class="navigation_under_logo">
-            <ul class="main_nav nav">
-              <li>
-                <a href="abonnement.html">Abonnement</a>
-              </li>
-              <div class="sortiment_pil">
-                <li>Sortiment</li>
-                <img src="/img/pil_ned_1.svg" alt="" />
-              </div>
-              <li>Begivenheder</li>
-              <li>Kontakt os</li>
-            </ul>
-            <ul class="secondary_nav nav">
-              <li><img class="person" src="img/person.svg" alt="" /></li>
-              <li>
-                <img class="shopping" src="img/shopping_bag.svg" alt="" />
-              </li>
-              <li><img class="search" src="img/search.svg" alt="" /></li>
-            </ul>
-          </div>
-        </section> -->
     </header>
+
+    <!-- hero section -->
     <section class="baggrundsbillede">
-      <img class="pt-s-spacing-mobile" src="img/logo/bb_ill_sol.png" alt="" />
-      <div class="px-16 text-center">
-        <h1 class="pt-s-spacing-mobile text-h1-mobile text-sol-300">
-          Bring sæsonnen hjem til dig
-        </h1>
-        <p
-          class="pt-l-spacing-mobile font-font-body text-body-mobile text-sol-300"
-        >
-          Med et abonnement hos Blomster Bjarne får du leveret unikke buketter
-          fra hver sæson.
-        </p>
-        <div class="primary py-xl-spacing-mobile">
-          <button class="mx-auto">Tegn mit abonnement</button>
+      <div class="lg:p-xxl-spacing-mobile">
+        <div class="lg:flex lg:border-2 lg:border-sol-300">
+          <div class="lg:border-r-2 lg:border-sol-300 lg:px-s-spacing-mobile">
+            <img
+              class="lg:w-[866px] lg:pt-s-spacing-mobile"
+              src="img/logo/bb_ill_sol.png"
+              alt=""
+            />
+          </div>
+          <div class="px-16 text-center">
+            <h1
+              class="pt-s-spacing-mobile text-h1-mobile text-sol-300 lg:text-h1-desktop"
+            >
+              Bring sæsonnen hjem til dig
+            </h1>
+            <p
+              class="pt-l-spacing-mobile font-font-body text-body-mobile text-sol-300 lg:text-body-desktop"
+            >
+              Med et abonnement hos Blomster Bjarne får du leveret unikke
+              buketter fra hver sæson.
+            </p>
+            <div class="primary py-xl-spacing-mobile">
+              <button class="mx-auto">
+                Tegn mit abonnement
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path
+                    fill="#ffffff"
+                    d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <main>
-      <section>
+    <main class="overflow-x-clip">
+      <!-- section_1 -->
+      <section class="mx-[30px] lg:mx-[80px]">
         <h2
-          class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile"
+          class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-xxl-spacing-desktop lg:text-h2-desktop"
         >
           Hvem er vi?
         </h2>
         <h3
-          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile"
+          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-xl-spacing-desktop lg:text-h3-desktop"
         >
           Hos Blomster Bjarne fejrer vi alt, hvad der er smukt!
         </h3>
-        <p class="pt-l-spacing-mobile font-font-body text-body-mobile">
+        <p
+          class="pt-l-spacing-mobile font-font-body text-body-mobile lg:px-96 lg:pt-l-spacing-desktop lg:text-body-desktop"
+        >
           Blomster Bjarne udspringer ud fra et kærligt minde om vores
-          grundlægger – at sælge blomster er en del af vores DNA. Vores ønske at
-          forkæle og lade dig vare en del at dette univers. Kald det et slags
-          ‘menageri’, hvor du kommer ind i vores florale univers – gennem et
-          væld af blomster i alverdens flimrende farver, alle unikke i deres
-          enkelte karakter. Tag forbi en af vores butikker eller se dig om på
-          hjemmesiden efter netop den vase eller den blomst, der skal være en
-          del af dit enestående hjem.
+          grundlægger – at sælge blomster er en del af vores DNA. <br />
+          <br />
+          Vores ønske at forkæle og lade dig vare en del at dette univers. Kald
+          det et slags ‘menageri’, hvor du kommer ind i vores florale univers –
+          gennem et væld af blomster i alverdens flimrende farver, alle unikke i
+          deres enkelte karakter. <br />
+          <br />
+          Tag forbi en af vores butikker eller se dig om på hjemmesiden efter
+          netop den vase eller den blomst, der skal være en del af dit
+          enestående hjem.
         </p>
-        <div class="primary py-xl-spacing-mobile">
+        <div class="primary py-xl-spacing-mobile lg:py-xl-spacing-desktop">
           <button class="mx-auto">Se vores udvalg af blomster</button>
         </div>
       </section>
-      <section id="banner_section" class="overflow-x-hidden">
+
+      <!-- section_2 -->
+      <section id="banner_section">
         <!-- banner -->
         <div class="h-[90px] bg-color-headings">
           <img
@@ -1085,14 +1123,26 @@
         </div>
       </section>
 
-      <!-- section X -->
-      <section>
+      <!-- section_3 -->
+      <section class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop">
         <div
           class="flex place-content-center gap-3 pt-xl-spacing-mobile pb-s-spacing-mobile"
         >
-          <img src="img/ikoner/sollys_ikon.svg" alt="" />
-          <img src="img/ikoner/blad.svg" alt="" />
+          <!-- sol -->
+          <img
+            class="h-[48.32px] lg:h-[92px] lg:w-[92px]"
+            src="img/ikoner/sollys_ikon.svg"
+            alt=""
+          />
+          <!-- blas -->
+          <img
+            class="h-[48.32px] lg:h-[92px] lg:w-[92px]"
+            src="img/ikoner/blad.svg"
+            alt=""
+          />
+          <!-- snefnug -->
           <svg
+            class="lille_snefnug"
             width="46"
             height="46
         "
@@ -1103,13 +1153,31 @@
               fill="#00000"
             />
           </svg>
-          <img src="img/ikoner/blomst_ikon.svg" alt="" />
+          <!-- ----- -->
+          <svg
+            class="stor_snefnug"
+            width="92"
+            height="92
+        "
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M440.5 345.8L408.1 327c11.8-12.3 26-18.2 26.2-18.3 7.5-3 11.4-11.4 8.9-19.1-1.9-5.9-7.4-9.8-13.5-9.8-1.9 0-3.7.4-5.5 1.1-1 .4-24.4 10-41.9 31.2l-96.3-56 96.3-56c17.5 21.2 40.8 30.8 41.9 31.2 1.8.7 3.6 1.1 5.5 1.1 6.1 0 11.6-4 13.5-9.8 2.5-7.7-1.4-16.1-8.9-19.1-.1-.1-14.3-6-26.2-18.3l32.4-18.8c7.2-4.2 9.6-13.4 5.5-20.6-2.7-4.7-7.7-7.6-13.1-7.6-2.6 0-5.3.7-7.6 2L393.1 159c-4.5-16.2-2.7-31.4-2.6-32 1.1-8.1-4.1-15.6-12-17.3-1-.2-2-.3-3-.3-7.1 0-13 5.2-14.1 12.4-.2 1.1-3.6 26 6.1 52.2l-96 56v-99.2c26.9-4.7 46.8-20.2 47.7-20.9 3.1-2.5 5.1-6 5.4-10 .3-4-.9-7.8-3.6-10.8-2.9-3.2-7-5.1-11.4-5.1-3.4 0-6.8 1.2-9.5 3.3-.1.1-12.2 9.4-28.6 13.6V63.1c0-8.2-7.1-15.1-15.5-15.1s-15.5 6.9-15.5 15.1v37.5c-16.3-4.2-28.4-13.5-28.6-13.6-2.7-2.1-6-3.3-9.5-3.3-4.4 0-8.5 1.9-11.4 5.1-2.7 3-4 7-3.6 10.9.3 3.9 2.3 7.4 5.4 9.9.9.7 20.8 16.2 47.7 20.9v99.2l-96-56c9.6-26 6.2-51.1 6-52.2-1-7.2-6.9-12.4-14-12.4-1 0-2 .1-3 .3-7.9 1.6-13.2 9.3-12 17.3 0 .2 2 15.5-2.6 31.9L86.6 140c-2.3-1.3-4.9-2-7.6-2-5.4 0-10.4 2.9-13.1 7.6-4.1 7.2-1.7 16.5 5.5 20.6l32.4 18.8c-11.7 12.1-25.7 18.1-26.2 18.3-7.5 3-11.4 11.4-8.9 19.1 1.9 5.9 7.4 9.8 13.5 9.8 1.9 0 3.7-.4 5.5-1.1 1-.4 24.4-10 41.9-31.2l96.3 56-96.3 56c-17.5-21.2-40.8-30.8-41.9-31.2-1.8-.7-3.6-1.1-5.5-1.1-6.1 0-11.6 4-13.5 9.8-2.5 7.7 1.4 16 8.9 19.1.5.2 14.5 6.2 26.2 18.3l-32.4 18.8c-7.2 4.2-9.6 13.4-5.5 20.6 2.7 4.7 7.7 7.6 13.1 7.6 2.6 0 5.3-.7 7.6-2l32.3-18.8c4.6 16.5 2.6 31.8 2.6 32-1.2 8 4.1 15.7 12 17.3 1 .2 2 .3 3 .3 7.1 0 13-5.2 14.1-12.4.2-1.1 3.6-26-6.1-52.2l96-56v99.2c-26.9 4.7-46.8 20.2-47.7 20.9-3.1 2.5-5.1 6-5.4 10-.3 4 .9 7.8 3.6 10.8 2.9 3.2 7 5.1 11.4 5.1 3.4 0 6.8-1.2 9.5-3.3.1-.1 12.3-9.4 28.6-13.6v37.5c0 8.2 7.1 15.1 15.5 15.1s15.5-6.9 15.5-15.1v-37.5c16.3 4.2 28.4 13.5 28.6 13.6 2.7 2.1 6.1 3.3 9.5 3.3 4.4 0 8.5-1.9 11.4-5.1 2.7-3 4-7 3.6-10.9-.3-3.9-2.3-7.4-5.4-9.9-.9-.7-20.8-16.2-47.7-20.9V282l96 56c-9.6 26-6.2 51.1-6 52.2 1 7.2 6.9 12.4 14 12.4 1 0 2-.1 3-.3 7.9-1.6 13.1-9.2 12-17.3-.1-.5-1.9-15.7 2.6-32l32.2 18.8c2.3 1.3 4.9 2 7.6 2 5.4 0 10.4-2.9 13.1-7.6 4.1-6.9 1.7-16.2-5.5-20.4z"
+              fill="#00000"
+            />
+          </svg>
+          <!-- blomst -->
+          <img
+            class="h-[48.32px] lg:h-[92px] lg:w-[92px]"
+            src="img/ikoner/blomst_ikon.svg"
+            alt=""
+          />
         </div>
         <div
-          class="mx-24 rounded-radius-mobile border-2 border-b-color-headings"
+          class="mx-auto w-40 rounded-radius-mobile border-2 border-b-color-headings lg:w-96"
         ></div>
         <h2
-          class="pt-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
+          class="pt-xl-spacing-mobile text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
         >
           Sæsonens blomster
         </h2>
@@ -1117,47 +1185,54 @@
         <!-- tre cards til forside -->
 
         <!-- Card til forsiden solsikke -->
-        <article>
-          <div class="article_wrapper">
-            <div class="billede_1">
-              <div class="arrow">
-                <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+        <div class="felxi">
+          <article>
+            <div class="article_wrapper">
+              <div class="billede_1">
+                <div class="arrow">
+                  <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+                </div>
+              </div>
+              <div class="overskrift">
+                <h4>Solsikke</h4>
               </div>
             </div>
-            <div class="overskrift">
-              <h4>Solsikke</h4>
+          </article>
+          <!-- card flipped solsikke -->
+          <article class="card_info">
+            <div class="arrow">
+              <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
             </div>
-          </div>
-        </article>
-        <!-- card flipped solsikke -->
-        <article class="card_info">
-          <div class="arrow">
-            <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
-          </div>
-          <h5 class="font-other-headings text-h5-mobile">Solsikke</h5>
-          <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
-            <img src="img/ikoner/oprindelse_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">
-              Sydamerika - Mexico og Peru
-            </p>
-          </div>
-          <div
-            class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-          >
-            <img src="img/ikoner/sollys_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">
-              Solsikken elsker at stå et solrigt sted (50-55 grader)
-            </p>
-          </div>
-          <div
-            class="mx-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-          >
-            <img src="img/ikoner/holdbarhed_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">
-              En lille uge, afhængig af pasning
-            </p>
-          </div>
-          <!-- <div
+            <div class="overskrift">
+              <h4
+                class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
+              >
+                Solsikke
+              </h4>
+            </div>
+            <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
+              <img src="img/ikoner/oprindelse_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">
+                Sydamerika - Mexico og Peru
+              </p>
+            </div>
+            <div
+              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
+            >
+              <img src="img/ikoner/sollys_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">
+                Solsikken elsker at stå et solrigt sted (50-55 grader)
+              </p>
+            </div>
+            <div
+              class="mx-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
+            >
+              <img src="img/ikoner/holdbarhed_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">
+                En lille uge, afhængig af pasning
+              </p>
+            </div>
+            <!-- <div
             class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
           >
             <img src="img/ikoner/maal_ikon.svg" alt="" />
@@ -1169,44 +1244,52 @@
             <img src="img/ikoner/pris_ikon.svg" alt="" />
             <p class="font-font-body text-body-mobile">Pris</p>
           </div> -->
-        </article>
+          </article>
 
-        <!-- Card til forsiden grøn blomst -->
-        <article>
-          <div class="article_wrapper">
-            <div class="billede_2">
-              <div class="arrow">
-                <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+          <!-- Card til forsiden grøn blomst -->
+          <article>
+            <div class="article_wrapper">
+              <div class="billede_2">
+                <div class="arrow">
+                  <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+                </div>
+              </div>
+              <div class="overskrift">
+                <h4>Sweet fennel</h4>
               </div>
             </div>
-            <div class="overskrift">
-              <h4>Sweet fennel</h4>
+          </article>
+          <!-- card flipped grøn blomst -->
+          <article class="card_info">
+            <div class="arrow">
+              <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
             </div>
-          </div>
-        </article>
-        <!-- card flipped grøn blomst -->
-        <article class="card_info">
-          <div class="arrow">
-            <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
-          </div>
-          <h5 class="font-other-headings text-h5-mobile">Sweet fennel</h5>
-          <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
-            <img src="img/ikoner/oprindelse_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">Middelhavsområdet</p>
-          </div>
-          <div
-            class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-          >
-            <img src="img/ikoner/sollys_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">Tåler meget sol</p>
-          </div>
-          <div
-            class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-          >
-            <img src="img/ikoner/holdbarhed_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">Op til flere måneder</p>
-          </div>
-          <!-- <div
+            <div class="overskrift">
+              <h4
+                class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
+              >
+                Sweet fennel
+              </h4>
+            </div>
+            <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
+              <img src="img/ikoner/oprindelse_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">Middelhavsområdet</p>
+            </div>
+            <div
+              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
+            >
+              <img src="img/ikoner/sollys_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">Tåler meget sol</p>
+            </div>
+            <div
+              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
+            >
+              <img src="img/ikoner/holdbarhed_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">
+                Op til flere måneder
+              </p>
+            </div>
+            <!-- <div
             class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
           >
             <img src="img/ikoner/maal_ikon.svg" alt="" />
@@ -1218,48 +1301,54 @@
             <img src="img/ikoner/pris_ikon.svg" alt="" />
             <p class="font-font-body text-body-mobile">Pris</p>
           </div> -->
-        </article>
+          </article>
 
-        <!-- Card til forsiden okkide -->
-        <article>
-          <div class="article_wrapper">
-            <div class="billede_3">
-              <div class="arrow">
-                <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+          <!-- Card til forsiden okkide -->
+          <article>
+            <div class="article_wrapper">
+              <div class="billede_3">
+                <div class="arrow">
+                  <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
+                </div>
+              </div>
+              <div class="overskrift">
+                <h4>Okkide</h4>
               </div>
             </div>
-            <div class="overskrift">
-              <h4>okkide</h4>
+          </article>
+          <!-- card flipped okkide -->
+          <article class="card_info">
+            <div class="arrow">
+              <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
             </div>
-          </div>
-        </article>
-        <!-- card flipped okkide -->
-        <article class="card_info">
-          <div class="arrow">
-            <img src="img/ikoner/fliparrow_ikon.svg" alt="" />
-          </div>
-          <h5 class="font-other-headings text-h5-mobile">Okkide</h5>
-          <div class="ml-xl-spacing-mobile flex gap-s-spacing-mobile">
-            <img src="img/ikoner/oprindelse_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">
-              Kina, Thailand, Filippinerne, Malaysia og Indonesien.
-            </p>
-          </div>
-          <div
-            class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-          >
-            <img src="img/ikoner/sollys_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">
-              Kan ikke tåle direkte sollys
-            </p>
-          </div>
-          <div
-            class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-          >
-            <img src="img/ikoner/holdbarhed_ikon.svg" alt="" />
-            <p class="font-font-body text-body-mobile">Ca. en uge</p>
-          </div>
-          <!-- <div
+            <div class="overskrift">
+              <h4
+                class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
+              >
+                Okkide
+              </h4>
+            </div>
+            <div class="ml-xl-spacing-mobile flex gap-s-spacing-mobile">
+              <img src="img/ikoner/oprindelse_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">
+                Kina, Thailand, Filippinerne, Malaysia og Indonesien.
+              </p>
+            </div>
+            <div
+              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
+            >
+              <img src="img/ikoner/sollys_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">
+                Kan ikke tåle direkte sollys
+              </p>
+            </div>
+            <div
+              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
+            >
+              <img src="img/ikoner/holdbarhed_ikon.svg" alt="" />
+              <p class="font-font-body text-body-mobile">Ca. en uge</p>
+            </div>
+            <!-- <div
             class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
           >
             <img src="img/ikoner/maal_ikon.svg" alt="" />
@@ -1271,17 +1360,23 @@
             <img src="img/ikoner/pris_ikon.svg" alt="" />
             <p class="font-font-body text-body-mobile">Pris</p>
           </div> -->
-        </article>
-
-        <div class="primary py-xl-spacing-mobile">
+          </article>
+        </div>
+        <div class="primary pt-xl-spacing-mobile">
           <button class="mx-auto">Udforsk sortimentet</button>
         </div>
+      </section>
 
-        <!-- testimonials section X -->
-        <h2 class="text-center font-other-headings text-h2-mobile">
+      <!-- testimonials section_4 -->
+      <section class="mx-[30px] lg:mx-[80px]">
+        <h2
+          class="mt-xxl-spacing-desktop text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
+        >
           Testimonials
         </h2>
-        <article class="flex gap-10 overflow-x-scroll pb-xxl-spacing-mobile">
+        <article
+          class="flex gap-10 overflow-x-scroll pb-20 lg:mt-xl-spacing-desktop"
+        >
           <div class="article px-m-spacing-mobile">
             <div class="flex justify-center gap-3 py-l-spacing-mobile">
               <svg width="32" height="32" viewBox="0 0 24 24">
@@ -1304,19 +1399,19 @@
               </svg>
             </div>
             <div class="flex">
-              <svg width="50" height="50" viewBox="0 0 24 24">
+              <svg class="pile" width="50" height="50" viewBox="0 0 24 24">
                 <path
                   fill="#888888"
                   d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
                 />
               </svg>
               <p
-                class="px-s-spacing-mobile text-center font-font-body text-body-mobile"
+                class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
                 “Abonnement løsningen lever altid op til mine forventninger.”
               </p>
               <svg
-                class="rotate-180"
+                class="pile rotate-180"
                 width="50"
                 height="50"
                 viewBox="0 0 24 24"
@@ -1357,19 +1452,19 @@
               </svg>
             </div>
             <div class="flex">
-              <svg width="50" height="50" viewBox="0 0 24 24">
+              <svg class="pile" width="50" height="50" viewBox="0 0 24 24">
                 <path
                   fill="#888888"
                   d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
                 />
               </svg>
               <p
-                class="px-s-spacing-mobile text-center font-font-body text-body-mobile"
+                class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
                 “Jeg forestrækker at købe mine blomster hos Blomster Bjarne.”
               </p>
               <svg
-                class="rotate-180"
+                class="pile rotate-180"
                 width="50"
                 height="50"
                 viewBox="0 0 24 24"
@@ -1410,20 +1505,20 @@
               </svg>
             </div>
             <div class="flex">
-              <svg width="50" height="50" viewBox="0 0 24 24">
+              <svg class="pile" width="50" height="50" viewBox="0 0 24 24">
                 <path
                   fill="#888888"
                   d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
                 />
               </svg>
               <p
-                class="px-s-spacing-mobile text-center font-font-body text-body-mobile"
+                class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
                 “Jeg elsker at købe mine blomster i butikken, der er altid et
                 sødt personale.”
               </p>
               <svg
-                class="rotate-180"
+                class="pile rotate-180"
                 width="50"
                 height="50"
                 viewBox="0 0 24 24"
