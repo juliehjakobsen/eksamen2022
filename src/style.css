@@ -301,7 +301,7 @@ header nav ul {
   nav ul {
     display: flex;
     flex-flow: row;
-    margin-top: var(--l-spacing-desktop);
+    margin-top: var(--m-spacing-desktop);
   }
 
   .navigation_desktop {
@@ -321,11 +321,12 @@ header nav ul {
   nav {
     display: flex;
     justify-content: space-between;
+    height: 100px;
   }
 
   .secondary_nav {
     margin-right: var(--xxl-spacing-desktop);
-    margin-top: var(--l-spacing-desktop);
+    margin-top: var(--s-spacing-desktop);
   }
 
   /* farveskift desktop  */
