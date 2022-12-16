@@ -294,15 +294,6 @@
         }
       }
 
-      .navigation_mobil {
-        background-color: var(--background-color);
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 2px solid black;
-        height: 96px;
-        align-items: center;
-      }
-
       .navigation_desktop {
         display: none;
       }
@@ -313,38 +304,7 @@
           padding: 15px 60px;
           border-radius: var(--radius-desktop);
         }
-        .navigation_mobil {
-          display: none;
-        }
-        .navigation_desktop {
-          display: block;
-          background-color: var(--background-color);
-          border-bottom: 2px solid black;
-          /* rigtig afstand fra figma
-      height: 286px;*/
-        }
-        .navigation_under_logo {
-          display: flex;
-          justify-content: space-between;
-          font-family: "Roboto", sans-serif;
-          padding-top: var(--l-spacing-desktop);
-          padding-bottom: var(--s-spacing-desktop);
-          list-style: none;
-          font-size: var(--header_text_desktop);
-        }
-        .main_nav {
-          display: flex;
-          list-style: none;
-          gap: var(--xxl-spacing-desktop);
-          padding-left: var(--xxl-spacing-desktop);
-        }
 
-        .secondary_nav {
-          list-style: none;
-          display: flex;
-          gap: var(--s-spacing-desktop);
-          padding-right: var(--xxl-spacing-desktop);
-        }
         .person {
           width: 40px;
           height: 40px;
@@ -356,15 +316,6 @@
         .search {
           width: 40px;
           height: 40px;
-        }
-
-        .navigation_desktop {
-          display: flex;
-          justify-content: center;
-          /* rigtige afstand fra figma
-          padding-top: var(--xl-spacing-desktop); */
-          /* padding-top: var(--l-spacing-desktop); */
-          border-bottom: 2px solid black;
         }
 
         /* farveskift desktop  */
@@ -586,9 +537,7 @@
         margin: auto;
         margin-top: 36px;
       }
-      /* img {
-        width: 155px;
-      } */
+
       .overskrift {
         text-align: center;
         font-size: var(--h5-mobile);
@@ -829,8 +778,7 @@
   <body>
     <!-- header -->
     <header>
-      <div class="lg:none navigation_desktop lg:block">
-        <a class="hej" href=""></a>
+      <div class="navigation_desktop">
         <img
           class="logo_lang"
           id="sort"

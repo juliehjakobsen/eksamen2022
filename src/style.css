@@ -16,7 +16,6 @@ body {
 .burger {
   display: flex;
   justify-content: end;
-  /* border-bottom: 2px solid black; */
 }
 
 .burger button {
@@ -63,17 +62,37 @@ header nav ul {
   gap: 60px;
 }
 
-.navigation_desktop {
-  display: none;
+.navigation_mobil {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (min-width: 900) {
-  header nav ul {
+/* navigation desktop */
+@media (min-width: 900px) {
+  nav ul {
     display: flex;
+    flex-flow: row;
+  }
+
+  .navigation_desktop {
+    display: block;
+    margin: auto;
+  }
+  .navigation_mobil {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: var(--l-spacing-desktop);
+  }
+
+  .secondary_nav {
+    margin-right: var(--xxl-spacing-desktop);
   }
 }
-
-/* sortiment dropdown */
 
 .dropdown {
   height: 40px;
