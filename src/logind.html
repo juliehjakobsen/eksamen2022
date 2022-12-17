@@ -13,21 +13,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      body {
-        overflow-x: hidden;
-      }
-
-      .baggrundsbillede {
-        background-image: url(img/hero_billede.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .bg_tekstur {
-        background-image: url(img/tekstur_baggrund.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
       .primary button {
         background-color: var(--color-primary-button-background);
         color: var(--color-primary-button-text);
@@ -260,7 +245,7 @@
 
     <main class="">
       <section
-        class="my-[100px] mx-[20px] max-w-[800px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body"
+        class="my-[100px] mx-[20px] max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body"
       >
         <div class="login_opret grid grid-cols-2 items-center">
           <div class="logind flex items-center px-[30px]">
@@ -285,15 +270,15 @@
 
         <div class="content px-[30px] pt-l-spacing-mobile font-font-body">
           <h3
-            class="overskrift1 pb-m-spacing-mobile font-other-headings text-h3-mobile"
+            class="overskrift1 pb-m-spacing-mobile font-other-headings text-h3-mobile lg:text-h3-desktop"
           >
             Log ind
           </h3>
 
           <p class="text pb-l-spacing-mobile">
             Har du bruger hos os, og vil gerne give feedback eller købe vores
-            abonnement? Log ind ved hjælp af formularen nedenfor. Har du ikke en
-            bruger, skal du først
+            abonnement? Log venligst ind ved hjælp af formularen nedenfor. Har
+            du ikke en bruger, skal du først
             <a class="underline hover:text-rust-500" href=""
               >oprette en bruger</a
             >.
@@ -305,7 +290,7 @@
                 >E-mail</label
               >
               <input
-                class="rounded-radius-mobile"
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
                 type="email"
                 inputmode="email"
                 placeholder="Fx. google@gmail.com"
@@ -317,7 +302,7 @@
                 >Adgangskode</label
               >
               <input
-                class="rounded-radius-mobile"
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
                 type="text"
                 inputmode="text"
                 placeholder="Indeholder min. 6 karakterer"
@@ -329,8 +314,12 @@
               href="#"
               >Har du glemt dit kodeord?</a
             >
-            <div class="knap flex content-center">
-              <PrimaryButton class="" knaptext="Log ind" />
+            <div class="knap flex justify-center">
+              <a
+                class="flex max-w-[50%] flex-row items-center justify-center gap-[10px] rounded-radius-mobile border-0 bg-color-primary-button-background py-[15px] px-[40px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href=""
+                >Log ind</a
+              >
             </div>
           </form>
         </div>
