@@ -50,10 +50,6 @@
         background-color: var(--color-primary-button-hover-background);
       }
 
-      .article {
-        min-width: 380px;
-      }
-
       .stor_snefnug {
         display: none;
       }
@@ -756,43 +752,136 @@
             </div>
           </article>
         </section>
-        <div class="primary pt-xl-spacing-mobile">
+        <div class="primary py-xl-spacing-mobile">
           <button class="mx-auto">Udforsk sortimentet</button>
         </div>
       </section>
 
       <!-- testimonials section_4 -->
-      <section class="px-[30px] lg:px-[80px]">
+      <section
+        class="bg_tekstur py-xxl-spacing-mobile px-[30px] shadow-inner lg:px-[80px]"
+      >
         <h2
-          class="mt-xxl-spacing-desktop text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
+          class="pb-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
         >
-          Testimonials
+          Anmeldelser
         </h2>
         <article
-          class="flex snap-center gap-10 overflow-x-scroll pb-20 lg:mt-xl-spacing-desktop"
+          class="carousel carousel-center h-[200px] overflow-y-hidden overflow-x-scroll lg:mt-xl-spacing-desktop lg:h-[300px] lg:place-content-center lg:overflow-x-hidden"
         >
-          <div class="article px-m-spacing-mobile">
-            <figure class="flex justify-center gap-3 py-l-spacing-mobile">
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-            </figure>
-            <div class="flex">
+          <div class="carousel-item">
+            <div class="snap-center lg:w-[500px]">
+              <figure class="flex justify-center gap-3 py-l-spacing-mobile">
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+              </figure>
+              <div>
+                <p
+                  class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  “Abonnementløsningen lever altid op til mine forventninger.”
+                </p>
+              </div>
+              <div>
+                <p
+                  class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
+                >
+                  Peter Nielsen
+                </p>
+              </div>
+            </div>
+            <div class="snap-center lg:-mx-xxl-spacing-desktop lg:w-[500px]">
+              <figure class="flex justify-center gap-3 py-l-spacing-mobile">
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+              </figure>
+              <div>
+                <p
+                  class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  “Jeg forestrækker at købe mine blomster hos Blomster Bjarne”
+                </p>
+              </div>
+              <div>
+                <p
+                  class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
+                >
+                  Kathrine Hansen
+                </p>
+              </div>
+            </div>
+            <div class="snap-center lg:w-[500px]">
+              <figure class="flex justify-center gap-3 py-l-spacing-mobile">
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+              </figure>
+              <div>
+                <p
+                  class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  “Jeg elsker at købe mine blomster i butikken, der er altid et
+                  sødt personale”
+                </p>
+              </div>
+              <div>
+                <p
+                  class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
+                >
+                  Erik Jakobsen
+                </p>
+              </div>
+            </div>
+            <div
+              class="absolute left-5 right-5 flex justify-between px-0 pt-xxxl-spacing-mobile"
+            >
               <svg
                 class="pile"
                 width="50"
@@ -805,11 +894,6 @@
                   d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
                 />
               </svg>
-              <p
-                class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                “Abonnementløsningen lever altid op til mine forventninger.”
-              </p>
               <svg
                 class="pile rotate-180"
                 width="50"
@@ -822,134 +906,6 @@
                   d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
                 />
               </svg>
-            </div>
-            <div>
-              <p
-                class="pt-l-spacing-mobile text-right font-font-body text-body-mobile"
-              >
-                Peter Nielsen
-              </p>
-            </div>
-          </div>
-          <div class="article px-m-spacing-mobile">
-            <figure class="flex justify-center gap-3 py-l-spacing-mobile">
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-            </figure>
-            <div class="flex">
-              <svg
-                class="pile"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                alt="pil til venstre"
-              >
-                <path
-                  fill="#888888"
-                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
-                />
-              </svg>
-              <p
-                class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                “Jeg forestrækker at købe mine blomster hos Blomster Bjarne”
-              </p>
-              <svg
-                class="pile rotate-180"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                alt="pil til højre"
-              >
-                <path
-                  fill="#888888"
-                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
-                />
-              </svg>
-            </div>
-            <div>
-              <p
-                class="pt-l-spacing-mobile text-right font-font-body text-body-mobile"
-              >
-                Kathrine Hansen
-              </p>
-            </div>
-          </div>
-          <div class="article">
-            <figure class="flex justify-center gap-3 py-l-spacing-mobile">
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-              <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
-                <path
-                  fill="#edc551"
-                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
-                />
-              </svg>
-            </figure>
-            <div class="flex">
-              <svg
-                class="pile"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                alt="pil til venstre"
-              >
-                <path
-                  fill="#888888"
-                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
-                />
-              </svg>
-              <p
-                class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                “Jeg elsker at købe mine blomster i butikken, der er altid et
-                sødt personale”
-              </p>
-              <svg
-                class="pile rotate-180"
-                width="50"
-                height="50"
-                viewBox="0 0 24 24"
-                alt="pil til højre"
-              >
-                <path
-                  fill="#888888"
-                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
-                />
-              </svg>
-            </div>
-            <div>
-              <p
-                class="pt-l-spacing-mobile text-right font-font-body text-body-mobile"
-              >
-                Erik Jakobsen
-              </p>
             </div>
           </div>
         </article>
