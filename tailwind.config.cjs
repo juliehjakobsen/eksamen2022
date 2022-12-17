@@ -90,6 +90,9 @@ module.exports = {
 
       /* BUTTONS */
 
+      "color-primary-button-background": "#666a46",
+      "color-primary-button-hover-background": "#a0a57a",
+
       /* secondary */
       "color-secondary-button-background": "#ffffff",
     },
@@ -129,7 +132,7 @@ module.exports = {
       "banner-desktop": "15.625rem",
       "button-desktop": "1.375rem",
       "progress-heading": "2rem",
-      "header_text_desktop": "1.2rem",
+      header_text_desktop: "1.2rem",
       "h1-hero": "3.5rem",
     },
 

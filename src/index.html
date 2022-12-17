@@ -178,14 +178,14 @@
         .felxi {
           display: flex;
           place-content: center;
-          justify-content: space-between;
+          gap: var(--m-spacing-desktop);
         }
 
         .article_wrapper {
           border: solid 2px black;
           border-radius: var(--xs-radius);
-          width: 400px;
-          height: 600px;
+          width: 342px;
+          height: 500px;
           margin: auto;
           margin-top: 36px;
           display: block;
@@ -195,19 +195,19 @@
           background-image: url(/img/blomster/solsikke.webp);
           background-repeat: no-repeat;
           background-size: cover;
-          height: 458px;
+          height: 400px;
         }
         .billede_2 {
           background-image: url(/img/blomster/gron_blomst.webp);
           background-repeat: no-repeat;
           background-size: cover;
-          height: 458px;
+          height: 400px;
         }
         .billede_3 {
           background-image: url(/img/blomster/okkide.webp);
           background-repeat: no-repeat;
           background-size: cover;
-          height: 458px;
+          height: 400px;
         }
 
         /* når carded er flipped */
@@ -294,8 +294,14 @@
   <body>
     <!-- header -->
     <header>
-      <!-- NAVIGATION DESKTOP -->
-      <section>
+      <div
+        class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
+      >
+        <p>Køb dine blomster i vores butikker</p>
+        <p>Bestil dit abonnement på vores webshop</p>
+      </div>
+      <!-- LOGO DESKTOP -->
+      <div>
         <a class="navigation_desktop" href="index.html">
           <img
             class="logo_lang"
@@ -370,7 +376,6 @@
         </div>
       </section>
 
-      <!-- IKONER TIL BEGGE -->
       <nav class="lg:flex">
         <ul>
           <li>
@@ -382,13 +387,13 @@
           </li>
           <div class="dropdown">
             <label tabindex="0">
-              <button class="flex gap-s-spacing-mobile">
+              <button class="flex">
                 <p
                   class="font-other-headings text-h3-mobile lg:text-h5-desktop"
                 >
                   Sortiment
                 </p>
-                <svg width="40" height="40" viewBox="0 0 24 24">
+                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
                   <path
                     fill="#000000"
                     d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
@@ -401,7 +406,7 @@
                 <a
                   tabindex="0"
                   class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                  href="abonnement.html"
+                  href="blomster.html"
                   >Blomster</a
                 >
               </li>
@@ -409,7 +414,7 @@
                 <a
                   tabindex="0"
                   class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                  href="abonnement.html"
+                  href="vaser.html"
                   >Vaser</a
                 >
               </li>
@@ -417,14 +422,14 @@
           </div>
           <li>
             <a
-              href=""
+              href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Begivenheder</a
             >
           </li>
           <li>
             <a
-              href=""
+              href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Kontakt os</a
             >
@@ -511,21 +516,22 @@
         </svg>
       </div>
     </section>
+
     <main class="overflow-x-clip">
       <!-- section_1 -->
       <section class="bg_tekstur px-[30px] lg:px-[80px]">
         <h2
-          class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-xxl-spacing-desktop lg:text-h2-desktop"
+          class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-l-spacing-desktop lg:text-h2-desktop"
         >
           Hvem er vi?
         </h2>
         <h3
-          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-xl-spacing-desktop lg:text-h5-desktop"
+          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-m-spacing-desktop lg:text-h5-desktop"
         >
           Hos Blomster Bjarne fejrer vi alt, hvad der er smukt!
         </h3>
         <p
-          class="pt-l-spacing-mobile font-font-body text-body-mobile lg:px-96 lg:pt-l-spacing-desktop lg:text-body-desktop"
+          class="pt-l-spacing-mobile font-font-body text-body-mobile lg:px-72 lg:pt-l-spacing-desktop lg:text-body-desktop"
         >
           Blomster Bjarne udspringer ud fra et kærligt minde om vores
           grundlægger – at sælge blomster er en del af vores DNA. <br />
@@ -569,7 +575,7 @@
           <!-- sol -->
 
           <img
-            class="h-[48.32px] lg:h-[92px] lg:w-[92px]"
+            class="h-[48.32px] lg:h-[70px] lg:w-[70px]"
             src="img/ikoner/sollys_ikon.svg"
             alt="sommer ikon"
           />
@@ -577,7 +583,7 @@
           <!-- blad -->
 
           <img
-            class="h-[48.32px] lg:h-[92px] lg:w-[92px]"
+            class="h-[48.32px] lg:h-[70px] lg:w-[70px]"
             src="img/ikoner/blad.svg"
             alt="efterår ikon"
           />
@@ -599,8 +605,8 @@
           <!-- ----- -->
           <svg
             class="stor_snefnug"
-            width="92"
-            height="92
+            width="70"
+            height="70
         "
             viewBox="0 0 512 512"
             alt="vinter ikon desktop"
@@ -612,7 +618,7 @@
           </svg>
           <!-- blomst -->
           <img
-            class="h-[48.32px] lg:h-[92px] lg:w-[92px]"
+            class="h-[48.32px] lg:h-[70px] lg:w-[70px]"
             src="img/ikoner/blomst_ikon.svg"
             alt="forår ikon"
           />
@@ -638,7 +644,7 @@
                 </div>
               </div>
               <div class="overskrift">
-                <h4>Solsikke</h4>
+                <h4 class="pt-xxs-spacing-desktop">Solsikke</h4>
               </div>
             </div>
           </article>
@@ -687,7 +693,7 @@
                 </div>
               </div>
               <div class="overskrift">
-                <h4>Sweet fennel</h4>
+                <h4 class="pt-xxs-spacing-desktop">Fennikel</h4>
               </div>
             </div>
           </article>
@@ -732,7 +738,7 @@
                 </div>
               </div>
               <div class="overskrift">
-                <h4>Okkide</h4>
+                <h4 class="pt-xxs-spacing-desktop">Orkidé</h4>
               </div>
             </div>
           </article>
@@ -776,7 +782,7 @@
       </section>
 
       <!-- testimonials section_4 -->
-      <section class="bg_tekstur px-[30px] lg:px-[80px]">
+      <section class="px-[30px] lg:px-[80px]">
         <h2
           class="mt-xxl-spacing-desktop text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
         >
@@ -816,7 +822,7 @@
               <p
                 class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
-                “Abonnement løsningen lever altid op til mine forventninger.”
+                “Abonnementløsningen lever altid op til mine forventninger.”
               </p>
               <svg
                 class="pile rotate-180"
@@ -869,7 +875,7 @@
               <p
                 class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
-                “Jeg forestrækker at købe mine blomster hos Blomster Bjarne.”
+                “Jeg forestrækker at købe mine blomster hos Blomster Bjarne”
               </p>
               <svg
                 class="pile rotate-180"
@@ -887,7 +893,7 @@
               <p
                 class="pt-l-spacing-mobile text-right font-font-body text-body-mobile"
               >
-                Kathine Hansen
+                Kathrine Hansen
               </p>
             </div>
           </div>
@@ -923,7 +929,7 @@
                 class="px-s-spacing-mobile text-center font-font-body text-body-mobile lg:text-body-desktop"
               >
                 “Jeg elsker at købe mine blomster i butikken, der er altid et
-                sødt personale.”
+                sødt personale”
               </p>
               <svg
                 class="pile rotate-180"
@@ -941,14 +947,151 @@
               <p
                 class="pt-l-spacing-mobile text-right font-font-body text-body-mobile"
               >
-                Peter Nielsen
+                Erik Jakobsen
               </p>
             </div>
           </div>
         </article>
       </section>
     </main>
-    <footer></footer>
+
+    <!-- footer -->
+    <footer
+      class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
+    >
+      <article
+        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
+      >
+        <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
+          <section
+            class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+          >
+            <h4 class="text-h4-mobile lg:text-h4-desktop">BUTIKKER</h4>
+
+            <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
+              <div class="strandvejen">
+                <p>Strandvejen 167</p>
+                <p>2900 Hellerup</p>
+                <p>Danmark</p>
+                <p>
+                  <a href="tel:+4539629059"></a>
+                  Tlf.: +45 39 62 90 59
+                </p>
+              </div>
+
+              <div class="gunnar">
+                <p>Gunnar Nu Hansens Pl. 6</p>
+                <p>2100 København Ø</p>
+                <p>Danmark</p>
+                <p><a href="tel:+4536260700"></a>Tlf.: +45 36 26 07 00</p>
+              </div>
+
+              <div class="vaernedamsvej">
+                <p>Værnedamsvej 4A st.</p>
+                <p>1619 København V</p>
+                <p>Danmark</p>
+                <p><a href="tel:+4526117006"></a>Tlf.: +45 26 11 70 06</p>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
+          >
+            <h4
+              class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
+            >
+              INFORMATIONER
+            </h4>
+            <div class="mx-auto">
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a href="#">Om os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a href="#">Kontakt os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a href="#">Sitemap</a>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+          >
+            <h4 class="text-h4-mobile lg:text-h4-desktop">ÅBNINGSTIDER</h4>
+            <div class="tider grid grid-cols-2">
+              <div
+                class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
+              >
+                <p>Mandag</p>
+                <p>Tirsdag</p>
+                <p>Onsdag</p>
+                <p>Torsdag</p>
+                <p>Fredag</p>
+                <p>Lørdag</p>
+                <p>Søndag</p>
+              </div>
+              <div
+                class="tidspunkter grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
+              >
+                <p>10 - 18</p>
+                <p>10 - 18</p>
+                <p>10 - 18</p>
+                <p>10 - 18</p>
+                <p>10 - 18</p>
+                <p>10 - 15</p>
+                <p>11 - 16</p>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
+          >
+            <h4 class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop">
+              FØLG OS HER
+            </h4>
+            <div class="ikoner flex place-content-center gap-m-spacing-mobile">
+              <svg width="40" height="40" viewBox="0 0 48 48">
+                <g fill="none" fill-rule="evenodd" clip-rule="evenodd">
+                  <path
+                    stroke="#fffdf9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                    d="M4.111 46A2.117 2.117 0 0 1 2 43.877V4.123C2 2.95 2.945 2 4.111 2H43.89C45.055 2 46 2.95 46 4.123v39.754A2.117 2.117 0 0 1 43.889 46H4.11Z"
+                  ></path>
+                  <path
+                    fill="#fffdf9"
+                    d="M38.662 17.887h-4.869a2.445 2.445 0 0 0-2.444 2.444v4.89h7.313l-1.071 7.332h-6.242V46h-8.042V32.553h-6.64v-7.331h6.554l.086-6.959l-.024-2.494a6.377 6.377 0 0 1 6.376-6.438h9.003v8.556Z"
+                  ></path>
+                </g>
+              </svg>
+              <svg width="44" height="44" viewBox="0 0 512 512">
+                <path
+                  fill="#fffdf9"
+                  d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32Z"
+                ></path>
+                <path
+                  fill="#fffdf9"
+                  d="M377.33 162.67a28 28 0 1 1 28-28a27.94 27.94 0 0 1-28 28ZM256 181.33A74.67 74.67 0 1 1 181.33 256A74.75 74.75 0 0 1 256 181.33m0-37.33a112 112 0 1 0 112 112a112 112 0 0 0-112-112Z"
+                ></path>
+              </svg>
+            </div>
+          </section>
+        </div>
+
+        <section
+          class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
+        >
+          <p>CVR: 35649328</p>
+          <a class="cursor-pointer underline" href="#">Cookiepolitik</a>
+          <a class="cursor-pointer underline" href="#">Privatlivspolitik</a>
+          <a class="cursor-pointer underline" href="#">Handelsbetingelser</a>
+        </section>
+      </article>
+    </footer>
     <script></script>
     <script type="module" src="main.js"></script>
   </body>
