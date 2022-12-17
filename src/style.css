@@ -6,9 +6,31 @@
   margin: 0;
 }
 
+/* virker kun i chrome */
+.skip-to-content-link {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.skip-to-content-link {
+  background: #e77e23;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
+}
+
 body {
   background-color: var(--background-color);
 }
+
 .burger {
   display: flex;
   justify-content: end;
@@ -19,6 +41,14 @@ body {
   margin-top: var(--xxs-spacing-mobile);
   margin-bottom: var(--s-spacing-mobile);
   font-size: var(--h2-mobile);
+  background-color: var(--background-color);
+}
+
+.sortiment {
+  background-color: var(--background-color);
+}
+.sortiment:hover {
+  background-color: var(--background-color);
 }
 
 .toggle-btn {
@@ -52,6 +82,7 @@ nav ul {
   gap: var(--xl-spacing-mobile);
   margin-left: var(--xxl-spacing-mobile);
   margin-bottom: var(--l-spacing-mobile);
+  flex-flow: row;
 }
 
 .logo_mobil {
@@ -307,6 +338,10 @@ header nav ul {
   .navigation_desktop {
     margin: auto;
     margin-top: var(--s-spacing-desktop);
+  }
+
+  .sortiment {
+    height: 32px;
   }
 
   .logo_lang {

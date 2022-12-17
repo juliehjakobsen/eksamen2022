@@ -125,61 +125,229 @@
       }
     </style>
   </head>
-  <body class="baggrundsbillede">
-    <a href="kurv.html">kurv</a>
+  <body class="">
+    <!-- <a href="kurv.html">kurv</a>
     <a href="blomster.html">blomster</a>
-    <a href="vaser.html">vaser</a>
-    <header class="bg-rust-400 font-medium text-color-black">
+    <a href="vaser.html">vaser</a> -->
+
+    <!-- header -->
+    <header>
       <div
+        class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
+      >
+        <p>Køb dine blomster i vores butikker</p>
+        <p>Bestil dit abonnement på vores webshop</p>
+      </div>
+      <!-- LOGO DESKTOP -->
+      <section>
+        <a class="navigation_desktop" href="index.html">
+          <img
+            class="logo_lang"
+            id="sort"
+            src="img/logo/bb_logo_lang.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_lang"
+            id="sol"
+            src="img/logo/bb_logo_lang_sol.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_lang"
+            id="graes"
+            src="img/logo/bb_logo_lang.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_lang"
+            id="himmel"
+            src="img/logo/bb_logo_lang_himmel.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_lang"
+            id="rust"
+            src="img/logo/bb_logo_lang_rust.png"
+            alt="Blomster Bjarne logo"
+          />
+        </a>
+      </section>
+
+      <!-- NAVIGATION MOBIL -->
+      <section class="navigation_mobil">
+        <a class="logo_mobil" href="">
+          <img
+            class="logo_kort"
+            id="sort"
+            src="img/logo/bb_logo_kort.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_kort"
+            id="sol"
+            src="img/logo/bb_logo_kort_sol.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_kort"
+            id="graes"
+            src="img/logo/bb_logo_kort_graes.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_kort"
+            id="himmel"
+            src="img/logo/bb_logo_kort_himmel.png"
+            alt="Blomster Bjarne logo"
+          />
+          <img
+            class="logo_kort"
+            id="rust"
+            src="img/logo/bb_logo_kort_rust.png"
+            alt="Blomster Bjarne logo"
+          />
+        </a>
+
+        <div class="burger">
+          <button class="toggle-btn">☰</button>
+        </div>
+      </section>
+
+      <nav class="lg:flex">
+        <ul>
+          <li tabindex="0">
+            <a
+              href="abonnement.html"
+              class="mt-8 font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Abonnement</a
+            >
+          </li>
+          <div class="dropdown">
+            <label tabindex="0">
+              <button class="flex">
+                <p
+                  class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+                >
+                  Sortiment
+                </p>
+                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                  />
+                </svg>
+              </button>
+            </label>
+            <ul class="underkat m-0">
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
+                  href="blomster.html"
+                  >Blomster</a
+                >
+              </li>
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
+                  href="vaser.html"
+                  >Vaser</a
+                >
+              </li>
+            </ul>
+          </div>
+          <li>
+            <a
+              href="#"
+              class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Begivenheder</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Kontakt os</a
+            >
+          </li>
+        </ul>
+
+        <ul class="secondary_nav">
+          <li>
+            <a href="logind.html">
+              <img
+                class="person h-8 w-8"
+                src="img/ikoner/person.svg"
+                alt="Gå til din konto"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="kurv.html">
+              <img
+                class="shopping h-8 w-8"
+                src="img/ikoner/shopping_bag.svg"
+                alt="Gå til kurv"
+              />
+            </a>
+          </li>
+          <li>
+            <img class="search h-8 w-8" src="img/ikoner/search.svg" alt="Søg" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <div
         class="grid gap-0.5 py-1 text-center font-font-body text-abonnement-text-info lg:flex lg:justify-around lg:text-body-mobile"
       >
         <p>Køb dine blomster i vores butikker</p>
         <p>Bestil dit abonnement på vores webshop</p>
         <p><a href="logind.html">Logind</a></p>
         <p><a href="cookie.html">cookie</a></p>
-      </div>
-    </header>
+      </div> -->
 
     <!---------------------------------------------- HERO -->
-    <section
-      class="bg-hero_image bg-cover pt-l-spacing-mobile text-center lg:h-hero-height"
-    >
-      <div
-        class="mx-10 border-2 border-sol pt-m-spacing-mobile pl-10 pr-10 text-sol lg:h-hero-border-height"
+    <main class="baggrundsbillede">
+      <section
+        class="bg-hero_image bg-cover pt-l-spacing-mobile text-center lg:h-hero-height"
       >
-        <h1
-          class="font-main-heading text-h1-mobile lg:pt-xxxl-spacing-desktop lg:text-h1-desktop"
+        <div
+          class="mx-10 border-2 border-sol pt-m-spacing-mobile pl-10 pr-10 text-sol lg:h-hero-border-height"
         >
-          Abonnement
-        </h1>
-        <p
-          class="pt-s-spacing-mobile font-font-body text-h5-mobile lg:pt-s-spacing-desktop lg:text-h5-desktop"
-        >
-          Et udvalg af blomster leveret til din dør
-        </p>
-        <p
-          class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
-        >
-          Med et blomsterabonnement fra Blomster Bjarne kan du nyde et udvalg af
-          årstidens blomster leveret direkte til din hoveddør *
-        </p>
-      </div>
-      <div class="py-s-spacing-mobile">
-        <svg
-          class="mx-auto grid text-sol"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8l8-8z"
-          ></path>
-        </svg>
-      </div>
-    </section>
+          <h1
+            class="font-main-heading text-h1-mobile lg:pt-xxxl-spacing-desktop lg:text-h1-desktop"
+          >
+            Abonnement
+          </h1>
+          <p
+            class="pt-s-spacing-mobile font-font-body text-h5-mobile lg:pt-s-spacing-desktop lg:text-h5-desktop"
+          >
+            Et udvalg af blomster leveret til din dør
+          </p>
+          <p
+            class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
+          >
+            Med et blomsterabonnement fra Blomster Bjarne kan du nyde et udvalg
+            af årstidens blomster leveret direkte til din hoveddør *
+          </p>
+        </div>
+        <div class="py-s-spacing-mobile">
+          <svg
+            class="mx-auto grid text-sol"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8l8-8z"
+            ></path>
+          </svg>
+        </div>
+      </section>
 
-    <main class="">
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section class="pb-xxl-spacing-mobile lg:pb-xxl-spacing-desktop">
         <!------------------------------- KNAP -->
@@ -220,7 +388,11 @@
         >
           <div class="article">
             <div class="ikon">
-              <img class="img" src="img/ikoner/blomst_ikon.svg" alt="" />
+              <img
+                class="img"
+                src="img/ikoner/blomst_ikon.svg"
+                alt="blomster ikon"
+              />
             </div>
             <div class="info">
               <h3 class="h4">1. Vælg din buket</h3>
@@ -239,7 +411,11 @@
 
           <div class="article">
             <div class="ikon">
-              <img class="img" src="img/ikoner/shoppingcart_ikon.svg" alt="" />
+              <img
+                class="img"
+                src="img/ikoner/shoppingcart_ikon.svg"
+                alt="shipping ikon"
+              />
             </div>
             <div class="info">
               <div><h3 class="h4">2. Tilføj til kurv</h3></div>
@@ -260,7 +436,11 @@
 
           <div class="article">
             <div class="ikon">
-              <img class="img" src="img/ikoner/levering_ikon.svg" alt="" />
+              <img
+                class="img"
+                src="img/ikoner/levering_ikon.svg"
+                alt="lastbil leverings ikon"
+              />
             </div>
             <div class="info">
               <div><h3 class="h4">3. Din buket bliver sendt</h3></div>
@@ -281,7 +461,11 @@
 
           <div class="article">
             <div class="ikon">
-              <img class="img" src="img/ikoner/lokation_ikon.svg" alt="" />
+              <img
+                class="img"
+                src="img/ikoner/lokation_ikon.svg"
+                alt="lokation ikon"
+              />
             </div>
             <div class="info">
               <div><h3 class="h4">4. Buketten bliver leveret</h3></div>
@@ -344,17 +528,23 @@
           </section>
 
           <section
-            class="informationer grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+            class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
-            <h4 class="text-h4-mobile lg:text-h4-desktop">INFORMATIONER</h4>
-            <div>
-              <a href="#">Om os</a>
-            </div>
-            <div>
-              <a href="#">Kontakt os</a>
-            </div>
-            <div>
-              <a href="#">Sitemap</a>
+            <h4
+              class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
+            >
+              INFORMATIONER
+            </h4>
+            <div class="mx-auto">
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a href="#">Om os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a href="#">Kontakt os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a href="#">Sitemap</a>
+              </div>
             </div>
           </section>
 
@@ -425,7 +615,7 @@
         </div>
 
         <section
-          class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile"
+          class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
           <p>CVR: 35649328</p>
           <a class="cursor-pointer underline" href="#">Cookiepolitik</a>
@@ -434,6 +624,6 @@
         </section>
       </article>
     </footer>
-    <script></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
