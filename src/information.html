@@ -165,11 +165,11 @@
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
-        <p>Køb dine blomster i vores butikker</p>
-        <p>Bestil dit abonnement på vores webshop</p>
+        <p tabindex="0">Køb dine blomster i vores butikker</p>
+        <p tabindex="0">Bestil dit abonnement på vores webshop</p>
       </div>
       <!-- LOGO DESKTOP -->
-      <section>
+      <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
           <img
             class="logo_lang"
@@ -205,8 +205,8 @@
       </section>
 
       <!-- NAVIGATION MOBIL -->
-      <section class="navigation_mobil">
-        <a class="logo_mobil" href="">
+      <section tabindex="0" class="navigation_mobil">
+        <a class="logo_mobil" href="index.html">
           <img
             class="logo_kort"
             id="sort"
@@ -248,15 +248,17 @@
         <ul>
           <li>
             <a
+              tabindex="0"
               href="abonnement.html"
               class="mt-8 font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Abonnement</a
             >
           </li>
           <div class="dropdown">
-            <label tabindex="0">
+            <label>
               <button class="flex">
                 <p
+                  tabindex="0"
                   class="font-other-headings text-h3-mobile lg:text-h5-desktop"
                 >
                   Sortiment
@@ -290,6 +292,7 @@
           </div>
           <li>
             <a
+              tabindex="0"
               href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Begivenheder</a
@@ -297,6 +300,7 @@
           </li>
           <li>
             <a
+              tabindex="0"
               href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Kontakt os</a
@@ -306,7 +310,7 @@
 
         <ul class="secondary_nav">
           <li>
-            <a href="logind.html">
+            <a tabindex="0" href="logind.html">
               <img
                 class="person h-8 w-8"
                 src="img/ikoner/person.svg"
@@ -315,7 +319,7 @@
             </a>
           </li>
           <li>
-            <a href="kurv.html">
+            <a tabindex="0" href="kurv.html">
               <img
                 class="shopping h-8 w-8"
                 src="img/ikoner/shopping_bag.svg"
@@ -324,7 +328,12 @@
             </a>
           </li>
           <li>
-            <img class="search h-8 w-8" src="img/ikoner/search.svg" alt="Søg" />
+            <img
+              tabindex="0"
+              class="search h-8 w-8"
+              src="img/ikoner/search.svg"
+              alt="Søg"
+            />
           </li>
         </ul>
       </nav>

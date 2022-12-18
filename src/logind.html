@@ -87,11 +87,11 @@
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
-        <p>Køb dine blomster i vores butikker</p>
-        <p>Bestil dit abonnement på vores webshop</p>
+        <p tabindex="0">Køb dine blomster i vores butikker</p>
+        <p tabindex="0">Bestil dit abonnement på vores webshop</p>
       </div>
       <!-- LOGO DESKTOP -->
-      <div>
+      <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
           <img
             class="logo_lang"
@@ -124,11 +124,11 @@
             alt="Blomster Bjarne logo"
           />
         </a>
-      </div>
+      </section>
 
       <!-- NAVIGATION MOBIL -->
-      <section class="navigation_mobil">
-        <a class="logo_mobil" href="">
+      <section tabindex="0" class="navigation_mobil">
+        <a class="logo_mobil" href="index.html">
           <img
             class="logo_kort"
             id="sort"
@@ -170,15 +170,17 @@
         <ul>
           <li>
             <a
+              tabindex="0"
               href="abonnement.html"
               class="mt-8 font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Abonnement</a
             >
           </li>
           <div class="dropdown">
-            <label tabindex="0">
+            <label>
               <button class="flex">
                 <p
+                  tabindex="0"
                   class="font-other-headings text-h3-mobile lg:text-h5-desktop"
                 >
                   Sortiment
@@ -196,7 +198,7 @@
                 <a
                   tabindex="0"
                   class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                  href="logind.html"
+                  href="blomster.html"
                   >Blomster</a
                 >
               </li>
@@ -212,6 +214,7 @@
           </div>
           <li>
             <a
+              tabindex="0"
               href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Begivenheder</a
@@ -219,6 +222,7 @@
           </li>
           <li>
             <a
+              tabindex="0"
               href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Kontakt os</a
@@ -226,29 +230,34 @@
           </li>
         </ul>
 
-        <ol class="secondary_nav">
+        <ul class="secondary_nav">
           <li>
-            <img
-              class="person h-8 w-8"
-              src="img/ikoner/person.svg"
-              alt="profil ikon"
-            />
+            <a tabindex="0" href="logind.html">
+              <img
+                class="person h-8 w-8"
+                src="img/ikoner/person.svg"
+                alt="Gå til din konto"
+              />
+            </a>
+          </li>
+          <li>
+            <a tabindex="0" href="kurv.html">
+              <img
+                class="shopping h-8 w-8"
+                src="img/ikoner/shopping_bag.svg"
+                alt="Gå til kurv"
+              />
+            </a>
           </li>
           <li>
             <img
-              class="shopping h-8 w-8"
-              src="img/ikoner/shopping_bag.svg"
-              alt="shopping ikon"
-            />
-          </li>
-          <li>
-            <img
+              tabindex="0"
               class="search h-8 w-8"
               src="img/ikoner/search.svg"
-              alt="søge ikon"
+              alt="Søg"
             />
           </li>
-        </ol>
+        </ul>
       </nav>
     </header>
 
