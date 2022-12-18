@@ -333,13 +333,13 @@
       class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
     >
       <section>
-        <div>
+        <article>
           <h1
             class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
           >
             Din Kurv
           </h1>
-        </div>
+        </article>
         <article
           class="grid place-content-center pb-m-spacing-mobile lg:pb-m-spacing-desktop"
         >
@@ -387,19 +387,15 @@
       <section class="gap-20 lg:grid lg:grid-cols-2">
         <article class="pb-xxl-spacing-mobile lg:pb-xxl-spacing-desktop">
           <div class="lg:flex lg:flex-col-reverse">
-            <div class="">
-              <img
-                class=""
-                src="img/abonnement_filler.webp"
-                alt="blomster i spand"
-              />
-            </div>
+            <figure>
+              <img src="img/abonnement_filler.webp" alt="blomster i spand" />
+            </figure>
             <div>
-              <h3
+              <h2
                 class="pb-l-spacing-mobile text-center text-h3-mobile lg:pb-l-spacing-desktop lg:text-h3-desktop"
               >
                 Abonnement Oplysninger
-              </h3>
+              </h2>
             </div>
           </div>
         </article>
@@ -469,18 +465,25 @@
               </p>
             </div>
           </div>
+
           <div
             class="flex justify-between pt-xl-spacing-mobile lg:justify-evenly lg:pt-xl-spacing-desktop"
           >
-            <div class="secondary">
-              <button class="mx-auto">
-                <a href="abonnement.html">Rediger</a>
-              </button>
+            <div>
+              <a
+                class="flex flex-row-reverse rounded-radius-mobile border-2 border-rust-500 bg-color-secondary-button-background px-sbutton-padding-x-mobile py-sbutton-padding-y-mobile font-button-text text-button-mobile text-rust-800 hover:bg-rust-200 lg:px-sbutton-padding-x-desktop lg:py-sbutton-padding-y-desktop lg:text-button-desktop"
+                href="abonnement.html"
+              >
+                Rediger
+              </a>
             </div>
-            <div class="primary">
-              <button class="mx-auto">
-                <a href="information.html">Videre</a>
-              </button>
+            <div>
+              <a
+                tabindex="0"
+                class="flex flex-row items-center justify-center gap-[10px] rounded-radius-mobile border-0 bg-color-primary-button-background py-[15px] px-[40px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href="information.html"
+                >Videre</a
+              >
             </div>
           </div>
         </article>
