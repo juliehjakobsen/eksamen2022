@@ -70,59 +70,8 @@
       .line1 {
         border: solid 2px var(--color-kurv-bar-active);
       }
-      .secondary button {
-        background-color: var(--color-secondary-button-background);
-        color: var(--color-secondary-button-text);
-        border: var(--color-secondary-button-border) 2px solid;
-
-        font-family: var(--button-text);
-        font-weight: var(--font-weight-semibold);
-        font-size: var(--button-mobile);
-        padding: 15px 40px;
-        max-width: 50%;
-        height: 50px;
-
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--radius-mobile);
-
-        gap: 10px;
-      }
-      .secondary button:hover {
-        background-color: var(--color-secondary-button-hover-background);
-      }
-      .primary button {
-        background-color: var(--color-primary-button-background);
-        color: var(--color-primary-button-text);
-        font-family: var(--button-text);
-        font-weight: var(--font-weight-semibold);
-        font-size: var(--button-mobile);
-        padding: 15px 40px;
-        border: none;
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--radius-mobile);
-        max-width: 50%;
-        height: 50px;
-        gap: 10px;
-      }
-      .primary button:hover {
-        background-color: var(--color-primary-button-hover-background);
-      }
 
       @media (min-width: 900px) {
-        .secondary button,
-        .primary button {
-          font-size: var(--button-desktop);
-          padding: 15px 60px;
-          border-radius: var(--radius-desktop);
-        }
         .overskrift {
           font-size: var(--h4-desktop);
         }
@@ -395,18 +344,18 @@
         </article>
       </section>
       <section class="pt-xxl-spacing-mobile lg:pt-l-spacing-desktop">
-        <article class="">
+        <article>
           <form
             class="lg:flex lg:justify-around lg:pb-xl-spacing-desktop"
             action="udfyld"
           >
-            <div class="">
+            <div>
               <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
+                <h2
                   class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                 >
                   Fornavn og efternavn <span class="text-rust-500">*</span>
-                </h4>
+                </h2>
                 <label for="betaling">
                   <input
                     class="w-full font-font-body text-body-mobile lg:text-body-desktop"
@@ -417,11 +366,11 @@
                 </label>
               </div>
               <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
+                <h2
                   class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                 >
                   Leveringsadresse <span class="text-rust-500">*</span>
-                </h4>
+                </h2>
                 <label for="betaling">
                   <input
                     class="w-full font-font-body text-body-mobile lg:text-body-desktop"
@@ -432,11 +381,11 @@
                 </label>
               </div>
               <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
+                <h2
                   class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                 >
                   Email <span class="text-rust-500">*</span>
-                </h4>
+                </h2>
                 <label for="betaling">
                   <input
                     class="w-full font-font-body text-body-mobile lg:text-body-desktop"
@@ -447,11 +396,11 @@
                 </label>
               </div>
               <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
+                <h2
                   class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                 >
                   Telefonnummer
-                </h4>
+                </h2>
                 <label for="betaling">
                   <input
                     class="w-full font-font-body text-body-mobile lg:text-body-desktop"
@@ -464,11 +413,11 @@
             </div>
             <div>
               <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h4
+                <h2
                   class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
                 >
                   Bemærkning til bestilling
-                </h4>
+                </h2>
                 <label for="betaling">
                   <textarea
                     class="w-full font-font-body text-body-mobile lg:text-body-desktop"
@@ -481,11 +430,11 @@
                 </label>
               </div>
               <div>
-                <h5
+                <h2
                   class="pb-xs-spacing-mobile font-font-body text-h5-mobile lg:pb-s-spacing-desktop lg:text-h5-desktop"
                 >
                   Vil du have besked, når der er leveret?
-                </h5>
+                </h2>
                 <div class="grid gap-5">
                   <div class="flex gap-5">
                     <input class="h-8 w-8" type="checkbox" />
@@ -513,14 +462,20 @@
             class="flex justify-between pt-xl-spacing-mobile lg:justify-evenly lg:pt-xl-spacing-desktop"
           >
             <div class="secondary">
-              <button class="mx-auto">
-                <a href="kurv.html">Tilbage</a>
-              </button>
+              <a
+                class="flex flex-row-reverse rounded-radius-mobile border-2 border-rust-500 bg-color-secondary-button-background px-sbutton-padding-x-mobile py-sbutton-padding-y-mobile font-button-text text-button-mobile text-rust-800 hover:bg-rust-200 lg:px-sbutton-padding-x-desktop lg:py-sbutton-padding-y-desktop lg:text-button-desktop"
+                href="kurv.html"
+              >
+                Tilbage
+              </a>
             </div>
             <div class="primary">
-              <button class="mx-auto">
-                <a href="betal.html">Videre</a>
-              </button>
+              <a
+                tabindex="0"
+                class="flex flex-row items-center justify-center gap-[10px] rounded-radius-mobile border-0 bg-color-primary-button-background py-[15px] px-[40px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href="betal.html"
+                >Videre</a
+              >
             </div>
           </div>
         </article>
