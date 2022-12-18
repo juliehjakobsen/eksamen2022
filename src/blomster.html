@@ -19,14 +19,7 @@
         background-size: cover;
       }
 
-      @media (min-width: 900px) {
-      }
-
       /* card */
-      article {
-        width: 155px;
-        height: 100%;
-      }
 
       .article_wrapper {
         border: solid 2px black;
@@ -41,19 +34,16 @@
         max-width: 100%;
         max-height: 100%;
         height: 150px;
+        width: 150px;
+        margin: auto;
       }
       img {
         max-height: 100%;
-        margin: auto;
+        max-width: 100%;
       }
 
-      .overskrift {
-        background-color: #ffffff;
-        color: black;
-        border-top: 2px solid black;
-        text-align: center;
-        font-size: var(--h5-mobile);
-        font-family: var(--other-headings);
+      .article_info {
+        display: none;
       }
 
       .arrow img {
@@ -80,7 +70,7 @@
 
         .billede_wrapper {
           width: 100%;
-          height: 300px;
+          height: 200px;
         }
       }
     </style>
@@ -309,7 +299,7 @@
     <main class="baggrundsbillede">
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section
-        class="pt-xxl-spacing-mobile text-center lg:pt-xxl-spacing-desktop"
+        class="px-[30px] pt-xxl-spacing-mobile text-center lg:px-[80px] lg:pt-xxl-spacing-desktop"
       >
         <!------------------------------- KNAP -->
 
@@ -325,12 +315,11 @@
 
       <!---------------------------------------------- ANDEN SEKTION CARDS -->
       <section
-        class="flex flex-wrap justify-center gap-m-spacing-mobile lg:gap-l-spacing-desktop"
+        class="lg:px[80px] flex flex-wrap justify-center gap-s-spacing-mobile lg:gap-l-spacing-desktop"
       >
         <!-- card -->
-        <label class="swap swap-flip hover:scale-105">
-          <input class="hidden" type="checkbox" />
-          <div class="article_wrapper swap-off">
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
             <div class="billede">
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
@@ -343,56 +332,76 @@
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
               <h3>Anthurium</h3>
             </div>
           </div>
-          <div class="article_wrapper overskrift swap-on p-s-spacing-mobile">
-            <h3>Anthurium</h3>
-            <div class="mx-auto grid">
-              <div class="flex">
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Anthurium
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
                 <img
-                  class="h-5 w-5"
+                  class="h-7 w-7"
                   src="img/ikoner/oprindelse_ikon.svg"
-                  alt="flag ikon"
+                  alt="oprindelse ikon"
                 />
-                <h4>hej</h4>
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
               </div>
-              <div class="flex">
+              <div class="flex gap-xs-spacing-mobile">
                 <img
-                  class="h-5 w-5"
+                  class="h-7 w-7"
                   src="img/ikoner/sollys_ikon.svg"
-                  alt="sol ikon"
+                  alt="sollys ikon"
                 />
-                <h4>hej</h4>
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
               </div>
-              <div class="flex">
+              <div class="flex gap-xs-spacing-mobile">
                 <img
-                  class="h-5 w-5"
+                  class="h-7 w-7"
                   src="img/ikoner/holdbarhed_ikon.svg"
-                  alt="ur ikon"
+                  alt="holdbarhed ikon"
                 />
-                <h4>hej</h4>
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
               </div>
-              <div class="flex">
+
+              <div class="flex gap-xs-spacing-mobile">
                 <img
-                  class="h-5 w-5"
-                  src="img/ikoner/maal_ikon.svg"
-                  alt="målebånd ikon"
-                />
-                <h4>hej</h4>
-              </div>
-              <div class="flex">
-                <img
-                  class="h-5 w-5"
+                  class="h-7 w-7"
                   src="img/ikoner/pris_ikon.svg"
-                  alt="dollertegn ikon"
+                  alt="pris ikon"
                 />
-                <h4>hej</h4>
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
               </div>
             </div>
           </div>
-        </label>
+        </article>
 
         <!-- card -->
         <article class="hover:scale-105">
@@ -406,12 +415,76 @@
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
               <h3>Astromea</h3>
             </div>
           </div>
-        </article>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Astromea
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
 
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
         <!-- card -->
         <article class="hover:scale-105">
           <div class="article_wrapper">
@@ -427,8 +500,73 @@
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
               <h3>Carnations</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Carnations
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
             </div>
           </div>
         </article>
@@ -448,8 +586,73 @@
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Dry flower</h3>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Dry Flower</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Dry Flower
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
             </div>
           </div>
         </article>
@@ -464,94 +667,163 @@
               <div class="billede_wrapper">
                 <img
                   src="/img/blomster/eucalyptus.webp"
-                  alt="Alstromeria blomst"
+                  alt="Eucalyptus blomst"
                 />
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Eucalyptus</h3>
             </div>
           </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
-              </div>
-              <div class="billede_wrapper">
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Eucalyptus
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
                 <img
-                  src="/img/blomster/gron_blomst.webp"
-                  alt="Alstromeria blomst"
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
                 />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
               </div>
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
-            </div>
-          </div>
-        </article>
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
-              </div>
-              <div class="billede_wrapper">
-                <img src="/img/blomster/iris.webp" alt="Alstromeria blomst" />
-              </div>
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
-              </div>
-              <div class="billede_wrapper">
-                <img src="/img/blomster/okkide.webp" alt="Alstromeria blomst" />
-              </div>
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
-              </div>
-              <div class="billede_wrapper">
+              <div class="flex gap-xs-spacing-mobile">
                 <img
-                  src="/img/blomster/orchid-cymbidium.webp"
-                  alt="Alstromeria blomst"
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
                 />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
               </div>
-            </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
             </div>
           </div>
         </article>
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img src="/img/blomster/iris.webp" alt="Iris blomst" />
+              </div>
+            </div>
 
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Iris blomst</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Iris blomst
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
         <!-- card -->
         <article class="hover:scale-105">
           <div class="article_wrapper">
@@ -562,13 +834,78 @@
               <div class="billede_wrapper">
                 <img
                   src="/img/blomster/pink-lilies.webp"
-                  alt="Alstromeria blomst"
+                  alt="Pink lilje blomst"
                 />
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Pink lilje</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Pink lilje
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
             </div>
           </div>
         </article>
@@ -583,13 +920,327 @@
               <div class="billede_wrapper">
                 <img
                   src="/img/blomster/queen-protea.webp"
-                  alt="Alstromeria blomst"
+                  alt="Queen protea blomst"
                 />
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Queen Protea</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Queen Protea
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img src="/img/blomster/roses.webp" alt="Rose blomst" />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Rose</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Rose
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img src="/img/blomster/short-roses.webp" alt="kort rose" />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Kort rose</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Kort rose
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img src="/img/blomster/tissel.webp" alt="Tissel blomst" />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Tissel</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Tissel
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
             </div>
           </div>
         </article>
@@ -601,12 +1252,165 @@
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
               <div class="billede_wrapper">
-                <img src="/img/blomster/roses.webp" alt="Alstromeria blomst" />
+                <img
+                  src="/img/blomster/white-lilies-3-stems.webp"
+                  alt="Hvide liljer"
+                />
               </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h3>Alstromeria</h3>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Hvide liljer</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Hvide liljer
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- card -->
+        <article class="hover:scale-105">
+          <div class="article_wrapper">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  src="/img/blomster/white-roses-10-stems.webp"
+                  alt="Hvide roser"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3>Hvide roser</h3>
+            </div>
+          </div>
+          <div class="article_info border-2 border-color-black bg-color-white">
+            <div class="arrow">
+              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+            </div>
+            <h3
+              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              Hvide roser
+            </h3>
+            <div
+              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+            >
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/oprindelse_ikon.svg"
+                  alt="oprindelse ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  oprindelse
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/sollys_ikon.svg"
+                  alt="sollys ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  sollys
+                </h4>
+              </div>
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/holdbarhed_ikon.svg"
+                  alt="holdbarhed ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  holdbarhed
+                </h4>
+              </div>
+
+              <div class="flex gap-xs-spacing-mobile">
+                <img
+                  class="h-7 w-7"
+                  src="img/ikoner/pris_ikon.svg"
+                  alt="pris ikon"
+                />
+                <h4
+                  class="font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  pris
+                </h4>
+              </div>
             </div>
           </div>
         </article>
