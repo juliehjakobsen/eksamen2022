@@ -104,8 +104,8 @@ header nav ul {
 
 /* farveskift mobil */
 #sort {
-  width: 85px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
   animation-name: blink;
   animation: blink 5s infinite;
   animation-delay: 0s;
@@ -147,8 +147,8 @@ header nav ul {
 }
 
 #sol {
-  width: 85px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
   animation-name: blink1;
   animation: blink1 5s infinite;
   animation-delay: 0s;
@@ -190,8 +190,8 @@ header nav ul {
 }
 
 #graes {
-  width: 85px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
   animation-name: blink2;
   animation: blink2 5s infinite;
   animation-delay: 0s;
@@ -233,8 +233,8 @@ header nav ul {
 }
 
 #himmel {
-  width: 85px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
   animation-name: blink3;
   animation: blink3 5s infinite;
   animation-delay: 0s;
@@ -276,8 +276,8 @@ header nav ul {
   }
 }
 #rust {
-  width: 85px;
-  height: 50px;
+  width: 75px;
+  height: 40px;
   animation-name: blink4;
   animation: blink4 5s infinite;
   animation-delay: 0s;
