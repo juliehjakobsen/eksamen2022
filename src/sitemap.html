@@ -5,148 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orienta&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
     <style>
-      header {
-        margin-bottom: var(--xl-spacing-desktop);
-      }
-      /* ---------------------------------PROGRESS BAR */
-
-      p {
-        margin-block: 0;
-      }
-      [class^="ball"] {
-        display: grid;
-        place-content: center;
-      }
-      .overskrift {
-        font-size: var(--abonnement-text-info);
-        font-family: var(--font-body);
-        font-weight: var(--font-weight-bold);
-      }
-
-      .full_bar {
-        display: flex;
-
-        place-items: center;
-      }
-      .bar1,
-      .bar2,
-      .bar3,
-      .bar4 {
-        display: flex;
-
-        place-items: center;
-      }
-
-      .ball1,
-      .ball2,
-      .ball3,
-      .ball4 {
-        margin-left: -3px;
-        width: 20px;
-        height: 20px;
-        background-color: var(--color-abonnement-bar-disabled);
-        border-radius: 100%;
-        font-family: var(--font-body);
-        font-size: var(--progressbar-number);
-        color: var(--color-abonnement-bar-text);
-      }
-
-      .ball1 {
-        background-color: var(--color-abonnement-bar-active);
-        z-index: 1;
-      }
-
-      .ball2,
-      .ball3 {
-        background-color: var(--color-abonnement-bar-active);
-        z-index: 1;
-      }
-
-      .line1,
-      .line2,
-      .line3 {
-        width: 60px;
-        height: 0px;
-        border: solid 2px var(--color-abonnement-bar-disabled);
-        margin-left: -0.5px;
-      }
-
-      .line1,
-      .line2 {
-        border: solid 2px var(--color-abonnement-bar-active);
-      }
-
-      @media (min-width: 900px) {
-        .overskrift {
-          font-size: var(--h4-desktop);
-        }
-
-        .ball1,
-        .ball2,
-        .ball3,
-        .ball4 {
-          width: 50px;
-          height: 50px;
-          background-color: var(--color-abonnement-bar-disabled);
-          border-radius: 100%;
-          font-family: var(--font-body);
-          font-size: var(--h4-desktop);
-
-          color: var(--color-abonnement-bar-text);
-        }
-        .ball1,
-        .ball2,
-        .ball3 {
-          background-color: var(--color-abonnement-bar-active);
-          z-index: 1;
-        }
-
-        .line1,
-        .line2,
-        .line3 {
-          width: 180px;
-          height: 0px;
-          border: 5px solid var(--color-abonnement-bar-disabled);
-        }
-
-        .line1,
-        .line2 {
-          border: solid 5px var(--color-abonnement-bar-active);
-        }
-
-        /* ---------------------------------RADIO BUTTONS */
-        input {
-          margin: 0;
-          font-size: var(--body-mobile);
-          accent-color: var(--rust-500);
-          width: 1.15em;
-          height: 1.15em;
-          border: 0.15em solid black;
-          border-radius: 50%;
-        }
-
-        @media (min-width: 900px) {
-          input {
-            font-size: var(--body-desktop);
-          }
-
-          input[type="radio"] {
-            transform: scale(2);
-          }
-        }
+      li {
+        list-style: none;
       }
     </style>
   </head>
-  <body class="bg-background-color">
-    <!--------------------------------------------------------------------- HEADER -->
+  <body>
     <!-- header -->
     <header>
       <div
@@ -325,137 +191,167 @@
         </ul>
       </nav>
     </header>
-
-    <main>
-      <!-- PROGRESS BAR START -->
-      <section>
-        <article
-          class="grid place-content-center pb-l-spacing-mobile lg:pb-l-spacing-desktop"
-        >
-          <div class="full_bar">
-            <div>
-              <p class="overskrift -ml-6 text-rust-500 lg:-ml-11">Størrelse</p>
-              <div class="bar1">
-                <a href="abonnement1.html"
-                  ><div class="ball1">
-                    <p>1</p>
-                  </div>
-                </a>
-                <div class="line1"></div>
-              </div>
-            </div>
-
-            <div>
-              <p class="overskrift -ml-1.5 text-rust-500 lg:-ml-2">Stil</p>
-              <div class="bar2">
-                <a href="abonnement2.html"
-                  ><div class="ball2">
-                    <p>2</p>
-                  </div>
-                </a>
-                <div class="line2"></div>
-              </div>
-            </div>
-            <div>
-              <p class="overskrift -ml-2 text-rust-500 lg:-ml-5">Duft</p>
-              <div class="bar3">
-                <a href="abonnement3.html"
-                  ><div class="ball3">
-                    <p>3</p>
-                  </div>
-                </a>
-                <div class="line3"></div>
-              </div>
-            </div>
-            <div>
-              <p class="overskrift -ml-6 text-rust-200 lg:-ml-14">Hyppighed</p>
-              <div class="bar4">
-                <a href="abonnement4.html"
-                  ><div class="ball4">
-                    <p>4</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-      <!-- PROGRESS BAR SLUT -->
-      <!---------------------------------------------- FØRSTE SEKTION -->
-      <section class="text-center">
-        <h1 class="font-main-heading text-h1-mobile lg:text-h1-desktop">
-          Er du sensitiv over for stærk blomsterduft?
-        </h1>
-        <article
-          class="mx-auto w-11/12 py-l-spacing-mobile text-left font-font-body text-body-mobile lg:w-2/3 lg:py-xl-spacing-desktop lg:text-body-desktop"
-        >
-          <h2 class="pb-xxs-spacing-mobile">
-            Vi spørger fordi nogle kan være ekstra sensitive over for stærke
-            dufte, og vi vil gerne sørge for, at du er så tilfreds med dit buket
-            som muligt!
-          </h2>
-          <h2 class="">
-            Dit svar kan have indflydelse på hvilke blomster der kommer i din
-            buket.
-          </h2>
-        </article>
-      </section>
-
-      <!---------------------------------------------- ANDEN SEKTION -->
-      <section
-        class="flex place-content-center gap-xl-spacing-mobile lg:gap-xxxl-spacing-desktop"
-      >
-        <article
-          class="flex items-baseline gap-xs-spacing-mobile lg:gap-s-spacing-desktop"
-        >
+    <main class="p-10">
+      <div>
+        <h1 class="text-h1-desktop">Sitemap.html</h1>
+        <ul>
+          <!-- header -->
           <div>
-            <label class="form-control">
-              <input
-                class="text-[#6F9043] accent-[#6F9043] checked:bg-[#6F9043] focus:bg-[#6F9043] focus:ring-[#6F9043] active:bg-[#6F9043]"
-                type="radio"
-                name="radio"
-              />
-            </label>
-          </div>
-          <h3 class="font-font-body text-body-mobile lg:text-body-desktop">
-            Ja
-          </h3>
-        </article>
+            <li>
+              <a class="text-h3-desktop" href="index.html">Header</a>
+            </li>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="abonnement.html">Abonnement</a>
+              </li>
+              <li>
+                <a class="text-h5-desktop" href="#">Sortiment</a>
+              </li>
+              <ul class="pl-3">
+                <li>
+                  <a href="vaser.html">Blomster</a>
+                </li>
 
-        <article
-          class="flex items-baseline gap-xs-spacing-mobile lg:gap-s-spacing-desktop"
-        >
-          <div>
-            <label class="form-control">
-              <input
-                class="text-[#6F9043] accent-[#6F9043] checked:bg-[#6F9043] focus:bg-[#6F9043] focus:ring-[#6F9043] active:bg-[#6F9043]"
-                type="radio"
-                name="radio"
-              />
-            </label>
+                <li>
+                  <a href="vaser.html">Vaser</a>
+                </li>
+              </ul>
+              <li>
+                <a class="text-h5-desktop" href="#">Begivenheder</a>
+              </li>
+              <li>
+                <a class="text-h5-desktop" href="#">Kontakt os</a>
+              </li>
+            </ul>
           </div>
-          <h3 class="font-font-body text-body-mobile lg:text-body-desktop">
-            Nej
-          </h3>
-        </article>
-      </section>
 
-      <!---------------------------------------------- TREDJE SEKTION -->
-      <section
-        class="flex place-content-center pt-l-spacing-mobile pb-xxl-spacing-mobile lg:pt-xl-spacing-desktop lg:pb-xxl-spacing-desktop"
-      >
-        <a href="abonnement4.html"
-          ><button
-            class="flex flex-row-reverse rounded-radius-mobile border-2 border-rust-500 bg-color-secondary-button-background px-sbutton-padding-x-mobile py-sbutton-padding-y-mobile font-button-text text-button-mobile font-semibold text-rust-800 hover:bg-rust-200 lg:px-sbutton-padding-x-desktop lg:py-sbutton-padding-y-desktop lg:text-button-desktop"
-          >
-            Næste trin
-          </button></a
-        >
-      </section>
+          <!-- forside -->
+          <div class="mt-s-spacing-desktop">
+            <li>
+              <a class="text-h3-desktop" href="index.html">Forside</a>
+            </li>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="abonnement.html"
+                  >Tegn mit abonnement</a
+                >
+              </li>
+              <li>
+                <a class="text-h5-desktop" href="blomster.html"
+                  >Se vores udvalg af blomster</a
+                >
+              </li>
+              <li>
+                <a class="text-h5-desktop" href="blomster.html"
+                  >Udforsk sortiment</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- abonnement -->
+          <div class="mt-s-spacing-desktop">
+            <li>
+              <a class="text-h3-desktop" href="program.html">Abonnement</a>
+            </li>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="abonnement1.html"
+                  >Tegn mit abonnement</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sortiment -->
+          <div class="mt-s-spacing-desktop">
+            <li>
+              <a class="text-h3-desktop" href="program.html">Sortiment</a>
+            </li>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="frivillig.html">Blomster</a>
+              </li>
+              <ul class="pl-3">
+                <li>
+                  <a href="abonnement.html">Tegn mit abonnemnt</a>
+                </li>
+              </ul>
+              <li class="mt-xxs-spacing-desktop">
+                <a class="text-h5-desktop" href="arrangoer.html">Vaser</a>
+              </li>
+              <ul class="pl-3">
+                <li>
+                  <a href="abonnement.html">Tegn mit abonnemnt</a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+
+          <!-- begivenheder -->
+          <div class="mt-s-spacing-desktop">
+            <li>
+              <a class="text-h3-desktop" href="#">Begivenheder</a>
+            </li>
+          </div>
+
+          <!-- Kontakt os -->
+          <div class="mt-s-spacing-desktop">
+            <li>
+              <a class="text-h3-desktop" href="#">Kontakt os</a>
+            </li>
+          </div>
+
+          <!-- footer -->
+          <div class="mt-s-spacing-desktop">
+            <li>
+              <a class="text-h3-desktop" href="">Footer</a>
+            </li>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="#">Butikker</a>
+              </li>
+            </ul>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="#">Information</a>
+              </li>
+              <ul class="pl-3">
+                <li><a href="#">Om os</a></li>
+                <li><a href="#">Kontakt os</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+              </ul>
+            </ul>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="#">Åbningstider</a>
+              </li>
+            </ul>
+            <ul class="pl-3">
+              <li>
+                <a class="text-h5-desktop" href="#">Følg os her</a>
+              </li>
+              <ul class="pl-3">
+                <li>
+                  <a
+                    href="https://www.facebook.com/pages/Bjarnes-Blomster/303127747136077"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/blomster_bjarne/"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </ul>
+      </div>
     </main>
-
-    <!--------------------------------------------------------------------- FOOTER -->
+    <!-- footer -->
     <footer
+      tabindex="0"
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
@@ -465,10 +361,12 @@
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 class="text-h4-mobile lg:text-h4-desktop">BUTIKKER</h4>
+            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              BUTIKKER
+            </h4>
 
             <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
-              <div class="strandvejen">
+              <div tabindex="0" class="strandvejen">
                 <p>Strandvejen 167</p>
                 <p>2900 Hellerup</p>
                 <p>Danmark</p>
@@ -478,14 +376,14 @@
                 </p>
               </div>
 
-              <div class="gunnar">
+              <div tabindex="0" class="gunnar">
                 <p>Gunnar Nu Hansens Pl. 6</p>
                 <p>2100 København Ø</p>
                 <p>Danmark</p>
                 <p><a href="tel:+4536260700"></a>Tlf.: +45 36 26 07 00</p>
               </div>
 
-              <div class="vaernedamsvej">
+              <div tabindex="0" class="vaernedamsvej">
                 <p>Værnedamsvej 4A st.</p>
                 <p>1619 København V</p>
                 <p>Danmark</p>
@@ -498,19 +396,20 @@
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
             <h4
+              tabindex="0"
               class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
             >
               INFORMATIONER
             </h4>
             <div class="mx-auto">
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a href="#">Om os</a>
+                <a tabindex="0" href="#">Om os</a>
               </div>
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a href="#">Kontakt os</a>
+                <a tabindex="0" href="#">Kontakt os</a>
               </div>
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a href="#">Sitemap</a>
+                <a tabindex="0" href="sitemap.html">Sitemap</a>
               </div>
             </div>
           </section>
@@ -518,29 +417,31 @@
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 class="text-h4-mobile lg:text-h4-desktop">ÅBNINGSTIDER</h4>
+            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              ÅBNINGSTIDER
+            </h4>
             <div class="tider grid grid-cols-2">
               <div
                 class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
               >
-                <p>Mandag</p>
-                <p>Tirsdag</p>
-                <p>Onsdag</p>
-                <p>Torsdag</p>
-                <p>Fredag</p>
-                <p>Lørdag</p>
-                <p>Søndag</p>
+                <p tabindex="0">Mandag</p>
+                <p tabindex="0">Tirsdag</p>
+                <p tabindex="0">Onsdag</p>
+                <p tabindex="0 ">Torsdag</p>
+                <p tabindex="0">Fredag</p>
+                <p tabindex="0">Lørdag</p>
+                <p tabindex="0">Søndag</p>
               </div>
               <div
                 class="tidspunkter grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
               >
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 15</p>
-                <p>11 - 16</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 15</p>
+                <p tabindex="0">11 - 16</p>
               </div>
             </div>
           </section>
@@ -548,11 +449,14 @@
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
-            <h4 class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop">
+            <h4
+              tabindex="0"
+              class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop"
+            >
               FØLG OS HER
             </h4>
             <div class="ikoner flex place-content-center gap-m-spacing-mobile">
-              <svg width="40" height="40" viewBox="0 0 48 48">
+              <svg tabindex="0" width="40" height="40" viewBox="0 0 48 48">
                 <g fill="none" fill-rule="evenodd" clip-rule="evenodd">
                   <path
                     stroke="#fffdf9"
@@ -567,7 +471,7 @@
                   ></path>
                 </g>
               </svg>
-              <svg width="44" height="44" viewBox="0 0 512 512">
+              <svg tabindex="0" width="44" height="44" viewBox="0 0 512 512">
                 <path
                   fill="#fffdf9"
                   d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32Z"
@@ -584,10 +488,16 @@
         <section
           class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
-          <p>CVR: 35649328</p>
-          <a class="cursor-pointer underline" href="#">Cookiepolitik</a>
-          <a class="cursor-pointer underline" href="#">Privatlivspolitik</a>
-          <a class="cursor-pointer underline" href="#">Handelsbetingelser</a>
+          <p tabindex="0">CVR: 35649328</p>
+          <a tabindex="0" class="cursor-pointer underline" href="#"
+            >Cookiepolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="#"
+            >Privatlivspolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="#"
+            >Handelsbetingelser</a
+          >
         </section>
       </article>
     </footer>
