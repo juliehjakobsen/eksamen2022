@@ -29,35 +29,6 @@
         background-size: cover;
       }
 
-      button {
-        background-color: var(--color-primary-button-background);
-        color: var(--color-primary-button-text);
-        font-family: var(--button-text);
-        font-weight: var(--font-weight-semibold);
-        font-size: var(--button-mobile);
-        padding: 15px 40px;
-        border: none;
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--radius-mobile);
-        max-width: 50%;
-        height: 60px;
-        gap: 10px;
-      }
-      button:hover {
-        background-color: var(--color-primary-button-hover-background);
-      }
-      @media (min-width: 900px) {
-        button {
-          font-size: var(--button-desktop);
-          padding: 15px 60px;
-          border-radius: var(--radius-desktop);
-        }
-      }
-
       /* card */
 
       .article_wrapper {
@@ -215,47 +186,42 @@
               >Abonnement</a
             >
           </li>
-          <li>
-            <div class="dropdown">
-              <label class="">
-                <button
-                  id="sortiment"
-                  class="flex items-start hover:bg-color-white"
+          <div class="dropdown">
+            <label>
+              <button class="flex">
+                <p
+                  tabindex="0"
+                  class="font-other-headings text-h3-mobile lg:text-h5-desktop"
                 >
-                  <p
-                    tabindex="0"
-                    class="font-other-headings text-h3-mobile lg:text-h5-desktop"
-                  >
-                    Sortiment
-                  </p>
-                  <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
-                    <path
-                      fill="#000000"
-                      d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
-                    />
-                  </svg>
-                </button>
-              </label>
-              <ul class="underkat m-0">
-                <li>
-                  <a
-                    tabindex="0"
-                    class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                    href="blomster.html"
-                    >Blomster</a
-                  >
-                </li>
-                <li>
-                  <a
-                    tabindex="0"
-                    class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                    href="vaser.html"
-                    >Vaser</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
+                  Sortiment
+                </p>
+                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                  />
+                </svg>
+              </button>
+            </label>
+            <ul class="underkat m-0">
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
+                  href="blomster.html"
+                  >Blomster</a
+                >
+              </li>
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
+                  href="vaser.html"
+                  >Vaser</a
+                >
+              </li>
+            </ul>
+          </div>
           <li>
             <a
               tabindex="0"
@@ -296,7 +262,7 @@
           <li>
             <img
               tabindex="0"
-              class="search h-8 w-8"
+              class="search max-h-100% h-8 w-8"
               src="img/ikoner/search.svg"
               alt="Søg"
             />
