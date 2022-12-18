@@ -261,7 +261,11 @@
       }
     </style>
   </head>
-  <body>
+  <body
+    itemscope
+    itemtype="https://schema.org/OnlineStore"
+    itemtype="https://schema.org/ImageObject"
+  >
     <!-- virker kun i chrome  -->
     <a tabindex="0" class="skip-to-content-link" href="#section_1">
       Skip to content
@@ -519,7 +523,8 @@
           tabindex="0"
           class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-m-spacing-desktop lg:text-h5-desktop"
         >
-          Hos Blomster Bjarne fejrer vi alt, hvad der er smukt!
+          Hos <span itemprop="brand"> Blomster Bjarne </span> fejrer vi alt,
+          hvad der er smukt!
         </h3>
         <p
           tabindex="0"
@@ -638,7 +643,7 @@
         <section class="felxi">
           <article>
             <div tabindex="0" class="article_wrapper">
-              <div class="billede_1">
+              <div itemprop="image" class="billede_1">
                 <div class="arrow">
                   <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
                 </div>
@@ -649,7 +654,7 @@
             </div>
           </article>
           <!-- card flipped solsikke -->
-          <article class="card_info">
+          <article itemprop="description" class="card_info">
             <div class="arrow">
               <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
             </div>
@@ -662,7 +667,10 @@
             </div>
             <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
               <img src="img/ikoner/oprindelse_ikon.svg" alt="'oprindelse" />
-              <p class="font-font-body text-body-mobile">
+              <p
+                itemprop="countryOfOrigin"
+                class="font-font-body text-body-mobile"
+              >
                 Sydamerika - Mexico og Peru
               </p>
             </div>
@@ -687,7 +695,7 @@
           <!-- Card til forsiden grøn blomst -->
           <article>
             <div tabindex="0" class="article_wrapper">
-              <div class="billede_2">
+              <div itemprop="image" class="billede_2">
                 <div class="arrow">
                   <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
                 </div>
@@ -698,7 +706,7 @@
             </div>
           </article>
           <!-- card flipped grøn blomst -->
-          <article class="card_info">
+          <article itemprop="description" class="card_info">
             <div class="arrow">
               <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
             </div>
@@ -711,7 +719,12 @@
             </div>
             <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
               <img src="img/ikoner/oprindelse_ikon.svg" alt="oprindelse" />
-              <p class="font-font-body text-body-mobile">Middelhavsområdet</p>
+              <p
+                itemprop="countryOfOrigin"
+                class="font-font-body text-body-mobile"
+              >
+                Middelhavsområdet
+              </p>
             </div>
             <div
               class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
@@ -732,7 +745,7 @@
           <!-- Card til forsiden okkide -->
           <article>
             <div tabindex="0" class="article_wrapper">
-              <div class="billede_3">
+              <div itemprop="image" class="billede_3">
                 <div class="arrow">
                   <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
                 </div>
@@ -743,7 +756,7 @@
             </div>
           </article>
           <!-- card flipped okkide -->
-          <article class="card_info">
+          <article itemprop="description" class="card_info">
             <div class="arrow">
               <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
             </div>
@@ -756,7 +769,10 @@
             </div>
             <div class="ml-xl-spacing-mobile flex gap-s-spacing-mobile">
               <img src="img/ikoner/oprindelse_ikon.svg" alt="oprindelse" />
-              <p class="font-font-body text-body-mobile">
+              <p
+                itemprop="countryOfOrigin"
+                class="font-font-body text-body-mobile"
+              >
                 Kina, Thailand, Filippinerne, Malaysia og Indonesien.
               </p>
             </div>
@@ -819,7 +835,7 @@
                   />
                 </svg>
               </figure>
-              <div>
+              <div itemprop="review">
                 <p
                   tabindex="0"
                   class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
@@ -862,6 +878,7 @@
               </figure>
               <div>
                 <p
+                  itemprop="review"
                   tabindex="0"
                   class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
                 >
@@ -903,6 +920,7 @@
               </figure>
               <div>
                 <p
+                  itemprop="review"
                   tabindex="0"
                   class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
                 >
