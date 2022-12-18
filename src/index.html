@@ -255,7 +255,7 @@
       }
     </style>
   </head>
-  <body itemscope itemtype="https://schema.org/OnlineStore">
+  <body>
     <!-- virker kun i chrome  -->
     <a tabindex="0" class="skip-to-content-link" href="#section_1">
       Skip to content
@@ -513,7 +513,12 @@
     <!-------------------------------------------------------------------------------------------- MAIN -->
     <main class="overflow-x-clip">
       <!-- section_1 -->
-      <section id="section_1" class="bg_tekstur px-[30px] lg:px-[80px]">
+      <section
+        itemscope
+        itemtype="https://schema.org/OnlineStore"
+        id="section_1"
+        class="bg_tekstur px-[30px] lg:px-[80px]"
+      >
         <h2
           tabindex="0"
           class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-l-spacing-desktop lg:text-h2-desktop"
@@ -573,7 +578,11 @@
       </section>
 
       <!-- section_3 -->
-      <section class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop">
+      <section
+        itemscope
+        itemtype="https://schema.org/CreativeWork"
+        class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop"
+      >
         <div
           class="flex place-content-center gap-3 pt-xl-spacing-mobile pb-s-spacing-mobile"
         >
