@@ -90,20 +90,23 @@
   bottom: 0;
   z-index: 10;
 } */
-
     </style>
   </head>
   <body class="">
+    <!-- virker kun i chrome  -->
+    <a tabindex="0" class="skip-to-content-link" href="#section_1">
+      Skip to content
+    </a>
     <!-- header -->
     <header>
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
-        <p>Køb dine blomster i vores butikker</p>
-        <p>Bestil dit abonnement på vores webshop</p>
+        <p tabindex="0">Køb dine blomster i vores butikker</p>
+        <p tabindex="0">Bestil dit abonnement på vores webshop</p>
       </div>
       <!-- LOGO DESKTOP -->
-      <div>
+      <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
           <img
             class="logo_lang"
@@ -136,10 +139,10 @@
             alt="Blomster Bjarne logo"
           />
         </a>
-      </div>
+      </section>
 
-      <!-- NAVIGATION MOBIL -->
-      <section class="navigation_mobil">
+      <!-- LOGO MOBIL -->
+      <section tabindex="0" class="navigation_mobil">
         <a class="logo_mobil" href="">
           <img
             class="logo_kort"
@@ -182,15 +185,17 @@
         <ul>
           <li>
             <a
+              tabindex="0"
               href="abonnement.html"
               class="mt-8 font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Abonnement</a
             >
           </li>
           <div class="dropdown">
-            <label tabindex="0">
+            <label>
               <button class="flex">
                 <p
+                  tabindex="0"
                   class="font-other-headings text-h3-mobile lg:text-h5-desktop"
                 >
                   Sortiment
@@ -208,7 +213,7 @@
                 <a
                   tabindex="0"
                   class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                  href="logind.html"
+                  href="blomster.html"
                   >Blomster</a
                 >
               </li>
@@ -224,6 +229,7 @@
           </div>
           <li>
             <a
+              tabindex="0"
               href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Begivenheder</a
@@ -231,6 +237,7 @@
           </li>
           <li>
             <a
+              tabindex="0"
               href="#"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Kontakt os</a
@@ -238,54 +245,88 @@
           </li>
         </ul>
 
-        <ol class="secondary_nav">
+        <ul class="secondary_nav">
           <li>
-            <img class="person h-8 w-8" src="img/ikoner/person.svg" alt="profil ikon" />
+            <a tabindex="0" href="logind.html">
+              <img
+                class="person h-8 w-8"
+                src="img/ikoner/person.svg"
+                alt="Gå til din konto"
+              />
+            </a>
+          </li>
+          <li>
+            <a tabindex="0" href="kurv.html">
+              <img
+                class="shopping h-8 w-8"
+                src="img/ikoner/shopping_bag.svg"
+                alt="Gå til kurv"
+              />
+            </a>
           </li>
           <li>
             <img
-              class="shopping h-8 w-8"
-              src="img/ikoner/shopping_bag.svg"
-              alt="shopping ikon"
+              tabindex="0"
+              class="search h-8 w-8"
+              src="img/ikoner/search.svg"
+              alt="Søg"
             />
           </li>
-          <li>
-            <img class="search h-8 w-8" src="img/ikoner/search.svg" alt="søge ikon" />
-          </li>
-        </ol>
+        </ul>
       </nav>
     </header>
 
     <main class="">
-
-              <!-- Cookieboks start-->
-      <article  class="bg-background-color h-[700px] modale rounded-radius-desktop font-font-body p-8 border-2 border-black mx-3 fixed z-1 bottom-10 right-0" id="cookieboks">
-      <div class="">
-        <h3 class=" font-bold mb-5 text-h3-mobile text-center">Du bestemmer over dine data</h3>
-        <p>
-          Vi og vores samarbejdspartnere bruger teknologier, herunder cookies, til at indsamle oplysninger om dig til forskellige formål, herunder:
-          <ol class="font-semibold my-2">
+      <!-- Cookieboks start-->
+      <article
+        class="z-1 fixed bottom-0 right-0 h-[58%] w-[100%] rounded-t-cookie bg-background-color p-8 font-font-body lg:right-52 lg:h-[35%] lg:w-[70%]"
+        id="cookieboks"
+      >
+        <div class="grid place-content-center pb-xxxs-spacing-mobile lg:hidden">
+          <img class="" src="img/ikoner/cookie_ikon.svg" alt="" />
+        </div>
+        <div class="">
+          <h3
+            class="text-center text-h5-mobile font-bold lg:text-left lg:text-h5-desktop"
+          >
+            Du bestemmer over dine data
+          </h3>
+          <p class="text-abonnement-text-info">
+            Vi og vores samarbejdspartnere bruger teknologier, herunder cookies,
+            til at indsamle oplysninger om dig til forskellige formål, herunder:
+          </p>
+          <ol class="my-2 text-footer-mobile font-semibold">
             <li>1. Funktionalitet</li>
             <li>2. Statistisk</li>
             <li>3. Marketing</li>
           </ol>
-          Tryk "Accepter" for at give samtykke til alle formål. Du kan altid trække din samtykke tilbage, ved at besøge "Cookiepolitik" nederst på siden.
-        </p>
-      </div>
+          <p class="text-abonnement-text-info">
+            Tryk "Accepter" for at give samtykke til alle formål. <br />
+            Du kan altid trække din samtykke tilbage, ved at besøge
+            "Cookiepolitik" nederst på siden.
+          </p>
+        </div>
 
-
-      <div class=" justify-center gap-xs-spacing-mobile mt-5 grid">   
-        <div class="bg-graes-400 hover:cursor-pointer border-2 border-solid border-graes-500 p-2 w-36 text-center hover:bg-[#2db15f]" id="accepter">
-        <button>Accepter</button>
-      </div>
-        <div class="bg-[#b9b8b8] hover:cursor-pointer border-2 border-solid border-[#a1a0a0] p-2 w-36 text-center hover:bg-[#a1a0a0]" id="afvis">
-        <button>Afvis</button>
-      </div>
-      
-   </div>
-</article>
+        <div
+          class="grid gap-xs-spacing-mobile pt-m-spacing-mobile lg:grid-cols-2"
+        >
+          <div id="accepter" class="knap lg:grid-start-2 justify-center">
+            <button
+              class="flex w-[400px] flex-row items-center justify-center gap-[10px] rounded-radius border-0 bg-rust-400 py-[15px] px-[40px] font-button-text text-button-mobile text-color-black drop-shadow-buttonshadow hover:bg-rust-500 lg:h-10 lg:py-[15px] lg:px-[60px] lg:text-button-mobile"
+              href=""
+            >
+              Accepter
+            </button>
+          </div>
+          <div
+            class="lg:grid-start-1 flex justify-center text-abonnement-text-info underline"
+            id="afvis"
+          >
+            <button>Afvis</button>
+          </div>
+        </div>
+      </article>
       <!-- Cookieboks slut-->
-
     </main>
 
     <!-- footer -->
@@ -425,28 +466,23 @@
         </section>
       </article>
     </footer>
-    
 
     <script>
-        const acceptCookie = document.querySelector("#accepter");
-const denyCookie = document.querySelector("#afvis");
-const cookieboks = document.querySelector("#cookieboks");
+      const acceptCookie = document.querySelector("#accepter");
+      const denyCookie = document.querySelector("#afvis");
+      const cookieboks = document.querySelector("#cookieboks");
 
+      acceptCookie.addEventListener("click", fjernCookieBoks);
+      denyCookie.addEventListener("click", fjernCookieBoks);
 
+      function fjernCookieBoks() {
+        cookieboks.classList.add("hidden");
+        sessionStorage.setItem("fjerncookieboks", true);
+      }
 
-
-acceptCookie.addEventListener("click", fjernCookieBoks); 
-denyCookie.addEventListener("click", fjernCookieBoks); 
-
-function fjernCookieBoks() {
-    cookieboks.classList.add("hidden");
-    sessionStorage.setItem("fjerncookieboks", true);
-
-}
-
-if (sessionStorage.getItem("fjerncookieboks")) {
-    fjernCookieBoks.classList.add("hidden");
-}
+      if (sessionStorage.getItem("fjerncookieboks")) {
+        fjernCookieBoks.classList.add("hidden");
+      }
     </script>
     <script type="module" src="main.js"></script>
   </body>

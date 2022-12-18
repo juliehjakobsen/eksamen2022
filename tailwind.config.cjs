@@ -193,7 +193,10 @@ module.exports = {
     borderRadius: {
       "radius-mobile": "3px",
       "radius-desktop": "5px",
+      radius: "100px",
       full: "100%",
+      none: "0%",
+      cookie: "30px",
     },
   },
   plugins: [
