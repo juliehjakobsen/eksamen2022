@@ -55,10 +55,10 @@
       .article {
         background-color: var(--regnorm-100);
         border: 2px solid black;
-        min-width: 380px;
+        min-width: 350px;
 
         border-radius: var(--xs-radius);
-        padding: var(--l-spacing-mobile);
+        padding: var(--s-spacing-mobile);
       }
       .ikon {
         display: grid;
@@ -322,7 +322,7 @@
       <section
         class="bg-hero_image bg-cover pt-l-spacing-mobile text-center lg:h-hero-height"
       >
-        <div
+        <article
           class="mx-10 border-2 border-sol pt-m-spacing-mobile pl-10 pr-10 text-sol lg:h-hero-border-height"
         >
           <h1
@@ -341,13 +341,14 @@
             Med et blomsterabonnement fra Blomster Bjarne kan du nyde et udvalg
             af årstidens blomster leveret direkte til din hoveddør *
           </p>
-        </div>
+        </article>
         <div class="py-s-spacing-mobile">
           <svg
             class="mx-auto grid text-sol"
             width="32"
             height="32"
             viewBox="0 0 24 24"
+            alt="pil ned"
           >
             <path
               fill="currentColor"
@@ -358,13 +359,16 @@
       </section>
 
       <!---------------------------------------------- FØRSTE SEKTION -->
-      <section class="pb-xxl-spacing-mobile lg:pb-xxl-spacing-desktop">
+      <section
+        class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xxl-spacing-desktop"
+      >
         <!------------------------------- KNAP -->
 
-        <a href="abonnement1.html"
-          ><button class="mx-auto mt-xl-spacing-mobile">
-            Tegn mit abonnement
-          </button></a
+        <a
+          tabindex="0"
+          class="mx-auto mt-xl-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+          href="abonnement1.html"
+          >Tegn mit abonnement</a
         >
 
         <!------------------------------- INFO -->
@@ -384,16 +388,17 @@
             sæsonen.
           </p>
         </article>
+      </section>
+      <h2
+        class="pt-s-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
+      >
+        Sådan fungerer det
+      </h2>
 
-        <h2
-          class="pt-s-spacing-mobile pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
-        >
-          Sådan fungerer det
-        </h2>
-
-        <!------------------------------- SÅDAN GØR DU -->
+      <!------------------------------- SÅDAN GØR DU -->
+      <section class="pb-xxl-spacing-mobile">
         <article
-          class="flex justify-center gap-xl-spacing-mobile overflow-x-scroll lg:grid lg:grid-cols-2 lg:overflow-hidden lg:overflow-x-auto"
+          class="mx-7 flex gap-10 overflow-x-scroll lg:grid lg:grid-cols-2 lg:overflow-hidden lg:overflow-x-auto"
         >
           <div class="article">
             <div class="ikon">
@@ -498,6 +503,7 @@
 
     <!--------------------------------------------------------------------- FOOTER -->
     <footer
+      tabindex="0"
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
@@ -507,10 +513,12 @@
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 class="text-h4-mobile lg:text-h4-desktop">BUTIKKER</h4>
+            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              BUTIKKER
+            </h4>
 
             <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
-              <div class="strandvejen">
+              <address tabindex="0" class="strandvejen">
                 <p>Strandvejen 167</p>
                 <p>2900 Hellerup</p>
                 <p>Danmark</p>
@@ -518,21 +526,21 @@
                   <a href="tel:+4539629059"></a>
                   Tlf.: +45 39 62 90 59
                 </p>
-              </div>
+              </address>
 
-              <div class="gunnar">
+              <address tabindex="0" class="gunnar">
                 <p>Gunnar Nu Hansens Pl. 6</p>
                 <p>2100 København Ø</p>
                 <p>Danmark</p>
                 <p><a href="tel:+4536260700"></a>Tlf.: +45 36 26 07 00</p>
-              </div>
+              </address>
 
-              <div class="vaernedamsvej">
+              <address tabindex="0" class="vaernedamsvej">
                 <p>Værnedamsvej 4A st.</p>
                 <p>1619 København V</p>
                 <p>Danmark</p>
                 <p><a href="tel:+4526117006"></a>Tlf.: +45 26 11 70 06</p>
-              </div>
+              </address>
             </div>
           </section>
 
@@ -540,19 +548,20 @@
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
             <h4
+              tabindex="0"
               class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
             >
               INFORMATIONER
             </h4>
             <div class="mx-auto">
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a href="#">Om os</a>
+                <a tabindex="0" href="#">Om os</a>
               </div>
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a href="#">Kontakt os</a>
+                <a tabindex="0" href="#">Kontakt os</a>
               </div>
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a href="#">Sitemap</a>
+                <a tabindex="0" href="sitemap.html">Sitemap</a>
               </div>
             </div>
           </section>
@@ -560,29 +569,31 @@
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 class="text-h4-mobile lg:text-h4-desktop">ÅBNINGSTIDER</h4>
+            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              ÅBNINGSTIDER
+            </h4>
             <div class="tider grid grid-cols-2">
               <div
                 class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
               >
-                <p>Mandag</p>
-                <p>Tirsdag</p>
-                <p>Onsdag</p>
-                <p>Torsdag</p>
-                <p>Fredag</p>
-                <p>Lørdag</p>
-                <p>Søndag</p>
+                <p tabindex="0">Mandag</p>
+                <p tabindex="0">Tirsdag</p>
+                <p tabindex="0">Onsdag</p>
+                <p tabindex="0 ">Torsdag</p>
+                <p tabindex="0">Fredag</p>
+                <p tabindex="0">Lørdag</p>
+                <p tabindex="0">Søndag</p>
               </div>
               <div
                 class="tidspunkter grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
               >
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 18</p>
-                <p>10 - 15</p>
-                <p>11 - 16</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 15</p>
+                <p tabindex="0">11 - 16</p>
               </div>
             </div>
           </section>
@@ -590,11 +601,20 @@
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
-            <h4 class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop">
+            <h4
+              tabindex="0"
+              class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop"
+            >
               FØLG OS HER
             </h4>
             <div class="ikoner flex place-content-center gap-m-spacing-mobile">
-              <svg width="40" height="40" viewBox="0 0 48 48">
+              <svg
+                tabindex="0"
+                width="40"
+                height="40"
+                viewBox="0 0 48 48"
+                alt="facebook"
+              >
                 <g fill="none" fill-rule="evenodd" clip-rule="evenodd">
                   <path
                     stroke="#fffdf9"
@@ -609,7 +629,13 @@
                   ></path>
                 </g>
               </svg>
-              <svg width="44" height="44" viewBox="0 0 512 512">
+              <svg
+                tabindex="0"
+                width="44"
+                height="44"
+                viewBox="0 0 512 512"
+                alt="instagram"
+              >
                 <path
                   fill="#fffdf9"
                   d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32Z"
@@ -626,10 +652,16 @@
         <section
           class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
-          <p>CVR: 35649328</p>
-          <a class="cursor-pointer underline" href="#">Cookiepolitik</a>
-          <a class="cursor-pointer underline" href="#">Privatlivspolitik</a>
-          <a class="cursor-pointer underline" href="#">Handelsbetingelser</a>
+          <p tabindex="0">CVR: 35649328</p>
+          <a tabindex="0" class="cursor-pointer underline" href="#"
+            >Cookiepolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="#"
+            >Privatlivspolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="#"
+            >Handelsbetingelser</a
+          >
         </section>
       </article>
     </footer>
