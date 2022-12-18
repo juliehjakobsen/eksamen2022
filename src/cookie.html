@@ -69,6 +69,10 @@
           padding: 15px 60px;
           border-radius: var(--radius-desktop);
         }
+
+        .knap:first-of-type {
+          order: 2;
+        }
       }
 
       input {
@@ -279,7 +283,7 @@
     <main class="">
       <!-- Cookieboks start-->
       <article
-        class="z-1 fixed bottom-0 right-0 h-[58%] w-[100%] rounded-t-cookie bg-background-color p-8 font-font-body lg:right-52 lg:h-[35%] lg:w-[70%]"
+        class="z-1 fixed bottom-0 right-0 h-[58%] w-[100%] rounded-t-cookie bg-background-color p-8 font-font-body lg:right-52 lg:h-[38%] lg:w-[70%]"
         id="cookieboks"
       >
         <div class="grid place-content-center pb-xxxs-spacing-mobile lg:hidden">
@@ -287,7 +291,7 @@
         </div>
         <div class="">
           <h3
-            class="text-center text-h5-mobile font-bold lg:text-left lg:text-h5-desktop"
+            class="text-center text-h5-mobile font-bold lg:pb-xs-spacing-desktop lg:text-h5-desktop"
           >
             Du bestemmer over dine data
           </h3>
@@ -308,21 +312,20 @@
         </div>
 
         <div
-          class="grid gap-xs-spacing-mobile pt-m-spacing-mobile lg:grid-cols-2"
+          class="grid gap-s-spacing-mobile pt-xs-spacing-mobile lg:flex lg:justify-end lg:gap-xxl-spacing-mobile"
         >
-          <div id="accepter" class="knap lg:grid-start-2 justify-center">
+          <div class="knap grid justify-center">
             <button
-              class="flex w-[400px] flex-row items-center justify-center gap-[10px] rounded-radius border-0 bg-rust-400 py-[15px] px-[40px] font-button-text text-button-mobile text-color-black drop-shadow-buttonshadow hover:bg-rust-500 lg:h-10 lg:py-[15px] lg:px-[60px] lg:text-button-mobile"
-              href=""
+              id="accepter"
+              class="flex w-[400px] items-center justify-center rounded-radius border-0 bg-rust-400 py-[10px] px-[40px] font-button-text text-button-mobile text-color-black drop-shadow-buttonshadow hover:bg-rust-500 lg:h-10 lg:w-[200px] lg:py-[15px] lg:px-[60px] lg:text-button-mobile"
             >
               Accepter
             </button>
           </div>
           <div
-            class="lg:grid-start-1 flex justify-center text-abonnement-text-info underline"
-            id="afvis"
+            class="knap knap grid justify-center text-abonnement-text-info underline"
           >
-            <button>Afvis</button>
+            <button id="afvis">Afvis</button>
           </div>
         </div>
       </article>

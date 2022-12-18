@@ -13,6 +13,16 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      #sortiment {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+
       .baggrundsbillede {
         background-image: url(img/tekstur_baggrund.jpg);
         background-repeat: no-repeat;
@@ -107,6 +117,10 @@
     </style>
   </head>
   <body class="">
+    <!-- virker kun i chrome  -->
+    <a tabindex="0" class="skip-to-content-link" href="#section_1">
+      Skip to content
+    </a>
     <!-- header -->
     <header>
       <div
@@ -201,42 +215,47 @@
               >Abonnement</a
             >
           </li>
-          <div class="dropdown">
-            <label>
-              <button class="flex">
-                <p
-                  tabindex="0"
-                  class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+          <li>
+            <div class="dropdown">
+              <label class="">
+                <button
+                  id="sortiment"
+                  class="flex items-start hover:bg-color-white"
                 >
-                  Sortiment
-                </p>
-                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
-                  <path
-                    fill="#000000"
-                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
-                  />
-                </svg>
-              </button>
-            </label>
-            <ul class="underkat m-0">
-              <li>
-                <a
-                  tabindex="0"
-                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                  href="blomster.html"
-                  >Blomster</a
-                >
-              </li>
-              <li>
-                <a
-                  tabindex="0"
-                  class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
-                  href="vaser.html"
-                  >Vaser</a
-                >
-              </li>
-            </ul>
-          </div>
+                  <p
+                    tabindex="0"
+                    class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+                  >
+                    Sortiment
+                  </p>
+                  <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
+                    <path
+                      fill="#000000"
+                      d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <ul class="underkat m-0">
+                <li>
+                  <a
+                    tabindex="0"
+                    class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
+                    href="blomster.html"
+                    >Blomster</a
+                  >
+                </li>
+                <li>
+                  <a
+                    tabindex="0"
+                    class="dropdown-content w-52 rounded-radius-mobile bg-color-white p-4 font-font-body text-body-mobile shadow lg:text-body-desktop"
+                    href="vaser.html"
+                    >Vaser</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
           <li>
             <a
               tabindex="0"
@@ -294,7 +313,7 @@
         class="mx-10 border-2 border-graes-300 pt-m-spacing-mobile pl-10 pr-10 text-graes-300 lg:h-hero-border-height"
       >
         <h1
-          class="font-main-heading text-h1-mobile lg:pt-xxxl-spacing-desktop lg:text-h1-desktop"
+          class="font-main-heading text-h1-mobile lg:pt-xl-spacing-desktop lg:text-h1-desktop"
         >
           Vaser
         </h1>
@@ -340,13 +359,13 @@
         <p
           class="py-l-spacing-mobile font-font-body text-body-mobile lg:pt-l-spacing-desktop lg:pb-xxl-spacing-desktop lg:text-body-desktop"
         >
-          12 resultater
+          10 resultater
         </p>
       </section>
 
       <!---------------------------------------------- ANDEN SEKTION CARDS -->
       <section
-        class="flex flex-wrap justify-center gap-m-spacing-mobile lg:gap-l-spacing-desktop"
+        class="mx-auto flex w-[400px] flex-wrap gap-m-spacing-mobile lg:w-[1200px] lg:gap-l-spacing-desktop"
       >
         <!-- card -->
         <article class="hover:scale-105">
@@ -355,7 +374,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase10_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -371,7 +390,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase1_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -387,7 +406,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase2_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -403,7 +422,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase3_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -419,7 +438,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase4_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -435,7 +454,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase5_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -451,7 +470,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase6_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -467,7 +486,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase7_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -483,7 +502,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase8_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -499,7 +518,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase9_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">
@@ -515,23 +534,7 @@
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
               </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
-              </div>
-              <img src="/img/abonnement_filler.webp" alt="blomster i spand" />
+              <img src="/img/vaser/vase10_2.webp" alt="blomster i spand" />
             </div>
 
             <div class="overskrift p-s-spacing-mobile">

@@ -47,6 +47,7 @@ body {
 .sortiment {
   background-color: var(--background-color);
 }
+
 .sortiment:hover {
   background-color: var(--background-color);
 }
@@ -241,6 +242,7 @@ header nav ul {
   grid-column-start: 2;
   grid-row-start: 1;
 }
+
 @keyframes blink3 {
   0% {
     opacity: 0;

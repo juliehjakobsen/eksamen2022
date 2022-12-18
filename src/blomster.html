@@ -76,6 +76,10 @@
     </style>
   </head>
   <body>
+    <!-- virker kun i chrome  -->
+    <a tabindex="0" class="skip-to-content-link" href="#section_1">
+      Skip to content
+    </a>
     <!-- header -->
     <header>
       <div
@@ -246,7 +250,7 @@
           <li>
             <img
               tabindex="0"
-              class="search h-8 w-8"
+              class="search max-h-100% h-8 w-8"
               src="img/ikoner/search.svg"
               alt="Søg"
             />
@@ -263,7 +267,7 @@
         class="mx-10 border-2 border-himmel-500 pt-m-spacing-mobile pl-10 pr-10 text-himmel-500 lg:h-hero-border-height"
       >
         <h1
-          class="font-main-heading text-h1-mobile lg:pt-xxxl-spacing-desktop lg:text-h1-desktop"
+          class="font-main-heading text-h1-mobile lg:pt-xl-spacing-desktop lg:text-h1-desktop"
         >
           Blomster
         </h1>
@@ -1431,7 +1435,7 @@
             tabindex="0"
             class="mx-auto flex w-1/2 flex-row items-center justify-center gap-[10px] rounded-radius-mobile border-0 bg-color-primary-button-background py-[15px] px-[40px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/3 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
             href="abonnement.html"
-            >Tegn mit Abonnement</a
+            >Tegn mit abonnement</a
           >
         </div>
       </section>
@@ -1443,7 +1447,7 @@
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
-        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
+        class="w-screen bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
       >
         <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
           <section

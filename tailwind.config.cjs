@@ -183,8 +183,8 @@ module.exports = {
 
         "max-width": "100%",
 
-        "hero-height": "700px",
-        "hero-border-height": "600px",
+        "hero-height": "500px",
+        "hero-border-height": "400px",
 
         // cards
         "card-mobile-width": "155px",
