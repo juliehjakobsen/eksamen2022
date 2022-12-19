@@ -313,7 +313,7 @@
       <section class="">
         <!-- progress bar -->
         <article
-          class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
+          class="grid place-content-center pb-l-spacing-mobile lg:pb-m-spacing-desktop"
         >
           <div class="full_bar">
             <div>
@@ -357,12 +357,12 @@
         <!-- tekst -->
         <article class="pb-l-spacing-mobile">
           <h1
-            class="text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
+            class="text-center font-main-heading text-h1-mobile lg:text-h1-desktop"
           >
             Tak for dit køb!
           </h1>
           <p
-            class="pt-s-spacing-mobile font-font-body text-abonnement-text-info"
+            class="pt-s-spacing-mobile font-font-body text-abonnement-text-info lg:mx-auto lg:w-2/3 lg:text-body-mobile"
           >
             Vi sætter stor pris på at du har valgt at bestille dit abonnement
             hos Blomster Bjarne. Vi håber, at du/I bliver glade for jeres nye
@@ -373,7 +373,9 @@
       </section>
 
       <!-- sektion 2  ORDREOVERSIGT -->
-      <section class="grid gap-s-spacing-mobile">
+      <section
+        class="grid gap-xl-spacing-mobile lg:grid-cols-2 lg:gap-xxxl-spacing-desktop"
+      >
         <!-- ordreoversigt -->
         <article>
           <!-- overskrift -->
@@ -405,7 +407,9 @@
             <div class="border-[0.5px] border-color-black"></div>
           </div>
           <!-- priser -->
-          <div class="mb-s-spacing-mobile font-font-body text-body-mobile">
+          <div
+            class="lg:mb-sp mb-s-spacing-mobile font-font-body text-body-mobile"
+          >
             <div class="grid gap-xxs-spacing-mobile">
               <div>
                 <p class="font-bold">Navn</p>
@@ -428,16 +432,19 @@
               </div>
             </div>
           </div>
-        </article>
 
-        <div class="flex place-content-center">
-          <a
-            tabindex="0"
-            class="mx-auto mt-s-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
-            href="index.html"
-            >Tilbage til forsiden</a
+          <!-- knap -->
+          <div
+            class="grid justify-end pt-m-spacing-mobile lg:pt-xxs-spacing-mobile"
           >
-        </div>
+            <a
+              tabindex="0"
+              class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-l-spacing-mobile font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+              href="information.html"
+              >Tilbage til forsiden</a
+            >
+          </div>
+        </article>
       </section>
 
       <!-- <section>
