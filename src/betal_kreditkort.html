@@ -295,10 +295,10 @@
     </header>
 
     <main
-      class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
+      class="mx-[60px] pb-l-spacing-mobile lg:mx-[160px] lg:pb-xl-spacing-desktop"
     >
       <!-- sektion 1 -->
-      <section>
+      <section class="">
         <!-- progress bar -->
         <article
           class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
@@ -350,12 +350,19 @@
             >
               Udfyld kortoplysninger
             </h1>
+            <a
+              class="font-font-body text-abonnement-text-info underline"
+              href="betal_kreditkort.html"
+              >Tilbage</a
+            >
           </div>
         </article>
       </section>
 
       <!-- sektion 2 -->
-      <section class="mx-[30px] grid gap-xl-spacing-mobile">
+      <section
+        class="grid gap-xl-spacing-mobile lg:grid-cols-2 lg:gap-xxxl-spacing-desktop"
+      >
         <!-- ordreoversigt -->
         <article>
           <!-- overskrift -->
@@ -367,7 +374,7 @@
           </div>
           <!-- priser -->
           <div
-            class="mb-l-spacing-mobile grid gap-l-spacing-mobile font-font-body text-body-mobile"
+            class="mb-m-spacing-mobile grid gap-m-spacing-mobile font-font-body text-body-mobile"
           >
             <div class="flex justify-between">
               <p>Blomsterabonnement</p>
@@ -403,14 +410,14 @@
             <div class="border-[0.5px] border-color-black"></div>
           </div>
           <!-- forms -->
-          <div class="grid gap-l-spacing-mobile">
+          <div class="grid gap-m-spacing-mobile">
             <!-- navn -->
             <div class="grid gap-xxs-spacing-mobile">
               <label class="font-other-headings text-h5-mobile" for="full-name"
                 >Kortholders navn <span class="text-rust-600">*</span></label
               >
               <input
-                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
                 type="text"
                 inputmode="text"
                 placeholder="Fx. Sofie Hansen"
@@ -422,7 +429,7 @@
                 >Kortnummer <span class="text-rust-600">*</span></label
               >
               <input
-                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
                 type="text"
                 inputmode="text"
                 placeholder="Fx. 1234 5678 9012 3456"
@@ -434,7 +441,7 @@
                 >Udløbsdato <span class="text-rust-600">*</span></label
               >
               <input
-                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
                 type="email"
                 inputmode="email"
                 placeholder="MM / ÅÅ"
@@ -446,7 +453,7 @@
                 >Kontrolcifre</label
               >
               <input
-                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
                 type="tel"
                 inputmode="tel"
                 placeholder="CVC"
@@ -454,9 +461,7 @@
             </div>
           </div>
           <!-- ekstra informationer -->
-          <div
-            class="mt-s-spacing-mobile grid gap-l-spacing-mobile pb-l-spacing-mobile"
-          >
+          <div class="mt-s-spacing-mobile grid gap-l-spacing-mobile">
             <!-- besked om levering -->
             <div class="">
               <div class="flex">
@@ -470,24 +475,16 @@
             </div>
           </div>
           <!-- knapper -->
-          <div>
-            <!-- tilbage -->
-            <div class="flex place-content-center">
-              <a
-                tabindex="0"
-                class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
-                href="kurv.html"
-              >
-                Tilbage
-              </a>
-            </div>
+          <div
+            class="grid gap-xxs-spacing-mobile pt-m-spacing-mobile lg:flex lg:justify-end lg:gap-m-spacing-desktop"
+          >
             <!-- videre -->
-            <div class="flex place-content-center">
+            <div class="grid justify-end">
               <a
                 tabindex="0"
-                class="mx-auto mt-s-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                class="mx-auto grid justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-[15px]"
                 href="betal_bekraeft.html"
-                >Bekræft betaling</a
+                >Bekræft køb</a
               >
             </div>
           </div>

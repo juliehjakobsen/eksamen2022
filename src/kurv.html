@@ -286,10 +286,10 @@
       <!-- MENUPUNKTER SLUT -->
     </header>
     <main
-      class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
+      class="mx-[60px] pb-l-spacing-mobile lg:mx-[160px] lg:pb-xl-spacing-desktop"
     >
       <!-- sektion 1 -->
-      <section>
+      <section class="">
         <!-- progress bar -->
         <article
           class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
@@ -337,7 +337,7 @@
         <!-- overskrift -->
         <article class="pb-xl-spacing-mobile">
           <h1
-            class="text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
+            class="text-center font-main-heading text-h1-mobile lg:text-h1-desktop"
           >
             Din kurv
           </h1>
@@ -345,7 +345,9 @@
       </section>
 
       <!-- sektion 2 -->
-      <section class="mx-[30px] grid gap-xl-spacing-mobile">
+      <section
+        class="grid gap-xl-spacing-mobile lg:grid-cols-2 lg:gap-xxxl-spacing-desktop"
+      >
         <article>
           <div class="pb-l-spacing-mobile">
             <h2 class="font-other-headings text-h3-mobile font-bold">
@@ -355,7 +357,11 @@
               class="mb-s-spacing-mobile w-[100%] border-[0.5px] border-color-black"
             ></div>
             <figure class="flex justify-center">
-              <img class="w-[70%]" src="img/abonnement_filler.webp" alt="" />
+              <img
+                class="w-[70%] lg:w-[50%]"
+                src="img/abonnement_filler.webp"
+                alt=""
+              />
             </figure>
           </div>
           <div
@@ -391,7 +397,7 @@
           </div>
           <!-- priser -->
           <div
-            class="mb-xl-spacing-mobile grid gap-l-spacing-mobile font-font-body text-body-mobile"
+            class="mb-l-spacing-mobile grid gap-m-spacing-mobile font-font-body text-body-mobile"
           >
             <div class="flex justify-between">
               <p>Blomsterabonnement</p>
@@ -409,7 +415,7 @@
                 >Indløs gavekort</label
               >
               <input
-                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-3 lg:pl-2"
                 type="text"
                 inputmode="text"
                 placeholder="Indtast gavekortnummer"
@@ -417,7 +423,7 @@
               <div class="flex place-content-end">
                 <button
                   tabindex="0"
-                  class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                  class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[5px] lg:px-[20px]"
                   href="#"
                 >
                   Indløs gavekort
@@ -440,10 +446,10 @@
           </div>
 
           <!-- knap -->
-          <div class="flex place-content-end">
+          <div class="grid justify-end pt-m-spacing-mobile lg:pt-[70px]">
             <a
               tabindex="0"
-              class="mx-auto mt-xl-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+              class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
               href="information.html"
               >Fortsæt til betaling</a
             >
