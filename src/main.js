@@ -30,3 +30,12 @@ function sidenVises() {
     });
   });
 }
+
+const wrappers = document.querySelectorAll(".article_wrapper");
+const elements = document.querySelectorAll(".flip");
+
+wrappers.forEach((wrapper, index) => {
+  wrapper.addEventListener("click", () => {
+    elements[index].classList.toggle("article_info");
+  });
+});
