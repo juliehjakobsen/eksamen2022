@@ -140,7 +140,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="mb-l-spacing-mobile">
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
@@ -324,18 +324,11 @@
     <main
       class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
     >
+      <!-- sektion 1 -->
       <section>
-        <article>
-          <div>
-            <h1
-              class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h2-desktop"
-            >
-              Betaling
-            </h1>
-          </div>
-        </article>
+        <!-- progress bar -->
         <article
-          class="grid place-content-center pb-xxl-spacing-mobile lg:pb-xl-spacing-desktop"
+          class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
         >
           <div class="full_bar">
             <div>
@@ -361,7 +354,7 @@
               <p class="overskrift -ml-2 lg:-ml-5">Betal</p>
               <div class="bar3">
                 <div class="ball3">
-                  <a href="betal.html"><p>3</p></a>
+                  <p>3</p>
                 </div>
                 <div class="line3"></div>
               </div>
@@ -376,136 +369,128 @@
             </div>
           </div>
         </article>
+        <!-- overskrift -->
+        <article class="pb-l-spacing-mobile">
+          <div>
+            <h1
+              class="text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
+            >
+              Betalingsmetode
+            </h1>
+          </div>
+        </article>
       </section>
-      <div class="lg:flex lg:gap-10">
-        <section>
-          <article>
-            <div>
-              <h2
-                class="pb-xs-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
-              >
-                Ordreoversigt
-              </h2>
-            </div>
-            <div class="rounded-radius-mobile border-2 border-color-headings">
-              <div class="flex lg:gap-8">
-                <figure class="my-auto w-1/2 pt-xs-spacing-mobile lg:w-full">
-                  <img
-                    src="img/abonnement_filler.webp"
-                    alt="blomster i en spand"
-                  />
-                </figure>
-                <div class="lg:w-[600px]">
-                  <div class="pt-l-spacing-mobile lg:pt-l-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Lille
-                    </p>
-                  </div>
-                  <div class="pt-m-spacing-mobile lg:pt-xl-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Neutral og tæt
-                    </p>
-                  </div>
-                  <div class="pt-m-spacing-mobile lg:pt-xl-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Sensitiv (nej)
-                    </p>
-                  </div>
-                  <div class="pt-m-spacing-mobile lg:pt-xl-spacing-desktop">
-                    <p
-                      class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Levering hver anden uge
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex place-content-center py-l-spacing-mobile font-medium lg:py-m-spacing-desktop"
-              >
-                <h3
-                  class="font-other-headings text-h4-mobile lg:text-h4-desktop"
-                >
-                  Subtotal 620 kr
-                </h3>
-              </div>
-            </div>
-            <div class="primary py-xl-spacing-mobile lg:py-xl-spacing-desktop">
-              <button class="mx-auto">
-                <a href="abonnement.html">Rediger Ordre</a>
-              </button>
-            </div>
-          </article>
-        </section>
-        <section>
-          <article class="pb-xxl-spacing-mobile">
-            <div>
-              <h2
-                class="pb-l-spacing-mobile font-other-headings text-h2-mobile font-semibold lg:pb-l-spacing-desktop lg:text-h2-desktop"
-              >
-                Betalingsmetode
-              </h2>
-              <h3
-                class="pb-xs-spacing-mobile text-center font-other-headings text-h3-mobile"
-              >
-                - Vælg betalingsmetode -
-              </h3>
-            </div>
-            <div class="flex flex-col gap-[27px] lg:gap-[44px]">
-              <a href="betal_kreditkort.html">
-                <div
-                  class="grid h-[70px] w-[330px] border-2 border-color-black hover:scale-105 lg:h-[100px] lg:w-[490px]"
-                >
-                  <h4
-                    class="m-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Mobile Pay
-                  </h4>
-                </div></a
-              >
-              <a class="" href="betal_kreditkort.html">
-                <div
-                  class="flex h-[70px] w-[330px] place-content-center gap-10 border-2 border-color-black hover:scale-105 lg:h-[100px] lg:w-[490px]"
-                >
-                  <img
-                    class="my-auto h-10 w-10"
-                    src="img/ikoner/kreditkort_ikon.svg"
-                    alt="betalingskort ikon"
-                  />
-                  <h4
-                    class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Kreditkort
-                  </h4>
-                </div></a
-              >
 
-              <a href="betal_kreditkort.html">
-                <div
-                  class="flex h-[70px] w-[330px] place-content-center gap-10 border-2 border-color-black hover:scale-105 lg:h-[100px] lg:w-[490px]"
+      <!-- sektion 2 -->
+      <section class="mx-[30px] grid gap-xl-spacing-mobile">
+        <!-- ordreoversigt -->
+        <article>
+          <!-- overskrift -->
+          <div class="mb-s-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Ordreoversigt
+            </h2>
+            <div class="border-[0.5px] border-color-black"></div>
+          </div>
+          <!-- priser -->
+          <div
+            class="mb-l-spacing-mobile grid gap-l-spacing-mobile font-font-body text-body-mobile"
+          >
+            <div class="flex justify-between">
+              <p>Blomsterabonnement</p>
+              <p class="font-bold">400,- DKK</p>
+            </div>
+            <div class="flex justify-between">
+              <p>Depositum (leveringsspand)</p>
+              <p class="font-bold">20,- DKK</p>
+            </div>
+          </div>
+
+          <!-- total -->
+          <div class="">
+            <div class="border-[0.5px] border-color-black"></div>
+            <div class="mt-xxxs-spacing-mobile flex justify-between">
+              <h2 class="font-other-headings text-body-mobile font-bold">
+                Total
+              </h2>
+              <h2 class="font-other-headings text-body-mobile font-bold">
+                420,- DKK
+              </h2>
+            </div>
+          </div>
+        </article>
+
+        <!-- betalingsmode -->
+        <article>
+          <!-- overskrift -->
+          <div class="mb-xs-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Betalingsmetode
+            </h2>
+            <div
+              class="mb-s-spacing-mobile border-[0.5px] border-color-black"
+            ></div>
+            <p class="font-font-body text-abonnement-text-info">
+              Vælg venligst dit foretrukne betalingsmiddel nedenfor.
+            </p>
+          </div>
+          <!-- metoder -->
+          <div
+            class="flex flex-col gap-[27px] pb-l-spacing-mobile lg:gap-[44px]"
+          >
+            <a href="betal_kreditkort.html">
+              <div
+                class="grid h-[50px] w-[330px] border-2 border-color-black hover:scale-105 lg:h-[100px] lg:w-[490px]"
+              >
+                <h4
+                  class="m-auto font-font-body text-body-mobile lg:text-body-desktop"
                 >
-                  <img
-                    class="my-auto h-10 w-10"
-                    src="img/ikoner/gavekort_ikon.svg"
-                    alt="gavekort ikon"
-                  />
-                  <h4
-                    class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-                  >
-                    Gavekort
-                  </h4>
-                </div></a
+                  MobilePay
+                </h4>
+              </div></a
+            >
+            <a class="" href="betal_kreditkort.html">
+              <div
+                class="flex h-[50px] w-[330px] place-content-center gap-10 border-2 border-color-black hover:scale-105 lg:h-[100px] lg:w-[490px]"
+              >
+                <!-- <img
+                  class="my-auto h-10 w-10"
+                  src="img/ikoner/kreditkort_ikon.svg"
+                  alt="betalingskort ikon"
+                /> -->
+                <h4
+                  class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  VISA / Mastercard
+                </h4>
+              </div></a
+            >
+          </div>
+
+          <!-- knapper -->
+          <div>
+            <!-- rediger -->
+            <div class="flex place-content-center">
+              <a
+                tabindex="0"
+                class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href="information.html"
+              >
+                Rediger ordre
+              </a>
+            </div>
+            <!-- videre -->
+            <div class="flex place-content-center">
+              <a
+                tabindex="0"
+                class="mx-auto mt-s-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href="betal_kreditkort.html"
+                >Fortsæt til betaling</a
               >
             </div>
-          </article>
-        </section>
-      </div>
+          </div>
+        </article>
+      </section>
     </main>
     <footer
       tabindex="0"
