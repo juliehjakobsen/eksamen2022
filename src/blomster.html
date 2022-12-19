@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -92,74 +92,75 @@
         <p tabindex="0">Køb dine blomster i vores butikker</p>
         <p tabindex="0">Bestil dit abonnement på vores webshop</p>
       </div>
-      <!-- LOGO DESKTOP -->
+      <!-- LOGO DESKTOP START -->
       <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
           <img
             class="logo_lang"
             id="sort"
             src="img/logo/bb_logo_lang.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo sort forkortelse"
           />
           <img
             class="logo_lang"
             id="sol"
             src="img/logo/bb_logo_lang_sol.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo gul forkortelse"
           />
           <img
             class="logo_lang"
             id="graes"
             src="img/logo/bb_logo_lang.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo grøn forkortelse"
           />
           <img
             class="logo_lang"
             id="himmel"
             src="img/logo/bb_logo_lang_himmel.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo blå forkortelse"
           />
           <img
             class="logo_lang"
             id="rust"
             src="img/logo/bb_logo_lang_rust.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo orange forkortelse"
           />
         </a>
       </section>
+      <!-- LOGO DESKTOP SLUT -->
 
-      <!-- LOGO MOBIL -->
+      <!-- LOGO MOBIL START -->
       <section tabindex="0" class="navigation_mobil">
         <a class="logo_mobil" href="index.html">
           <img
             class="logo_kort"
             id="sort"
             src="img/logo/bb_logo_kort.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo sort "
           />
           <img
             class="logo_kort"
             id="sol"
             src="img/logo/bb_logo_kort_sol.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo gul"
           />
           <img
             class="logo_kort"
             id="graes"
             src="img/logo/bb_logo_kort_graes.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo grøn"
           />
           <img
             class="logo_kort"
             id="himmel"
             src="img/logo/bb_logo_kort_himmel.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo blå"
           />
           <img
             class="logo_kort"
             id="rust"
             src="img/logo/bb_logo_kort_rust.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo orange"
           />
         </a>
 
@@ -167,7 +168,9 @@
           <button class="toggle-btn">☰</button>
         </div>
       </section>
+      <!-- LOGO MOBIL SLUT -->
 
+      <!-- MENUPUNKTER START -->
       <nav class="lg:flex">
         <ul>
           <li>
@@ -261,6 +264,7 @@
           </li>
         </ul>
       </nav>
+      <!-- MENUPUNKTER SLUT -->
     </header>
     <!---------------------------------------------- HERO -->
     <section
@@ -322,6 +326,8 @@
 
       <!---------------------------------------------- ANDEN SEKTION CARDS -->
       <section
+        itemscope
+        itemtype="https://schema.org/Product"
         class="flex flex-wrap justify-center gap-s-spacing-mobile lg:gap-l-spacing-desktop lg:px-[80px]"
       >
         <!-- card -->
@@ -333,6 +339,7 @@
               </div>
               <div class="billede_wrapper">
                 <img
+                  itemprop="image"
                   src="/img/blomster/anthurium.webp"
                   alt="Anthurium blomst"
                 />
@@ -342,7 +349,7 @@
             <div
               class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
             >
-              <h3>Anthurium</h3>
+              <h3 itemprop="name">Anthurium</h3>
             </div>
           </div>
           <div class="article_info border-2 border-color-black bg-color-white">
@@ -350,6 +357,7 @@
               <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
             </div>
             <h3
+              itemprop="name"
               class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
             >
               Anthurium
@@ -364,6 +372,7 @@
                   alt="oprindelse ikon"
                 />
                 <h4
+                  itemprop="countryOfOrigin"
                   class="font-font-body text-body-mobile lg:text-body-desktop"
                 >
                   oprindelse
@@ -401,6 +410,7 @@
                   alt="pris ikon"
                 />
                 <h4
+                  itemprop="price"
                   class="font-font-body text-body-mobile lg:text-body-desktop"
                 >
                   pris

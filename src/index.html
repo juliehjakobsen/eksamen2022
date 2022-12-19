@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -255,7 +255,7 @@
       }
     </style>
   </head>
-  <body itemscope itemtype="https://schema.org/OnlineStore">
+  <body>
     <!-- virker kun i chrome  -->
     <a tabindex="0" class="skip-to-content-link" href="#section_1">
       Skip to content
@@ -275,31 +275,31 @@
             class="logo_lang"
             id="sort"
             src="img/logo/bb_logo_lang.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo sort forkortelse"
           />
           <img
             class="logo_lang"
             id="sol"
             src="img/logo/bb_logo_lang_sol.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo gul forkortelse"
           />
           <img
             class="logo_lang"
             id="graes"
             src="img/logo/bb_logo_lang.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo grøn forkortelse"
           />
           <img
             class="logo_lang"
             id="himmel"
             src="img/logo/bb_logo_lang_himmel.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo blå forkortelse"
           />
           <img
             class="logo_lang"
             id="rust"
             src="img/logo/bb_logo_lang_rust.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo orange forkortelse"
           />
         </a>
       </section>
@@ -312,31 +312,31 @@
             class="logo_kort"
             id="sort"
             src="img/logo/bb_logo_kort.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo sort "
           />
           <img
             class="logo_kort"
             id="sol"
             src="img/logo/bb_logo_kort_sol.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo gul"
           />
           <img
             class="logo_kort"
             id="graes"
             src="img/logo/bb_logo_kort_graes.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo grøn"
           />
           <img
             class="logo_kort"
             id="himmel"
             src="img/logo/bb_logo_kort_himmel.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo blå"
           />
           <img
             class="logo_kort"
             id="rust"
             src="img/logo/bb_logo_kort_rust.png"
-            alt="Blomster Bjarne logo"
+            alt="Blomster Bjarne logo orange"
           />
         </a>
 
@@ -513,7 +513,12 @@
     <!-------------------------------------------------------------------------------------------- MAIN -->
     <main class="overflow-x-clip">
       <!-- section_1 -->
-      <section id="section_1" class="bg_tekstur px-[30px] lg:px-[80px]">
+      <section
+        itemscope
+        itemtype="https://schema.org/OnlineStore"
+        id="section_1"
+        class="bg_tekstur px-[30px] lg:px-[80px]"
+      >
         <h2
           tabindex="0"
           class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-l-spacing-desktop lg:text-h2-desktop"
@@ -573,7 +578,11 @@
       </section>
 
       <!-- section_3 -->
-      <section class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop">
+      <section
+        itemscope
+        itemtype="https://schema.org/CreativeWork"
+        class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop"
+      >
         <div
           class="flex place-content-center gap-3 pt-xl-spacing-mobile pb-s-spacing-mobile"
         >
@@ -650,7 +659,7 @@
                 </div>
               </div>
               <div class="overskrift">
-                <h3 class="pt-xxs-spacing-desktop">Solsikke</h3>
+                <h3 itemprop="name" class="pt-xxs-spacing-desktop">Solsikke</h3>
               </div>
             </div>
           </article>
@@ -661,6 +670,7 @@
             </div>
             <div class="overskrift">
               <h3
+                itemprop="name"
                 class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
               >
                 Solsikke
@@ -702,7 +712,7 @@
                 </div>
               </div>
               <div class="overskrift">
-                <h4 class="pt-xxs-spacing-desktop">Fennikel</h4>
+                <h3 itemprop="name" class="pt-xxs-spacing-desktop">Fennikel</h3>
               </div>
             </div>
           </article>
@@ -713,6 +723,7 @@
             </div>
             <div class="overskrift">
               <h3
+                itemprop="name"
                 class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
               >
                 Sweet fennel
@@ -752,7 +763,7 @@
                 </div>
               </div>
               <div class="overskrift">
-                <h3 class="pt-xxs-spacing-desktop">Orkidé</h3>
+                <h3 itemprop="name" class="pt-xxs-spacing-desktop">Orkidé</h3>
               </div>
             </div>
           </article>
@@ -763,6 +774,7 @@
             </div>
             <div class="overskrift">
               <h3
+                itemprop="name"
                 class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
               >
                 Okkide
@@ -821,9 +833,11 @@
           Anmeldelser
         </h2>
         <article
+          itemscope
+          itemtype="https://schema.org/Review"
           class="carousel-center carousel h-[200px] overflow-y-hidden overflow-x-scroll lg:mt-xl-spacing-desktop lg:h-[300px] lg:place-content-center lg:overflow-x-hidden"
         >
-          <div class="carousel-item">
+          <div itemprop="review" class="carousel-item">
             <div class="snap-center lg:w-[500px]">
               <figure
                 tabindex="0"
@@ -848,7 +862,7 @@
                   />
                 </svg>
               </figure>
-              <div itemprop="review">
+              <div>
                 <p
                   tabindex="0"
                   class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
@@ -858,6 +872,7 @@
               </div>
               <div>
                 <p
+                  itemprop="name"
                   tabindex="0"
                   class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
                 >
@@ -865,7 +880,10 @@
                 </p>
               </div>
             </div>
-            <div class="snap-center lg:-mx-xxl-spacing-desktop lg:w-[500px]">
+            <div
+              itemprop="review"
+              class="snap-center lg:-mx-xxl-spacing-desktop lg:w-[500px]"
+            >
               <figure
                 tabindex="0"
                 class="flex justify-center gap-3 py-l-spacing-mobile"
@@ -891,7 +909,6 @@
               </figure>
               <div>
                 <p
-                  itemprop="review"
                   tabindex="0"
                   class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
                 >
@@ -900,6 +917,7 @@
               </div>
               <div>
                 <p
+                  itemprop="name"
                   tabindex="0"
                   class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
                 >
@@ -907,7 +925,7 @@
                 </p>
               </div>
             </div>
-            <div class="snap-center lg:w-[500px]">
+            <div itemprop="review" class="snap-center lg:w-[500px]">
               <figure
                 tabindex="0"
                 class="flex justify-center gap-3 py-l-spacing-mobile"
@@ -933,7 +951,6 @@
               </figure>
               <div>
                 <p
-                  itemprop="review"
                   tabindex="0"
                   class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
                 >
@@ -942,6 +959,7 @@
               </div>
               <div>
                 <p
+                  itemprop="name"
                   tabindex="0"
                   class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
                 >
