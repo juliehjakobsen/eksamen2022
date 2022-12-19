@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+.valgt {
+  /* border-bottom: 10px solid var(--rust-700); */
+}
+
 /* virker kun i chrome */
 .skip-to-content-link {
   left: 50%;

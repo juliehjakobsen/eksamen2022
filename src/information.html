@@ -23,11 +23,9 @@
       .overskrift {
         font-size: var(--abonnement-text-info);
         font-family: var(--font-body);
-        font-weight: var(--font-weight-bold);
       }
       .full_bar {
         display: flex;
-
         place-items: center;
       }
       .bar1,
@@ -35,7 +33,6 @@
       .bar3,
       .bar4 {
         display: flex;
-
         place-items: center;
       }
 
@@ -73,14 +70,19 @@
 
       @media (min-width: 900px) {
         .overskrift {
-          font-size: var(--h4-desktop);
+          font-size: var(--body-desktop);
         }
+
+        .tal {
+          font-size: var(--body-desktop);
+        }
+
         .ball1,
         .ball2,
         .ball3,
         .ball4 {
-          width: 50px;
-          height: 50px;
+          width: 25px;
+          height: 25px;
           background-color: var(--color-kurv-bar-disabled);
           border-radius: 100%;
           font-family: var(--font-body);
@@ -88,22 +90,22 @@
 
           color: var(--color-kurv-bar-text);
         }
-
-        .line2,
-        .line3 {
-          width: 180px;
-          height: 0px;
-          border: 5px solid var(--color-kurv-bar-disabled);
-        }
         .ball1,
         .ball2 {
           background-color: var(--color-kurv-bar-active);
           z-index: 1;
         }
-        .line1 {
-          width: 180px;
+
+        .line2,
+        .line3 {
+          width: 115px;
           height: 0px;
-          border: 5px solid var(--color-kurv-bar-active);
+          border: 2px solid var(--color-kurv-bar-disabled);
+        }
+        .line1 {
+          width: 115px;
+          height: 0px;
+          background-color: var(--color-kurv-bar-active);
         }
       }
     </style>
@@ -305,7 +307,7 @@
               <p class="overskrift -ml-2 lg:-ml-3">Kurv</p>
               <div class="bar1">
                 <div class="ball1">
-                  <a href="kurv.html"><p>1</p></a>
+                  <a href="kurv.html"><p class="tal">1</p></a>
                 </div>
                 <div class="line1"></div>
               </div>
@@ -315,7 +317,7 @@
               <p class="overskrift -ml-1.5 lg:-ml-2">Info</p>
               <div class="bar2">
                 <div class="ball2">
-                  <a href="information.html"><p>2</p></a>
+                  <a href="information.html"><p class="tal">2</p></a>
                 </div>
                 <div class="line2"></div>
               </div>
@@ -324,7 +326,7 @@
               <p class="overskrift -ml-2 lg:-ml-5">Betal</p>
               <div class="bar3">
                 <div class="ball3">
-                  <p>3</p>
+                  <p class="tal">3</p>
                 </div>
                 <div class="line3"></div>
               </div>
@@ -333,7 +335,7 @@
               <p class="overskrift -ml-4 lg:-ml-9">Bekræft</p>
               <div class="bar4">
                 <div class="ball4">
-                  <p>4</p>
+                  <p class="tal">4</p>
                 </div>
               </div>
             </div>
