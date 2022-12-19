@@ -110,7 +110,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="mb-l-spacing-mobile">
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
@@ -294,18 +294,11 @@
     <main
       class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
     >
+      <!-- sektion 1 -->
       <section>
-        <article>
-          <div>
-            <h1
-              class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h2-desktop"
-            >
-              Information
-            </h1>
-          </div>
-        </article>
+        <!-- progress bar -->
         <article
-          class="grid place-content-center pb-m-spacing-mobile lg:pb-xl-spacing-desktop"
+          class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
         >
           <div class="full_bar">
             <div>
@@ -346,139 +339,171 @@
             </div>
           </div>
         </article>
+        <!-- overskrift -->
+        <article class="pb-l-spacing-mobile">
+          <div>
+            <h1
+              class="text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
+            >
+              Information
+            </h1>
+          </div>
+        </article>
       </section>
-      <section class="pt-xxl-spacing-mobile lg:pt-l-spacing-desktop">
+
+      <!-- sektion 2 -->
+      <section class="mx-[30px] grid gap-xl-spacing-mobile">
+        <!-- ordreoversigt -->
         <article>
-          <form
-            class="lg:flex lg:justify-around lg:pb-xl-spacing-desktop"
-            action="udfyld"
-          >
-            <div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h2
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Fornavn og efternavn <span class="text-rust-500">*</span>
-                </h2>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="text"
-                    value=""
-                    placeholder="Fx. Sofie Larsen"
-                  />
-                </label>
-              </div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h2
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Leveringsadresse <span class="text-rust-500">*</span>
-                </h2>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="text"
-                    value=""
-                    placeholder="Fx. Strandvejen 167, 2900 Hellerup"
-                  />
-                </label>
-              </div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h2
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Email <span class="text-rust-500">*</span>
-                </h2>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="email"
-                    value=""
-                    placeholder="Fx. sofie@gmail.com"
-                  />
-                </label>
-              </div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h2
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Telefonnummer
-                </h2>
-                <label for="betaling">
-                  <input
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    type="tel"
-                    value=""
-                    placeholder="Fx. +45 12345678"
-                  />
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="pb-m-spacing-mobile lg:pb-l-spacing-desktop">
-                <h2
-                  class="pb-xs-spacing-mobile font-other-headings text-h4-mobile font-medium lg:pb-s-spacing-desktop lg:text-h4-desktop"
-                >
-                  Bemærkning til bestilling
-                </h2>
-                <label for="betaling">
-                  <textarea
-                    class="w-full font-font-body text-body-mobile lg:text-body-desktop"
-                    name=""
-                    id=""
-                    cols="39"
-                    rows="10"
-                    placeholder="Fx. særlig bemærkninger for levering"
-                  ></textarea>
-                </label>
-              </div>
-              <div>
-                <h2
-                  class="pb-xs-spacing-mobile font-font-body text-h5-mobile lg:pb-s-spacing-desktop lg:text-h5-desktop"
-                >
-                  Vil du have besked, når der er leveret?
-                </h2>
-                <div class="grid gap-5">
-                  <div class="flex gap-5">
-                    <input class="h-8 w-8" type="checkbox" />
-                    <p
-                      class="font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Jeg ønsker en SMS, pr levering
-                    </p>
-                  </div>
-                  <div class="flex gap-5">
-                    <input class="h-8 w-8" type="checkbox" />
-
-                    <p
-                      class="font-font-body text-body-mobile lg:text-body-desktop"
-                    >
-                      Jeg ønsker en E-mail, pr levering
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
+          <!-- overskrift -->
+          <div class="mb-s-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Ordreoversigt
+            </h2>
+            <div class="border-[0.5px] border-color-black"></div>
+          </div>
+          <!-- priser -->
           <div
-            class="flex justify-between pt-xl-spacing-mobile lg:justify-evenly lg:pt-xl-spacing-desktop"
+            class="mb-l-spacing-mobile grid gap-l-spacing-mobile font-font-body text-body-mobile"
           >
-            <div>
+            <div class="flex justify-between">
+              <p>Blomsterabonnement</p>
+              <p class="font-bold">400,- DKK</p>
+            </div>
+            <div class="flex justify-between">
+              <p>Depositum (leveringsspand)</p>
+              <p class="font-bold">20,- DKK</p>
+            </div>
+          </div>
+
+          <!-- total -->
+          <div class="">
+            <div class="border-[0.5px] border-color-black"></div>
+            <div class="mt-xxxs-spacing-mobile flex justify-between">
+              <h2 class="font-other-headings text-body-mobile font-bold">
+                Total
+              </h2>
+              <h2 class="font-other-headings text-body-mobile font-bold">
+                420,- DKK
+              </h2>
+            </div>
+          </div>
+        </article>
+
+        <!-- informationer -->
+        <article>
+          <!-- overskrift H2 -->
+          <div class="mb-s-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Informationer
+            </h2>
+            <div class="border-[0.5px] border-color-black"></div>
+          </div>
+          <!-- forms -->
+          <div class="grid gap-l-spacing-mobile">
+            <!-- navn -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="full-name"
+                >For- og efternavn <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Fx. Sofie Hansen"
+              />
+            </div>
+            <!-- adresse -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Leveringsadresse <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Fx. Strandvejen 167, 2900 Hellerup"
+              />
+            </div>
+            <!-- e-mail -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >E-mail <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="Fx. sofia@gmail.com"
+              />
+            </div>
+            <!-- telefonnummer -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Telefonnummer</label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="tel"
+                inputmode="tel"
+                placeholder="Fx. +45 12345678"
+              />
+            </div>
+          </div>
+          <!-- ekstra informationer -->
+          <div
+            class="mt-s-spacing-mobile grid gap-l-spacing-mobile pb-l-spacing-mobile"
+          >
+            <!-- bemærkninger -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Bemærkning til bestillingen</label
+              >
+              <input
+                class="rounded-radius-mobile p-10 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="tel"
+                inputmode="tel"
+                placeholder="Eventuelle bemærkninger til levering"
+              />
+            </div>
+            <!-- besked om levering -->
+            <div class="grid gap-xs-spacing-mobile">
+              <h3 class="w-2/3 font-other-headings text-h5-mobile">
+                Vil du have besked når du får leveret en buket?
+              </h3>
+              <div class="flex">
+                <input type="checkbox" checked="checked" class="checkbox" />
+                <h4 class="pl-m-spacing-mobile font-font-body text-body-mobile">
+                  Jeg ønsker en e-mail pr. levering
+                </h4>
+              </div>
+              <div class="flex">
+                <input type="checkbox" checked="checked" class="checkbox" />
+                <h4 class="pl-m-spacing-mobile font-font-body text-body-mobile">
+                  Jeg ønsker en SMS pr. levering
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- knapper -->
+          <div>
+            <!-- tilbage -->
+            <div class="flex place-content-center">
               <a
-                class="flex flex-row-reverse rounded-radius-mobile border-2 border-rust-500 bg-color-secondary-button-background px-sbutton-padding-x-mobile py-sbutton-padding-y-mobile font-button-text text-button-mobile text-rust-800 hover:bg-rust-200 lg:px-sbutton-padding-x-desktop lg:py-sbutton-padding-y-desktop lg:text-button-desktop"
+                tabindex="0"
+                class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
                 href="kurv.html"
               >
                 Tilbage
               </a>
             </div>
-            <div>
+            <!-- videre -->
+            <div class="flex place-content-center">
               <a
                 tabindex="0"
-                class="flex flex-row items-center justify-center gap-[10px] rounded-radius-mobile border-0 bg-color-primary-button-background py-[15px] px-[40px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                class="mx-auto mt-s-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
                 href="betal.html"
-                >Videre</a
+                >Fortsæt til betaling</a
               >
             </div>
           </div>

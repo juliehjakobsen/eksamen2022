@@ -113,7 +113,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="mb-l-spacing-mobile">
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
@@ -298,6 +298,207 @@
     <main
       class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
     >
+      <!-- sektion 1 -->
+      <section>
+        <!-- progress bar -->
+        <article
+          class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
+        >
+          <div class="full_bar">
+            <div>
+              <p class="overskrift -ml-2 lg:-ml-3">Kurv</p>
+              <div class="bar1">
+                <div class="ball1">
+                  <a href="kurv.html"><p>1</p></a>
+                </div>
+                <div class="line1"></div>
+              </div>
+            </div>
+
+            <div>
+              <p class="overskrift -ml-1.5 lg:-ml-2">Info</p>
+              <div class="bar2">
+                <div class="ball2">
+                  <a href="information.html"><p>2</p></a>
+                </div>
+                <div class="line2"></div>
+              </div>
+            </div>
+            <div>
+              <p class="overskrift -ml-2 lg:-ml-5">Betal</p>
+              <div class="bar3">
+                <div class="ball3">
+                  <p>3</p>
+                </div>
+                <div class="line3"></div>
+              </div>
+            </div>
+            <div>
+              <p class="overskrift -ml-4 lg:-ml-9">Bekræft</p>
+              <div class="bar4">
+                <div class="ball4">
+                  <p>4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- overskrift -->
+        <article class="pb-l-spacing-mobile">
+          <div>
+            <h1
+              class="text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
+            >
+              Udfyld kortoplysninger
+            </h1>
+          </div>
+        </article>
+      </section>
+
+      <!-- sektion 2 -->
+      <section class="mx-[30px] grid gap-xl-spacing-mobile">
+        <!-- ordreoversigt -->
+        <article>
+          <!-- overskrift -->
+          <div class="mb-s-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Ordreoversigt
+            </h2>
+            <div class="border-[0.5px] border-color-black"></div>
+          </div>
+          <!-- priser -->
+          <div
+            class="mb-l-spacing-mobile grid gap-l-spacing-mobile font-font-body text-body-mobile"
+          >
+            <div class="flex justify-between">
+              <p>Blomsterabonnement</p>
+              <p class="font-bold">400,- DKK</p>
+            </div>
+            <div class="flex justify-between">
+              <p>Depositum (leveringsspand)</p>
+              <p class="font-bold">20,- DKK</p>
+            </div>
+          </div>
+
+          <!-- total -->
+          <div class="">
+            <div class="border-[0.5px] border-color-black"></div>
+            <div class="mt-xxxs-spacing-mobile flex justify-between">
+              <h2 class="font-other-headings text-body-mobile font-bold">
+                Total
+              </h2>
+              <h2 class="font-other-headings text-body-mobile font-bold">
+                420,- DKK
+              </h2>
+            </div>
+          </div>
+        </article>
+
+        <!-- informationer -->
+        <article>
+          <!-- overskrift H2 -->
+          <div class="mb-s-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Betaling
+            </h2>
+            <div class="border-[0.5px] border-color-black"></div>
+          </div>
+          <!-- forms -->
+          <div class="grid gap-l-spacing-mobile">
+            <!-- navn -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="full-name"
+                >Kortholders navn <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Fx. Sofie Hansen"
+              />
+            </div>
+            <!-- adresse -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Kortnummer <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Fx. 1234 5678 9012 3456"
+              />
+            </div>
+            <!-- e-mail -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Udløbsdato <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="MM / ÅÅ"
+              />
+            </div>
+            <!-- telefonnummer -->
+            <div class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Kontrolcifre</label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="tel"
+                inputmode="tel"
+                placeholder="CVC"
+              />
+            </div>
+          </div>
+          <!-- ekstra informationer -->
+          <div
+            class="mt-s-spacing-mobile grid gap-l-spacing-mobile pb-l-spacing-mobile"
+          >
+            <!-- besked om levering -->
+            <div class="">
+              <div class="flex">
+                <input type="checkbox" checked="checked" class="checkbox" />
+                <h4
+                  class="pl-m-spacing-mobile font-font-body text-abonnement-text-info"
+                >
+                  Jeg accepterer vilkår og handelsbetingelser
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- knapper -->
+          <div>
+            <!-- tilbage -->
+            <div class="flex place-content-center">
+              <a
+                tabindex="0"
+                class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href="kurv.html"
+              >
+                Tilbage
+              </a>
+            </div>
+            <!-- videre -->
+            <div class="flex place-content-center">
+              <a
+                tabindex="0"
+                class="mx-auto mt-s-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                href="betal_bekraeft.html"
+                >Bekræft betaling</a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- <main
+      class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
+    >
       <section>
         <article>
           <h1
@@ -446,7 +647,7 @@
           </div>
         </article>
       </section>
-    </main>
+    </main> -->
     <footer
       tabindex="0"
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"

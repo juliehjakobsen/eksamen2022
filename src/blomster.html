@@ -68,7 +68,7 @@
       @media (min-width: 900px) {
         /* card */
         article {
-          width: 350px;
+          width: 300px;
           height: 100%;
         }
 
@@ -332,7 +332,7 @@
       >
         <!-- card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
                 <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
@@ -351,70 +351,157 @@
             >
               <h3 itemprop="name">Anthurium</h3>
             </div>
-          </div>
-          <div class="article_info border-2 border-color-black bg-color-white">
-            <div class="arrow">
-              <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
-            </div>
-            <h3
-              itemprop="name"
-              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
-            >
-              Anthurium
-            </h3>
             <div
-              class="flex flex-col gap-xs-spacing-mobile pb-xxxs-spacing-mobile pl-xl-spacing-mobile"
+              class="article_info flip absolute top-0 w-[150px] bg-color-white lg:h-full lg:w-[296px]"
             >
-              <div class="flex gap-xs-spacing-mobile">
-                <img
-                  class="h-7 w-7"
-                  src="img/ikoner/oprindelse_ikon.svg"
-                  alt="oprindelse ikon"
-                />
-                <h4
-                  itemprop="countryOfOrigin"
-                  class="font-font-body text-body-mobile lg:text-body-desktop"
-                >
-                  oprindelse
-                </h4>
-              </div>
-              <div class="flex gap-xs-spacing-mobile">
-                <img
-                  class="h-7 w-7"
-                  src="img/ikoner/sollys_ikon.svg"
-                  alt="sollys ikon"
-                />
-                <h4
-                  class="font-font-body text-body-mobile lg:text-body-desktop"
-                >
-                  sollys
-                </h4>
-              </div>
-              <div class="flex gap-xs-spacing-mobile">
-                <img
-                  class="h-7 w-7"
-                  src="img/ikoner/holdbarhed_ikon.svg"
-                  alt="holdbarhed ikon"
-                />
-                <h4
-                  class="font-font-body text-body-mobile lg:text-body-desktop"
-                >
-                  holdbarhed
-                </h4>
-              </div>
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Anthurium
+              </h3>
+              <div
+                class="flex flex-col gap-xs-spacing-mobile py-s-spacing-mobile pl-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5 lg:h-7 lg:w-7"
+                    src="img/ikoner/oprindelse_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    oprindelse
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5"
+                    src="img/ikoner/sollys_ikon.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    sollys
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5"
+                    src="img/ikoner/holdbarhed_ikon.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    holdbarhed
+                  </h4>
+                </div>
 
-              <div class="flex gap-xs-spacing-mobile">
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    pris
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="hover:scale-105">
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
                 <img
-                  class="h-7 w-7"
-                  src="img/ikoner/pris_ikon.svg"
-                  alt="pris ikon"
+                  itemprop="image"
+                  src="/img/blomster/anthurium.webp"
+                  alt="Anthurium blomst"
                 />
-                <h4
-                  itemprop="price"
-                  class="font-font-body text-body-mobile lg:text-body-desktop"
-                >
-                  pris
-                </h4>
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 itemprop="name">Anthurium</h3>
+            </div>
+            <div
+              class="article_info flip absolute top-0 w-[150px] bg-color-white lg:h-full lg:w-[300px]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Anthurium
+              </h3>
+              <div
+                class="flex flex-col gap-xs-spacing-mobile py-s-spacing-mobile pl-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5 lg:h-7 lg:w-7"
+                    src="img/ikoner/oprindelse_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    oprindelse
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5"
+                    src="img/ikoner/sollys_ikon.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    sollys
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5"
+                    src="img/ikoner/holdbarhed_ikon.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    holdbarhed
+                  </h4>
+                </div>
+
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-5 w-5"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="font-font-body text-body-mobile lg:text-body-desktop"
+                  >
+                    pris
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
@@ -438,12 +525,14 @@
               <h3>Astromea</h3>
             </div>
           </div>
-          <div class="article_info border-2 border-color-black bg-color-white">
+          <div
+            class="article_info flip -translate-y-[235px] border-x-2 border-x-color-black bg-color-white"
+          >
             <div class="arrow">
               <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
             </div>
             <h3
-              class="border-t-color-black bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+              class="bg-color-white pb-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
             >
               Astromea
             </h3>
@@ -1618,6 +1707,15 @@
         </section>
       </article>
     </footer>
-    <script type="module" src="main.js"></script>
+    <script>
+      const wrappers = document.querySelectorAll(".article_wrapper");
+      const elements = document.querySelectorAll(".flip");
+
+      wrappers.forEach((wrapper, index) => {
+        wrapper.addEventListener("click", () => {
+          elements[index].classList.toggle("article_info");
+        });
+      });
+    </script>
   </body>
 </html>

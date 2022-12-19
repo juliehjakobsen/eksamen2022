@@ -102,7 +102,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="mb-l-spacing-mobile">
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
@@ -286,16 +286,11 @@
     <main
       class="mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px] lg:pb-xl-spacing-desktop"
     >
+      <!-- sektion 1 -->
       <section>
-        <article>
-          <h1
-            class="py-xl-spacing-mobile text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
-          >
-            Din Kurv
-          </h1>
-        </article>
+        <!-- progress bar -->
         <article
-          class="grid place-content-center pb-m-spacing-mobile lg:pb-m-spacing-desktop"
+          class="grid place-content-center pb-l-spacing-mobile lg:pb-xl-spacing-desktop"
         >
           <div class="full_bar">
             <div>
@@ -336,109 +331,120 @@
             </div>
           </div>
         </article>
+
+        <!-- overskrift -->
+        <article class="pb-xl-spacing-mobile">
+          <h1
+            class="text-center font-main-heading text-h1-mobile lg:py-xl-spacing-desktop lg:text-h1-desktop"
+          >
+            Din kurv
+          </h1>
+        </article>
       </section>
 
-      <section class="gap-20 lg:grid lg:grid-cols-2">
-        <article class="pb-xxl-spacing-mobile lg:pb-xxl-spacing-desktop">
-          <div class="lg:flex lg:flex-col-reverse">
-            <figure>
-              <img src="img/abonnement_filler.webp" alt="blomster i spand" />
+      <!-- sektion 2 -->
+      <section class="mx-[30px] grid gap-xl-spacing-mobile">
+        <article>
+          <div class="pb-l-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Dit valgte abonnement
+            </h2>
+            <div
+              class="mb-s-spacing-mobile w-[100%] border-[0.5px] border-color-black"
+            ></div>
+            <figure class="flex justify-center">
+              <img class="w-[70%]" src="img/abonnement_filler.webp" alt="" />
             </figure>
-            <div>
-              <h2
-                class="pb-l-spacing-mobile text-center text-h3-mobile lg:pb-l-spacing-desktop lg:text-h3-desktop"
-              >
-                Abonnement Oplysninger
-              </h2>
+          </div>
+          <div
+            class="grid gap-l-spacing-mobile font-font-body text-body-mobile"
+          >
+            <div class="flex justify-between">
+              <p>Størrelse:</p>
+              <p class="font-bold">Lille</p>
+            </div>
+            <div class="flex justify-between">
+              <p>Stil:</p>
+              <p class="font-bold">Neutral, Tæt</p>
+            </div>
+            <div class="flex justify-between">
+              <p>Sensitiv:</p>
+              <p class="font-bold">Ikke sensitiv</p>
+            </div>
+            <div class="flex justify-between">
+              <p>Levering:</p>
+              <p class="font-bold">Hver anden uge</p>
             </div>
           </div>
         </article>
 
+        <!-- ordreoversigt -->
         <article>
+          <!-- overskrift -->
+          <div class="mb-s-spacing-mobile">
+            <h2 class="font-other-headings text-h3-mobile font-bold">
+              Ordreoversigt
+            </h2>
+            <div class="border-[0.5px] border-color-black"></div>
+          </div>
+          <!-- priser -->
           <div
-            class="rounded-radius-mobile border-2 border-color-headings lg:w-[400px] lg:border-none"
+            class="mb-xl-spacing-mobile grid gap-l-spacing-mobile font-font-body text-body-mobile"
           >
-            <div
-              class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
-            >
-              <h4 class="font-other-headings text-h5-mobile lg:text-h4-desktop">
-                Størrelse
-              </h4>
-              <p
-                class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                Lille
-              </p>
+            <div class="flex justify-between">
+              <p>Blomsterabonnement</p>
+              <p class="font-bold">400,- DKK</p>
             </div>
-            <div
-              class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
-            >
-              <h4 class="font-other-headings text-h5-mobile lg:text-h4-desktop">
-                Stil
-              </h4>
-              <p
-                class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                Neutral og tæt
-              </p>
+            <div class="flex justify-between">
+              <p>Depositum (leveringsspand)</p>
+              <p class="font-bold">20,- DKK</p>
             </div>
-            <div
-              class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
-            >
-              <h4 class="font-other-headings text-h5-mobile lg:text-h4-desktop">
-                Sensitiv ja/nej
-              </h4>
-              <p
-                class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
+          </div>
+          <!-- gavekort -->
+          <div>
+            <div class="password grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="password"
+                >Indløs gavekort</label
               >
-                Nej
-              </p>
-            </div>
-            <div
-              class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
-            >
-              <h4 class="font-other-headings text-h5-mobile lg:text-h4-desktop">
-                Hyppighed
-              </h4>
-              <p
-                class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                Hver anden uge
-              </p>
-            </div>
-            <div
-              class="flex justify-between py-l-spacing-mobile px-s-spacing-mobile lg:px-s-spacing-desktop lg:py-l-spacing-desktop"
-            >
-              <h4 class="font-other-headings text-h5-mobile lg:text-h4-desktop">
-                Subtotal
-              </h4>
-              <p
-                class="my-auto font-font-body text-body-mobile lg:text-body-desktop"
-              >
-                620 kr
-              </p>
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Indtast gavekortnummer"
+              />
+              <div class="flex place-content-end">
+                <button
+                  tabindex="0"
+                  class="flex w-1/2 justify-center rounded-radius-mobile border-[1px] border-rust-500 bg-regnorm-100 py-[5px] px-[10px] font-button-text text-button-mobile text-rust-800 drop-shadow-buttonshadow hover:bg-rust-200 lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+                  href="#"
+                >
+                  Indløs gavekort
+                </button>
+              </div>
             </div>
           </div>
 
-          <div
-            class="flex justify-between pt-xl-spacing-mobile lg:justify-evenly lg:pt-xl-spacing-desktop"
-          >
-            <div>
-              <a
-                class="flex flex-row-reverse rounded-radius-mobile border-2 border-rust-500 bg-color-secondary-button-background px-sbutton-padding-x-mobile py-sbutton-padding-y-mobile font-button-text text-button-mobile text-rust-800 hover:bg-rust-200 lg:px-sbutton-padding-x-desktop lg:py-sbutton-padding-y-desktop lg:text-button-desktop"
-                href="abonnement.html"
-              >
-                Rediger
-              </a>
+          <!-- total -->
+          <div class="pt-xl-spacing-mobile">
+            <div class="border-[0.5px] border-color-black"></div>
+            <div class="mt-xxxs-spacing-mobile flex justify-between">
+              <h2 class="font-other-headings text-h3-mobile font-bold">
+                Total
+              </h2>
+              <h2 class="font-other-headings text-h2-mobile font-bold">
+                420,- DKK
+              </h2>
             </div>
-            <div>
-              <a
-                tabindex="0"
-                class="flex flex-row items-center justify-center gap-[10px] rounded-radius-mobile border-0 bg-color-primary-button-background py-[15px] px-[40px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
-                href="information.html"
-                >Videre</a
-              >
-            </div>
+          </div>
+
+          <!-- knap -->
+          <div class="flex place-content-end">
+            <a
+              tabindex="0"
+              class="mx-auto mt-xl-spacing-mobile grid w-2/3 justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-[10px] px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-1/2 lg:py-[15px] lg:px-[60px] lg:text-button-desktop"
+              href="information.html"
+              >Fortsæt til betaling</a
+            >
           </div>
         </article>
       </section>
