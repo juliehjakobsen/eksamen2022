@@ -72,6 +72,17 @@
         .pile {
           display: none;
         }
+        .knap:first-of-type {
+          order: 2;
+        }
+      }
+
+      input {
+        border: var(--border) solid black;
+        height: var(--m-spacing-mobile);
+        border-radius: var(--radius-mobile);
+        padding-left: var(--xs-spacing-mobile);
+        max-width: 630px;
       }
 
       .article_wrapper {
@@ -466,7 +477,7 @@
             />
           </figure>
           <div
-            class="my-auto text-center lg:px-xl-spacing-desktop lg:pt-l-spacing-desktop"
+            class="mx-[30px] my-auto text-center lg:px-xl-spacing-desktop lg:pt-l-spacing-desktop"
           >
             <h1
               tabindex="0"
@@ -519,6 +530,56 @@
 
     <!-------------------------------------------------------------------------------------------- MAIN -->
     <main class="overflow-x-clip">
+      <!-- Cookieboks start-->
+      <article
+        class="z-1 fixed bottom-0 right-0 h-[62%] w-[100%] rounded-t-cookie bg-background-color p-8 font-font-body lg:right-52 lg:h-[45%] lg:w-[70%]"
+        id="cookieboks"
+      >
+        <div class="grid place-content-center pb-xxxs-spacing-mobile lg:hidden">
+          <img class="" src="img/ikoner/cookie_ikon.svg" alt="" />
+        </div>
+        <div class="">
+          <h3
+            class="text-center text-h5-mobile font-bold lg:pb-xs-spacing-desktop lg:text-h5-desktop"
+          >
+            Du bestemmer over dine data
+          </h3>
+          <p class="text-abonnement-text-info">
+            Vi og vores samarbejdspartnere bruger teknologier, herunder cookies,
+            til at indsamle oplysninger om dig til forskellige formål, herunder:
+          </p>
+          <ol class="my-2 text-footer-mobile font-semibold">
+            <li>1. Funktionalitet</li>
+            <li>2. Statistisk</li>
+            <li>3. Marketing</li>
+          </ol>
+          <p class="text-abonnement-text-info">
+            Tryk "Accepter" for at give samtykke til alle formål. <br />
+            Du kan altid trække din samtykke tilbage, ved at besøge
+            "Cookiepolitik" nederst på siden.
+          </p>
+        </div>
+
+        <div
+          class="grid gap-s-spacing-mobile pt-xs-spacing-mobile lg:flex lg:justify-end lg:gap-xxl-spacing-mobile"
+        >
+          <div class="knap grid justify-center">
+            <button
+              id="accepter"
+              class="flex w-[400px] items-center justify-center rounded-radius border-0 bg-rust-400 py-[10px] px-[40px] font-button-text text-button-mobile text-color-black drop-shadow-buttonshadow hover:bg-rust-500 lg:h-10 lg:w-[200px] lg:py-[15px] lg:px-[60px] lg:text-button-mobile"
+            >
+              Accepter
+            </button>
+          </div>
+          <div
+            class="knap knap grid justify-center text-abonnement-text-info underline"
+          >
+            <button id="afvis">Afvis</button>
+          </div>
+        </div>
+      </article>
+      <!-- Cookieboks slut-->
+
       <!-- section_1 -->
       <section
         itemscope

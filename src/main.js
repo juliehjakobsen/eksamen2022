@@ -30,3 +30,28 @@ function sidenVises() {
     });
   });
 }
+
+const wrappers = document.querySelectorAll(".article_wrapper");
+const elements = document.querySelectorAll(".flip");
+
+wrappers.forEach((wrapper, index) => {
+  wrapper.addEventListener("click", () => {
+    elements[index].classList.toggle("article_info");
+  });
+});
+
+const acceptCookie = document.querySelector("#accepter");
+const denyCookie = document.querySelector("#afvis");
+const cookieboks = document.querySelector("#cookieboks");
+
+acceptCookie.addEventListener("click", fjernCookieBoks);
+denyCookie.addEventListener("click", fjernCookieBoks);
+
+function fjernCookieBoks() {
+  cookieboks.classList.add("hidden");
+  sessionStorage.setItem("fjerncookieboks", true);
+}
+
+if (sessionStorage.getItem("fjerncookieboks")) {
+  fjernCookieBoks.classList.add("hidden");
+}

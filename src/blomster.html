@@ -1402,10 +1402,10 @@
 
       <!---------------------------------------------- TREDJE SEKTION -->
       <section
-        class="mx-auto w-10/12 pt-l-spacing-mobile pb-xl-spacing-mobile text-center font-font-body text-body-mobile lg:py-xxl-spacing-desktop"
+        class="mx-[30px] pt-l-spacing-mobile pb-xl-spacing-mobile text-center font-font-body text-body-mobile lg:mx-[80px] lg:py-xxl-spacing-desktop"
       >
         <h5>Øv, du er nået til enden.</h5>
-        <p class="pb-xl-spacing-mobile lg:pb-xl-spacing-desktop">
+        <p class="lg:pb-xl-spacing-deskto pb-xl-spacing-mobile">
           Kan du ikke bestemme dig for én enkelt? Fri dig selv for besværet og
           bestil et abonnement i dag!
         </p>
@@ -1584,15 +1584,6 @@
         </section>
       </article>
     </footer>
-    <script>
-      const wrappers = document.querySelectorAll(".article_wrapper");
-      const elements = document.querySelectorAll(".flip");
-
-      wrappers.forEach((wrapper, index) => {
-        wrapper.addEventListener("click", () => {
-          elements[index].classList.toggle("article_info");
-        });
-      });
-    </script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

@@ -7,7 +7,8 @@
 }
 
 .valgt {
-  /* border-bottom: 10px solid var(--rust-700); */
+  border: 2px solid var(--rust-500);
+  transform: scale(1.1);
 }
 
 /* virker kun i chrome */
