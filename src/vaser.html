@@ -13,16 +13,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      #sortiment {
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-      }
-
       .baggrundsbillede {
         background-image: url(img/tekstur_baggrund.jpg);
         background-repeat: no-repeat;
@@ -34,25 +24,29 @@
       .article_wrapper {
         border: solid 2px black;
         border-radius: var(--xs-radius);
-        width: 155px;
       }
 
       .article_wrapper:hover {
         cursor: pointer;
       }
 
+      .billede_wrapper {
+        max-width: 100%;
+        max-height: 100%;
+        height: 150px;
+        width: 150px;
+        margin: auto;
+      }
+      .billede_wrapper img {
+        max-width: 100%;
+        max-height: 100%;
+      }
       img {
-        width: 155px;
+        height: 100%;
+        width: 100%;
       }
-      .overskrift {
-        background-color: #ffffff;
-        color: black;
-        border-top: 2px solid black;
-        text-align: center;
-        font-size: var(--h5-mobile);
-        font-family: var(--other-headings);
-      }
-      .card_info img {
+
+      .article_info {
         display: none;
       }
 
@@ -72,17 +66,15 @@
       /* DESKTOP */
 
       @media (min-width: 900px) {
-        .article_wrapper,
-        img {
-          width: 350px;
-        }
-        .overskrift {
-          font-size: var(--h5-desktop);
+        /* card */
+        article {
+          width: 300px;
+          height: 100%;
         }
 
-        .arrow img {
-          width: 40px;
-          height: 40px;
+        .billede_wrapper {
+          width: 100%;
+          height: 300px;
         }
       }
     </style>
@@ -316,10 +308,12 @@
       </div>
     </section>
 
-    <main class="baggrundsbillede">
+    <main
+      class="baggrundsbillede px-[60px] pb-l-spacing-mobile lg:px-[160px] lg:pb-xl-spacing-desktop"
+    >
       <!---------------------------------------------- FØRSTE SEKTION -->
       <section
-        class="pt-xxl-spacing-mobile text-center lg:pt-xxl-spacing-desktop"
+        class="pt-l-spacing-mobile text-center lg:pb-l-spacing-desktop lg:pt-l-spacing-desktop"
       >
         <!------------------------------- KNAP -->
 
@@ -327,188 +321,672 @@
           Vaser
         </h2>
         <p
-          class="py-l-spacing-mobile font-font-body text-body-mobile lg:pt-l-spacing-desktop lg:pb-xxl-spacing-desktop lg:text-body-desktop"
+          class="py-s-spacing-mobile font-font-body text-body-mobile lg:pt-l-spacing-desktop lg:text-body-desktop"
         >
           10 resultater
+        </p>
+        <p
+          class="pb-m-spacing-mobile text-left font-font-body text-abonnement-text-info lg:mx-auto lg:w-2/3 lg:text-body-desktop"
+        >
+          Herunder kan du se en oversigt over butikkens smukke, unikke vaser.
+          Alle vaser nedenfor er håndlavede og -malede, og de er derfor
+          allesammen unikke. Kom ned i butikken og find den perfekte til dig!
         </p>
       </section>
 
       <!---------------------------------------------- ANDEN SEKTION CARDS -->
       <section
-        class="mx-auto flex w-[400px] flex-wrap gap-m-spacing-mobile lg:w-[1200px] lg:gap-l-spacing-desktop"
+        itemscope
+        itemtype="https://schema.org/Product"
+        class="flex flex-wrap justify-center gap-s-spacing-mobile lg:gap-l-spacing-desktop"
       >
-        <!-- card -->
+        <!-- Lily vase (venstre) card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase10_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase1_2.webp"
+                  alt="Lily vase"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Lily vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Lily vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Sunny vase card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase1_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase2_2.webp"
+                  alt="Sunny vase blomst"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Sunny vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Sunny vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Delphi vase (venstre) card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase2_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase4_2.webp"
+                  alt="Delphi vase"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Delphi vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Delphi vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Bamboo vase card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase3_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase5_2.webp"
+                  alt="Bamboo vase blomst"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Bamboo vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Bamboo vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Datura vase (venstre) card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase4_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase6_2.webp"
+                  alt="Datura vase"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Datura vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Datura vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Pansy vase card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase5_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase3_2.webp"
+                  alt="Pansy vase blomst"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Pansy vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Pansy vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Daisy vase (venstre) card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase6_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase7_2.webp"
+                  alt="Daisy vase"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Daisy vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Daisy vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Hyacinth vase card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase7_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase8_2.webp"
+                  alt="Hyacinth vase blomst"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Hyacinth vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Hyacinth vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Poppy vase (venstre) card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase8_2.webp" alt="blomster i spand" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase9_2.webp"
+                  alt="Poppy vase"
+                />
+              </div>
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Poppy vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Poppy vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
-
-        <!-- card -->
+        <!-- Flax vase card -->
         <article class="hover:scale-105">
-          <div class="article_wrapper">
+          <!-- forside -->
+          <div class="article_wrapper relative">
             <div class="billede">
               <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+                <img src="/img/ikoner/fliparrow_ikon.svg" alt="pil ikon" />
               </div>
-              <img src="/img/vaser/vase9_2.webp" alt="blomster i spand" />
-            </div>
-
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
-            </div>
-          </div>
-        </article>
-
-        <!-- card -->
-        <article class="hover:scale-105">
-          <div class="article_wrapper">
-            <div class="billede">
-              <div class="arrow">
-                <img src="/img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="/img/vaser/vase10_2.webp"
+                  alt="Flax vase blomst"
+                />
               </div>
-              <img src="/img/vaser/vase10_2.webp" alt="blomster i spand" />
             </div>
 
-            <div class="overskrift p-s-spacing-mobile">
-              <h4>Alstromeria</h4>
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Flax vase</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Flax vase
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/maal_ikon.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Lille antik vase
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="img/ikoner/pris_ikon.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
             </div>
           </div>
         </article>
@@ -516,19 +994,21 @@
 
       <!---------------------------------------------- TREDJE SEKTION -->
       <section
-        class="mx-[30px] pt-l-spacing-mobile pb-xl-spacing-mobile text-center font-font-body text-body-mobile lg:mx-[80px] lg:py-xxl-spacing-desktop"
+        class="pt-l-spacing-mobile pb-xl-spacing-mobile text-center font-font-body text-body-mobile lg:py-l-spacing-desktop"
       >
-        <p>Øv, du er nået til enden.</p>
-        <p>
-          Kan du ikke bestemme dig for én enkelt? Fri dig selv for besværet og
-          bestil et abonnement i dag!
+        <p class="text-left lg:mx-auto lg:w-2/3 lg:pb-xl-spacing-desktop">
+          Øv, du er nået til enden. Har du ingen blomster at dekorere din nye
+          vase med? Frygt ej! Bestil et abonnement på under 2 min, og få leveret
+          friske buketter til hoveddøren.
         </p>
-        <div class="grid justify-center py-xl-spacing-mobile lg:pt-[70px]">
+        <div
+          class="grid justify-center py-xl-spacing-mobile lg:pb-0 lg:pt-[70px]"
+        >
           <a
             tabindex="0"
             class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
-            href="blomster.html"
-            >Udforsk sortimentet</a
+            href="abonnement.html"
+            >Bestil mit abonnement</a
           >
         </div>
       </section>
