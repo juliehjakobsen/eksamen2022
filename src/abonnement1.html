@@ -44,7 +44,6 @@
       .bar3,
       .bar4 {
         display: flex;
-
         place-items: center;
       }
 
@@ -78,15 +77,18 @@
 
       @media (min-width: 900px) {
         .overskrift {
-          font-size: var(--h4-desktop);
+          font-size: var(--body-desktop);
+        }
+        .tal {
+          font-size: var(--body-desktop);
         }
 
         .ball1,
         .ball2,
         .ball3,
         .ball4 {
-          width: 50px;
-          height: 50px;
+          width: 25px;
+          height: 25px;
           background-color: var(--color-abonnement-bar-disabled);
           border-radius: 100%;
           font-family: var(--font-body);
@@ -102,9 +104,9 @@
         .line1,
         .line2,
         .line3 {
-          width: 180px;
+          width: 115px;
           height: 0px;
-          border: 5px solid var(--color-abonnement-bar-disabled);
+          border: 2px solid var(--color-abonnement-bar-disabled);
         }
       }
     </style>
@@ -303,11 +305,11 @@
         >
           <nav class="full_bar border-none">
             <div>
-              <p class="overskrift -ml-6 text-rust-500 lg:-ml-11">Størrelse</p>
+              <p class="overskrift -ml-6 text-color-black">Størrelse</p>
               <div class="bar1">
                 <a href="abonnement1.html"
                   ><div class="ball1">
-                    <p>1</p>
+                    <p class="tal">1</p>
                   </div>
                 </a>
                 <div class="line1"></div>
@@ -315,30 +317,30 @@
             </div>
 
             <div>
-              <p class="overskrift -ml-1.5 text-rust-200 lg:-ml-2">Stil</p>
+              <p class="overskrift -ml-1.5 text-color-black">Stil</p>
               <div class="bar2">
                 <div class="ball2">
-                  <p>2</p>
+                  <p class="tal">2</p>
                 </div>
 
                 <div class="line2"></div>
               </div>
             </div>
             <div>
-              <p class="overskrift -ml-2 text-rust-200 lg:-ml-5">Duft</p>
+              <p class="overskrift -ml-2 text-color-black">Duft</p>
               <div class="bar3">
                 <div class="ball3">
-                  <p>3</p>
+                  <p class="tal">3</p>
                 </div>
 
                 <div class="line3"></div>
               </div>
             </div>
             <div>
-              <p class="overskrift -ml-6 text-rust-200 lg:-ml-14">Hyppighed</p>
+              <p class="overskrift -ml-6 text-color-black">Hyppighed</p>
               <div class="bar4">
                 <div class="ball4">
-                  <p>4</p>
+                  <p class="tal">4</p>
                 </div>
               </div>
             </div>
