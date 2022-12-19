@@ -141,7 +141,7 @@ module.exports = {
         buttonshadow: "rgba(70, 70, 70, 0.25)",
       },
       backgroundImage: {
-        hero_image: "url('img/hero_billede.webp')",
+        hero_image: "url('img/hero_billede_75.webp')",
       },
       spacing: {
         /* mobile */
