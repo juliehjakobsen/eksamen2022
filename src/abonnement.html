@@ -89,8 +89,33 @@
       }
 
       .progress {
-        display: grid;
-        place-content: center;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .step1 {
+        width: 50px;
+        height: 5px;
+        border: 1px solid var(--rust-500);
+      }
+      .step2 {
+        width: 50px;
+        height: 5px;
+        border: 1px solid var(--rust-500);
+        /* margin: auto; */
+      }
+      .step3 {
+        width: 50px;
+        height: 5px;
+        border: 1px solid var(--rust-500);
+        /* margin: auto; */
+      }
+      .step4 {
+        width: 50px;
+        height: 5px;
+        border: 1px solid var(--rust-500);
+        /* margin: auto; */
       }
 
       /* DESKTOP */
@@ -411,11 +436,12 @@
                 enim ad minim veniam, quis nostrud exercitation
               </p>
             </div>
-            <!-- <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
-            </div> -->
+            <div class="progress">
+              <div class="step1 bg-rust-500"></div>
+              <div class="step2"></div>
+              <div class="step3"></div>
+              <div class="step4"></div>
+            </div>
           </div>
 
           <div class="article">
@@ -437,9 +463,10 @@
               </div>
             </div>
             <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
+              <div class="step1 bg-rust-500"></div>
+              <div class="step2 bg-rust-500"></div>
+              <div class="step3"></div>
+              <div class="step4"></div>
             </div>
           </div>
 
@@ -462,9 +489,10 @@
               </div>
             </div>
             <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
+              <div class="step1 bg-rust-500"></div>
+              <div class="step2 bg-rust-500"></div>
+              <div class="step3 bg-rust-500"></div>
+              <div class="step4"></div>
             </div>
           </div>
 
@@ -487,9 +515,10 @@
               </div>
             </div>
             <div class="progress">
-              <div>
-                <ProgressBarCard />
-              </div>
+              <div class="step1 bg-rust-500"></div>
+              <div class="step2 bg-rust-500"></div>
+              <div class="step3 bg-rust-500"></div>
+              <div class="step4 bg-rust-500"></div>
             </div>
           </div>
         </article>
