@@ -467,16 +467,21 @@
       </section>
 
       <!---------------------------------------------- ANDEN SEKTION -->
-      <label for="hyppighed">
+      <form action="">
+        <label for="hyppighed"> </label>
         <select
+          name="hyppighed"
+          id="hyppighed"
           class="max-w-xs mx-auto flex w-64 cursor-pointer rounded-radius-mobile border-2 border-color-black font-font-body text-body-mobile lg:text-body-desktop"
         >
-          <option disabled selected>-- Vælg hyppighed --</option>
-          <option class="active:bg-sol">Hver uge</option>
-          <option>Hveranden uge</option>
-          <option>Hver måned</option>
+          <option value="default" disabled selected>
+            -- Vælg hyppighed --
+          </option>
+          <option value="hver uge" class="active:bg-sol">Hver uge</option>
+          <option value="hver anden uge">Hver anden uge</option>
+          <option value="hver måned">Hver måned</option>
         </select>
-      </label>
+      </form>
 
       <!---------------------------------------------- TREDJE SEKTION -->
       <section class="grid justify-center py-l-spacing-mobile">
