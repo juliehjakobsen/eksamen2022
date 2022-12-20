@@ -343,8 +343,8 @@
             >.
           </p>
 
-          <form class="grid gap-m-spacing-mobile text-left">
-            <div class="email grid gap-xs-spacing-mobile">
+          <div class="grid gap-m-spacing-mobile text-left">
+            <form class="email grid gap-xs-spacing-mobile">
               <label class="font-other-headings text-body-mobile" for="email"
                 >E-mail</label
               >
@@ -354,9 +354,9 @@
                 inputmode="email"
                 placeholder="Fx. google@gmail.com"
               />
-            </div>
+            </form>
 
-            <div class="password grid gap-xs-spacing-mobile">
+            <form class="password grid gap-xs-spacing-mobile">
               <label class="font-other-headings text-body-mobile" for="password"
                 >Adgangskode</label
               >
@@ -366,7 +366,7 @@
                 inputmode="text"
                 placeholder="Indeholder min. 6 karakterer"
               />
-            </div>
+            </form>
 
             <a
               class="glemt text-center font-font-body text-body-mobile text-color-headings underline hover:text-rust-500"
@@ -382,7 +382,7 @@
                 Log ind
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </section>
       <!-- sektion 1 -->
@@ -512,7 +512,7 @@
               />
             </div>
             <!-- adresse -->
-            <div class="grid gap-xxs-spacing-mobile">
+            <form class="grid gap-xxs-spacing-mobile">
               <label class="font-other-headings text-h5-mobile" for="address"
                 >Kortnummer <span class="text-rust-600">*</span></label
               >
@@ -522,9 +522,9 @@
                 inputmode="text"
                 placeholder="Fx. 1234 5678 9012 3456"
               />
-            </div>
+            </form>
             <!-- e-mail -->
-            <div class="grid gap-xxs-spacing-mobile">
+            <form class="grid gap-xxs-spacing-mobile">
               <label class="font-other-headings text-h5-mobile" for="address"
                 >Udløbsdato <span class="text-rust-600">*</span></label
               >
@@ -534,9 +534,9 @@
                 inputmode="email"
                 placeholder="MM / ÅÅ"
               />
-            </div>
+            </form>
             <!-- telefonnummer -->
-            <div class="grid gap-xxs-spacing-mobile">
+            <form class="grid gap-xxs-spacing-mobile">
               <label class="font-other-headings text-h5-mobile" for="address"
                 >Kontrolcifre</label
               >
@@ -546,21 +546,26 @@
                 inputmode="tel"
                 placeholder="CVC"
               />
-            </div>
+            </form>
           </div>
           <!-- ekstra informationer -->
           <div class="mt-s-spacing-mobile grid gap-l-spacing-mobile">
             <!-- besked om levering -->
-            <div class="">
-              <div class="flex">
-                <input type="checkbox" checked="checked" class="checkbox" />
+            <form class="">
+              <label class="flex">
+                <input
+                  class="my-auto text-color-white accent-graes-600 checked:bg-graes-600 focus:bg-graes-600 focus:ring-graes-600 active:bg-graes-600"
+                  type="checkbox"
+                  name="checkbox"
+                />
+
                 <h4
                   class="pl-m-spacing-mobile font-font-body text-abonnement-text-info"
                 >
                   Jeg accepterer vilkår og handelsbetingelser
                 </h4>
-              </div>
-            </div>
+              </label>
+            </form>
           </div>
           <!-- knapper -->
           <div
