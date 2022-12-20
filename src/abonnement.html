@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da ">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -305,13 +305,13 @@
 
         <ul class="secondary_nav">
           <li>
-            <a tabindex="0" href="logind.html">
+            <button id="konto" tabindex="0">
               <img
                 class="person h-8 w-8"
                 src="img/ikoner/person.svg"
                 alt="Gå til din konto"
               />
-            </a>
+            </button>
           </li>
           <li>
             <a tabindex="0" href="kurv.html">
@@ -371,6 +371,90 @@
               d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8l8-8z"
             ></path>
           </svg>
+        </div>
+      </section>
+      <!--------------------------------------------------------------------- LOG IND -->
+      <section
+        id="loginbox"
+        class="placering_box gemt fixed top-0 left-[25%] max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body"
+      >
+        <div class="login_opret grid grid-cols-2 items-center">
+          <div class="logind flex items-center px-[30px]">
+            <img
+              class="pr-s-spacing-mobile"
+              src="/img/ikoner/radio.svg"
+              alt="radio button log ind"
+            />
+            <p>Log ind</p>
+          </div>
+          <div
+            class="opret flex items-center border-2 border-t-0 border-r-0 border-color-black px-[30px] pl-[10px]"
+          >
+            <img
+              class="pr-s-spacing-mobile"
+              src="/img/ikoner/radio_un.svg"
+              alt="radio button opret bruger"
+            />
+            <p>Opret konto</p>
+          </div>
+        </div>
+
+        <div class="content px-[30px] pt-l-spacing-mobile font-font-body">
+          <h3
+            class="overskrift1 pb-m-spacing-mobile font-other-headings text-h3-mobile lg:text-h3-desktop"
+          >
+            Log ind
+          </h3>
+
+          <p class="text pb-l-spacing-mobile">
+            Har du bruger hos os, og vil gerne give feedback eller købe vores
+            abonnement? Log venligst ind ved hjælp af formularen nedenfor. Har
+            du ikke en bruger, skal du først
+            <a class="underline hover:text-rust-500" href=""
+              >oprette en bruger</a
+            >.
+          </p>
+
+          <form class="grid gap-m-spacing-mobile text-left">
+            <div class="email grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="email"
+                >E-mail</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="Fx. google@gmail.com"
+              />
+            </div>
+
+            <div class="password grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="password"
+                >Adgangskode</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Indeholder min. 6 karakterer"
+              />
+            </div>
+
+            <a
+              class="glemt text-center font-font-body text-body-mobile text-color-headings underline hover:text-rust-500"
+              href="#"
+              >Har du glemt dit kodeord?</a
+            >
+            <div class="grid justify-center">
+              <a
+                id="luk"
+                tabindex="0"
+                class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+                href=""
+                >Log ind</a
+              >
+            </div>
+          </form>
         </div>
       </section>
 
