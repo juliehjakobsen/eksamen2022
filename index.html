@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blomster Bjarne - Københavns bedste blomsterforhandler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orienta&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita&display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+      /* generelt */
+      body {
+        overflow-x: hidden;
+      }
+
+      .baggrundsbillede {
+        background-image: url(./assets/hero_billede_75.2d5be898.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bg_tekstur {
+        background-image: url(./assets/tekstur_baggrund.8dfda18b.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* ------------------------------------log ind pop-up */
+      @media (min-width: 900px) {
+        /* knap rækkefølge i log-ind pop-up */
+        .knap:first-of-type {
+          order: 2;
+        }
+      }
+
+      input {
+        border: var(--border) solid black;
+        height: var(--m-spacing-mobile);
+        border-radius: var(--radius-mobile);
+        padding-left: var(--xs-spacing-mobile);
+        max-width: 630px;
+      }
+
+      /* --------------------------sæsonens blomster mobil */
+
+      .stor_snefnug {
+        display: none;
+      }
+
+      .overskrift {
+        text-align: center;
+        font-size: var(--h5-mobile);
+        font-family: var(--other-headings);
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .article_wrapper {
+        border: solid 2px black;
+        border-radius: var(--xs-radius);
+        width: 250px;
+        height: 360px;
+        margin: auto;
+        margin-top: 36px;
+      }
+
+      .arrow img {
+        width: 30px;
+        height: 30px;
+      }
+      .arrow {
+        display: grid;
+        justify-content: end;
+      }
+      .billede_1 {
+        background-image: url(./assets/solsikke.c164f300.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 290px;
+      }
+      .billede_2 {
+        background-image: url(./assets/gron_blomst.a1c85b25.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 290px;
+      }
+      .billede_3 {
+        background-image: url(./assets/okkide.7357c0dd.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 290px;
+      }
+      h5 {
+        display: none;
+        text-align: center;
+      }
+
+      /* --------------------------sæsonens blomster desktop */
+
+      @media (min-width: 900px) {
+        .overskrift {
+          font-size: var(--h5-desktop);
+        }
+
+        .felxi {
+          display: flex;
+          place-content: center;
+          gap: var(--m-spacing-desktop);
+        }
+
+        .article_wrapper {
+          border: solid 2px black;
+          border-radius: var(--xs-radius);
+          width: 342px;
+          height: 500px;
+          margin: auto;
+          margin-top: 36px;
+          display: block;
+        }
+
+        .billede_1 {
+          background-image: url(./assets/solsikke.c164f300.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 400px;
+        }
+        .billede_2 {
+          background-image: url(./assets/gron_blomst.a1c85b25.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 400px;
+        }
+        .billede_3 {
+          background-image: url(./assets/okkide.7357c0dd.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 400px;
+        }
+        .lille_snefnug {
+          display: none;
+        }
+
+        .stor_snefnug {
+          display: block;
+        }
+
+        .pile {
+          display: none;
+        }
+      }
+
+      /* --------------------------banner mobil */
+
+      .banner {
+        -webkit-animation-name: banner_animate;
+                animation-name: banner_animate;
+        -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+      }
+      @-webkit-keyframes banner_animate {
+        0% {
+          transform: translateX(-820px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes banner_animate {
+        0% {
+          transform: translateX(-820px);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+
+      .banner_delay {
+        -webkit-animation-name: banner_animate_delay;
+                animation-name: banner_animate_delay;
+        -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+      }
+      @-webkit-keyframes banner_animate_delay {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(820px);
+        }
+      }
+      @keyframes banner_animate_delay {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(820px);
+        }
+      }
+      #banner_section img {
+        max-width: 200%;
+      }
+      main {
+        margin: 0;
+      }
+
+      /* --------------------------banner desktop */
+      @media (min-width: 900px) {
+        #banner_section img {
+          min-width: 120%;
+        }
+        #banner_section figure {
+          height: 200px;
+        }
+        @-webkit-keyframes banner_animate_delay {
+          0% {
+            transform: translateX(0px);
+          }
+          100% {
+            transform: translateX(1850px);
+          }
+        }
+        @keyframes banner_animate_delay {
+          0% {
+            transform: translateX(0px);
+          }
+          100% {
+            transform: translateX(1850px);
+          }
+        }
+        @-webkit-keyframes banner_animate {
+          0% {
+            transform: translateX(-1850px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        }
+        @keyframes banner_animate {
+          0% {
+            transform: translateX(-1850px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/main.1431fdc5.js"></script>
+    <link rel="stylesheet" href="./assets/main.af66e74a.css">
+  </head>
+  <body>
+    <!-- virker kun i chrome  -->
+    <a tabindex="0" class="skip-to-content-link" href="#section_1">
+      Skip to content
+    </a>
+    <!-------------------------------------------------------------------------------------------- HEADER START -->
+    <header>
+      <!-- banner start -->
+      <div
+        class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
+      >
+        <p tabindex="0">Køb dine blomster i vores butikker</p>
+        <p tabindex="0">
+          Bestil dit abonnement på vores webshop - psst! Du får 15% på din
+          første levering
+        </p>
+      </div>
+      <!-- banner start -->
+
+      <!-- LOGO DESKTOP START -->
+      <section tabindex="0">
+        <a class="navigation_desktop" href="index.html">
+          <img
+            class="logo_lang"
+            id="sort"
+            src="./assets/bb_logo_lang.a18c4ee3.png"
+            alt="Blomster Bjarne logo sort forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="sol"
+            src="./assets/bb_logo_lang_sol.6951dad9.png"
+            alt="Blomster Bjarne logo gul forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="graes"
+            src="./assets/bb_logo_lang.a18c4ee3.png"
+            alt="Blomster Bjarne logo grøn forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="himmel"
+            src="./assets/bb_logo_lang_himmel.d3fdc848.png"
+            alt="Blomster Bjarne logo blå forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="rust"
+            src="./assets/bb_logo_lang_rust.d8f52a41.png"
+            alt="Blomster Bjarne logo orange forkortelse"
+          />
+        </a>
+      </section>
+      <!-- LOGO DESKTOP SLUT -->
+
+      <!-- LOGO MOBIL START -->
+      <section tabindex="0" class="navigation_mobil">
+        <a class="logo_mobil" href="index.html">
+          <img
+            class="logo_kort"
+            id="sort"
+            src="./assets/bb_logo_kort.75bde4d8.png"
+            alt="Blomster Bjarne logo sort "
+          />
+          <img
+            class="logo_kort"
+            id="sol"
+            src="./assets/bb_logo_kort_sol.7d015cb7.png"
+            alt="Blomster Bjarne logo gul"
+          />
+          <img
+            class="logo_kort"
+            id="graes"
+            src="./assets/bb_logo_kort_graes.299932d6.png"
+            alt="Blomster Bjarne logo grøn"
+          />
+          <img
+            class="logo_kort"
+            id="himmel"
+            src="./assets/bb_logo_kort_himmel.13730c2b.png"
+            alt="Blomster Bjarne logo blå"
+          />
+          <img
+            class="logo_kort"
+            id="rust"
+            src="./assets/bb_logo_kort_rust.3ab909c1.png"
+            alt="Blomster Bjarne logo orange"
+          />
+        </a>
+
+        <div class="burger">
+          <button class="toggle-btn">☰</button>
+        </div>
+      </section>
+      <!-- LOGO MOBIL SLUT -->
+
+      <!-- MENUPUNKTER START -->
+      <nav class="lg:flex">
+        <ul>
+          <li>
+            <a
+              tabindex="0"
+              href="abonnement.html"
+              class="mt-8 font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Abonnement</a
+            >
+          </li>
+          <div class="dropdown">
+            <label>
+              <button class="flex">
+                <p
+                  tabindex="0"
+                  class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+                >
+                  Sortiment
+                </p>
+                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                  />
+                </svg>
+              </button>
+            </label>
+            <ul class="underkat m-0">
+              <li class="pt-[0.18cm]">
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 border-t-transparent bg-background-color p-4 font-font-body text-body-mobile lg:border-x-2 lg:border-b-2 lg:border-color-black lg:text-body-desktop"
+                  href="blomster.html"
+                  >Blomster</a
+                >
+              </li>
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 bg-background-color p-4 font-font-body text-body-mobile lg:border-x-2 lg:border-b-2 lg:border-color-black lg:text-body-desktop"
+                  href="vaser.html"
+                  >Vaser</a
+                >
+              </li>
+            </ul>
+          </div>
+          <li>
+            <a
+              tabindex="0"
+              href="index.html"
+              class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Begivenheder</a
+            >
+          </li>
+          <li>
+            <a
+              tabindex="0"
+              href="index.html"
+              class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Kontakt os</a
+            >
+          </li>
+        </ul>
+
+        <ul class="secondary_nav">
+          <li>
+            <button id="konto" tabindex="0">
+              <img
+                class="person h-8 w-8"
+                src="./assets/person.c53fec39.svg"
+                alt="Gå til din konto"
+              />
+            </button>
+          </li>
+          <li>
+            <a tabindex="0" href="kurv.html">
+              <img
+                class="shopping h-8 w-8"
+                src="./assets/shopping_bag.857c5c3e.svg"
+                alt="Gå til kurv"
+              />
+            </a>
+          </li>
+          <li>
+            <img
+              tabindex="0"
+              class="search h-8 w-8"
+              src="./assets/search.f79d748d.svg"
+              alt="Søg"
+            />
+          </li>
+        </ul>
+      </nav>
+      <!-- MENUPUNKTER SLUT -->
+    </header>
+    <!-------------------------------------------------------------------------------------------- HEADER SLUT -->
+    <!--------------------------------------------------------------------------------------------- HERO START -->
+    <section class="baggrundsbillede">
+      <div
+        class="lg:h-hero-height lg:py-l-spacing-mobile lg:px-xxl-spacing-desktop lg:pb-m-spacing-desktop"
+      >
+        <div class="lg:grid lg:grid-cols-2 lg:border-2 lg:border-sol-300">
+          <!-- bjarne -->
+          <figure
+            class="illustration_bb lg:grid-cols-1 lg:border-r-2 lg:border-sol-300 lg:px-s-spacing-mobile"
+          >
+            <img
+              id="bb_blink"
+              class="mx-auto w-[300px] pt-xs-spacing-mobile lg:w-[400px] lg:pt-s-spacing-mobile"
+              src="./assets/bb_ill_sol.c0cb2fe2.png"
+              alt="Blomster Bjarne blink illustration"
+            />
+            <img
+              id="bb_ikke_blink"
+              class="mx-auto w-[300px] pt-xs-spacing-mobile lg:w-[400px] lg:pt-s-spacing-mobile"
+              src="./assets/bb_ill_sol_blink.454318b5.png"
+              alt="Blomster Bjarne ingen blink illustration"
+            />
+          </figure>
+          <!-- copywriting til hero -->
+          <div
+            class="mx-[30px] my-auto text-center lg:px-xl-spacing-desktop lg:pt-l-spacing-desktop"
+          >
+            <h1
+              tabindex="0"
+              class="text-h1-mobile text-sol-300 lg:pb-s-spacing-desktop lg:text-h1-hero"
+            >
+              Bring sæsonen hjem til dig
+            </h1>
+            <p
+              tabindex="0"
+              class="font-font-body text-body-mobile text-sol-300 lg:px-s-spacing-desktop lg:text-body-desktop"
+            >
+              Med et abonnement hos Blomster Bjarne får du leveret unikke
+              buketter fra hver sæson.
+            </p>
+            <!-- CTA START -->
+
+            <div
+              class="mx-auto mt-s-spacing-desktop flex h-[50px] w-[70%] items-center justify-center gap-xs-spacing-mobile rounded-radius-desktop bg-color-primary-button-background py-s-spacing-mobile drop-shadow-buttonshadow hover:cursor-pointer hover:bg-color-primary-button-hover-background lg:w-[65%]"
+            >
+              <a
+                class="font-button-text text-button-mobile text-color-white"
+                href="abonnement.html"
+                >Tegn mit abonnement</a
+              >
+              <svg class="" width="32" height="32" viewBox="0 0 24 24">
+                <path
+                  fill="#ffffff"
+                  d="M13.3 17.275q-.3-.3-.288-.725q.013-.425.313-.725L16.15 13H5q-.425 0-.713-.288Q4 12.425 4 12t.287-.713Q4.575 11 5 11h11.15L13.3 8.15q-.3-.3-.3-.713q0-.412.3-.712t.713-.3q.412 0 .712.3L19.3 11.3q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325l-4.6 4.6q-.275.275-.687.275q-.413 0-.713-.3Z"
+                />
+              </svg>
+            </div>
+            <!-- CTA SLUT -->
+          </div>
+        </div>
+      </div>
+
+      <!-- pil -->
+      <div class="py-xs-spacing-mobile">
+        <svg
+          class="mx-auto grid text-sol-300"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8l8-8z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!--------------------------------------------------------------------------------------------- HERO SLUT -->
+
+    <!-------------------------------------------------------------------------------------------- MAIN START -->
+    <main class="overflow-x-clip">
+      <!-- log ind -->
+      <section
+        id="loginbox"
+        class="placering_box gemt fixed top-2 left-0 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
+      >
+        <div class="login_opret grid grid-cols-2 items-center">
+          <div class="logind flex items-center px-[30px]">
+            <img
+              class="pr-s-spacing-mobile"
+              src="./assets/radio.bb25eedd.svg"
+              alt="radio button log ind"
+            />
+            <p>Log ind</p>
+          </div>
+          <div
+            class="opret flex items-center border-2 border-t-0 border-r-0 border-color-black px-[30px] pl-[10px]"
+          >
+            <img
+              class="pr-s-spacing-mobile"
+              src="./assets/radio_un.21b37d72.svg"
+              alt="radio button opret bruger"
+            />
+            <p>Opret konto</p>
+          </div>
+        </div>
+
+        <div class="content px-[30px] pt-m-spacing-mobile font-font-body">
+          <h2
+            class="overskrift1 pb-m-spacing-mobile font-other-headings text-h3-mobile lg:text-h3-desktop"
+          >
+            Log ind
+          </h2>
+
+          <p class="pb-xs-spacing-mobile font-font-body text-body-mobile">
+            Har du bruger hos os, og vil gerne give feedback eller købe vores
+            abonnement? Log venligst ind ved hjælp af formularen nedenfor. Har
+            du ikke en bruger, skal du først
+            <a class="underline hover:text-rust-500" href=""
+              >oprette en bruger</a
+            >.
+          </p>
+
+          <div class="grid gap-m-spacing-mobile text-left">
+            <form action="" class="email grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="email"
+                >E-mail</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="Fx. google@gmail.com"
+              />
+
+              <label class="font-other-headings text-body-mobile" for="password"
+                >Adgangskode</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Indeholder min. 6 karakterer"
+              />
+            </form>
+
+            <a
+              class="glemt text-center font-font-body text-body-mobile text-color-headings underline hover:text-rust-500"
+              href="#"
+              >Har du glemt dit kodeord?</a
+            >
+            <div class="grid justify-center">
+              <button
+                id="luk"
+                tabindex="0"
+                class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+              >
+                Log ind
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article
+        class="fixed bottom-0 right-0 z-10 h-[62%] w-[100%] rounded-t-cookie bg-background-color px-s-spacing-mobile pt-m-spacing-mobile font-font-body lg:right-52 lg:h-[50%] lg:w-[70%]"
+        id="cookieboks"
+      >
+        <div class="grid place-content-center pb-xxxs-spacing-mobile lg:hidden">
+          <img class="" src="./assets/cookie_ikon.84be6e37.svg" alt="" />
+        </div>
+        <div class="px-3">
+          <h3
+            class="text-center text-h5-mobile font-bold lg:pb-xs-spacing-desktop lg:text-h5-desktop"
+          >
+            Du bestemmer over dine data
+          </h3>
+          <p class="text-abonnement-text-info">
+            Vi og vores samarbejdspartnere bruger teknologier, herunder cookies,
+            til at indsamle oplysninger om dig til forskellige formål, herunder:
+          </p>
+          <ol class="my-2 text-footer-mobile font-semibold">
+            <li>1. Funktionalitet</li>
+            <li>2. Statistisk</li>
+            <li>3. Marketing</li>
+          </ol>
+          <p class="text-abonnement-text-info">
+            Tryk "Accepter" for at give samtykke til alle formål. <br />
+            Du kan altid trække din samtykke tilbage, ved at besøge
+            "Cookiepolitik" nederst på siden.
+          </p>
+        </div>
+
+        <div
+          class="grid gap-s-spacing-mobile p-8 pt-xs-spacing-mobile lg:flex lg:justify-end lg:gap-xxl-spacing-mobile"
+        >
+          <div class="knap grid justify-center">
+            <button
+              id="accepter"
+              class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+            >
+              Accepter
+            </button>
+          </div>
+          <div
+            class="knap grid justify-center text-abonnement-text-info underline"
+          >
+            <button id="afvis">Afvis</button>
+          </div>
+        </div>
+      </article>
+
+      <!--------------------------------   SEKTION 1 -->
+      <section
+        itemscope
+        itemtype="https://schema.org/OnlineStore"
+        id="section_1"
+        class="bg_tekstur px-[30px] lg:px-[80px]"
+      >
+        <h2
+          tabindex="0"
+          class="pt-l-spacing-mobile text-center font-other-headings text-h2-mobile lg:pt-l-spacing-desktop lg:text-h2-desktop"
+        >
+          Hvem er vi?
+        </h2>
+        <h3
+          tabindex="0"
+          class="pt-xl-spacing-mobile text-center font-other-headings text-h5-mobile lg:pt-m-spacing-desktop lg:text-h5-desktop"
+        >
+          Hos <span itemprop="brand"> Blomster Bjarne </span> fejrer vi alt,
+          hvad der er smukt!
+        </h3>
+        <p
+          tabindex="0"
+          class="pt-l-spacing-mobile font-font-body text-body-mobile lg:px-72 lg:pt-l-spacing-desktop lg:text-body-desktop"
+        >
+          Blomster Bjarne udspringer ud fra et kærligt minde om vores
+          grundlægger – at sælge blomster er en del af vores DNA. <br />
+          <br />
+          Vores ønske at forkæle og lade dig vare en del at dette univers. Kald
+          det et slags ‘menageri’, hvor du kommer ind i vores florale univers –
+          gennem et væld af blomster i alverdens flimrende farver, alle unikke i
+          deres enkelte karakter. <br />
+          <br />
+          Tag forbi en af vores butikker eller se dig om på hjemmesiden efter
+          netop den vase eller den blomst, der skal være en del af dit
+          enestående hjem.
+        </p>
+        <div class="grid justify-center py-xl-spacing-mobile lg:pt-[70px]">
+          <a
+            tabindex="0"
+            class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+            href="blomster.html"
+            >Se vores udvalg af blomster</a
+          >
+        </div>
+      </section>
+
+      <!--------------------------------   SEKTION 2 -->
+      <section tabindex="0" id="banner_section">
+        <!-- banner -->
+        <figure class="h-[90px] bg-color-headings">
+          <img
+            class="banner top-50 absolute left-0"
+            src="./assets/banner_text_mobil.9eb5f21e.svg"
+            alt="Blomster Bjarne roterende banner"
+          />
+          <img
+            class="banner_delay top-50 absolute left-0"
+            src="./assets/banner_text_mobil.9eb5f21e.svg"
+            alt="Blomster Bjarne roterende banner"
+          />
+        </figure>
+      </section>
+
+      <!--------------------------------   SEKTION 3 -->
+      <section
+        itemscope
+        itemtype="https://schema.org/CreativeWork"
+        class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop"
+      >
+        <!-- vejr ikoner -->
+        <div
+          class="flex place-content-center gap-3 pt-xl-spacing-mobile pb-s-spacing-mobile"
+        >
+          <!-- sol -->
+
+          <img
+            class="h-[48.32px] lg:h-[70px] lg:w-[70px]"
+            src="./assets/sollys_ikon.8db05e0e.svg"
+            alt="sommer ikon"
+          />
+
+          <!-- blad -->
+
+          <img
+            class="h-[48.32px] lg:h-[70px] lg:w-[70px]"
+            src="./assets/blad.01459efe.svg"
+            alt="efterår ikon"
+          />
+
+          <!-- snefnug -->
+
+          <svg
+            class="lille_snefnug"
+            width="46"
+            height="46"
+            viewBox="0 0 512 512"
+            alt="vinter ikon mobil"
+          >
+            <path
+              d="M440.5 345.8L408.1 327c11.8-12.3 26-18.2 26.2-18.3 7.5-3 11.4-11.4 8.9-19.1-1.9-5.9-7.4-9.8-13.5-9.8-1.9 0-3.7.4-5.5 1.1-1 .4-24.4 10-41.9 31.2l-96.3-56 96.3-56c17.5 21.2 40.8 30.8 41.9 31.2 1.8.7 3.6 1.1 5.5 1.1 6.1 0 11.6-4 13.5-9.8 2.5-7.7-1.4-16.1-8.9-19.1-.1-.1-14.3-6-26.2-18.3l32.4-18.8c7.2-4.2 9.6-13.4 5.5-20.6-2.7-4.7-7.7-7.6-13.1-7.6-2.6 0-5.3.7-7.6 2L393.1 159c-4.5-16.2-2.7-31.4-2.6-32 1.1-8.1-4.1-15.6-12-17.3-1-.2-2-.3-3-.3-7.1 0-13 5.2-14.1 12.4-.2 1.1-3.6 26 6.1 52.2l-96 56v-99.2c26.9-4.7 46.8-20.2 47.7-20.9 3.1-2.5 5.1-6 5.4-10 .3-4-.9-7.8-3.6-10.8-2.9-3.2-7-5.1-11.4-5.1-3.4 0-6.8 1.2-9.5 3.3-.1.1-12.2 9.4-28.6 13.6V63.1c0-8.2-7.1-15.1-15.5-15.1s-15.5 6.9-15.5 15.1v37.5c-16.3-4.2-28.4-13.5-28.6-13.6-2.7-2.1-6-3.3-9.5-3.3-4.4 0-8.5 1.9-11.4 5.1-2.7 3-4 7-3.6 10.9.3 3.9 2.3 7.4 5.4 9.9.9.7 20.8 16.2 47.7 20.9v99.2l-96-56c9.6-26 6.2-51.1 6-52.2-1-7.2-6.9-12.4-14-12.4-1 0-2 .1-3 .3-7.9 1.6-13.2 9.3-12 17.3 0 .2 2 15.5-2.6 31.9L86.6 140c-2.3-1.3-4.9-2-7.6-2-5.4 0-10.4 2.9-13.1 7.6-4.1 7.2-1.7 16.5 5.5 20.6l32.4 18.8c-11.7 12.1-25.7 18.1-26.2 18.3-7.5 3-11.4 11.4-8.9 19.1 1.9 5.9 7.4 9.8 13.5 9.8 1.9 0 3.7-.4 5.5-1.1 1-.4 24.4-10 41.9-31.2l96.3 56-96.3 56c-17.5-21.2-40.8-30.8-41.9-31.2-1.8-.7-3.6-1.1-5.5-1.1-6.1 0-11.6 4-13.5 9.8-2.5 7.7 1.4 16 8.9 19.1.5.2 14.5 6.2 26.2 18.3l-32.4 18.8c-7.2 4.2-9.6 13.4-5.5 20.6 2.7 4.7 7.7 7.6 13.1 7.6 2.6 0 5.3-.7 7.6-2l32.3-18.8c4.6 16.5 2.6 31.8 2.6 32-1.2 8 4.1 15.7 12 17.3 1 .2 2 .3 3 .3 7.1 0 13-5.2 14.1-12.4.2-1.1 3.6-26-6.1-52.2l96-56v99.2c-26.9 4.7-46.8 20.2-47.7 20.9-3.1 2.5-5.1 6-5.4 10-.3 4 .9 7.8 3.6 10.8 2.9 3.2 7 5.1 11.4 5.1 3.4 0 6.8-1.2 9.5-3.3.1-.1 12.3-9.4 28.6-13.6v37.5c0 8.2 7.1 15.1 15.5 15.1s15.5-6.9 15.5-15.1v-37.5c16.3 4.2 28.4 13.5 28.6 13.6 2.7 2.1 6.1 3.3 9.5 3.3 4.4 0 8.5-1.9 11.4-5.1 2.7-3 4-7 3.6-10.9-.3-3.9-2.3-7.4-5.4-9.9-.9-.7-20.8-16.2-47.7-20.9V282l96 56c-9.6 26-6.2 51.1-6 52.2 1 7.2 6.9 12.4 14 12.4 1 0 2-.1 3-.3 7.9-1.6 13.1-9.2 12-17.3-.1-.5-1.9-15.7 2.6-32l32.2 18.8c2.3 1.3 4.9 2 7.6 2 5.4 0 10.4-2.9 13.1-7.6 4.1-6.9 1.7-16.2-5.5-20.4z"
+              fill="#00000"
+            />
+          </svg>
+          <!-- ----- -->
+          <svg
+            class="stor_snefnug"
+            width="70"
+            height="70
+        "
+            viewBox="0 0 512 512"
+            alt="vinter ikon desktop"
+          >
+            <path
+              d="M440.5 345.8L408.1 327c11.8-12.3 26-18.2 26.2-18.3 7.5-3 11.4-11.4 8.9-19.1-1.9-5.9-7.4-9.8-13.5-9.8-1.9 0-3.7.4-5.5 1.1-1 .4-24.4 10-41.9 31.2l-96.3-56 96.3-56c17.5 21.2 40.8 30.8 41.9 31.2 1.8.7 3.6 1.1 5.5 1.1 6.1 0 11.6-4 13.5-9.8 2.5-7.7-1.4-16.1-8.9-19.1-.1-.1-14.3-6-26.2-18.3l32.4-18.8c7.2-4.2 9.6-13.4 5.5-20.6-2.7-4.7-7.7-7.6-13.1-7.6-2.6 0-5.3.7-7.6 2L393.1 159c-4.5-16.2-2.7-31.4-2.6-32 1.1-8.1-4.1-15.6-12-17.3-1-.2-2-.3-3-.3-7.1 0-13 5.2-14.1 12.4-.2 1.1-3.6 26 6.1 52.2l-96 56v-99.2c26.9-4.7 46.8-20.2 47.7-20.9 3.1-2.5 5.1-6 5.4-10 .3-4-.9-7.8-3.6-10.8-2.9-3.2-7-5.1-11.4-5.1-3.4 0-6.8 1.2-9.5 3.3-.1.1-12.2 9.4-28.6 13.6V63.1c0-8.2-7.1-15.1-15.5-15.1s-15.5 6.9-15.5 15.1v37.5c-16.3-4.2-28.4-13.5-28.6-13.6-2.7-2.1-6-3.3-9.5-3.3-4.4 0-8.5 1.9-11.4 5.1-2.7 3-4 7-3.6 10.9.3 3.9 2.3 7.4 5.4 9.9.9.7 20.8 16.2 47.7 20.9v99.2l-96-56c9.6-26 6.2-51.1 6-52.2-1-7.2-6.9-12.4-14-12.4-1 0-2 .1-3 .3-7.9 1.6-13.2 9.3-12 17.3 0 .2 2 15.5-2.6 31.9L86.6 140c-2.3-1.3-4.9-2-7.6-2-5.4 0-10.4 2.9-13.1 7.6-4.1 7.2-1.7 16.5 5.5 20.6l32.4 18.8c-11.7 12.1-25.7 18.1-26.2 18.3-7.5 3-11.4 11.4-8.9 19.1 1.9 5.9 7.4 9.8 13.5 9.8 1.9 0 3.7-.4 5.5-1.1 1-.4 24.4-10 41.9-31.2l96.3 56-96.3 56c-17.5-21.2-40.8-30.8-41.9-31.2-1.8-.7-3.6-1.1-5.5-1.1-6.1 0-11.6 4-13.5 9.8-2.5 7.7 1.4 16 8.9 19.1.5.2 14.5 6.2 26.2 18.3l-32.4 18.8c-7.2 4.2-9.6 13.4-5.5 20.6 2.7 4.7 7.7 7.6 13.1 7.6 2.6 0 5.3-.7 7.6-2l32.3-18.8c4.6 16.5 2.6 31.8 2.6 32-1.2 8 4.1 15.7 12 17.3 1 .2 2 .3 3 .3 7.1 0 13-5.2 14.1-12.4.2-1.1 3.6-26-6.1-52.2l96-56v99.2c-26.9 4.7-46.8 20.2-47.7 20.9-3.1 2.5-5.1 6-5.4 10-.3 4 .9 7.8 3.6 10.8 2.9 3.2 7 5.1 11.4 5.1 3.4 0 6.8-1.2 9.5-3.3.1-.1 12.3-9.4 28.6-13.6v37.5c0 8.2 7.1 15.1 15.5 15.1s15.5-6.9 15.5-15.1v-37.5c16.3 4.2 28.4 13.5 28.6 13.6 2.7 2.1 6.1 3.3 9.5 3.3 4.4 0 8.5-1.9 11.4-5.1 2.7-3 4-7 3.6-10.9-.3-3.9-2.3-7.4-5.4-9.9-.9-.7-20.8-16.2-47.7-20.9V282l96 56c-9.6 26-6.2 51.1-6 52.2 1 7.2 6.9 12.4 14 12.4 1 0 2-.1 3-.3 7.9-1.6 13.1-9.2 12-17.3-.1-.5-1.9-15.7 2.6-32l32.2 18.8c2.3 1.3 4.9 2 7.6 2 5.4 0 10.4-2.9 13.1-7.6 4.1-6.9 1.7-16.2-5.5-20.4z"
+              fill="#00000"
+            />
+          </svg>
+          <!-- blomst -->
+          <img
+            class="h-[48.32px] lg:h-[70px] lg:w-[70px]"
+            src="./assets/blomst_ikon.302cf9ba.svg"
+            alt="forår ikon"
+          />
+        </div>
+        <div
+          class="mx-auto w-40 rounded-radius-mobile border-2 border-b-color-headings lg:w-96"
+        ></div>
+        <h2
+          tabindex="0"
+          class="pt-xl-spacing-mobile text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
+        >
+          Sæsonens blomster
+        </h2>
+
+        <!-- tre cards til forside -->
+
+        <!-- Card til forsiden solsikke -->
+        <section class="felxi">
+          <article>
+            <div tabindex="0" class="article_wrapper">
+              <div itemprop="image" class="billede_1">
+                <div class="arrow">
+                  <img src="./assets/fliparrow_ikon.8b799959.svg" alt="flip pil" />
+                </div>
+              </div>
+              <div class="overskrift">
+                <h3 itemprop="name" class="pt-xxs-spacing-desktop">Solsikke</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card til forsiden grøn blomst -->
+          <article>
+            <div tabindex="0" class="article_wrapper">
+              <div itemprop="image" class="billede_2">
+                <div class="arrow">
+                  <img src="./assets/fliparrow_ikon.8b799959.svg" alt="flip pil" />
+                </div>
+              </div>
+              <div class="overskrift">
+                <h3 itemprop="name" class="pt-xxs-spacing-desktop">Fennikel</h3>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card til forsiden okkide -->
+          <article>
+            <div tabindex="0" class="article_wrapper">
+              <div itemprop="image" class="billede_3">
+                <div class="arrow">
+                  <img src="./assets/fliparrow_ikon.8b799959.svg" alt="flip pil" />
+                </div>
+              </div>
+              <div class="overskrift">
+                <h3 itemprop="name" class="pt-xxs-spacing-desktop">Orkidé</h3>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- knap -->
+        <div class="grid justify-center py-xl-spacing-mobile lg:pt-[70px]">
+          <a
+            tabindex="0"
+            class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+            href="blomster.html"
+            >Udforsk sortimentet</a
+          >
+        </div>
+      </section>
+
+      <!--------------------------------   SEKTION 4 -->
+      <section
+        class="bg_tekstur py-xxl-spacing-mobile px-[30px] shadow-inner lg:px-[80px]"
+      >
+        <h2
+          tabindex="0"
+          class="text-center font-other-headings text-h2-mobile lg:text-h2-desktop"
+        >
+          Anmeldelser
+        </h2>
+        <p
+          class="pt-s-spacing-mobile text-center font-font-body text-abonnement-text-info"
+        >
+          Læs herunder anmeldelser fra nogle af vores fantastiske kunder!
+        </p>
+        <!-- anmeldelser -->
+        <article
+          itemscope
+          itemtype="https://schema.org/Review"
+          class="carousel-center carousel h-[235px] overflow-y-hidden overflow-x-scroll lg:mt-l-spacing-desktop lg:h-[300px] lg:place-content-center lg:overflow-x-hidden"
+        >
+          <div itemprop="review" class="carousel-item">
+            <!-- anmeldelse 1 -->
+            <div class="snap-center lg:w-[500px]">
+              <figure
+                tabindex="0"
+                class="flex justify-center gap-3 py-l-spacing-mobile"
+              >
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+              </figure>
+              <div>
+                <p
+                  tabindex="0"
+                  class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  “Abonnementløsningen lever altid op til mine forventninger!”
+                </p>
+              </div>
+              <div>
+                <p
+                  itemprop="name"
+                  tabindex="0"
+                  class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
+                >
+                  Peter Nielsen
+                </p>
+              </div>
+            </div>
+            <!-- anmeldelse 2 -->
+            <div
+              itemprop="review"
+              class="snap-center lg:-mx-xxl-spacing-desktop lg:w-[500px]"
+            >
+              <figure
+                tabindex="0"
+                class="flex justify-center gap-3 py-l-spacing-mobile"
+              >
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+              </figure>
+              <div>
+                <p
+                  tabindex="0"
+                  class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  “Jeg forestrækker at købe mine blomster hos Blomster Bjarne”
+                </p>
+              </div>
+              <div>
+                <p
+                  itemprop="name"
+                  tabindex="0"
+                  class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
+                >
+                  Kathrine Hansen
+                </p>
+              </div>
+            </div>
+            <!-- anmeldelse 3 -->
+            <div itemprop="review" class="snap-center lg:w-[500px]">
+              <figure
+                tabindex="0"
+                class="flex justify-center gap-3 py-l-spacing-mobile"
+              >
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 1">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 2">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" alt="stjerne 3">
+                  <path
+                    fill="#edc551"
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27z"
+                  />
+                </svg>
+              </figure>
+              <div>
+                <p
+                  tabindex="0"
+                  class="mx-auto w-1/2 text-center font-font-body text-body-mobile lg:text-body-desktop"
+                >
+                  “Blomster Bjarnes personale er altid venlige og smilende”
+                </p>
+              </div>
+              <div>
+                <p
+                  itemprop="name"
+                  tabindex="0"
+                  class="pt-l-spacing-mobile text-center font-font-body text-body-mobile"
+                >
+                  Erik Jakobsen
+                </p>
+              </div>
+            </div>
+            <!-- pile -->
+            <div
+              class="absolute left-5 right-5 flex justify-between px-0 pt-xxxl-spacing-mobile"
+            >
+              <svg
+                class="pile"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+                alt="pil til venstre"
+              >
+                <path
+                  fill="#888888"
+                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+                />
+              </svg>
+              <svg
+                class="pile rotate-180"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+                alt="pil til højre"
+              >
+                <path
+                  fill="#888888"
+                  d="M9.125 21.1L.7 12.7q-.15-.15-.212-.325Q.425 12.2.425 12t.063-.375Q.55 11.45.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L3.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-------------------------------------------------------------------------------------------- MAIN SLUT -->
+
+    <!--------------------------------------------------------------------------------------------- FOOTER START -->
+    <footer
+      itemscope
+      itemtype="https://schema.org/LocalBusiness"
+      tabindex="0"
+      class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
+    >
+      <article
+        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:w-full lg:pt-xl-spacing-desktop"
+      >
+        <!--------------------------------   PRIMÆR INDHOLD -->
+        <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
+          <!--------------------------------   SEKTION 1 BUTIKKER -->
+          <section
+            class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+          >
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              BUTIKKER
+            </h2>
+
+            <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="strandvejen not-italic"
+              >
+                <p itemprop="streetAddress">Strandvejen 167</p>
+                <p>
+                  <span itemprop="postalCode">2900</span
+                  ><span itemprop="addressLocality"> Hellerup</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+
+                <a href="tel:+4539629059"
+                  >Tlf.: <span itemprop="telephone">+45 39 62 90 59</span></a
+                >
+              </address>
+
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="gunnar not-italic"
+              >
+                <p itemprop="streetAddress">Gunnar Nu Hansens Pl. 6</p>
+                <p>
+                  <span itemprop="postalCode">2100</span
+                  ><span itemprop="addressLocality"> København Ø</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+
+                <a href="tel:+4536260700"
+                  >Tlf.: <span itemprop="telephone">+45 36 26 07 00</span></a
+                >
+              </address>
+
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="vaernedamsvej not-italic"
+              >
+                <p itemprop="streetAddress">Værnedamsvej 4A st.</p>
+                <p>
+                  <span itemprop="postalCode">1619</span
+                  ><span itemprop="addressLocality"> København V</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+
+                <a href="tel:+4526117006"
+                  >Tlf.: <span itemprop="telephone">+45 26 11 70 06</span></a
+                >
+              </address>
+            </div>
+          </section>
+
+          <!--------------------------------   SEKTION 2 INFORMATION LINK -->
+          <section
+            class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
+          >
+            <h2
+              tabindex="0"
+              class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
+            >
+              INFORMATIONER
+            </h2>
+            <div class="mx-auto">
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a tabindex="0" href="index.html">Om os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a tabindex="0" href="#">Kontakt os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a tabindex="0" href="sitemap.html">Sitemap</a>
+              </div>
+            </div>
+          </section>
+
+          <!--------------------------------   SEKTION 3 ÅBNINGSTIDER -->
+          <section
+            class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+          >
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              ÅBNINGSTIDER
+              <meta
+                itemprop="openingHours"
+                content="Mo,Tu,We,Th,Fr 10:00-18:00"
+              />
+              <meta itemprop="openingHours" content="Sa 10:00-15:00" />
+              <meta itemprop="openingHours" content="Su 11:00-16:00" />
+            </h2>
+            <div class="tider grid grid-cols-2">
+              <div
+                class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
+              >
+                <p tabindex="0">Mandag</p>
+                <p tabindex="0">Tirsdag</p>
+                <p tabindex="0">Onsdag</p>
+                <p tabindex="0 ">Torsdag</p>
+                <p tabindex="0">Fredag</p>
+                <p tabindex="0">Lørdag</p>
+                <p tabindex="0">Søndag</p>
+              </div>
+              <div
+                class="tidspunkter grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
+              >
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 15</p>
+                <p tabindex="0">11 - 16</p>
+              </div>
+            </div>
+          </section>
+
+          <!--------------------------------   SEKTION 4 FØLG OS HER -->
+          <section
+            class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
+          >
+            <h2
+              tabindex="0"
+              class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop"
+            >
+              FØLG OS HER
+            </h2>
+            <div class="ikoner flex place-content-center gap-m-spacing-mobile">
+              <svg
+                tabindex="0"
+                width="40"
+                height="40"
+                viewBox="0 0 48 48"
+                alt="facebook"
+              >
+                <g fill="none" fill-rule="evenodd" clip-rule="evenodd">
+                  <path
+                    stroke="#fffdf9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                    d="M4.111 46A2.117 2.117 0 0 1 2 43.877V4.123C2 2.95 2.945 2 4.111 2H43.89C45.055 2 46 2.95 46 4.123v39.754A2.117 2.117 0 0 1 43.889 46H4.11Z"
+                  ></path>
+                  <path
+                    fill="#fffdf9"
+                    d="M38.662 17.887h-4.869a2.445 2.445 0 0 0-2.444 2.444v4.89h7.313l-1.071 7.332h-6.242V46h-8.042V32.553h-6.64v-7.331h6.554l.086-6.959l-.024-2.494a6.377 6.377 0 0 1 6.376-6.438h9.003v8.556Z"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                tabindex="0"
+                width="44"
+                height="44"
+                viewBox="0 0 512 512"
+                alt="instagram"
+              >
+                <path
+                  fill="#fffdf9"
+                  d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32Z"
+                ></path>
+                <path
+                  fill="#fffdf9"
+                  d="M377.33 162.67a28 28 0 1 1 28-28a27.94 27.94 0 0 1-28 28ZM256 181.33A74.67 74.67 0 1 1 181.33 256A74.75 74.75 0 0 1 256 181.33m0-37.33a112 112 0 1 0 112 112a112 112 0 0 0-112-112Z"
+                ></path>
+              </svg>
+            </div>
+          </section>
+        </div>
+
+        <!--------------------------------   SEKTION 5 SEKUNDÆR INDHOLD -->
+        <section
+          class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
+        >
+          <p tabindex="0">CVR: 35649328</p>
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
+            >Cookiepolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
+            >Privatlivspolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
+            >Handelsbetingelser</a
+          >
+        </section>
+      </article>
+    </footer>
+    <!--------------------------------------------------------------------------------------------- FOOTER SLUT -->
+
+    
+  </body>
+</html>

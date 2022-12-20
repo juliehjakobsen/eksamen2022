@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blomster Bjarne - Se vores sortiment af blomster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orienta&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita&display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+      /* generelt */
+      .baggrundsbillede {
+        background-image: url(./assets/tekstur_baggrund.8dfda18b.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* card */
+      .article_wrapper {
+        border: solid 2px black;
+        border-radius: var(--xs-radius);
+      }
+
+      .article_wrapper:hover {
+        cursor: pointer;
+      }
+
+      .billede_wrapper {
+        max-width: 100%;
+        max-height: 100%;
+        height: 150px;
+        width: 150px;
+        margin: auto;
+      }
+      .billede_wrapper img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      article img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .article_info {
+        display: none;
+      }
+
+      .arrow img {
+        width: 20px;
+        height: 20px;
+      }
+      .arrow {
+        display: grid;
+        justify-content: end;
+      }
+
+      .billede {
+        background-color: var(--himmel-100);
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 900px) {
+        /* card */
+        article {
+          width: 300px;
+          height: 100%;
+        }
+
+        .billede_wrapper {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/main.1431fdc5.js"></script>
+    <link rel="stylesheet" href="./assets/main.af66e74a.css">
+  </head>
+  <body>
+    <!-- virker kun i chrome  -->
+    <a tabindex="0" class="skip-to-content-link" href="#section_1">
+      Skip to content
+    </a>
+    <!-------------------------------------------------------------------------------------------- HEADER START -->
+    <header>
+      <!-- banner start -->
+      <div
+        class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
+      >
+        <p tabindex="0">Køb dine blomster i vores butikker</p>
+        <p tabindex="0">
+          Bestil dit abonnement på vores webshop - psst! Du får 15% på din
+          første levering
+        </p>
+      </div>
+      <!-- banner start -->
+
+      <!-- LOGO DESKTOP START -->
+      <section tabindex="0">
+        <a class="navigation_desktop" href="index.html">
+          <img
+            class="logo_lang"
+            id="sort"
+            src="./assets/bb_logo_lang.a18c4ee3.png"
+            alt="Blomster Bjarne logo sort forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="sol"
+            src="./assets/bb_logo_lang_sol.6951dad9.png"
+            alt="Blomster Bjarne logo gul forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="graes"
+            src="./assets/bb_logo_lang.a18c4ee3.png"
+            alt="Blomster Bjarne logo grøn forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="himmel"
+            src="./assets/bb_logo_lang_himmel.d3fdc848.png"
+            alt="Blomster Bjarne logo blå forkortelse"
+          />
+          <img
+            class="logo_lang"
+            id="rust"
+            src="./assets/bb_logo_lang_rust.d8f52a41.png"
+            alt="Blomster Bjarne logo orange forkortelse"
+          />
+        </a>
+      </section>
+      <!-- LOGO DESKTOP SLUT -->
+
+      <!-- LOGO MOBIL START -->
+      <section tabindex="0" class="navigation_mobil">
+        <a class="logo_mobil" href="index.html">
+          <img
+            class="logo_kort"
+            id="sort"
+            src="./assets/bb_logo_kort.75bde4d8.png"
+            alt="Blomster Bjarne logo sort "
+          />
+          <img
+            class="logo_kort"
+            id="sol"
+            src="./assets/bb_logo_kort_sol.7d015cb7.png"
+            alt="Blomster Bjarne logo gul"
+          />
+          <img
+            class="logo_kort"
+            id="graes"
+            src="./assets/bb_logo_kort_graes.299932d6.png"
+            alt="Blomster Bjarne logo grøn"
+          />
+          <img
+            class="logo_kort"
+            id="himmel"
+            src="./assets/bb_logo_kort_himmel.13730c2b.png"
+            alt="Blomster Bjarne logo blå"
+          />
+          <img
+            class="logo_kort"
+            id="rust"
+            src="./assets/bb_logo_kort_rust.3ab909c1.png"
+            alt="Blomster Bjarne logo orange"
+          />
+        </a>
+
+        <div class="burger">
+          <button class="toggle-btn">☰</button>
+        </div>
+      </section>
+      <!-- LOGO MOBIL SLUT -->
+
+      <!-- MENUPUNKTER START -->
+      <nav class="lg:flex">
+        <ul>
+          <li>
+            <a
+              tabindex="0"
+              href="abonnement.html"
+              class="mt-8 font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Abonnement</a
+            >
+          </li>
+          <div class="dropdown">
+            <label>
+              <button class="flex">
+                <p
+                  tabindex="0"
+                  class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+                >
+                  Sortiment
+                </p>
+                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                  />
+                </svg>
+              </button>
+            </label>
+            <ul class="underkat m-0">
+              <li class="pt-[0.18cm]">
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 border-t-transparent bg-background-color p-4 font-font-body text-body-mobile lg:border-x-2 lg:border-b-2 lg:border-color-black lg:text-body-desktop"
+                  href="blomster.html"
+                  >Blomster</a
+                >
+              </li>
+              <li>
+                <a
+                  tabindex="0"
+                  class="dropdown-content w-52 bg-background-color p-4 font-font-body text-body-mobile lg:border-x-2 lg:border-b-2 lg:border-color-black lg:text-body-desktop"
+                  href="vaser.html"
+                  >Vaser</a
+                >
+              </li>
+            </ul>
+          </div>
+          <li>
+            <a
+              tabindex="0"
+              href="index.html"
+              class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Begivenheder</a
+            >
+          </li>
+          <li>
+            <a
+              tabindex="0"
+              href="index.html"
+              class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+              >Kontakt os</a
+            >
+          </li>
+        </ul>
+
+        <ul class="secondary_nav">
+          <li>
+            <button id="konto" tabindex="0">
+              <img
+                class="person h-8 w-8"
+                src="./assets/person.c53fec39.svg"
+                alt="Gå til din konto"
+              />
+            </button>
+          </li>
+          <li>
+            <a tabindex="0" href="kurv.html">
+              <img
+                class="shopping h-8 w-8"
+                src="./assets/shopping_bag.857c5c3e.svg"
+                alt="Gå til kurv"
+              />
+            </a>
+          </li>
+          <li>
+            <img
+              tabindex="0"
+              class="search h-8 w-8"
+              src="./assets/search.f79d748d.svg"
+              alt="Søg"
+            />
+          </li>
+        </ul>
+      </nav>
+      <!-- MENUPUNKTER SLUT -->
+    </header>
+    <!-------------------------------------------------------------------------------------------- HEADER SLUT -->
+    <!-------------------------------------------------------------------------------------------- HERO START -->
+    <section
+      class="bg-hero_image bg-cover pt-l-spacing-mobile text-center lg:h-hero-height lg:px-xxl-spacing-desktop lg:py-l-spacing-mobile lg:pb-m-spacing-desktop"
+    >
+      <!-- copy -->
+      <div
+        class="mx-10 border-2 border-himmel-500 pt-m-spacing-mobile pl-10 pr-10 text-himmel-500 lg:h-hero-border-height"
+      >
+        <h1
+          class="font-main-heading text-h1-mobile lg:pt-l-spacing-desktop lg:text-h1-desktop"
+        >
+          Blomster
+        </h1>
+        <p
+          class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
+        >
+          Gå på opdagelse blandt Blomster Bjarnes store udvalg af smukke,
+          farverige og livlige blomster. Find det helt rigtige match for dig
+          eller én du holder af, og kom ned i butikken for at finde din udkårne.
+        </p>
+        <p
+          class="pt-xs-spacing-mobile pb-m-spacing-mobile font-font-body text-body-mobile lg:mx-auto lg:w-1/2 lg:pt-xs-spacing-desktop lg:pb-m-spacing-desktop lg:text-body-desktop"
+        >
+          Vi glæder os til at se dig!
+        </p>
+      </div>
+      <!-- pil -->
+      <div class="mt-l-spacing-desktop pb-xs-spacing-mobile">
+        <svg
+          class="mx-auto grid text-himmel-500"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          alt="pil ned"
+        >
+          <path
+            fill="currentColor"
+            d="m20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8l8-8z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!-------------------------------------------------------------------------------------------- HERO SLUT -->
+
+    <!-------------------------------------------------------------------------------------------- MAIN START -->
+    <main
+      class="baggrundsbillede px-[30px] pb-l-spacing-mobile lg:px-[80px] lg:pb-xl-spacing-desktop"
+    >
+      <!-- LOG IND -->
+      <section
+        id="loginbox"
+        class="placering_box gemt fixed top-2 left-0 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
+      >
+        <div class="login_opret grid grid-cols-2 items-center">
+          <div class="logind flex items-center px-[30px]">
+            <img
+              class="pr-s-spacing-mobile"
+              src="./assets/radio.bb25eedd.svg"
+              alt="radio button log ind"
+            />
+            <p>Log ind</p>
+          </div>
+          <div
+            class="opret flex items-center border-2 border-t-0 border-r-0 border-color-black px-[30px] pl-[10px]"
+          >
+            <img
+              class="pr-s-spacing-mobile"
+              src="./assets/radio_un.21b37d72.svg"
+              alt="radio button opret bruger"
+            />
+            <p>Opret konto</p>
+          </div>
+        </div>
+
+        <div class="content px-[30px] pt-m-spacing-mobile font-font-body">
+          <h2
+            class="overskrift1 pb-m-spacing-mobile font-other-headings text-h3-mobile lg:text-h3-desktop"
+          >
+            Log ind
+          </h2>
+
+          <p class="pb-xs-spacing-mobile font-font-body text-body-mobile">
+            Har du bruger hos os, og vil gerne give feedback eller købe vores
+            abonnement? Log venligst ind ved hjælp af formularen nedenfor. Har
+            du ikke en bruger, skal du først
+            <a class="underline hover:text-rust-500" href=""
+              >oprette en bruger</a
+            >.
+          </p>
+
+          <form class="grid gap-m-spacing-mobile text-left">
+            <div class="email grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="email"
+                >E-mail</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="Fx. google@gmail.com"
+              />
+            </div>
+
+            <div class="password grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="password"
+                >Adgangskode</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Indeholder min. 6 karakterer"
+              />
+            </div>
+
+            <a
+              class="glemt text-center font-font-body text-body-mobile text-color-headings underline hover:text-rust-500"
+              href="#"
+              >Har du glemt dit kodeord?</a
+            >
+            <div class="grid justify-center">
+              <button
+                id="luk"
+                tabindex="0"
+                class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+              >
+                Log ind
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!---------------------------------------------- FØRSTE SEKTION -->
+      <section
+        class="pt-l-spacing-mobile text-center lg:pb-l-spacing-desktop lg:pt-l-spacing-desktop"
+      >
+        <!------------------------------- KNAP -->
+
+        <h2 class="font-other-headings text-h2-mobile lg:text-h2-desktop">
+          Blomster
+        </h2>
+        <p
+          class="py-s-spacing-mobile font-font-body text-body-mobile lg:pt-l-spacing-desktop lg:text-body-desktop"
+        >
+          12 resultater
+        </p>
+        <p
+          class="pb-m-spacing-mobile text-left font-font-body text-abonnement-text-info lg:mx-auto lg:w-2/3 lg:text-body-desktop"
+        >
+          Herunder kan du se en oversigt over vores blomster, som kun kan købes
+          direkte i én af vores 4 butikker. Tryk på kortene for at læse mere om
+          den enkelte plante. Vil du vide mere? Tøv ikke med at komme ned i
+          butikken til en snak om vores skønne planter.
+        </p>
+      </section>
+
+      <!---------------------------------------------- ANDEN SEKTION CARDS -->
+      <section
+        itemscope
+        itemtype="https://schema.org/Product"
+        class="flex flex-wrap justify-center gap-s-spacing-mobile lg:gap-l-spacing-desktop"
+      >
+        <!-- anthurium (venstre) card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/anthurium.1ba3739c.webp"
+                  alt="Anthurium blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Anthurium</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Anthurium
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt af Arum-familien, stammer fra Centralamerika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Undgå direkte sollys (18-21 grader)
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Tåler bedst at blive vandet moderat
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- iris card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/iris.b8ff752d.webp"
+                  alt="Agapanthus blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Agapanthus</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Agapanthus
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile pl-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt af Agapanthaceae-familien, stammer fra Sydafrika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan berige som både have- og krukkeplante. Skal helst holdes
+                    inde om vinteren.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Holder godt på vandet. Vanding en gang om ugen.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 88,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- astromea (venstre) card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/astromea.cb49b63a.webp"
+                  alt="Inkalilje blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Inkalilje</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Inkalilje
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt af Alstroemeria-familien, stammer fra Sydamerika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Trives bedst i sol/halvskygge.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Vokser i almindelig næringsrig havejord, undgå vintervæde.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 100,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- carnations card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/carnations.c3b28d42.webp"
+                  alt="Carnations blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Carnations</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Carnations
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    En art af nellike-slægten, stammer fra omkring Middelhavet.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Den skal placeres så lyst som muligt.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Vandes godt med en let udtørring mellem vandingerne.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- dry flower (venstre) card -->
+        <article class="hover:scale-105">
+          <!------------------ forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/dry-flower.a1bf45f5.webp"
+                  alt="Vinget Hindebæger blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Hindebæger</h3>
+            </div>
+            <!------------------ bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Hindebæger
+              </h3>
+              <!-- informationer om blomst -->
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <!-- oprindelse/slægt -->
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt af Vingebæger-familien, stammer fra Middelhavsområdet
+                  </h4>
+                </div>
+                <!-- sollys -->
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Tåler direkte sollys
+                  </h4>
+                </div>
+                <!-- vanding -->
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Den kan bruges både frisk og tørret, og i tørret tilstand,
+                    holde den både farve og form fantastisk. Den gror fint i
+                    potter, og egner sig derfor fint til altandyrkning
+                  </h4>
+                </div>
+                <!-- pris i butik -->
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 88,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- eucalyptus card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/eucalyptus.f6050e91.webp"
+                  alt="Eucalyptus blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Eucalyptus</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Eucalyptus
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt fra Myrtaceae-familien, udbredt omkring Australien og
+                    Tasmanien.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kræver en lys og lun placering, frostfrit.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Som udgangspunkt må de aldrig tørre ud, men de må til
+                    gengæld heller ikke soppe i vand.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 88,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- pink lilje (venstre) card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/pink-lilies.3bffdeb1.webp"
+                  alt="Pink lilje blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Pink lilje</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Pink Lilje
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kommer af slægten Lilieae, udbredt i Europa, Asien og
+                    Nordamerika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Liljer skal placeres sammen med en lavere vegetation, så
+                    blomsterhovedet står i sol og bunden i skygge.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Det er nødvendigt at vande liljer med jævne mellemrum.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 80,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- queen protea card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/queen-protea.9c9dddbd.webp"
+                  alt="Queen Protea blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Queen Protea</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Queen Protea
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile pl-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Stammer fra slægten Proteeae, stammer fra Sydafrika og
+                    Australien.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Alle Protea-arter skal stå så lyst og luftigt som muligt (4
+                    - 10 grader)
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    De skal vandes regelmæssigt, men forsigtigt, hele året
+                    rundt.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 88,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- rose card (venstre) -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/short-roses.7c483e59.webp"
+                  alt="Rød rose blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Rød rose</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Rød rose
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt af Rosaceae-familien, udbredt i Nordamerika, Europa,
+                    Asien og Nordafrika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Tåler direkte sollys
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Tåler bedst at blive vandet moderat
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- tissel card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/tissel.ddcf81d1.webp"
+                  alt="Eryngium blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Eryngium</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Eryngium
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile pl-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt fra Skærmplante-familien, udbredt i Europa,
+                    Nordafrika, Asien og Nord- og Sydamerika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Den trives i sol og i en veldrænet havejord.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Vokser i veldrænet havejord, undgå for meget vinterfugt
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- hvid lilje (venstre) card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/white-lilies-3-stems.bdf7bcb4.webp"
+                  alt="Hvid lilje blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Hvid lilje</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[2px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Hvid lilje
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile px-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kommer af slægten Lilieae, udbredt i Europa, Asien og
+                    Nordamerika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Liljer skal placeres sammen med en lavere vegetation, så
+                    blomsterhovedet står i sol og bunden i skygge.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Det er nødvendigt at vande liljer med jævne mellemrum.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- hvid rose card -->
+        <article class="hover:scale-105">
+          <!-- forside -->
+          <div class="article_wrapper relative">
+            <div class="billede">
+              <div class="arrow">
+                <img src="./assets/fliparrow_ikon.8b799959.svg" alt="pil ikon" />
+              </div>
+              <div class="billede_wrapper">
+                <img
+                  itemprop="image"
+                  src="./assets/white-roses-10-stems.ec847cd2.webp"
+                  alt="Hvid rose blomst"
+                />
+              </div>
+            </div>
+
+            <div
+              class="border-t-2 border-t-color-black bg-color-white p-s-spacing-mobile text-center font-other-headings text-h5-mobile text-color-black lg:text-h5-desktop"
+            >
+              <h3 class="font-other-headings" itemprop="name">Hvid rose</h3>
+            </div>
+            <!-- bagsiden -->
+            <div
+              class="article_info flip absolute -left-[174px] -top-1 z-50 h-[calc(150%+28px)] w-[calc(200%+26px)] border-2 border-color-black bg-color-white lg:-left-[2px] lg:h-[calc(100%+6px)] lg:w-[calc(100%+4px)]"
+            >
+              <h3
+                class="pt-s-spacing-mobile text-center font-other-headings text-h4-mobile text-color-black lg:text-h5-desktop"
+                itemprop="name"
+              >
+                Hvid rose
+              </h3>
+              <div
+                class="flex flex-col gap-s-spacing-mobile py-l-spacing-mobile pl-xs-spacing-mobile"
+              >
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/oprindelse_ikon.6c701f74.svg"
+                    alt="oprindelse ikon"
+                  />
+                  <h4
+                    itemprop="countryOfOrigin"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Slægt af Rosaceae-familien, udbredt i Nordamerika, Europa,
+                    Asien og Nordafrika.
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/sollys_ikon.8db05e0e.svg"
+                    alt="sollys ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Tåler direkte sollys
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/water_ikon.df99d417.svg"
+                    alt="holdbarhed ikon"
+                  />
+                  <h4
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Tåler bedst at blive vandet moderat
+                  </h4>
+                </div>
+                <div class="flex gap-xs-spacing-mobile">
+                  <img
+                    class="h-7 w-7"
+                    src="./assets/pris_ikon.2a889a2f.svg"
+                    alt="pris ikon"
+                  />
+                  <h4
+                    itemprop="price"
+                    class="my-auto grid font-font-body text-abonnement-text-info"
+                  >
+                    Kan købes i butikken for 128,- DKK
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!---------------------------------------------- TREDJE SEKTION -->
+      <section
+        class="pt-l-spacing-mobile pb-xl-spacing-mobile text-center font-font-body text-body-mobile lg:py-l-spacing-desktop"
+      >
+        <h5>Øv, du er nået til enden.</h5>
+        <p class="lg:pb-xl-spacing-deskto">
+          Kan du ikke bestemme dig for én enkelt? Fri dig selv for besværet og
+          bestil et abonnement i dag!
+        </p>
+        <div
+          class="grid justify-center py-xl-spacing-mobile lg:pb-0 lg:pt-[70px]"
+        >
+          <a
+            tabindex="0"
+            class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+            href="abonnement.html"
+            >Bestil mit abonnement</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-------------------------------------------------------------------------------------------- MAIN SLUT -->
+
+    <!--------------------------------------------------------------------------------------------- FOOTER START -->
+    <footer
+      itemscope
+      itemtype="https://schema.org/LocalBusiness"
+      tabindex="0"
+      class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
+    >
+      <article
+        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:w-full lg:pt-xl-spacing-desktop"
+      >
+        <!--------------------------------   PRIMÆR INDHOLD -->
+        <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
+          <!--------------------------------   SEKTION 1 BUTIKKER -->
+          <section
+            class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+          >
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              BUTIKKER
+            </h2>
+
+            <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="strandvejen not-italic"
+              >
+                <p itemprop="streetAddress">Strandvejen 167</p>
+                <p>
+                  <span itemprop="postalCode">2900</span
+                  ><span itemprop="addressLocality"> Hellerup</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+
+                <a href="tel:+4539629059"
+                  >Tlf.: <span itemprop="telephone">+45 39 62 90 59</span></a
+                >
+              </address>
+
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="gunnar not-italic"
+              >
+                <p itemprop="streetAddress">Gunnar Nu Hansens Pl. 6</p>
+                <p>
+                  <span itemprop="postalCode">2100</span
+                  ><span itemprop="addressLocality"> København Ø</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+
+                <a href="tel:+4536260700"
+                  >Tlf.: <span itemprop="telephone">+45 36 26 07 00</span></a
+                >
+              </address>
+
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="vaernedamsvej not-italic"
+              >
+                <p itemprop="streetAddress">Værnedamsvej 4A st.</p>
+                <p>
+                  <span itemprop="postalCode">1619</span
+                  ><span itemprop="addressLocality"> København V</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+
+                <a href="tel:+4526117006"
+                  >Tlf.: <span itemprop="telephone">+45 26 11 70 06</span></a
+                >
+              </address>
+            </div>
+          </section>
+
+          <!--------------------------------   SEKTION 2 INFORMATION LINK -->
+          <section
+            class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
+          >
+            <h2
+              tabindex="0"
+              class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
+            >
+              INFORMATIONER
+            </h2>
+            <div class="mx-auto">
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a tabindex="0" href="index.html">Om os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a tabindex="0" href="#">Kontakt os</a>
+              </div>
+              <div class="text-start underline lg:pb-l-spacing-desktop">
+                <a tabindex="0" href="sitemap.html">Sitemap</a>
+              </div>
+            </div>
+          </section>
+
+          <!--------------------------------   SEKTION 3 ÅBNINGSTIDER -->
+          <section
+            class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
+          >
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+              ÅBNINGSTIDER
+              <meta
+                itemprop="openingHours"
+                content="Mo,Tu,We,Th,Fr 10:00-18:00"
+              />
+              <meta itemprop="openingHours" content="Sa 10:00-15:00" />
+              <meta itemprop="openingHours" content="Su 11:00-16:00" />
+            </h2>
+            <div class="tider grid grid-cols-2">
+              <div
+                class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
+              >
+                <p tabindex="0">Mandag</p>
+                <p tabindex="0">Tirsdag</p>
+                <p tabindex="0">Onsdag</p>
+                <p tabindex="0 ">Torsdag</p>
+                <p tabindex="0">Fredag</p>
+                <p tabindex="0">Lørdag</p>
+                <p tabindex="0">Søndag</p>
+              </div>
+              <div
+                class="tidspunkter grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
+              >
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 18</p>
+                <p tabindex="0">10 - 15</p>
+                <p tabindex="0">11 - 16</p>
+              </div>
+            </div>
+          </section>
+
+          <!--------------------------------   SEKTION 4 FØLG OS HER -->
+          <section
+            class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
+          >
+            <h2
+              tabindex="0"
+              class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop"
+            >
+              FØLG OS HER
+            </h2>
+            <div class="ikoner flex place-content-center gap-m-spacing-mobile">
+              <svg
+                tabindex="0"
+                width="40"
+                height="40"
+                viewBox="0 0 48 48"
+                alt="facebook"
+              >
+                <g fill="none" fill-rule="evenodd" clip-rule="evenodd">
+                  <path
+                    stroke="#fffdf9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                    d="M4.111 46A2.117 2.117 0 0 1 2 43.877V4.123C2 2.95 2.945 2 4.111 2H43.89C45.055 2 46 2.95 46 4.123v39.754A2.117 2.117 0 0 1 43.889 46H4.11Z"
+                  ></path>
+                  <path
+                    fill="#fffdf9"
+                    d="M38.662 17.887h-4.869a2.445 2.445 0 0 0-2.444 2.444v4.89h7.313l-1.071 7.332h-6.242V46h-8.042V32.553h-6.64v-7.331h6.554l.086-6.959l-.024-2.494a6.377 6.377 0 0 1 6.376-6.438h9.003v8.556Z"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                tabindex="0"
+                width="44"
+                height="44"
+                viewBox="0 0 512 512"
+                alt="instagram"
+              >
+                <path
+                  fill="#fffdf9"
+                  d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32Z"
+                ></path>
+                <path
+                  fill="#fffdf9"
+                  d="M377.33 162.67a28 28 0 1 1 28-28a27.94 27.94 0 0 1-28 28ZM256 181.33A74.67 74.67 0 1 1 181.33 256A74.75 74.75 0 0 1 256 181.33m0-37.33a112 112 0 1 0 112 112a112 112 0 0 0-112-112Z"
+                ></path>
+              </svg>
+            </div>
+          </section>
+        </div>
+
+        <!--------------------------------   SEKTION 5 SEKUNDÆR INDHOLD -->
+        <section
+          class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
+        >
+          <p tabindex="0">CVR: 35649328</p>
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
+            >Cookiepolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
+            >Privatlivspolitik</a
+          >
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
+            >Handelsbetingelser</a
+          >
+        </section>
+      </article>
+    </footer>
+    <!--------------------------------------------------------------------------------------------- FOOTER SLUT -->
+    
+  </body>
+</html>
