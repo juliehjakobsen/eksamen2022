@@ -24,7 +24,7 @@ export default defineConfig({
         betal: resolve(__dirname, "src/betal.html"),
         blomster: resolve(__dirname, "src/blomster.html"),
         information: resolve(__dirname, "src/information.html"),
-        kurv: resolve(__dirname, "src/betal.html"),
+        kurv: resolve(__dirname, "src/kurv.html"),
         sitemap: resolve(__dirname, "src/sitemap.html"),
         vaser: resolve(__dirname, "src/vaser.html"),
         // about: resolve(__dirname, "src/about.html"),
