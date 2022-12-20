@@ -117,10 +117,9 @@
     </style>
   </head>
   <body class="bg-background-color">
-    <!--------------------------------------------------------------------- HEADER  -->
-
+    <!-------------------------------------------------------------------------------------------- HEADER START -->
     <header>
-      <!-- banner  -->
+      <!-- banner start -->
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
       >
@@ -130,6 +129,8 @@
           første levering
         </p>
       </div>
+      <!-- banner start -->
+
       <!-- LOGO DESKTOP START -->
       <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
@@ -258,7 +259,7 @@
           <li>
             <a
               tabindex="0"
-              href="#"
+              href="index.html"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Begivenheder</a
             >
@@ -266,7 +267,7 @@
           <li>
             <a
               tabindex="0"
-              href="#"
+              href="index.html"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Kontakt os</a
             >
@@ -304,6 +305,7 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
+    <!-------------------------------------------------------------------------------------------- HEADER SLUT -->
     <!--------------------------------------------------------------------- MAIN START -->
 
     <main>
@@ -584,7 +586,7 @@
     </main>
     <!--------------------------------------------------------------------- MAIN SLUT -->
 
-    <!--------------------------------------------------------------------- FOOTER START -->
+    <!--------------------------------------------------------------------------------------------- FOOTER START -->
     <footer
       itemscope
       itemtype="https://schema.org/LocalBusiness"
@@ -592,11 +594,11 @@
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
-        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
+        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:w-full lg:pt-xl-spacing-desktop"
       >
-        <!-- primær indhold -->
+        <!--------------------------------   PRIMÆR INDHOLD -->
         <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
-          <!-- butikker -->
+          <!--------------------------------   SEKTION 1 BUTIKKER -->
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
@@ -610,7 +612,7 @@
                 itemscope
                 itemtype="https://schema.org/PostalAddress"
                 tabindex="0"
-                class="strandvejen"
+                class="strandvejen not-italic"
               >
                 <p itemprop="streetAddress">Strandvejen 167</p>
                 <p>
@@ -618,10 +620,10 @@
                   ><span itemprop="addressLocality"> Hellerup</span>
                 </p>
                 <p><span itemprop="addressLocality">Danmark</span></p>
-                <p>
-                  <a href="tel:+4539629059"></a> Tlf.:
-                  <span itemprop="telephone">+45 39 62 90 59</span>
-                </p>
+
+                <a href="tel:+4539629059"
+                  >Tlf.: <span itemprop="telephone">+45 39 62 90 59</span></a
+                >
               </address>
 
               <address
@@ -629,7 +631,7 @@
                 itemscope
                 itemtype="https://schema.org/PostalAddress"
                 tabindex="0"
-                class="gunnar"
+                class="gunnar not-italic"
               >
                 <p itemprop="streetAddress">Gunnar Nu Hansens Pl. 6</p>
                 <p>
@@ -637,10 +639,10 @@
                   ><span itemprop="addressLocality"> København Ø</span>
                 </p>
                 <p><span itemprop="addressLocality">Danmark</span></p>
-                <p>
-                  <a href="tel:+4536260700"></a>
-                  Tlf.: <span itemprop="telephone">+45 36 26 07 00</span>
-                </p>
+
+                <a href="tel:+4536260700"
+                  >Tlf.: <span itemprop="telephone">+45 36 26 07 00</span></a
+                >
               </address>
 
               <address
@@ -648,7 +650,7 @@
                 itemscope
                 itemtype="https://schema.org/PostalAddress"
                 tabindex="0"
-                class="vaernedamsvej"
+                class="vaernedamsvej not-italic"
               >
                 <p itemprop="streetAddress">Værnedamsvej 4A st.</p>
                 <p>
@@ -656,15 +658,15 @@
                   ><span itemprop="addressLocality"> København V</span>
                 </p>
                 <p><span itemprop="addressLocality">Danmark</span></p>
-                <p>
-                  <a href="tel:+4526117006"></a>Tlf.:
-                  <span itemprop="telephone">+45 26 11 70 06</span>
-                </p>
+
+                <a href="tel:+4526117006"
+                  >Tlf.: <span itemprop="telephone">+45 26 11 70 06</span></a
+                >
               </address>
             </div>
           </section>
 
-          <!-- information links -->
+          <!--------------------------------   SEKTION 2 INFORMATION LINK -->
           <section
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
@@ -676,7 +678,7 @@
             </h2>
             <div class="mx-auto">
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a tabindex="0" href="#">Om os</a>
+                <a tabindex="0" href="index.html">Om os</a>
               </div>
               <div class="text-start underline lg:pb-l-spacing-desktop">
                 <a tabindex="0" href="#">Kontakt os</a>
@@ -687,7 +689,7 @@
             </div>
           </section>
 
-          <!-- åbningstider -->
+          <!--------------------------------   SEKTION 3 ÅBNINGSTIDER -->
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
@@ -726,7 +728,7 @@
             </div>
           </section>
 
-          <!-- følg os her links -->
+          <!--------------------------------   SEKTION 4 FØLG OS HER -->
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
@@ -778,24 +780,24 @@
           </section>
         </div>
 
-        <!-- sekundær indhold  -->
+        <!--------------------------------   SEKTION 5 SEKUNDÆR INDHOLD -->
         <section
           class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
           <p tabindex="0">CVR: 35649328</p>
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Cookiepolitik</a
           >
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Privatlivspolitik</a
           >
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Handelsbetingelser</a
           >
         </section>
       </article>
     </footer>
-    <!--------------------------------------------------------------------- FOOTER SLUT -->
+    <!--------------------------------------------------------------------------------------------- FOOTER SLUT -->
     <script type="module" src="main.js"></script>
   </body>
 </html>
