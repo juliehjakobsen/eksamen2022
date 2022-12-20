@@ -6,10 +6,26 @@
   margin: 0;
 }
 
+.gemt {
+  display: none;
+}
+.vis {
+  display: block;
+}
+input {
+  border: var(--border) solid black;
+  height: var(--m-spacing-mobile);
+  border-radius: var(--radius-mobile);
+  padding-left: var(--xs-spacing-mobile);
+  max-width: 600px;
+}
+
+
 .valgt {
   border: 2px solid var(--rust-500);
   transform: scale(1.1);
 }
+
 
 /* virker kun i chrome */
 .skip-to-content-link {
