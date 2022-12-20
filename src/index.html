@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* generelt */
       body {
         overflow-x: hidden;
       }
@@ -28,50 +29,9 @@
         background-size: cover;
       }
 
-      .primary button {
-        background-color: var(--color-primary-button-background);
-        color: var(--color-primary-button-text);
-        font-family: var(--button-text);
-
-        font-size: var(--button-mobile);
-        padding: 15px 40px;
-        border: none;
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--radius-mobile);
-
-        height: 60px;
-        gap: 10px;
-      }
-      .primary button:hover {
-        background-color: var(--color-primary-button-hover-background);
-      }
-
-      .stor_snefnug {
-        display: none;
-      }
-
+      /* ------------------------------------log ind pop-up */
       @media (min-width: 900px) {
-        .primary button {
-          font-size: var(--button-desktop);
-          padding: 15px 60px;
-          border-radius: var(--radius-desktop);
-        }
-
-        .lille_snefnug {
-          display: none;
-        }
-
-        .stor_snefnug {
-          display: block;
-        }
-
-        .pile {
-          display: none;
-        }
+        /* knap rækkefølge i log-ind pop-up */
         .knap:first-of-type {
           order: 2;
         }
@@ -85,13 +45,10 @@
         max-width: 630px;
       }
 
-      .article_wrapper {
-        border: solid 2px black;
-        border-radius: var(--xs-radius);
-        width: 250px;
-        height: 360px;
-        margin: auto;
-        margin-top: 36px;
+      /* --------------------------sæsonens blomster mobil */
+
+      .stor_snefnug {
+        display: none;
       }
 
       .overskrift {
@@ -102,16 +59,15 @@
         margin-bottom: 20px;
       }
 
-      /* når carded er flipped */
-      .card_info {
+      .article_wrapper {
         border: solid 2px black;
         border-radius: var(--xs-radius);
-        width: 350px;
-        height: 450px;
+        width: 250px;
+        height: 360px;
         margin: auto;
         margin-top: 36px;
-        display: none;
       }
+
       .arrow img {
         width: 30px;
         height: 30px;
@@ -143,7 +99,7 @@
         text-align: center;
       }
 
-      /* DESKTOP */
+      /* --------------------------sæsonens blomster desktop */
 
       @media (min-width: 900px) {
         .overskrift {
@@ -184,19 +140,20 @@
           background-size: cover;
           height: 400px;
         }
+        .lille_snefnug {
+          display: none;
+        }
 
-        /* når carded er flipped */
-        .card_info {
-          border: solid 2px black;
-          border-radius: var(--xs-radius);
-          width: 380px;
-          height: 600px;
-          margin-top: 36px;
+        .stor_snefnug {
+          display: block;
+        }
+
+        .pile {
           display: none;
         }
       }
 
-      /* Banner */
+      /* --------------------------banner mobil */
 
       .banner {
         animation-name: banner_animate;
@@ -212,6 +169,7 @@
           transform: translateX(0px);
         }
       }
+
       .banner_delay {
         animation-name: banner_animate_delay;
         animation-duration: 10s;
@@ -232,6 +190,8 @@
       main {
         margin: 0;
       }
+
+      /* --------------------------banner desktop */
       @media (min-width: 900px) {
         #banner_section img {
           min-width: 120%;
@@ -256,14 +216,6 @@
           }
         }
       }
-
-      /* DESKTOP */
-
-      @media (min-width: 900px) {
-        [data-variant="card_forside_flipped"] .article_wrapper {
-          width: 452px;
-        }
-      }
     </style>
   </head>
   <body>
@@ -271,9 +223,9 @@
     <a tabindex="0" class="skip-to-content-link" href="#section_1">
       Skip to content
     </a>
-    <!-------------------------------------------------------------------------------------------- HEADER -->
+    <!-------------------------------------------------------------------------------------------- HEADER START -->
     <header>
-      <!-- banner  -->
+      <!-- banner start -->
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
       >
@@ -283,6 +235,8 @@
           første levering
         </p>
       </div>
+      <!-- banner start -->
+
       <!-- LOGO DESKTOP START -->
       <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
@@ -373,24 +327,22 @@
             >
           </li>
           <div class="dropdown">
-            <form>
-              <label>
-                <button class="flex">
-                  <p
-                    tabindex="0"
-                    class="font-other-headings text-h3-mobile lg:text-h5-desktop"
-                  >
-                    Sortiment
-                  </p>
-                  <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
-                    <path
-                      fill="#000000"
-                      d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
-                    />
-                  </svg>
-                </button>
-              </label>
-            </form>
+            <label>
+              <button class="flex">
+                <p
+                  tabindex="0"
+                  class="font-other-headings text-h3-mobile lg:text-h5-desktop"
+                >
+                  Sortiment
+                </p>
+                <svg class="pb-2" width="40" height="40" viewBox="0 0 24 24">
+                  <path
+                    fill="#000000"
+                    d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"
+                  />
+                </svg>
+              </button>
+            </label>
             <ul class="underkat m-0">
               <li class="pt-[0.18cm]">
                 <a
@@ -459,13 +411,14 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
-
-    <!--------------------------------------------------------------------------------------------- HERO -->
+    <!-------------------------------------------------------------------------------------------- HEADER SLUT -->
+    <!--------------------------------------------------------------------------------------------- HERO START -->
     <section class="baggrundsbillede">
       <div
         class="lg:h-hero-height lg:py-l-spacing-mobile lg:px-xxl-spacing-desktop lg:pb-m-spacing-desktop"
       >
         <div class="lg:grid lg:grid-cols-2 lg:border-2 lg:border-sol-300">
+          <!-- bjarne -->
           <figure
             class="illustration_bb lg:grid-cols-1 lg:border-r-2 lg:border-sol-300 lg:px-s-spacing-mobile"
           >
@@ -482,6 +435,7 @@
               alt="Blomster Bjarne ingen blink illustration"
             />
           </figure>
+          <!-- copywriting til hero -->
           <div
             class="mx-[30px] my-auto text-center lg:px-xl-spacing-desktop lg:pt-l-spacing-desktop"
           >
@@ -520,6 +474,7 @@
         </div>
       </div>
 
+      <!-- pil -->
       <div class="py-xs-spacing-mobile">
         <svg
           class="mx-auto grid text-sol-300"
@@ -534,10 +489,12 @@
         </svg>
       </div>
     </section>
+    <!--------------------------------------------------------------------------------------------- HERO SLUT -->
 
     <!-------------------------------------------------------------------------------------------- MAIN -->
     <main class="overflow-x-clip">
-      <!--------------------------------------------------------------------- LOG IND -->
+      <!---->
+      LOG IND -->
       <section
         id="loginbox"
         class="placering_box gemt fixed top-2 left-0 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
@@ -621,7 +578,8 @@
           </form>
         </div>
       </section>
-      <!-- Cookieboks start-->
+      <!---->
+      COOKIEBOX -->
       <article
         class="fixed bottom-0 right-0 z-10 h-[62%] w-[100%] rounded-t-cookie bg-background-color px-s-spacing-mobile pt-m-spacing-mobile font-font-body lg:right-52 lg:h-[50%] lg:w-[70%]"
         id="cookieboks"
@@ -663,15 +621,14 @@
             </button>
           </div>
           <div
-            class="knap knap grid justify-center text-abonnement-text-info underline"
+            class="knap grid justify-center text-abonnement-text-info underline"
           >
             <button id="afvis">Afvis</button>
           </div>
         </div>
       </article>
-      <!-- Cookieboks slut-->
 
-      <!-- section_1 -->
+      <!--------------------------------   SEKTION 1 -->
       <section
         itemscope
         itemtype="https://schema.org/OnlineStore"
@@ -717,7 +674,7 @@
         </div>
       </section>
 
-      <!-- section_2 -->
+      <!--------------------------------   SEKTION 2 -->
       <section tabindex="0" id="banner_section">
         <!-- banner -->
         <figure class="h-[90px] bg-color-headings">
@@ -734,12 +691,13 @@
         </figure>
       </section>
 
-      <!-- section_3 -->
+      <!--------------------------------   SEKTION 3 -->
       <section
         itemscope
         itemtype="https://schema.org/CreativeWork"
         class="mx-[30px] lg:mx-[80px] lg:mt-xxl-spacing-desktop"
       >
+        <!-- vejr ikoner -->
         <div
           class="flex place-content-center gap-3 pt-xl-spacing-mobile pb-s-spacing-mobile"
         >
@@ -820,45 +778,6 @@
               </div>
             </div>
           </article>
-          <!-- card flipped solsikke -->
-          <article itemprop="description" class="card_info">
-            <div class="arrow">
-              <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
-            </div>
-            <div class="overskrift">
-              <h3
-                itemprop="name"
-                class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
-              >
-                Solsikke
-              </h3>
-            </div>
-            <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
-              <img src="img/ikoner/oprindelse_ikon.svg" alt="'oprindelse" />
-              <p
-                itemprop="countryOfOrigin"
-                class="font-font-body text-body-mobile"
-              >
-                Sydamerika - Mexico og Peru
-              </p>
-            </div>
-            <div
-              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-            >
-              <img src="img/ikoner/sollys_ikon.svg" alt="sollys" />
-              <p class="font-font-body text-body-mobile">
-                Solsikken elsker at stå et solrigt sted (50-55 grader)
-              </p>
-            </div>
-            <div
-              class="mx-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-            >
-              <img src="img/ikoner/holdbarhed_ikon.svg" alt="holdbarhed" />
-              <p class="font-font-body text-body-mobile">
-                En lille uge, afhængig af pasning
-              </p>
-            </div>
-          </article>
 
           <!-- Card til forsiden grøn blomst -->
           <article>
@@ -871,43 +790,6 @@
               <div class="overskrift">
                 <h3 itemprop="name" class="pt-xxs-spacing-desktop">Fennikel</h3>
               </div>
-            </div>
-          </article>
-          <!-- card flipped grøn blomst -->
-          <article itemprop="description" class="card_info">
-            <div class="arrow">
-              <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
-            </div>
-            <div class="overskrift">
-              <h3
-                itemprop="name"
-                class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
-              >
-                Sweet fennel
-              </h3>
-            </div>
-            <div class="mx-xl-spacing-mobile flex gap-s-spacing-mobile">
-              <img src="img/ikoner/oprindelse_ikon.svg" alt="oprindelse" />
-              <p
-                itemprop="countryOfOrigin"
-                class="font-font-body text-body-mobile"
-              >
-                Middelhavsområdet
-              </p>
-            </div>
-            <div
-              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-            >
-              <img src="img/ikoner/sollys_ikon.svg" alt="sollys" />
-              <p class="font-font-body text-body-mobile">Tåler meget sol</p>
-            </div>
-            <div
-              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-            >
-              <img src="img/ikoner/holdbarhed_ikon.svg" alt="holdbarhed" />
-              <p class="font-font-body text-body-mobile">
-                Op til flere måneder
-              </p>
             </div>
           </article>
 
@@ -924,45 +806,9 @@
               </div>
             </div>
           </article>
-          <!-- card flipped okkide -->
-          <article itemprop="description" class="card_info">
-            <div class="arrow">
-              <img src="img/ikoner/fliparrow_ikon.svg" alt="flip pil" />
-            </div>
-            <div class="overskrift">
-              <h3
-                itemprop="name"
-                class="mb-xxl-spacing-mobile font-other-headings text-h5-mobile"
-              >
-                Okkide
-              </h3>
-            </div>
-            <div class="ml-xl-spacing-mobile flex gap-s-spacing-mobile">
-              <img src="img/ikoner/oprindelse_ikon.svg" alt="oprindelse" />
-              <p
-                itemprop="countryOfOrigin"
-                class="font-font-body text-body-mobile"
-              >
-                Kina, Thailand, Filippinerne, Malaysia og Indonesien.
-              </p>
-            </div>
-            <div
-              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-            >
-              <img src="img/ikoner/sollys_ikon.svg" alt="sollys" />
-              <p class="font-font-body text-body-mobile">
-                Kan ikke tåle direkte sollys
-              </p>
-            </div>
-            <div
-              class="ml-xl-spacing-mobile mt-s-spacing-mobile flex gap-s-spacing-mobile"
-            >
-              <img src="img/ikoner/holdbarhed_ikon.svg" alt="holdbarhed" />
-              <p class="font-font-body text-body-mobile">Ca. en uge</p>
-            </div>
-          </article>
         </section>
 
+        <!-- knap -->
         <div class="grid justify-center py-xl-spacing-mobile lg:pt-[70px]">
           <a
             tabindex="0"
@@ -973,7 +819,7 @@
         </div>
       </section>
 
-      <!-- section_4 -->
+      <!--------------------------------   SEKTION 4 -->
       <section
         class="bg_tekstur py-xxl-spacing-mobile px-[30px] shadow-inner lg:px-[80px]"
       >
@@ -988,12 +834,14 @@
         >
           Læs herunder anmeldelser fra nogle af vores fantastiske kunder!
         </p>
+        <!-- anmeldelser -->
         <article
           itemscope
           itemtype="https://schema.org/Review"
           class="carousel-center carousel h-[235px] overflow-y-hidden overflow-x-scroll lg:mt-l-spacing-desktop lg:h-[300px] lg:place-content-center lg:overflow-x-hidden"
         >
           <div itemprop="review" class="carousel-item">
+            <!-- anmeldelse 1 -->
             <div class="snap-center lg:w-[500px]">
               <figure
                 tabindex="0"
@@ -1036,6 +884,7 @@
                 </p>
               </div>
             </div>
+            <!-- anmeldelse 2 -->
             <div
               itemprop="review"
               class="snap-center lg:-mx-xxl-spacing-desktop lg:w-[500px]"
@@ -1081,6 +930,7 @@
                 </p>
               </div>
             </div>
+            <!-- anmeldelse 3 -->
             <div itemprop="review" class="snap-center lg:w-[500px]">
               <figure
                 tabindex="0"
@@ -1123,6 +973,7 @@
                 </p>
               </div>
             </div>
+            <!-- pile -->
             <div
               class="absolute left-5 right-5 flex justify-between px-0 pt-xxxl-spacing-mobile"
             >
@@ -1156,7 +1007,7 @@
       </section>
     </main>
 
-    <!--------------------------------------------------------------------------------------------- FOOTER -->
+    <!--------------------------------------------------------------------------------------------- FOOTER START -->
     <footer
       itemscope
       itemtype="https://schema.org/LocalBusiness"
@@ -1164,11 +1015,11 @@
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
-        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
+        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:w-full lg:pt-xl-spacing-desktop"
       >
-        <!-- primær indhold -->
+        <!--------------------------------   PRIMÆR INDHOLD -->
         <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
-          <!-- butikker -->
+          <!--------------------------------   SEKTION 1 BUTIKKER -->
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
@@ -1236,7 +1087,7 @@
             </div>
           </section>
 
-          <!-- information links -->
+          <!--------------------------------   SEKTION 2 INFORMATION LINK -->
           <section
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
@@ -1259,7 +1110,7 @@
             </div>
           </section>
 
-          <!-- åbningstider -->
+          <!--------------------------------   SEKTION 3 ÅBNINGSTIDER -->
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
@@ -1298,7 +1149,7 @@
             </div>
           </section>
 
-          <!-- følg os her links -->
+          <!--------------------------------   SEKTION 4 FØLG OS HER -->
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
@@ -1350,24 +1201,25 @@
           </section>
         </div>
 
-        <!-- sekundær indhold  -->
+        <!--------------------------------   SEKTION 5 SEKUNDÆR INDHOLD -->
         <section
           class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
           <p tabindex="0">CVR: 35649328</p>
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Cookiepolitik</a
           >
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Privatlivspolitik</a
           >
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Handelsbetingelser</a
           >
         </section>
       </article>
     </footer>
-    <script></script>
+    <!--------------------------------------------------------------------------------------------- FOOTER SLUT -->
+
     <script type="module" src="main.js"></script>
   </body>
 </html>

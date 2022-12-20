@@ -16,6 +16,8 @@
       p {
         margin-block: 0;
       }
+
+      /* progressbar mobile */
       [class^="ball"] {
         display: grid;
         place-content: center;
@@ -111,9 +113,9 @@
     </style>
   </head>
   <body>
-    <!-- header -->
+    <!-------------------------------------------------------------------------------------------- HEADER START -->
     <header class="pb-l-spacing-desktop">
-      <!-- banner  -->
+      <!-- banner start -->
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
       >
@@ -123,6 +125,8 @@
           første levering
         </p>
       </div>
+      <!-- banner start -->
+
       <!-- LOGO DESKTOP START -->
       <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
@@ -251,7 +255,7 @@
           <li>
             <a
               tabindex="0"
-              href="#"
+              href="index.html"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Begivenheder</a
             >
@@ -259,7 +263,7 @@
           <li>
             <a
               tabindex="0"
-              href="#"
+              href="index.html"
               class="font-other-headings text-h3-mobile lg:text-h5-desktop"
               >Kontakt os</a
             >
@@ -297,10 +301,12 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
+    <!-------------------------------------------------------------------------------------------- HEADER SLUT -->
+    <!-------------------------------------------------------------------------------------------- MAIN START -->
     <main
       class="mx-[60px] pb-l-spacing-mobile lg:mx-[160px] lg:pb-xl-spacing-desktop"
     >
-      <!--------------------------------------------------------------------- LOG IND -->
+      <!-------------------------- LOG IND -->
       <section
         id="loginbox"
         class="placering_box gemt fixed top-2 left-0 z-10 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
@@ -384,13 +390,14 @@
           </form>
         </div>
       </section>
-      <!-- sektion 1 -->
+      <!------------------------ SEKTION 1 -->
       <section class="">
         <!-- progress bar -->
         <article
           class="grid place-content-center pb-l-spacing-mobile lg:pb-m-spacing-desktop"
         >
           <div class="full_bar">
+            <!-- kurv -->
             <div>
               <p class="overskrift -ml-2 lg:-ml-3">Kurv</p>
               <div class="bar1">
@@ -401,6 +408,7 @@
               </div>
             </div>
 
+            <!-- info -->
             <div>
               <p class="overskrift -ml-1.5 lg:-ml-2">Info</p>
               <div class="bar2">
@@ -410,8 +418,10 @@
                 <div class="line2"></div>
               </div>
             </div>
+
+            <!-- betal -->
             <div>
-              <p class="overskrift -ml-2">Betal</p>
+              <p class="overskrift -ml-2 lg:-ml-3">Betal</p>
               <div class="bar3">
                 <div class="ball3">
                   <p class="tal">3</p>
@@ -419,8 +429,10 @@
                 <div class="line3"></div>
               </div>
             </div>
+
+            <!-- tak! -->
             <div>
-              <p class="overskrift -ml-1 lg:-ml-9">Tak!</p>
+              <p class="overskrift -ml-1">Tak!</p>
               <div class="bar4">
                 <div class="ball4">
                   <p class="tal">4</p>
@@ -441,7 +453,7 @@
         </article>
       </section>
 
-      <!-- sektion 2 -->
+      <!------------------------ SEKTION 2 -->
       <section
         class="grid gap-xl-spacing-mobile lg:grid-cols-2 lg:gap-xxxl-spacing-desktop"
       >
@@ -621,6 +633,7 @@
         </article>
       </section>
     </main>
+    <!--------------------------------------------------------------------------------------------- FOOTER START -->
     <footer
       itemscope
       itemtype="https://schema.org/LocalBusiness"
@@ -628,11 +641,11 @@
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
-        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
+        class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:w-full lg:pt-xl-spacing-desktop"
       >
-        <!-- primær indhold -->
+        <!--------------------------------   PRIMÆR INDHOLD -->
         <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
-          <!-- butikker -->
+          <!--------------------------------   SEKTION 1 BUTIKKER -->
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
@@ -646,7 +659,7 @@
                 itemscope
                 itemtype="https://schema.org/PostalAddress"
                 tabindex="0"
-                class="strandvejen"
+                class="strandvejen not-italic"
               >
                 <p itemprop="streetAddress">Strandvejen 167</p>
                 <p>
@@ -654,10 +667,10 @@
                   ><span itemprop="addressLocality"> Hellerup</span>
                 </p>
                 <p><span itemprop="addressLocality">Danmark</span></p>
-                <p>
-                  <a href="tel:+4539629059"></a> Tlf.:
-                  <span itemprop="telephone">+45 39 62 90 59</span>
-                </p>
+
+                <a href="tel:+4539629059"
+                  >Tlf.: <span itemprop="telephone">+45 39 62 90 59</span></a
+                >
               </address>
 
               <address
@@ -665,7 +678,7 @@
                 itemscope
                 itemtype="https://schema.org/PostalAddress"
                 tabindex="0"
-                class="gunnar"
+                class="gunnar not-italic"
               >
                 <p itemprop="streetAddress">Gunnar Nu Hansens Pl. 6</p>
                 <p>
@@ -673,10 +686,10 @@
                   ><span itemprop="addressLocality"> København Ø</span>
                 </p>
                 <p><span itemprop="addressLocality">Danmark</span></p>
-                <p>
-                  <a href="tel:+4536260700"></a>
-                  Tlf.: <span itemprop="telephone">+45 36 26 07 00</span>
-                </p>
+
+                <a href="tel:+4536260700"
+                  >Tlf.: <span itemprop="telephone">+45 36 26 07 00</span></a
+                >
               </address>
 
               <address
@@ -684,7 +697,7 @@
                 itemscope
                 itemtype="https://schema.org/PostalAddress"
                 tabindex="0"
-                class="vaernedamsvej"
+                class="vaernedamsvej not-italic"
               >
                 <p itemprop="streetAddress">Værnedamsvej 4A st.</p>
                 <p>
@@ -692,15 +705,15 @@
                   ><span itemprop="addressLocality"> København V</span>
                 </p>
                 <p><span itemprop="addressLocality">Danmark</span></p>
-                <p>
-                  <a href="tel:+4526117006"></a>Tlf.:
-                  <span itemprop="telephone">+45 26 11 70 06</span>
-                </p>
+
+                <a href="tel:+4526117006"
+                  >Tlf.: <span itemprop="telephone">+45 26 11 70 06</span></a
+                >
               </address>
             </div>
           </section>
 
-          <!-- information links -->
+          <!--------------------------------   SEKTION 2 INFORMATION LINK -->
           <section
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
@@ -712,7 +725,7 @@
             </h2>
             <div class="mx-auto">
               <div class="text-start underline lg:pb-l-spacing-desktop">
-                <a tabindex="0" href="#">Om os</a>
+                <a tabindex="0" href="index.html">Om os</a>
               </div>
               <div class="text-start underline lg:pb-l-spacing-desktop">
                 <a tabindex="0" href="#">Kontakt os</a>
@@ -723,7 +736,7 @@
             </div>
           </section>
 
-          <!-- åbningstider -->
+          <!--------------------------------   SEKTION 3 ÅBNINGSTIDER -->
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
@@ -762,7 +775,7 @@
             </div>
           </section>
 
-          <!-- følg os her links -->
+          <!--------------------------------   SEKTION 4 FØLG OS HER -->
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
@@ -814,23 +827,24 @@
           </section>
         </div>
 
-        <!-- sekundær indhold  -->
+        <!--------------------------------   SEKTION 5 SEKUNDÆR INDHOLD -->
         <section
           class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
           <p tabindex="0">CVR: 35649328</p>
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Cookiepolitik</a
           >
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Privatlivspolitik</a
           >
-          <a tabindex="0" class="cursor-pointer underline" href="#"
+          <a tabindex="0" class="cursor-pointer underline" href="index.html"
             >Handelsbetingelser</a
           >
         </section>
       </article>
     </footer>
+    <!--------------------------------------------------------------------------------------------- FOOTER SLUT -->
     <script type="module" src="main.js"></script>
   </body>
 </html>
