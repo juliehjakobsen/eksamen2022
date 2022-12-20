@@ -126,12 +126,15 @@
   <body class="bg-background-color">
     <!--------------------------------------------------------------------- HEADER -->
     <!-- header -->
-    <header>
+    <header class="pb-l-spacing-desktop">
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
       >
         <p tabindex="0">Køb dine blomster i vores butikker</p>
-        <p tabindex="0">Bestil dit abonnement på vores webshop</p>
+        <p tabindex="0">
+          Bestil dit abonnement på vores webshop - psst! Du får 15% på din
+          første levering
+        </p>
       </div>
       <!-- LOGO DESKTOP START -->
       <section tabindex="0">
@@ -243,7 +246,7 @@
               <li class="pt-[0.18cm]">
                 <a
                   tabindex="0"
-                  class="dropdown-content w-52 border-x-2 border-b-2 border-color-black border-t-transparent bg-background-color p-4 font-font-body text-body-mobile lg:text-body-desktop"
+                  class="dropdown-content w-52 border-t-transparent bg-background-color p-4 font-font-body text-body-mobile lg:border-x-2 lg:border-b-2 lg:border-color-black lg:text-body-desktop"
                   href="blomster.html"
                   >Blomster</a
                 >
@@ -251,7 +254,7 @@
               <li>
                 <a
                   tabindex="0"
-                  class="dropdown-content w-52 border-x-2 border-b-2 border-color-black bg-background-color p-4 font-font-body text-body-mobile lg:text-body-desktop"
+                  class="dropdown-content w-52 bg-background-color p-4 font-font-body text-body-mobile lg:border-x-2 lg:border-b-2 lg:border-color-black lg:text-body-desktop"
                   href="vaser.html"
                   >Vaser</a
                 >
@@ -278,13 +281,13 @@
 
         <ul class="secondary_nav">
           <li>
-            <a tabindex="0" href="logind.html">
+            <button id="konto" tabindex="0">
               <img
                 class="person h-8 w-8"
                 src="img/ikoner/person.svg"
                 alt="Gå til din konto"
               />
-            </a>
+            </button>
           </li>
           <li>
             <a tabindex="0" href="kurv.html">
