@@ -3,7 +3,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: resolve(_dirname, "src"),
+  root: resolve(__dirname, "src"),
   base: "./",
   preview: {
     host: true,
@@ -13,20 +13,20 @@ export default defineConfig({
     outDir: resolve("dist"),
     rollupOptions: {
       input: {
-        index: resolve(_dirname, "src/index.html"),
-        abonnement: resolve(_dirname, "src/abonnement.html"),
-        abonnement1: resolve(_dirname, "src/abonnement1.html"),
-        abonnement2: resolve(_dirname, "src/abonnement2.html"),
-        abonnement3: resolve(_dirname, "src/abonnement3.html"),
-        abonnement4: resolve(_dirname, "src/abonnement4.html"),
-        betal_bekraeft: resolve(_dirname, "src/betal_bekraeft.html"),
-        betal_kreditkort: resolve(_dirname, "src/betal_kreditkort.html"),
-        betal: resolve(_dirname, "src/betal.html"),
-        blomster: resolve(_dirname, "src/blomster.html"),
-        information: resolve(_dirname, "src/information.html"),
-        kurv: resolve(_dirname, "src/betal.html"),
-        sitemap: resolve(_dirname, "src/sitemap.html"),
-        vaser: resolve(_dirname, "src/vaser.html"),
+        index: resolve(__dirname, "src/index.html"),
+        abonnement: resolve(__dirname, "src/abonnement.html"),
+        abonnement1: resolve(__dirname, "src/abonnement1.html"),
+        abonnement2: resolve(__dirname, "src/abonnement2.html"),
+        abonnement3: resolve(__dirname, "src/abonnement3.html"),
+        abonnement4: resolve(__dirname, "src/abonnement4.html"),
+        betal_bekraeft: resolve(__dirname, "src/betal_bekraeft.html"),
+        betal_kreditkort: resolve(__dirname, "src/betal_kreditkort.html"),
+        betal: resolve(__dirname, "src/betal.html"),
+        blomster: resolve(__dirname, "src/blomster.html"),
+        information: resolve(__dirname, "src/information.html"),
+        kurv: resolve(__dirname, "src/betal.html"),
+        sitemap: resolve(__dirname, "src/sitemap.html"),
+        vaser: resolve(__dirname, "src/vaser.html"),
         // about: resolve(__dirname, "src/about.html"),
       },
     },
