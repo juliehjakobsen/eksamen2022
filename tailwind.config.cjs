@@ -98,7 +98,7 @@ module.exports = {
     },
     maxWidth: {
       "abb-card-mobile": "175px",
-      "abb-card-desktop": "280px",
+      "abb-card-desktop": "250px",
     },
     fontFamily: {
       "font-body": ["Orienta", "sans-serif"],
