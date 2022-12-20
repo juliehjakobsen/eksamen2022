@@ -127,8 +127,9 @@
     <!--------------------------------------------------------------------- HEADER -->
     <!-- header -->
     <header>
+      <!-- banner  -->
       <div
-        class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-body-mobile"
+        class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
       >
         <p tabindex="0">Køb dine blomster i vores butikker</p>
         <p tabindex="0">
@@ -312,6 +313,90 @@
     </header>
 
     <main>
+      <!--------------------------------------------------------------------- LOG IND -->
+      <section
+        id="loginbox"
+        class="placering_box gemt fixed top-2 left-0 z-20 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
+      >
+        <div class="login_opret grid grid-cols-2 items-center">
+          <div class="logind flex items-center px-[30px]">
+            <img
+              class="pr-s-spacing-mobile"
+              src="/img/ikoner/radio.svg"
+              alt="radio button log ind"
+            />
+            <p>Log ind</p>
+          </div>
+          <div
+            class="opret flex items-center border-2 border-t-0 border-r-0 border-color-black px-[30px] pl-[10px]"
+          >
+            <img
+              class="pr-s-spacing-mobile"
+              src="/img/ikoner/radio_un.svg"
+              alt="radio button opret bruger"
+            />
+            <p>Opret konto</p>
+          </div>
+        </div>
+
+        <div class="content px-[30px] pt-m-spacing-mobile font-font-body">
+          <h2
+            class="overskrift1 pb-m-spacing-mobile font-other-headings text-h3-mobile lg:text-h3-desktop"
+          >
+            Log ind
+          </h2>
+
+          <p class="pb-xs-spacing-mobile font-font-body text-body-mobile">
+            Har du bruger hos os, og vil gerne give feedback eller købe vores
+            abonnement? Log venligst ind ved hjælp af formularen nedenfor. Har
+            du ikke en bruger, skal du først
+            <a class="underline hover:text-rust-500" href=""
+              >oprette en bruger</a
+            >.
+          </p>
+
+          <form class="grid gap-m-spacing-mobile text-left">
+            <div class="email grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="email"
+                >E-mail</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="Fx. google@gmail.com"
+              />
+            </div>
+
+            <div class="password grid gap-xs-spacing-mobile">
+              <label class="font-other-headings text-body-mobile" for="password"
+                >Adgangskode</label
+              >
+              <input
+                class="rounded-radius-mobile p-4 pl-2 lg:p-5 lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Indeholder min. 6 karakterer"
+              />
+            </div>
+
+            <a
+              class="glemt text-center font-font-body text-body-mobile text-color-headings underline hover:text-rust-500"
+              href="#"
+              >Har du glemt dit kodeord?</a
+            >
+            <div class="grid justify-center">
+              <button
+                id="luk"
+                tabindex="0"
+                class="mx-auto grid w-full justify-center rounded-radius-mobile border-0 bg-color-primary-button-background py-xxs-spacing-mobile px-[30px] font-button-text text-button-mobile text-color-white drop-shadow-buttonshadow hover:bg-color-primary-button-hover-background lg:w-full lg:py-xs-spacing-mobile"
+              >
+                Log ind
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
       <section>
         <!-- PROGRESS BAR START -->
         <article
@@ -383,7 +468,7 @@
 
       <!---------------------------------------------- ANDEN SEKTION -->
       <select
-        class="max-w-xs mx-auto flex w-64 rounded-radius-mobile border-2 border-color-black font-font-body text-body-mobile lg:text-body-desktop"
+        class="max-w-xs mx-auto flex w-64 cursor-pointer rounded-radius-mobile border-2 border-color-black font-font-body text-body-mobile lg:text-body-desktop"
       >
         <option disabled selected>-- Vælg hyppighed --</option>
         <option class="active:bg-sol">Hver uge</option>
@@ -414,9 +499,9 @@
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
               BUTIKKER
-            </h4>
+            </h2>
 
             <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
               <address tabindex="0" class="strandvejen">
@@ -448,12 +533,12 @@
           <section
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
-            <h4
+            <h2
               tabindex="0"
               class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
             >
               INFORMATIONER
-            </h4>
+            </h2>
             <div class="mx-auto">
               <div class="text-start underline lg:pb-l-spacing-desktop">
                 <a tabindex="0" href="#">Om os</a>
@@ -470,9 +555,9 @@
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
               ÅBNINGSTIDER
-            </h4>
+            </h2>
             <div class="tider grid grid-cols-2">
               <div
                 class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
@@ -502,12 +587,12 @@
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
-            <h4
+            <h2
               tabindex="0"
               class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop"
             >
               FØLG OS HER
-            </h4>
+            </h2>
             <div class="ikoner flex place-content-center gap-m-spacing-mobile">
               <svg
                 tabindex="0"
