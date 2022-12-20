@@ -120,6 +120,7 @@ module.exports = {
       "abonnement-text-spand": "0.563rem",
       "abonnement-text-info": "0.813rem",
       "progressbar-number": "0.625rem",
+      banner_text: "0.9rem",
 
       /* desktop */
 
