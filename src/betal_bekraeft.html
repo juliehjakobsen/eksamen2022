@@ -532,56 +532,94 @@
       </section>
     </main>
     <footer
+      itemscope
+      itemtype="https://schema.org/LocalBusiness"
       tabindex="0"
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
     >
       <article
         class="bg-footer-background1 pt-xl-spacing-mobile text-center lg:pt-xl-spacing-desktop"
       >
+        <!-- primær indhold -->
         <div class="desktop lg:grid lg:grid-cols-3 lg:pb-xxl-spacing-desktop">
+          <!-- butikker -->
           <section
             class="butikker grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
               BUTIKKER
-            </h4>
+            </h2>
 
             <div class="adresser mx-auto grid gap-l-spacing-mobile text-left">
-              <address tabindex="0" class="strandvejen">
-                <p>Strandvejen 167</p>
-                <p>2900 Hellerup</p>
-                <p>Danmark</p>
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="strandvejen"
+              >
+                <p itemprop="streetAddress">Strandvejen 167</p>
                 <p>
-                  <a href="tel:+4539629059"></a>
-                  Tlf.: +45 39 62 90 59
+                  <span itemprop="postalCode">2900</span
+                  ><span itemprop="addressLocality"> Hellerup</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+                <p>
+                  <a href="tel:+4539629059"></a> Tlf.:
+                  <span itemprop="telephone">+45 39 62 90 59</span>
                 </p>
               </address>
 
-              <address tabindex="0" class="gunnar">
-                <p>Gunnar Nu Hansens Pl. 6</p>
-                <p>2100 København Ø</p>
-                <p>Danmark</p>
-                <p><a href="tel:+4536260700"></a>Tlf.: +45 36 26 07 00</p>
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="gunnar"
+              >
+                <p itemprop="streetAddress">Gunnar Nu Hansens Pl. 6</p>
+                <p>
+                  <span itemprop="postalCode">2100</span
+                  ><span itemprop="addressLocality"> København Ø</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+                <p>
+                  <a href="tel:+4536260700"></a>
+                  Tlf.: <span itemprop="telephone">+45 36 26 07 00</span>
+                </p>
               </address>
 
-              <address tabindex="0" class="vaernedamsvej">
-                <p>Værnedamsvej 4A st.</p>
-                <p>1619 København V</p>
-                <p>Danmark</p>
-                <p><a href="tel:+4526117006"></a>Tlf.: +45 26 11 70 06</p>
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                tabindex="0"
+                class="vaernedamsvej"
+              >
+                <p itemprop="streetAddress">Værnedamsvej 4A st.</p>
+                <p>
+                  <span itemprop="postalCode">1619</span
+                  ><span itemprop="addressLocality"> København V</span>
+                </p>
+                <p><span itemprop="addressLocality">Danmark</span></p>
+                <p>
+                  <a href="tel:+4526117006"></a>Tlf.:
+                  <span itemprop="telephone">+45 26 11 70 06</span>
+                </p>
               </address>
             </div>
           </section>
 
+          <!-- information links -->
           <section
             class="informationer flex flex-col gap-l-spacing-mobile pb-xxl-spacing-mobile lg:gap-0 lg:pb-0"
           >
-            <h4
+            <h2
               tabindex="0"
               class="text-h4-mobile lg:pb-l-spacing-desktop lg:text-h4-desktop"
             >
               INFORMATIONER
-            </h4>
+            </h2>
             <div class="mx-auto">
               <div class="text-start underline lg:pb-l-spacing-desktop">
                 <a tabindex="0" href="#">Om os</a>
@@ -595,12 +633,19 @@
             </div>
           </section>
 
+          <!-- åbningstider -->
           <section
             class="abningstider grid gap-l-spacing-mobile pb-xxl-spacing-mobile lg:grid lg:gap-l-spacing-desktop lg:pb-0"
           >
-            <h4 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
+            <h2 tabindex="0" class="text-h4-mobile lg:text-h4-desktop">
               ÅBNINGSTIDER
-            </h4>
+              <meta
+                itemprop="openingHours"
+                content="Mo,Tu,We,Th,Fr 10:00-18:00"
+              />
+              <meta itemprop="openingHours" content="Sa 10:00-15:00" />
+              <meta itemprop="openingHours" content="Su 11:00-16:00" />
+            </h2>
             <div class="tider grid grid-cols-2">
               <div
                 class="dage grid gap-l-spacing-mobile lg:grid lg:gap-m-spacing-desktop"
@@ -627,15 +672,16 @@
             </div>
           </section>
 
+          <!-- følg os her links -->
           <section
             class="folgosher pb-xxl-spacing-mobile lg:col-start-2 lg:pb-0 lg:pt-xxl-spacing-desktop"
           >
-            <h4
+            <h2
               tabindex="0"
               class="pb-l-spacing-mobile text-h4-mobile lg:text-h4-desktop"
             >
               FØLG OS HER
-            </h4>
+            </h2>
             <div class="ikoner flex place-content-center gap-m-spacing-mobile">
               <svg
                 tabindex="0"
@@ -678,6 +724,7 @@
           </section>
         </div>
 
+        <!-- sekundær indhold  -->
         <section
           class="nederst grid gap-l-spacing-mobile bg-footer-background2 pb-xl-spacing-mobile pt-l-spacing-mobile lg:flex lg:place-content-center lg:gap-20"
         >
