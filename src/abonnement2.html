@@ -19,6 +19,7 @@
       p {
         margin-block: 0;
       }
+      /* Progress bar */
       [class^="ball"] {
         display: grid;
         place-content: center;
@@ -78,7 +79,9 @@
         border: solid 2px var(--color-abonnement-bar-active);
       }
 
+      /* DESKTOP */
       @media (min-width: 900px) {
+        /* Progress bar */
         .overskrift {
           font-size: var(--body-desktop);
         }
@@ -120,8 +123,8 @@
     </style>
   </head>
   <body class="bg-background-color">
-    <!--------------------------------------------------------------------- HEADER -->
-    <!-- header -->
+    <!--------------------------------------------------------------------- HEADER START -->
+
     <header>
       <!-- banner  -->
       <div
@@ -307,9 +310,10 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
-
+    <!--------------------------------------------------------------------- HEADER SLUT -->
+    <!--------------------------------------------------------------------- MAIN START -->
     <main>
-      <!--------------------------------------------------------------------- LOG IND -->
+      <!-- LOG IND -->
       <section
         id="loginbox"
         class="placering_box gemt fixed top-2 left-0 z-20 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
@@ -393,7 +397,7 @@
           </form>
         </div>
       </section>
-      <!-- PROGRESS BAR START -->
+      <!-- PROGRESS BAR -->
       <section>
         <article
           class="grid place-content-center pb-l-spacing-mobile lg:pb-l-spacing-desktop"
@@ -443,8 +447,8 @@
           </div>
         </article>
       </section>
-      <!-- PROGRESS BAR SLUT -->
-      <!---------------------------------------------- FØRSTE SEKTION -->
+
+      <!---------------------------- FØRSTE SEKTION -->
       <section class="mx-[30px] grid text-center lg:mx-[80px]">
         <h1 class="font-main-heading text-h1-mobile lg:text-h1-desktop">
           Hvilken stil skal din buket have?
@@ -460,7 +464,7 @@
         </p>
       </section>
 
-      <!---------------------------------------------- ANDEN SEKTION -->
+      <!---------------------------- ANDEN SEKTION -->
       <div
         class="mx-8 place-content-center lg:flex lg:gap-xxxl-spacing-desktop lg:pb-l-spacing-desktop"
       >
@@ -585,7 +589,7 @@
           </section>
         </div>
       </div>
-      <!---------------------------------------------- TREDJE SEKTION -->
+      <!---------------------------- TREDJE SEKTION -->
       <section class="grid justify-center py-l-spacing-mobile">
         <a
           tabindex="0"
@@ -595,8 +599,9 @@
         >
       </section>
     </main>
+    <!--------------------------------------------------------------------- MAIN SLUT -->
 
-    <!--------------------------------------------------------------------- FOOTER -->
+    <!--------------------------------------------------------------------- FOOTER START -->
     <footer
       itemscope
       itemtype="https://schema.org/LocalBusiness"
@@ -807,6 +812,7 @@
         </section>
       </article>
     </footer>
+    <!--------------------------------------------------------------------- FOOTER SLUT -->
     <script type="module" src="main.js"></script>
   </body>
 </html>

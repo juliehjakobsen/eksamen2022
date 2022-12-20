@@ -20,38 +20,7 @@
         transform: rotate(90);
       }
 
-      /* knap */
-
-      .primary button {
-        background-color: var(--color-primary-button-background);
-        color: var(--color-primary-button-text);
-        font-family: var(--button-text);
-        font-weight: var(--font-weight-semibold);
-        font-size: var(--button-mobile);
-        padding: 15px 40px;
-        border: none;
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--radius-mobile);
-
-        height: 60px;
-        gap: 10px;
-      }
-      .primary button:hover {
-        background-color: var(--color-primary-button-hover-background);
-      }
-      @media (min-width: 900px) {
-        .primary button {
-          font-size: var(--button-desktop);
-          padding: 15px 60px;
-          border-radius: var(--radius-desktop);
-        }
-      }
-
-      /* card */
+      /* Stepguide card */
 
       .article {
         background-color: var(--regnorm-100);
@@ -70,6 +39,7 @@
         width: 80px;
         min-height: 80px;
       }
+      /* styling af tekster osv */
 
       .h4 {
         font-family: var(--other-headings);
@@ -87,6 +57,8 @@
         font-size: var(--body-mobile);
         padding-bottom: var(--l-spacing-mobile);
       }
+
+      /* progress bar */
 
       .progress {
         display: flex;
@@ -121,6 +93,7 @@
       /* DESKTOP */
 
       @media (min-width: 900px) {
+        /* stepguide */
         .article {
           display: flex;
           padding: var(--m-spacing-desktop);
@@ -133,6 +106,7 @@
         .img {
           max-width: 120px;
         }
+        /* styling af tekster osv */
         .h4 {
           font-size: var(--h4-desktop);
           padding-top: var(--xs-spacing-desktop);
@@ -145,6 +119,7 @@
         .info {
           padding-left: var(--l-spacing-desktop);
         }
+        /* progress bar */
         .progress {
           display: none;
         }
@@ -152,9 +127,9 @@
     </style>
   </head>
   <body>
-    <!-- header -->
+    <!---------------------------------------------- HEADER START -->
     <header>
-      <!-- banner  -->
+      <!-- banner -->
       <div
         class="grid gap-0.5 bg-rust-400 py-1 text-center font-font-body text-abonnement-text-info font-medium text-color-black lg:flex lg:justify-around lg:text-banner_text"
       >
@@ -164,7 +139,7 @@
           første levering
         </p>
       </div>
-      <!-- LOGO DESKTOP START -->
+      <!---------------- LOGO DESKTOP -->
       <section tabindex="0">
         <a class="navigation_desktop" href="index.html">
           <img
@@ -199,9 +174,8 @@
           />
         </a>
       </section>
-      <!-- LOGO DESKTOP SLUT -->
 
-      <!-- LOGO MOBIL START -->
+      <!---------------- LOGO DESKTOP -->
       <section tabindex="0" class="navigation_mobil">
         <a class="logo_mobil" href="index.html">
           <img
@@ -338,8 +312,8 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
-
-    <!---------------------------------------------- HERO -->
+    <!---------------------------------------------- MAIN START -->
+    <!---------------------------------------------- HERO START -->
     <main class="baggrundsbillede">
       <section
         class="bg-hero_image bg-cover px-[30px] pt-l-spacing-mobile text-center lg:h-hero-height lg:px-xxxl-spacing-desktop lg:py-l-spacing-mobile lg:pb-m-spacing-desktop"
@@ -367,6 +341,7 @@
             >
           </p>
         </article>
+        <!---------------------------------------------- HERO SLUT -->
         <div class="mt-l-spacing-desktop pb-xs-spacing-mobile">
           <svg
             class="mx-auto grid text-sol"
@@ -382,7 +357,7 @@
           </svg>
         </div>
       </section>
-      <!--------------------------------------------------------------------- LOG IND -->
+      <!-- LOG IND -->
       <section
         id="loginbox"
         class="placering_box gemt fixed top-2 left-0 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
@@ -467,12 +442,10 @@
         </div>
       </section>
 
-      <!---------------------------------------------- FØRSTE SEKTION -->
+      <!----------------------- FØRSTE SEKTION -->
       <section
         class="lg:pb-m2-spacing-desktop mx-[30px] pb-xxl-spacing-mobile lg:mx-[80px]"
       >
-        <!------------------------------- KNAP -->
-
         <div class="grid justify-center py-xl-spacing-mobile lg:pt-[70px]">
           <a
             tabindex="0"
@@ -481,7 +454,7 @@
             >Tegn mit abonnement</a
           >
         </div>
-        <!------------------------------- INFO -->
+
         <article class="grid gap-s-spacing-mobile">
           <p
             class="mx-auto w-4/5 font-font-body text-abonnement-text-info lg:w-1/2 lg:text-body-desktop"
@@ -499,17 +472,20 @@
           </p>
         </article>
       </section>
-      <h2
-        class="pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
-      >
-        Sådan fungerer det
-      </h2>
-
-      <!------------------------------- SÅDAN GØR DU -->
+      <!----------------------- ANDEN SEKTION -->
       <section class="pb-xxl-spacing-mobile lg:mx-[80px]">
+        <h2
+          class="pb-xl-spacing-mobile text-center font-other-headings text-h2-mobile"
+        >
+          Sådan fungerer det
+        </h2>
+
+        <!-- STEPGUIDE -->
+
         <article
           class="mx-7 flex gap-10 overflow-x-scroll lg:grid lg:grid-cols-2 lg:overflow-hidden lg:overflow-x-auto"
         >
+          <!-- STEP 1 -->
           <div class="article">
             <div class="ikon">
               <img
@@ -526,6 +502,7 @@
                 enim ad minim veniam, quis nostrud exercitation
               </p>
             </div>
+            <!-- PROGRESS BAR -->
             <div class="progress">
               <div class="step1 bg-rust-500"></div>
               <div class="step2"></div>
@@ -533,6 +510,7 @@
               <div class="step4"></div>
             </div>
           </div>
+          <!-- STEP 2 -->
 
           <div class="article">
             <div class="ikon">
@@ -552,6 +530,7 @@
                 </p>
               </div>
             </div>
+            <!-- PROGRESS BAR -->
             <div class="progress">
               <div class="step1"></div>
               <div class="step2 bg-rust-500"></div>
@@ -559,6 +538,7 @@
               <div class="step4"></div>
             </div>
           </div>
+          <!-- STEP 3 -->
 
           <div class="article">
             <div class="ikon">
@@ -578,6 +558,7 @@
                 </p>
               </div>
             </div>
+            <!-- PROGRESS BAR -->
             <div class="progress">
               <div class="step1"></div>
               <div class="step2"></div>
@@ -585,6 +566,7 @@
               <div class="step4"></div>
             </div>
           </div>
+          <!-- STEP 4 -->
 
           <div class="article">
             <div class="ikon">
@@ -604,6 +586,7 @@
                 </p>
               </div>
             </div>
+            <!-- PROGRESS BAR -->
             <div class="progress">
               <div class="step1"></div>
               <div class="step2"></div>
@@ -614,8 +597,9 @@
         </article>
       </section>
     </main>
+    <!---------------------------------------------- MAIN SLUT -->
 
-    <!--------------------------------------------------------------------- FOOTER -->
+    <!--------------------------------------------------------------------- FOOTER START -->
     <footer
       itemscope
       itemtype="https://schema.org/LocalBusiness"
@@ -826,6 +810,7 @@
         </section>
       </article>
     </footer>
+    <!--------------------------------------------------------------------- FOOTER SLUT -->
 
     <script type="module" src="main.js"></script>
   </body>

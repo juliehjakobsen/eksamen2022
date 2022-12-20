@@ -16,10 +16,7 @@
       header {
         margin-bottom: var(--xl-spacing-desktop);
       }
-      /* header p {
-        font-weight: var(--font-weight-bold);
-      } */
-      /* ---------------------------------PROGRESS BAR */
+      /* PROGRESS BAR */
 
       p {
         margin-block: 0;
@@ -84,7 +81,10 @@
         border: solid 2px var(--color-abonnement-bar-active);
       }
 
+      /* DESKTOP */
+
       @media (min-width: 900px) {
+        /* PROGRESS BAR */
         .overskrift {
           font-size: var(--body-desktop);
         }
@@ -124,8 +124,8 @@
     </style>
   </head>
   <body class="bg-background-color">
-    <!--------------------------------------------------------------------- HEADER -->
-    <!-- header -->
+    <!--------------------------------------------------------------------- HEADER START -->
+
     <header>
       <!-- banner  -->
       <div
@@ -311,9 +311,11 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
+    <!--------------------------------------------------------------------- HEADER SLUT -->
+    <!--------------------------------------------------------------------- MAIN START -->
 
     <main>
-      <!--------------------------------------------------------------------- LOG IND -->
+      <!-- LOG IND -->
       <section
         id="loginbox"
         class="placering_box gemt fixed top-2 left-0 z-20 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
@@ -398,7 +400,7 @@
         </div>
       </section>
       <section>
-        <!-- PROGRESS BAR START -->
+        <!-- PROGRESS BAR -->
         <article
           class="grid place-content-center pb-l-spacing-mobile lg:pb-l-spacing-desktop"
         >
@@ -449,9 +451,8 @@
             </div>
           </div>
         </article>
-        <!-- PROGRESS BAR SLUT -->
       </section>
-      <!---------------------------------------------- FØRSTE SEKTION -->
+      <!-------------------------- FØRSTE SEKTION -->
       <section class="mx-[30px] text-center lg:mx-[80px]">
         <h1 class="font-main-heading text-h1-mobile lg:text-h1-desktop">
           Hvor ofte vil du have din buket leveret?
@@ -466,24 +467,29 @@
         </article>
       </section>
 
-      <!---------------------------------------------- ANDEN SEKTION -->
-      <form action="">
-        <label for="hyppighed"> </label>
-        <select
-          name="hyppighed"
-          id="hyppighed"
-          class="max-w-xs mx-auto flex w-64 cursor-pointer rounded-radius-mobile border-2 border-color-black font-font-body text-body-mobile lg:text-body-desktop"
-        >
-          <option value="default" disabled selected>
-            -- Vælg hyppighed --
-          </option>
-          <option value="hver uge" class="active:bg-sol">Hver uge</option>
-          <option value="hver anden uge">Hver anden uge</option>
-          <option value="hver måned">Hver måned</option>
-        </select>
-      </form>
+      <!-------------------------- ANDEN SEKTION -->
+      <section>
+        <article>
+          <!-- DROPDOWN - VÆLG HYPPIGHED -->
+          <form action="">
+            <label for="hyppighed"> </label>
+            <select
+              name="hyppighed"
+              id="hyppighed"
+              class="max-w-xs mx-auto flex w-64 cursor-pointer rounded-radius-mobile border-2 border-color-black font-font-body text-body-mobile lg:text-body-desktop"
+            >
+              <option value="default" disabled selected>
+                -- Vælg hyppighed --
+              </option>
+              <option value="hver uge" class="active:bg-sol">Hver uge</option>
+              <option value="hver anden uge">Hver anden uge</option>
+              <option value="hver måned">Hver måned</option>
+            </select>
+          </form>
+        </article>
+      </section>
 
-      <!---------------------------------------------- TREDJE SEKTION -->
+      <!-------------------------- TREDJE SEKTION -->
       <section class="grid justify-center py-l-spacing-mobile">
         <a
           tabindex="0"
@@ -493,8 +499,9 @@
         >
       </section>
     </main>
+    <!--------------------------------------------------------------------- MAIN SLUT -->
 
-    <!--------------------------------------------------------------------- FOOTER -->
+    <!--------------------------------------------------------------------- FOOTER START -->
     <footer
       tabindex="0"
       class="font-font-body text-body-mobile text-background-color lg:text-body-desktop"
@@ -658,6 +665,7 @@
         </section>
       </article>
     </footer>
+    <!--------------------------------------------------------------------- FOOTER SLUT -->
     <script type="module" src="main.js"></script>
   </body>
 </html>
