@@ -16,11 +16,11 @@
       header {
         margin-bottom: var(--xl-spacing-desktop);
       }
-      /* ---------------------------------PROGRESS BAR */
 
       p {
         margin-block: 0;
       }
+      /* PROGRESS BAR */
       [class^="ball"] {
         display: grid;
         place-content: center;
@@ -82,8 +82,10 @@
       .line2 {
         border: solid 2px var(--color-abonnement-bar-active);
       }
+      /* DESKTOP */
 
       @media (min-width: 900px) {
+        /* PROGRESS BAR */
         .overskrift {
           font-size: var(--body-desktop);
         }
@@ -122,34 +124,12 @@
           height: 0px;
           background-color: var(--color-abonnement-bar-active);
         }
-
-        /* ---------------------------------RADIO BUTTONS */
-        input {
-          margin: 0;
-          font-size: var(--body-mobile);
-          accent-color: var(--rust-500);
-          width: 1.15em;
-          height: 1.15em;
-          border: 0.15em solid black;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-
-        @media (min-width: 900px) {
-          input {
-            font-size: var(--body-desktop);
-          }
-
-          input[type="radio"] {
-            transform: scale(2);
-          }
-        }
       }
     </style>
   </head>
   <body class="bg-background-color">
-    <!--------------------------------------------------------------------- HEADER -->
-    <!-- header -->
+    <!--------------------------------------------------------------------- HEADER START -->
+
     <header>
       <!-- banner  -->
       <div
@@ -335,9 +315,11 @@
       </nav>
       <!-- MENUPUNKTER SLUT -->
     </header>
+    <!--------------------------------------------------------------------- HEADER START -->
+    <!--------------------------------------------------------------------- MAIN START -->
 
     <main>
-      <!--------------------------------------------------------------------- LOG IND -->
+      <!-- LOG IND -->
       <section
         id="loginbox"
         class="placering_box gemt fixed top-2 left-0 z-20 mx-10 max-h-screen max-w-[600px] border-2 border-color-black bg-background-color pb-xl-spacing-mobile text-center font-font-body lg:left-[25%]"
@@ -421,7 +403,7 @@
           </form>
         </div>
       </section>
-      <!-- PROGRESS BAR START -->
+      <!-- PROGRESS BAR -->
       <section>
         <article
           class="grid place-content-center pb-l-spacing-mobile lg:pb-l-spacing-desktop"
@@ -472,8 +454,8 @@
           </div>
         </article>
       </section>
-      <!-- PROGRESS BAR SLUT -->
-      <!---------------------------------------------- FØRSTE SEKTION -->
+
+      <!-------------------------- FØRSTE SEKTION -->
       <section class="mx-[30px] text-center lg:mx-[80px]">
         <h1 class="font-main-heading text-h1-mobile lg:text-h1-desktop">
           Er du sensitiv over for stærk blomsterduft?
@@ -493,13 +475,15 @@
         </article>
       </section>
 
-      <!---------------------------------------------- ANDEN SEKTION -->
+      <!-------------------------- ANDEN SEKTION -->
+
       <section
         class="flex place-content-center gap-xl-spacing-mobile lg:gap-xxxl-spacing-desktop"
       >
         <article
           class="flex items-baseline gap-xs-spacing-mobile lg:gap-s-spacing-desktop"
         >
+          <!-- RADIO BUTTONS -->
           <form>
             <fieldset>
               <label class="form-control">
@@ -534,7 +518,7 @@
         </article>
       </section>
 
-      <!---------------------------------------------- TREDJE SEKTION -->
+      <!-------------------------- TREDJE SEKTION -->
       <section class="grid justify-center py-l-spacing-mobile">
         <a
           tabindex="0"
@@ -544,8 +528,9 @@
         >
       </section>
     </main>
+    <!--------------------------------------------------------------------- MAIN SLUT -->
 
-    <!--------------------------------------------------------------------- FOOTER -->
+    <!--------------------------------------------------------------------- FOOTER START -->
     <footer
       itemscope
       itemtype="https://schema.org/LocalBusiness"
@@ -756,6 +741,7 @@
         </section>
       </article>
     </footer>
+    <!--------------------------------------------------------------------- FOOTER SLUT -->
     <script type="module" src="main.js"></script>
   </body>
 </html>
