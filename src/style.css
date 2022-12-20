@@ -8,7 +8,6 @@
 
 .gemt {
   display: none;
-  
 }
 .vis {
   display: block;
@@ -21,12 +20,10 @@ input {
   max-width: 600px;
 }
 
-
 .valgt {
   border: 2px solid var(--rust-500);
   transform: scale(1.1);
 }
-
 
 /* virker kun i chrome */
 .skip-to-content-link {
@@ -132,7 +129,6 @@ header nav ul {
   animation-name: blink;
   animation: blink 5s infinite;
   animation-delay: 0s;
-  animation-direction: alternate;
   grid-column-start: 2;
   grid-row-start: 1;
 }
@@ -175,7 +171,8 @@ header nav ul {
   animation-name: blink1;
   animation: blink1 5s infinite;
   animation-delay: 0s;
-  animation-direction: alternate;
+
+  animation-timing-function: linear;
   grid-column-start: 2;
   grid-row-start: 1;
 }
@@ -218,7 +215,7 @@ header nav ul {
   animation-name: blink2;
   animation: blink2 5s infinite;
   animation-delay: 0s;
-  animation-direction: alternate;
+
   grid-column-start: 2;
   grid-row-start: 1;
 }
@@ -261,7 +258,7 @@ header nav ul {
   animation-name: blink3;
   animation: blink3 5s infinite;
   animation-delay: 0s;
-  animation-direction: alternate;
+
   grid-column-start: 2;
   grid-row-start: 1;
 }
@@ -304,7 +301,7 @@ header nav ul {
   animation-name: blink4;
   animation: blink4 5s infinite;
   animation-delay: 0s;
-  animation-direction: alternate;
+
   grid-column-start: 2;
   grid-row-start: 1;
 }
