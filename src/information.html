@@ -493,72 +493,59 @@
           </div>
           <!-- forms -->
           <div class="grid gap-m-spacing-mobile lg:gap-s-spacing-desktop">
-            
-              <!-- navn -->
-              <div class="grid gap-xxs-spacing-mobile">
-                <form action="udfyld">
-                <label
-                  class="font-other-headings text-h5-mobile"
-                  for="full-name"
-                  >For- og efternavn <span class="text-rust-600">*</span></label
-                >
-                <input
-                  class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
-                  type="text"
-                  inputmode="text"
-                  placeholder="Fx. Sofie Hansen"
-                />
-              </form>
-              </div>
-              <!-- adresse -->
-              <div class="grid gap-xxs-spacing-mobile">
-                <form action="udfyld">
-                <label class="font-other-headings text-h5-mobile" for="address"
-                  >Leveringsadresse <span class="text-rust-600">*</span></label
-                >
-                <input
-                  class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
-                  type="text"
-                  inputmode="text"
-                  placeholder="Fx. Strandvejen 167, 2900 Hellerup"
-                />
-              </form>
-              </div>
-              <!-- e-mail -->
-              <div class="grid gap-xxs-spacing-mobile">
-                <form action="udfyld">
-                <label class="font-other-headings text-h5-mobile" for="address"
-                  >E-mail <span class="text-rust-600">*</span></label
-                >
-                <input
-                  class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
-                  type="email"
-                  inputmode="email"
-                  placeholder="Fx. sofia@gmail.com"
-                />
-              </form>
-              </div>
-              <!-- telefonnummer -->
-              <div class="grid gap-xxs-spacing-mobile">
-                <form action="">
-                <label class="font-other-headings text-h5-mobile" for="address"
-                  >Telefonnummer</label
-                >
-                <input
-                  class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
-                  type="tel"
-                  inputmode="tel"
-                  placeholder="Fx. +45 12345678"
-                />
-              </form>
-              </div>
-            
+            <!-- navn -->
+            <form class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="full-name"
+                >For- og efternavn <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Fx. Sofie Hansen"
+              />
+            </form>
+            <!-- adresse -->
+            <form class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Leveringsadresse <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
+                type="text"
+                inputmode="text"
+                placeholder="Fx. Strandvejen 167, 2900 Hellerup"
+              />
+            </form>
+            <!-- e-mail -->
+            <form class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >E-mail <span class="text-rust-600">*</span></label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
+                type="email"
+                inputmode="email"
+                placeholder="Fx. sofia@gmail.com"
+              />
+            </form>
+            <!-- telefonnummer -->
+            <form class="grid gap-xxs-spacing-mobile">
+              <label class="font-other-headings text-h5-mobile" for="address"
+                >Telefonnummer</label
+              >
+              <input
+                class="rounded-radius-mobile p-1 pl-2 font-font-body text-abonnement-text-info lg:p-[4px] lg:pl-2"
+                type="tel"
+                inputmode="tel"
+                placeholder="Fx. +45 12345678"
+              />
+            </form>
           </div>
           <!-- ekstra informationer -->
           <div class="mt-m-spacing-mobile grid gap-l-spacing-mobile">
             <!-- bemærkninger -->
-            <div class="grid gap-xxs-spacing-mobile">
-              <form action="udfyld">
+            <form class="grid gap-xxs-spacing-mobile">
               <label class="font-other-headings text-h5-mobile" for="address"
                 >Bemærkning til bestillingen</label
               >
@@ -569,27 +556,44 @@
                 placeholder="Eventuelle bemærkninger til levering"
               />
             </form>
-            </div>
             <!-- besked om levering -->
             <div class="grid gap-xs-spacing-mobile">
               <h3 class="w-2/3 font-other-headings text-h5-mobile">
                 Vil du have besked når du får leveret en buket?
               </h3>
-              <div class="flex">
-                
-                
-                <input type="checkbox" checked="checked" class="checkbox" />
-                <h4 class="pl-m-spacing-mobile font-font-body text-body-mobile">
-                  Jeg ønsker en e-mail pr. levering
-                </h4>
-              </label>
-              </div>
-              <div class="flex">
-                <input type="checkbox" checked="checked" class="checkbox" />
-                <h4 class="pl-m-spacing-mobile font-font-body text-body-mobile">
-                  Jeg ønsker en SMS pr. levering
-                </h4>
-              </div>
+
+              <form class="flex flex-col gap-3">
+                <label class="form-control">
+                  <div class="flex">
+                    <input
+                      class="my-auto text-[#6F9043] accent-[#6F9043] checked:bg-[#6F9043] focus:bg-[#6F9043] focus:ring-[#6F9043] active:bg-[#6F9043]"
+                      type="radio"
+                      name="radio"
+                    />
+
+                    <h4
+                      class="pl-m-spacing-mobile font-font-body text-body-mobile"
+                    >
+                      Jeg ønsker en e-mail pr. levering
+                    </h4>
+                  </div></label
+                >
+                <label class="form-control">
+                  <div class="flex">
+                    <input
+                      class="my-auto text-[#6F9043] accent-[#6F9043] checked:bg-[#6F9043] focus:bg-[#6F9043] focus:ring-[#6F9043] active:bg-[#6F9043]"
+                      type="radio"
+                      name="radio"
+                    />
+
+                    <h4
+                      class="pl-m-spacing-mobile font-font-body text-body-mobile"
+                    >
+                      Jeg ønsker en SMS pr. levering
+                    </h4>
+                  </div></label
+                >
+              </form>
             </div>
           </div>
           <!-- knapper -->
