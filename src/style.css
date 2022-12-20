@@ -338,6 +338,8 @@ header nav ul {
   }
 }
 
+/* animation på forsiden blinker */
+
 .illustration_bb {
   display: grid;
   grid-template-columns: 1fr;
