@@ -3,7 +3,7 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: resolve(__dirname, "src"),
+  root: resolve(_dirname, "src"),
   base: "./",
   preview: {
     host: true,
@@ -13,7 +13,7 @@ export default defineConfig({
     outDir: resolve("dist"),
     rollupOptions: {
       input: {
-        index: resolve(__dirname, "src/index.html"),
+        index: resolve(_dirname, "src/index.html"),
         abonnement: resolve(_dirname, "src/abonnement.html"),
         abonnement1: resolve(_dirname, "src/abonnement1.html"),
         abonnement2: resolve(_dirname, "src/abonnement2.html"),
